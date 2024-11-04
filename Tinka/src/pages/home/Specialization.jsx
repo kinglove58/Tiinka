@@ -26,7 +26,7 @@ function Specialization() {
           </div>
         ))}
       </div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-8 mb-16">
         <p className="text-gray-700 mb-4">
           Don't see what you're looking for? We can help with a wide range of
           challenges.

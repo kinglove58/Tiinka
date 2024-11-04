@@ -1,6 +1,7 @@
 import Hero from "./Hero";
 import InsuranceLogo from "./InsuranceLogo";
 import Specialization from "./Specialization";
+import ChooseUs from "./ChooseUs";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
         <Hero />
         <InsuranceLogo />
         <Specialization />
+        <ChooseUs />
       </div>
     </div>
   );
