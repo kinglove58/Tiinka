@@ -463,7 +463,7 @@ const servicesDataList = [
     ],
   },
   {
-    id: "ersonality-Disorders",
+    id: "Personality-Disorders",
     title1: "we are here to help you tackle that personality disorder",
     title1Des:
       "Your personality is a unique and defining part of who you are. It encompasses your character traits, perspective, attitude, temperament, thought patterns, and values. A personality disorder is when a person’s unique traits cause significant issues and impairment. By working with Tinka Health to understands your disorder and how it’s disrupting your life, you can learn to better manage your symptoms and develop skills to better relate to others. ",
