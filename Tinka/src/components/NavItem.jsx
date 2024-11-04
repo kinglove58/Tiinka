@@ -15,7 +15,7 @@ function NavItem() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white text-gray-800 shadow-md">
+    <header className="bg-white text-gray-800 shadow-md relative">
       <div className="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
         <Link to="/" className="flex items-center">
           <img
@@ -48,7 +48,7 @@ function NavItem() {
               </Link>
             </li>
             <li
-              className="my-2 md:my-0 w-full md:w-auto relative"
+              className="my-2 md:my-0 w-full md:w-auto"
               onMouseEnter={() => setShowServices(true)}
               onMouseLeave={() => setShowServices(false)}
             >
@@ -56,8 +56,8 @@ function NavItem() {
                 Services
               </button>
               {showServices && (
-                <div className="absolute left-0 top-full bg-white shadow-lg z-20 grid grid-cols-4 gap-4 p-4 w-screen">
-                  <div className="col-span-3 grid grid-cols-3 gap-4">
+                <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-10 grid grid-cols-2 w-screen px-16">
+                  <div className="grid grid-cols-3">
                     {servicesDataList.slice(0, 12).map((service) => (
                       <div key={service.id}>
                         <ul>
@@ -73,8 +73,11 @@ function NavItem() {
                       </div>
                     ))}
                   </div>
+
                   <div className="col-span-1 relative text-white">
                     <img
+                      width={1136}
+                      height={542}
                       src={Teletherapy}
                       alt="teletherapy"
                       className="max-w-md"
