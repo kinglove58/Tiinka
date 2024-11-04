@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import WhyChooseUs from "./WhyChooseUs";
 import coupleTherapy from "../../assets/images/img mental health/why choose us/couples/coupleTherapy.png";
 import laugh from "../../assets/images/img mental health/why choose us/laugh/laugh.png";
 import sleep from "../../assets/images/img mental health/why choose us/sleep better/sleep.png";
 import teen from "../../assets/images/img mental health/why choose us/teen/teen.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const whyChooseUsData = [
   {
@@ -50,8 +52,18 @@ const PickUs = () => {
           title={item.title}
           subTitle={item.subTitle}
           showArrow={item.showArrow !== false} // Default to true if not specified
+          reverse={index % 2 !== 0} // Reverse layout for odd-indexed items
         />
       ))}
+      <div className="flex justify-around items-center mt-8 mb-10">
+        <Link to="/services">
+          <button className="flex justify-around items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800">
+            {" "}
+            <FaArrowRight className="text-white-600 text-xl mr-4" />
+            <span>Let's Do This</span>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
