@@ -18,7 +18,7 @@ function SingleService() {
   
   return (
     <div className="pt-20">
-      <div className="min-h-[60vh] bg-blue-800 px-4 py-6 md:px-16 flex flex-col justify-center space-y-7">
+      <div className="min-h-[50vh] bg-blue-800 px-4 py-6 md:px-16 flex flex-col justify-center space-y-7">
         <h1 className="text-6xl font-bold text-white">{service.id}</h1>
         <p className="text-xl font-semibold text-white">{service.id_sub}</p>
       </div>
