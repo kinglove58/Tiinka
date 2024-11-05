@@ -22,7 +22,7 @@ function Hero() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-16 py-8">
+      <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-16 py-8 pt-20">
         {/* Left Side */}
         <div className="md:w-1/2 mt-8 md:mt-0 md:mb-0 mb-12">
           <h1 className="text-2xl md:text-4xl md:max-w-lg  font-bold text-gray-800 mb-8">
