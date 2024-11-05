@@ -3,10 +3,10 @@ import InsuranceLogo from "./InsuranceLogo";
 import Specialization from "./Specialization";
 import ChooseUs from "./ChooseUs";
 import EasyStart from "./EasyStart";
-import Blog from "./Blog";
 import Testimonial from "./Testimonial";
 import MentalHealthStats from "./MentalHealthStats";
 import FAQs from "./Faqs";
+import StepGuide from "./StepGuide";
 
 function Home() {
   return (
@@ -20,6 +20,7 @@ function Home() {
         <Testimonial />
         <MentalHealthStats />
         <FAQs />
+        <StepGuide />
       </div>
     </div>
   );
