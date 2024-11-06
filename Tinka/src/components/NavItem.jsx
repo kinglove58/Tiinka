@@ -77,7 +77,10 @@ const NavItem = () => {
                 <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-3 px-4 md:px-16 lg:py-6 lg:flex items-center gap-2 bg-white">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-3 w-2/3">
                     {service_data.map((service) => (
-                      <li className="w-full text-gray-800 hover:text-blue-800 transition duration-300">
+                      <li
+                        key={service.id}
+                        className="w-full text-gray-800 hover:text-blue-800 transition duration-300"
+                      >
                         <Link
                           to={`/services/${service.id}`}
                           className="h-10 flex w-full"
