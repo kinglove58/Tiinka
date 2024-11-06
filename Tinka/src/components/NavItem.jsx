@@ -33,8 +33,8 @@ const NavItem = () => {
   };
 
   return (
-    <header className="h-20 fixed z-20 w-full top-0 right-0 bg-white text-gray-800 shadow-md">
-      <div className="h-full flex justify-between items-center px-6">
+    <header className="h-20 fixed w-full top-0 right-0 bg-white text-gray-800 shadow-md z-50 px-4 md:px-16">
+      <div className="h-full flex justify-between items-center">
         <Link to={"/"}>
           <img
             src={TinkaLogo}
@@ -48,13 +48,13 @@ const NavItem = () => {
         <nav
           className={`${
             showMenu
-              ? "flex absolute top-20 left-0 w-full px-6 py-6 shadow-md h-[60vh]"
+              ? "flex absolute top-20 left-0 w-full px-6 py-6 shadow-md min-h-[60vh] bg-white"
               : "hidden"
-          } md:flex md:flex-row h-full`}
+          } lg:flex lg:flex-row h-full`}
         >
           <ul
             className={`${
-              showMenu && "w-full flex-col overflow-auto bg-white"
+              showMenu && "w-full flex-col overflow-auto"
             } h-full flex items-center gap-5`}
           >
             <li className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 text-nowrap">
@@ -67,15 +67,14 @@ const NavItem = () => {
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
             >
-              <Link
-                to={"/"}
+              <p
                 className="flex items-center h-10 lg:h-20 justify-between lg:gap-1"
                 onClick={handleServiceClick}
               >
                 Services {isHovered ? <FaAngleUp /> : <FaAngleDown />}
-              </Link>
+              </p>
               {isHovered && (
-                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-800 bg-white shadow-md py-3 lg:px-6 lg:py-6 lg:flex items-center gap-2">
+                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-3 px-4 md:px-16 lg:py-6 lg:flex items-center gap-2 bg-white">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-3 w-2/3">
                     {service_data.map((service) => (
                       <li className="w-full text-gray-800 hover:text-blue-800 transition duration-300">
