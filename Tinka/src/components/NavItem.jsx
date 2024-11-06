@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import service_data from "../pages/services/serviceData";
 import Teletherapy from "../assets/images/img mental health/hero/teletherapy.png";
-import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaArrowRight } from "react-icons/fa";
 
 const NavItem = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +35,7 @@ const NavItem = () => {
   };
 
   return (
-    <header className="h-20 fixed w-full top-0 right-0 bg-white text-gray-800 shadow-md z-50 px-4 md:px-16">
+    <header className="h-20 fixed w-full top-0 right-0 bg-[#f1f2f6] text-gray-800 z-50 px-4 md:px-16 hover:bg-white font-sans">
       <div className="h-full flex justify-between items-center">
         <Link to={"/"}>
           <img
@@ -43,7 +45,7 @@ const NavItem = () => {
           />
         </Link>
         <div className="lg:hidden cursor-pointer" onClick={handleMenu}>
-          {showMenu ? <RiCloseFill size={25} /> : <RiMenu3Line size={25} />}
+          {showMenu ? <RiCloseFill size={25} /> : <GiHamburgerMenu size={25} />}
         </div>
         <nav
           className={`${
@@ -63,7 +65,7 @@ const NavItem = () => {
               </Link>
             </li>
             <li
-              className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300"
+              className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 cursor-pointer"
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
             >
@@ -74,9 +76,9 @@ const NavItem = () => {
                 Services {isHovered ? <FaAngleUp /> : <FaAngleDown />}
               </p>
               {isHovered && (
-                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-3 px-4 md:px-16 lg:py-6 lg:flex items-center gap-2 bg-white">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-3 w-2/3">
-                    {service_data.map((service) => (
+                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-1 lg:flex items-center gap-2 bg-white">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-5 lg:gap-x-3 w-2/3">
+                    {service_data.slice(0, 12).map((service) => (
                       <li
                         key={service.id}
                         className="w-full text-gray-800 hover:text-blue-800 transition duration-300"
@@ -85,17 +87,23 @@ const NavItem = () => {
                           to={`/services/${service.id}`}
                           className="h-10 flex w-full"
                         >
-                          {service.id}
+                          {service.name}
                         </Link>
                       </li>
                     ))}
                   </div>
-                  <li className="w-full lg:w-2/4">
+                  <li className="w-full relative lg:w-2/4">
                     <img
                       src={Teletherapy}
-                      alt="Teleterapy"
+                      alt="Teletherapy"
                       className="h-auto"
                     />
+                    <Link
+                      to="/contact"
+                      className="absolute top-[50%] left-[15%] hover:bg-white border-2 text-white hover:text-black p-4 border-solid rounded-full border-white"
+                    >
+                      <FaArrowRight />
+                    </Link>
                   </li>
                 </div>
               )}
@@ -103,11 +111,6 @@ const NavItem = () => {
             <li className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300">
               <Link to={"/blogs"} className="h-10 lg:h-20 flex items-center">
                 Blogs
-              </Link>
-            </li>
-            <li className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300">
-              <Link to={"/"} className="h-10 lg:h-20 flex items-center">
-                FAQs
               </Link>
             </li>
             <li className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300">

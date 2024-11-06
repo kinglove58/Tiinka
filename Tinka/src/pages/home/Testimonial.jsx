@@ -42,7 +42,7 @@ function Testimonial() {
 
   return (
     <div className="py-8 px-4">
-      <h1 className="text-3xl font-bold text-center mb-8">
+      <h1 className="text-3xl font-bold text-center mb-8 font-serif">
         <div className="flex justify-center mb-2">
           {[...Array(5)].map((_, index) => (
             <FaStar key={index} className="text-yellow-500" />
@@ -54,9 +54,13 @@ function Testimonial() {
         <Slider {...settings}>
           {testimonialData.map((testimonial, index) => (
             <div key={index} className="text-center px-4">
-              <p className="text-lg italic mb-4">{testimonial.words}</p>
+              <p className="text-lg italic mb-4 font-sans">
+                {testimonial.words}
+              </p>
               <div className="mt-4">
-                <h3 className="text-xl font-semibold">{testimonial.name}</h3>
+                <h3 className="text-xl font-semibold font-serif">
+                  {testimonial.name}
+                </h3>
               </div>
             </div>
           ))}

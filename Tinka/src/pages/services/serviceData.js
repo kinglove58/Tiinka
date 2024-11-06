@@ -1,6 +1,7 @@
 const servicesDataList = [
   {
     id: "Insomnia",
+    name: "Insomnia",
     id_sub: "Find restful sleep and peace of mind",
     title1: "Tinka Health will help you tackle insomnia",
     title1Des:
@@ -29,6 +30,7 @@ const servicesDataList = [
   },
   {
     id: "Individual-Therapy",
+    name: "Individual Therapy",
     id_sub: "Grow into your best, authentic self",
     title1: "Let’s smash your therapy goals together",
     title1Des:
@@ -58,6 +60,7 @@ const servicesDataList = [
   },
   {
     id: "Couples-Therapy",
+    name: "Couples Therapy",
     id_sub: "Strengthen and nurture your relationship",
     title1: "Get support in navigating your relationship ",
     title1Des:
@@ -87,6 +90,7 @@ const servicesDataList = [
   },
   {
     id: "Bipolar-Disorder",
+    name: "Bipolar Disorder",
     id_sub: "Manage mood swings and live with stability",
     title1: "Get support for managing bipolar disorder with Tinka Health",
     title1Des:
@@ -117,6 +121,7 @@ const servicesDataList = [
   },
   {
     id: "Childrens-Therapy",
+    name: "Childrens Therapy",
     id_sub: "Support and guidance for young minds",
     title1: "Play therapy and talk therapy for kids",
     title1Des:
@@ -146,6 +151,7 @@ const servicesDataList = [
   },
   {
     id: "Anxiety-Disorders",
+    name: "Anxiety Disorders",
     id_sub: "Overcome fears and regain control",
     title1: "we are here to help you tackle that anxiety",
     title1Des:
@@ -177,6 +183,7 @@ const servicesDataList = [
   },
   {
     id: "Depression",
+    name: "Depression",
     id_sub: "Rediscover hope and resilience",
     title1: "we are here to help you tackle that depression",
     title1Des:
@@ -207,33 +214,8 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Dissociative-Disorders",
-    id_sub: "Reconnect with yourself and find clarity",
-    title1: "we are here to help you tackle that dissociative disorders ",
-    title1Des:
-      "Dissociative disorders cause you to feel disconnected from yourself, your loved ones, and the world around you as a means to escape difficult emotions, painful memories, or the effects of trauma. A dissociative disorder often develops as a coping mechanism when a child or young adult and causes significant problems in your life. Let's Tinka Health help you recover and cope. ",
-    btnText: "Let's Do It",
-    title2: "Do you often feel detached, disconnected, or out of place?",
-    title2Des:
-      "When under great stress or trauma, you may dissociate, feeling disconnected from your thoughts, body, and environment. While it's common to experience dissociation in stressful situations, those with dissociative disorders face this detachment more frequently, impacting daily life. You might feel as if your surroundings are unreal or even forget your identity, making it difficult to cope with stress and trauma healthily. There are several types of dissociative disorders you can be diagnosed with:",
-    title2List: [
-      "Dissociative identity disorder: Previously referred to as multiple personality disorder, DID can make it feel like you have more than personality inside your mind, which each has its own set of mannerisms, thought patterns, memories, and traits. You may switch personalities when faced with a stressful situation.",
-      "Dissociative amnesia:  This type of dissociative disorder can cause you to forget certain events in your life and is not caused by physical trauma or issues with the brain. Often, the forgotten people, places, and events are connected to a past trauma. While you may not remember the event, you may still get triggered by things connected to the traumatic event. The amnesia can be so severe you may forget everything about your life, including your name and past.  ",
-      "Depersonalization-derealization disorder: DDD can make you feel as if the world around you is not real. You might feel like you’re watching your life from the outside, that you or others aren’t really human, that time has slowed down or sped up, or that your body appears distorted. You may also feel disconnected from your emotions and feel numb. ",
-    ],
-    title3: "Tinka Health’s goals to help you:",
-    title3Des:
-      "Living with a dissociative disorder can be very frightening – for yourself and your loved ones. They can cause serious impairment in your relationships and make it difficult to hold a job, manage your responsibilities, or care for yourself and others. Here is how Tinka Health can help you manage and recover from a dissociative disorder: ",
-    title3List: [
-      "Help you better understand your symptoms, the cause of your condition, and how it is impacting your life",
-      "Talk with you about how you manage stress and difficult emotions and help you develop healthy ways of handling stressful situations",
-      "Help you process, accept, and cope with past traumas in your childhood and adulthood that may be causing you to disassociate.",
-      "Practice grounding techniques, such as deep breathing, sensory exercises, meditation, taking a walk, and moving or exercising",
-      "Develop strategies to help you remember key events during an episode, such as leaving notes or keeping a journal",
-    ],
-  },
-  {
     id: "Grief-Trauma-Therapy",
+    name: "Grief Trauma Therapy",
     id_sub: "Healing from loss and painful experiences",
     title1: "we are here to help you tackle that Grief & Trauma",
     title1Des:
@@ -264,6 +246,7 @@ const servicesDataList = [
   },
   {
     id: "Personality-Disorders",
+    name: "Personality Disorders",
     id_sub: "Understand and reshape your patterns",
     title1: "we are here to help you tackle that personality disorder",
     title1Des:
@@ -295,36 +278,8 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Postpartum-Psychiatric-Disorders",
-    id_sub: "Embrace motherhood with mental well-being",
-    title1:
-      "we are here to help you tackle that postpartum psychiatric disorder",
-    title1Des:
-      "Pregnancy, childbirth, and postpartum recovery can feel like a roller coaster of emotions. If you’ve recently given birth and are experiencing significant difficulties with your mental health, you might have a postpartum psychiatric disorder. We’re here to help and support you during this wild time. Let's Tinka Health help you with postpartum depression and more.   ",
-    btnText: "Let's Do It",
-    title2: "Are you struggling with your mental health after childbirth? ",
-    title2Des:
-      "The postpartum period can be challenging for new mothers, often leading to mood changes due to poor sleep, physical pain, and hormonal shifts. While many experience temporary sadness or irritability known as the “baby blues,” some may develop more serious postpartum psychiatric disorders. These can severely impact the well-being of both mother and baby, resulting in difficulties with self-care, suicidal thoughts, intense anxiety, or psychosis. Various mental health disorders can affect women after childbirth. There are several mental health disorders that can affect women who’ve recently delivered a baby:",
-    title2List: [
-      "Postpartum depression: PPD causes symptoms of major depressive disorder, difficulties bonding with your baby, social withdrawal, feelings of worthlessness and hopelessness, thoughts of self-harm or suicide",
-      "Postpartum anxiety: You may experience heart palpitations and physical anxiety symptoms, extreme fear about your baby’s safety, difficulties leaving home or trusting others with your child",
-      "Birth trauma: An emotionally traumatic childbirth can cause symptoms of PTSD, such as hypervigilance, flashbacks, nightmares, avoidance behaviors, and panic.",
-      "Symptoms of PTSD from a traumatic birth experience, flashbacks",
-      "Postpartum psychosis: A severe postpartum condition that can cause delusions, mania, hallucinations, and mood instability",
-    ],
-    title3: "Tinka Health’s goals to help you:",
-    title3Des:
-      "No new mother wants to struggle with her mental health, and it can be incredibly difficult to adjust to being a new mother while struggling with a psychiatric disorder. Fortunately, therapy and psychiatric intervention can be very effective in helping you process what you’re feeling, recover, and enjoy these new precious moments with your new baby. Here’s how your Tinka Health can help: ",
-    title3List: [
-      "Evaluate your symptoms and determine if you’re showing signs and symptoms of a postpartum psychiatric disorder",
-
-      "Discuss if medication could be beneficial for addressing symptoms of depression, anxiety, psychosis, and more",
-      "Help you build a support group and get help from others to support your healing during this time",
-      "Explore how other factors in your life, such as a difficult relationship or pre-existing conditions, might be affecting your mental health",
-    ],
-  },
-  {
     id: "Stress-Burnout",
+    name: "Stress Burnout",
     id_sub: "Find balance and restore your energy",
     title1: "We're here to help you conquer stress and burnout like a pro!",
     title1Des:
@@ -356,6 +311,7 @@ const servicesDataList = [
   },
   {
     id: "Eating-Disorders",
+    name: "Eating Disorders",
     id_sub: "Nurture a healthy relationship with food and yourself",
     title1: "We're here to help you conquer that eating disorders",
     title1Des:
@@ -381,6 +337,63 @@ const servicesDataList = [
       "Develop coping strategies that support healthy eating behaviors",
       "Work through underlying emotions or experiences connected to the disorder",
       "Establish a sustainable, balanced approach to eating and self-care",
+    ],
+  },
+  {
+    id: "Dissociative-Disorders",
+    name: "Dissociative Disorders",
+    id_sub: "Reconnect with yourself and find clarity",
+    title1: "we are here to help you tackle that dissociative disorders ",
+    title1Des:
+      "Dissociative disorders cause you to feel disconnected from yourself, your loved ones, and the world around you as a means to escape difficult emotions, painful memories, or the effects of trauma. A dissociative disorder often develops as a coping mechanism when a child or young adult and causes significant problems in your life. Let's Tinka Health help you recover and cope. ",
+    btnText: "Let's Do It",
+    title2: "Do you often feel detached, disconnected, or out of place?",
+    title2Des:
+      "When under great stress or trauma, you may dissociate, feeling disconnected from your thoughts, body, and environment. While it's common to experience dissociation in stressful situations, those with dissociative disorders face this detachment more frequently, impacting daily life. You might feel as if your surroundings are unreal or even forget your identity, making it difficult to cope with stress and trauma healthily. There are several types of dissociative disorders you can be diagnosed with:",
+    title2List: [
+      "Dissociative identity disorder: Previously referred to as multiple personality disorder, DID can make it feel like you have more than personality inside your mind, which each has its own set of mannerisms, thought patterns, memories, and traits. You may switch personalities when faced with a stressful situation.",
+      "Dissociative amnesia:  This type of dissociative disorder can cause you to forget certain events in your life and is not caused by physical trauma or issues with the brain. Often, the forgotten people, places, and events are connected to a past trauma. While you may not remember the event, you may still get triggered by things connected to the traumatic event. The amnesia can be so severe you may forget everything about your life, including your name and past.  ",
+      "Depersonalization-derealization disorder: DDD can make you feel as if the world around you is not real. You might feel like you’re watching your life from the outside, that you or others aren’t really human, that time has slowed down or sped up, or that your body appears distorted. You may also feel disconnected from your emotions and feel numb. ",
+    ],
+    title3: "Tinka Health’s goals to help you:",
+    title3Des:
+      "Living with a dissociative disorder can be very frightening – for yourself and your loved ones. They can cause serious impairment in your relationships and make it difficult to hold a job, manage your responsibilities, or care for yourself and others. Here is how Tinka Health can help you manage and recover from a dissociative disorder: ",
+    title3List: [
+      "Help you better understand your symptoms, the cause of your condition, and how it is impacting your life",
+      "Talk with you about how you manage stress and difficult emotions and help you develop healthy ways of handling stressful situations",
+      "Help you process, accept, and cope with past traumas in your childhood and adulthood that may be causing you to disassociate.",
+      "Practice grounding techniques, such as deep breathing, sensory exercises, meditation, taking a walk, and moving or exercising",
+      "Develop strategies to help you remember key events during an episode, such as leaving notes or keeping a journal",
+    ],
+  },
+  {
+    id: "Postpartum-Psychiatric-Disorders",
+    name: "Postpartum Psychiatric Disorders",
+    id_sub: "Embrace motherhood with mental well-being",
+    title1:
+      "we are here to help you tackle that postpartum psychiatric disorder",
+    title1Des:
+      "Pregnancy, childbirth, and postpartum recovery can feel like a roller coaster of emotions. If you’ve recently given birth and are experiencing significant difficulties with your mental health, you might have a postpartum psychiatric disorder. We’re here to help and support you during this wild time. Let's Tinka Health help you with postpartum depression and more.   ",
+    btnText: "Let's Do It",
+    title2: "Are you struggling with your mental health after childbirth? ",
+    title2Des:
+      "The postpartum period can be challenging for new mothers, often leading to mood changes due to poor sleep, physical pain, and hormonal shifts. While many experience temporary sadness or irritability known as the “baby blues,” some may develop more serious postpartum psychiatric disorders. These can severely impact the well-being of both mother and baby, resulting in difficulties with self-care, suicidal thoughts, intense anxiety, or psychosis. Various mental health disorders can affect women after childbirth. There are several mental health disorders that can affect women who’ve recently delivered a baby:",
+    title2List: [
+      "Postpartum depression: PPD causes symptoms of major depressive disorder, difficulties bonding with your baby, social withdrawal, feelings of worthlessness and hopelessness, thoughts of self-harm or suicide",
+      "Postpartum anxiety: You may experience heart palpitations and physical anxiety symptoms, extreme fear about your baby’s safety, difficulties leaving home or trusting others with your child",
+      "Birth trauma: An emotionally traumatic childbirth can cause symptoms of PTSD, such as hypervigilance, flashbacks, nightmares, avoidance behaviors, and panic.",
+      "Symptoms of PTSD from a traumatic birth experience, flashbacks",
+      "Postpartum psychosis: A severe postpartum condition that can cause delusions, mania, hallucinations, and mood instability",
+    ],
+    title3: "Tinka Health’s goals to help you:",
+    title3Des:
+      "No new mother wants to struggle with her mental health, and it can be incredibly difficult to adjust to being a new mother while struggling with a psychiatric disorder. Fortunately, therapy and psychiatric intervention can be very effective in helping you process what you’re feeling, recover, and enjoy these new precious moments with your new baby. Here’s how your Tinka Health can help: ",
+    title3List: [
+      "Evaluate your symptoms and determine if you’re showing signs and symptoms of a postpartum psychiatric disorder",
+
+      "Discuss if medication could be beneficial for addressing symptoms of depression, anxiety, psychosis, and more",
+      "Help you build a support group and get help from others to support your healing during this time",
+      "Explore how other factors in your life, such as a difficult relationship or pre-existing conditions, might be affecting your mental health",
     ],
   },
 ];

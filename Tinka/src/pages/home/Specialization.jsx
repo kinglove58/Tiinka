@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Specialization() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6 text-center">
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-serif text-[#005ab0] font-bold mb-6 text-center">
         Tinka Health Services Specialize in:
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
@@ -18,8 +18,8 @@ function Specialization() {
               to={`/services/${service.id}`}
               className="flex items-center justify-center"
             >
-              <span className="text-blue-700 font-medium text-center">
-                {service.id}
+              <span className="text-[#005ab0] font-sans hover:text-[#314499] font-medium text-center">
+                {service.name}
               </span>
               <IoChevronForwardOutline className="text-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2" />
             </Link>
@@ -32,7 +32,7 @@ function Specialization() {
           challenges.
         </p>
         <Link to="/services">
-          <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800">
+          <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-3">
             Check More
           </button>
         </Link>

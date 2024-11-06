@@ -20,22 +20,22 @@ function Hero() {
   }, [words.length]);
 
   return (
-    <div>
+    <div className="mb-16 font-sans">
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-16 py-8 pt-20">
+      <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-24 py-8 pt-20">
         {/* Left Side */}
         <div className="md:w-1/2 mt-8 md:mt-0 md:mb-0 mb-12">
-          <h1 className="text-2xl md:text-4xl md:max-w-lg  font-bold text-gray-800 mb-8">
+          <h1 className="text-2xl md:text-4xl md:max-w-lg  font-bold text-gray-800 mb-4 font-serif">
             {" "}
-            <span className="text-blue-600">{words[wordIndex]}</span> <br />
-            Tinka Health Services Guides You to Your Desire Joy.
+            <span className="text-[#005ab0]">{words[wordIndex]}</span> <br />
+            Tinka Health Services will Help You to Your Desire Joy.
           </h1>
-          <p className="text-gray-600 mb-12 text-lg md:max-w-lg">
+          <p className="text-gray-700 font-sans md:mb-12 mb-8 text-lg md:max-w-lg">
             Whatever your journey looks like, we are here to support you with
             understanding and empathy.
           </p>
           <Link to="/contact">
-            <button className="bg-blue-600 text-white text-lg px-6 py-3 rounded-md hover:bg-blue-700">
+            <button className="bg-blue-600 text-white text-lg px-6 py-3 rounded-md hover:bg-blue-700 font-sans">
               Let's Do It
             </button>
           </Link>
@@ -50,11 +50,11 @@ function Hero() {
         </div>
       </div>
       {/* Call to Action Section */}
-      <div className="bg-blue-600 text-white text-center py-8 px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+      <div className="bg-[#005ab0] text-white text-center py-8 px-4">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4 font-serif">
           You deserve to be happy
         </h2>
-        <p className="max-w-2xl mx-auto">
+        <p className="max-w-2xl mx-auto font-sans">
           Your mental health care should be effective, easy, and fun. Whatever
           life is bringing you, Tinka Health Services is here to help you
           navigate it.

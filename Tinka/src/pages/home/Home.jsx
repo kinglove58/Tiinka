@@ -6,23 +6,38 @@ import EasyStart from "./EasyStart";
 import Testimonial from "./Testimonial";
 import MentalHealthStats from "./MentalHealthStats";
 import FAQs from "./Faqs";
-import StepGuide from "./StepGuide";
+import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 
 function Home() {
   return (
-    <div>
+    <main className="md:pt-24 bg-[#f1f2f6]">
       <div>
-        <Hero />
-        <InsuranceLogo />
-        <Specialization />
-        <ChooseUs />
-        <EasyStart />
-        <Testimonial />
-        <MentalHealthStats />
-        <FAQs />
-        <StepGuide />
+        <ScrollAnimationWrapper>
+          <Hero />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <InsuranceLogo />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <Specialization />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <ChooseUs />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <EasyStart />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <Testimonial />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <MentalHealthStats />
+        </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <FAQs />
+        </ScrollAnimationWrapper>
       </div>
-    </div>
+    </main>
   );
 }
 

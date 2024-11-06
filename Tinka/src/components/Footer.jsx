@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import TinkaLogo from "../assets/images/logo/Tinka-Health-Services-logo.png";
 import servicesDataList from "../pages/services/serviceData";
 
@@ -69,10 +70,11 @@ function Footer() {
                 </p>
               </div>
               <button
-                className="md:hidden text-blue-400 hover:underline"
+                className="md:hidden text-blue-400 hover:underline flex items-center"
                 onClick={() => setIsEmergencyOpen(!isEmergencyOpen)}
               >
-                Emergency Links
+                Emergency Links{" "}
+                {isEmergencyOpen ? <FaAngleUp /> : <FaAngleDown />}
               </button>
               <ul
                 className={`mt-4 space-y-2 ${
@@ -96,10 +98,10 @@ function Footer() {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer"
+              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
-              Services
+              Services {isServicesOpen ? <FaAngleUp /> : <FaAngleDown />}
             </h3>
             <ul
               className={`space-y-2 ${
@@ -110,7 +112,7 @@ function Footer() {
                 <li key={service.id}>
                   <Link
                     to={`/services/${service.id}`}
-                    className="text-blue-400 hover:underline"
+                    className="text-blue-400 hover:bg-blue-800 hover:text-white block px-2 py-1 rounded"
                   >
                     {service.id}
                   </Link>
@@ -120,10 +122,10 @@ function Footer() {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer"
+              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsCompanyOpen(!isCompanyOpen)}
             >
-              Company
+              Company {isCompanyOpen ? <FaAngleUp /> : <FaAngleDown />}
             </h3>
             <ul
               className={`space-y-2 ${
@@ -134,7 +136,7 @@ function Footer() {
                 <li key={index}>
                   <Link
                     to={`/${data.value}`}
-                    className="text-blue-400 hover:underline"
+                    className="text-blue-400 hover:bg-blue-800 hover:text-white block px-2 py-1 rounded"
                   >
                     {data.value}
                   </Link>
@@ -144,10 +146,10 @@ function Footer() {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer"
+              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsResourcesOpen(!isResourcesOpen)}
             >
-              Resources
+              Resources {isResourcesOpen ? <FaAngleUp /> : <FaAngleDown />}
             </h3>
             <ul
               className={`space-y-2 ${
@@ -155,7 +157,10 @@ function Footer() {
               } md:block`}
             >
               <li>
-                <Link to="/blogs" className="text-blue-400 hover:underline">
+                <Link
+                  to="/blogs"
+                  className="text-blue-400 hover:bg-blue-800 hover:text-white block px-2 py-1 rounded"
+                >
                   Blogs
                 </Link>
               </li>

@@ -9,9 +9,9 @@ function WhyChooseUs({
   reverse = false,
 }) {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto font-sans px-4 md:px-20">
       <div
-        className={`flex flex-col-reverse ${
+        className={`flex flex-col-reverse  pb-2 ${
           reverse ? "md:flex-row-reverse" : "md:flex-row"
         } items-center justify-between w-full`}
       >
@@ -20,13 +20,15 @@ function WhyChooseUs({
           <img src={img} alt={imgAlt} className="w-full max-w-md" />
         </div>
         {/* Right Section */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-2xl font-medium mb-4">{title}</h2>
-          <p className="text-gray-700 mb-4">{subTitle}</p>
+        <div className="md:w-1/2 text-center md:text-left max-w-lg bg-white rounded-lg shadow-sm p-6">
+          <h2 className="text-3xl text-gray-800 font-medium mb-4 font-serif">
+            {title}
+          </h2>
+          <p className="text-gray-600 mb-4 font-sans">{subTitle}</p>
         </div>
       </div>
       {showArrow && (
-        <div className="flex justify-center mt-8 mb-10">
+        <div className="flex justify-center md:mt-12 pb-16">
           <FaArrowDownLong className="text-blue-600 text-3xl" />
         </div>
       )}

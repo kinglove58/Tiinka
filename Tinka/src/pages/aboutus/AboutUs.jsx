@@ -59,7 +59,7 @@ const aboutUsData = [
 
 function AboutUs() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <main className="container mx-auto px-4 py-8 mt-16">
       <div className="flex flex-col md:flex-row items-center mb-8">
         <div className="md:w-1/2 mb-4 md:mb-0">
           <h1 className="text-3xl font-bold mb-4">
@@ -124,7 +124,7 @@ function AboutUs() {
           </button>
         </Link>
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -5,6 +5,7 @@ import laugh from "../../assets/images/img mental health/why choose us/laugh/lau
 import sleep from "../../assets/images/img mental health/why choose us/sleep better/sleep.png";
 import teen from "../../assets/images/img mental health/why choose us/teen/teen.png";
 import { FaArrowRight } from "react-icons/fa";
+import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 
 const whyChooseUsData = [
   {
@@ -40,25 +41,27 @@ const whyChooseUsData = [
 
 const PickUs = () => {
   return (
-    <div>
+    <div className="mb-16">
       <div className="text-center mb-16">
-        <h1 className="font-bold text-3xl capitalize">Why Choose Us?</h1>
+        <h1 className="font-bold text-3xl capitalize font-serif">
+          Why Choose Us?
+        </h1>
       </div>
       {whyChooseUsData.map((item, index) => (
-        <WhyChooseUs
-          key={index}
-          img={item.img}
-          imgAlt={item.imgAlt}
-          title={item.title}
-          subTitle={item.subTitle}
-          showArrow={item.showArrow !== false} // Default to true if not specified
-          reverse={index % 2 !== 0} // Reverse layout for odd-indexed items
-        />
+        <ScrollAnimationWrapper key={index}>
+          <WhyChooseUs
+            img={item.img}
+            imgAlt={item.imgAlt}
+            title={item.title}
+            subTitle={item.subTitle}
+            showArrow={item.showArrow !== false} // Default to true if not specified
+            reverse={index % 2 !== 0} // Reverse layout for odd-indexed items
+          />
+        </ScrollAnimationWrapper>
       ))}
       <div className="flex justify-around items-center mt-8 mb-10">
         <Link to="/services">
-          <button className="flex justify-around items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800">
-            {" "}
+          <button className="flex hover:scale-95 transition duration-300 mt-8 md:mt-12 mb-8 md:mb-12 justify-around items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800">
             <FaArrowRight className="text-white-600 text-xl mr-4" />
             <span>Let's Do This</span>
           </button>
