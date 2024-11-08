@@ -84,14 +84,14 @@ const FAQs = () => {
   return (
     <div className="bg-white text-gray-800 py-16 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-center font-serif">
           Frequently Asked Questions
         </h2>
 
         {faqData.map((category, catIndex) => (
           <div key={catIndex} className="mb-8">
             <h3
-              className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 cursor-pointer"
+              className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 cursor-pointer font-serif"
               onClick={() => toggleCategory(catIndex)}
             >
               {category.category}
@@ -104,13 +104,15 @@ const FAQs = () => {
                     className="border p-4 rounded-lg shadow-sm"
                   >
                     <h4
-                      className="font-semibold cursor-pointer"
+                      className="font-semibold cursor-pointer font-serif"
                       onClick={() => toggleQuestion(faqIndex)}
                     >
                       {faq.question}
                     </h4>
                     {activeQuestion === faqIndex && (
-                      <p className="mt-2 text-gray-600">{faq.answer}</p>
+                      <p className="mt-2 text-gray-600 font-sans">
+                        {faq.answer}
+                      </p>
                     )}
                   </div>
                 ))}

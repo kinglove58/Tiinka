@@ -7,6 +7,7 @@ import Testimonial from "./Testimonial";
 import MentalHealthStats from "./MentalHealthStats";
 import FAQs from "./Faqs";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
+import Blogs from "./Blogs";
 
 function Home() {
   return (
@@ -33,6 +34,10 @@ function Home() {
         <ScrollAnimationWrapper>
           <MentalHealthStats />
         </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+          <Blogs />
+        </ScrollAnimationWrapper>
+
         <ScrollAnimationWrapper>
           <FAQs />
         </ScrollAnimationWrapper>

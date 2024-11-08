@@ -5,11 +5,11 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import AboutUs from "./pages/aboutus/AboutUs.jsx";
-import Blogs from "./pages/Article/Blogs.jsx";
 import Policy from "./pages/Policy/Policy.jsx";
 import ContactUs from "./pages/contact/ContactUs.jsx";
 import SingleService from "./pages/services/SingleService.jsx";
-import SingleBlog from "./pages/Article/SingleBlog.jsx";
+import SingleBlog from "./pages/blogs/SingleBlog.jsx";
+import AllBlogs from "./pages/blogs/AllBlogs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogs",
-        element: <Blogs />,
+        element: <AllBlogs />,
       },
       {
         path: "/policy",
