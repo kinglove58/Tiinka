@@ -10,6 +10,7 @@ import ContactUs from "./pages/contact/ContactUs.jsx";
 import SingleService from "./pages/services/SingleService.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
 import AllBlogs from "./pages/blogs/AllBlogs.jsx";
+import { BlogProvider } from "./components/BlogContext";
 
 const router = createBrowserRouter([
   {
@@ -49,5 +50,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <BlogProvider>
+    <RouterProvider router={router} />
+  </BlogProvider>
 );

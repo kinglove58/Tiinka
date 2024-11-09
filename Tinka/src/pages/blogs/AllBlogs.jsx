@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { BlogContext } from "../../components/BlogContext";
 
 const iconMap = {
   FaUser: FaUser,
@@ -11,33 +12,11 @@ const iconMap = {
 };
 
 function AllBlogs() {
-  const [blogs, setBlogs] = useState([]);
-  const [filteredBlogs, setFilteredBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleBlogs, setVisibleBlogs] = useState(9);
 
-  useEffect(() => {
-    fetch("http://localhost:8000/api/blogs/30")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            "Sorry Network response was not ok, you can refresh the page"
-          );
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setBlogs(data.data); // Access the 'data' array from the API response
-        setFilteredBlogs(data.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+  const { blogs, filteredBlogs, loading, error, setFilteredBlogs } =
+    useContext(BlogContext);
 
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
@@ -92,7 +71,7 @@ function AllBlogs() {
             </Link>
 
             <div className="p-4">
-              <Link to={`/blogs/${blog.id}`}>
+              <Link to={`/blogs/${blog.title}`}>
                 <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
                   {blog.title}
                 </h1>
