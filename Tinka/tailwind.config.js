@@ -4,12 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Source Serif Pro"', "serif"],
-        sans: ['"Inter"', "sans-serif"],
+        serif: ["Inter", "serif"],
+        sans: ["Inter Light", "sans-serif"],
       },
       backgroundImage: {
         "custom-image":
           "url('/src/assets/images/img mental health/contact_us/appointment.png')",
+        "aboutUs-image":
+          "url('/src/assets/images/img mental health/aboutUs/about.png')",
       },
     },
   },

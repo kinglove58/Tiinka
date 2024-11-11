@@ -1,18 +1,27 @@
+import React from "react";
 import servicesDataList from "../services/serviceData";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 function Specialization() {
+  // Determine the number of services to display based on screen size
+  const servicesToShow =
+    window.innerWidth < 640
+      ? servicesDataList.slice(0, 6)
+      : window.innerWidth < 1024
+      ? servicesDataList.slice(0, 9)
+      : servicesDataList.slice(0, 12);
+
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-serif text-[#005ab0] font-bold mb-6 text-center">
+      <h1 className="text-4xl text-[#005ab0] font-bold mb-6 text-center">
         Tinka Health Services Specialize in:
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
-        {servicesDataList.slice(0, 12).map((service) => (
+        {servicesToShow.map((service) => (
           <div
             key={service.id}
-            className="bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex justify-center items-center  max-w-xs"
+            className="bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex justify-center items-center max-w-xs"
           >
             <Link
               to={`/services/${service.id}`}
@@ -26,12 +35,12 @@ function Specialization() {
           </div>
         ))}
       </div>
-      <div className="text-center mt-8 mb-16">
+      <div className="text-center mt-8 pb-16">
         <p className="text-gray-700 mb-4">
           Don't see what you're looking for? We can help with a wide range of
           challenges.
         </p>
-        <Link to="/services">
+        <Link to="/services/Insomnia">
           <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-3">
             Check More
           </button>

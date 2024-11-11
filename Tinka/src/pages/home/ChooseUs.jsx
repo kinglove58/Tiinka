@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import WhyChooseUs from "./WhyChooseUs";
-import coupleTherapy from "../../assets/images/img mental health/why choose us/couples/coupleTherapy.png";
 import laugh from "../../assets/images/img mental health/why choose us/laugh/laugh.png";
 import sleep from "../../assets/images/img mental health/why choose us/sleep better/sleep.png";
 import teen from "../../assets/images/img mental health/why choose us/teen/teen.png";
@@ -23,13 +22,6 @@ const whyChooseUsData = [
       "Our services support young minds through the unique struggles of childhood and adolescence, providing tools to navigate challenges with resilience.",
   },
   {
-    img: coupleTherapy,
-    imgAlt: "couple happy together",
-    title: "Because you could be better together.",
-    subTitle:
-      "We help couples strengthen their bond, fostering deeper connection and mutual growth so you can face life’s challenges side-by-side.",
-  },
-  {
     img: sleep,
     imgAlt: "man and woman sleeping better",
     title: "Because a quiet mind sleeps better.",
@@ -41,7 +33,7 @@ const whyChooseUsData = [
 
 const PickUs = () => {
   return (
-    <div className="mb-16">
+    <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50  ">
       <div className="text-center mb-16">
         <h1 className="font-bold text-3xl capitalize font-serif">
           Why Choose Us?

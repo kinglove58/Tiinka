@@ -46,7 +46,7 @@ function Footer() {
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
 
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-[#333743] text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:mr-12">
@@ -67,14 +67,14 @@ function Footer() {
               </a>
             </p>
             <div className="mt-4">
-              <div className="flex items-center text-center bg-gray-400 border-2 rounded-lg">
+              <div className="flex items-center text-center bg-[#4b4e57] border-2 rounded-lg">
                 <p>
                   If you are in a life-threatening situation, don’t use this
                   site. Please visit the sites below:
                 </p>
               </div>
               <button
-                className="md:hidden text-white hover:text-blue-600 flex items-center"
+                className="md:hidden mt-4 text-white hover:text-blue-600 flex items-center"
                 onClick={() => setIsEmergencyOpen(!isEmergencyOpen)}
               >
                 Emergency Links{" "}

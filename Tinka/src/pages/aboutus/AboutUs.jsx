@@ -1,14 +1,14 @@
 import { GoGoal } from "react-icons/go";
 import { FaEye } from "react-icons/fa";
 import { GiLovers } from "react-icons/gi";
-import Tinka from "../../assets/images/img mental health/last image/tinka-health2.png";
-import aboutImg from "../../assets/images/img mental health/aboutUs/about-us.png";
 import Testimonial from "../home/Testimonial";
 import { Link } from "react-router-dom";
+import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
+import aboutImage from "../../assets/images/img mental health/aboutUs/about.png";
 
 const supportData = [
   {
-    support: "Overcoming depression and anxiety",
+    support: "Overcoming depression",
   },
   {
     support: "Handling grief and loss",
@@ -59,70 +59,74 @@ const aboutUsData = [
 
 function AboutUs() {
   return (
-    <main className="container mx-auto px-4 py-8 mt-16">
-      <div className="flex flex-col md:flex-row items-center mb-8">
-        <div className="md:w-1/2 mb-4 md:mb-0">
-          <h1 className="text-3xl font-bold mb-4">
-            We Help You to Reclaim Your Mental Health Stability
-          </h1>
-          <p className="text-lg">
-            At Tinka Health Care Services we are dedicated to providing you and
-            your loved ones with the highest level of healthcare, tailored to
-            your unique needs. We accept Virtual appointments only and we've
-            Care teams that collaborate with all your providers.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img src={aboutImg} alt="Tinka Health Services" className="w-full" />
-        </div>
-      </div>
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">
-          What we support people with:
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {supportData.map((data, index) => (
-            <div key={index} className="text-lg">
-              {data.support}
+    <main className=" mx-auto py-16 bg-white">
+      <div>
+        <ScrollAnimationWrapper>
+          <div className="py-16 bg-gradient-to-b from-white to-blue-50">
+            <h1 className="lg:text-5xl md:text-4xl text-3xl text-center font-bold md:py-12 py-8  text-[#005ab0] ">
+              We Help You to Reclaim Your Mental Health Stability
+            </h1>
+            <div>
+              <img
+                className="w-full rounded-xl"
+                src={aboutImage}
+                alt="about us image"
+              />
             </div>
-          ))}
-        </div>
-      </div>
-      <div className="mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {aboutUsData.map((about, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <div className="flex justify-center mb-4">
-                <about.icon className="text-4xl text-blue-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{about.title}</h3>
-              <p className="text-lg">{about.description}</p>
+          </div>
+        </ScrollAnimationWrapper>
+
+        <div className="py-10 flex flex-col items-center bg-gradient-to-b from-blue-50 via-blue-50 to-blue-100 px-4 lg:px-0">
+          <ScrollAnimationWrapper>
+            <h2 className="text-3xl font-semibold text-[#005ab0] mb-8 text-center">
+              What we support people with:
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2 w-full max-w-4xl">
+              {supportData.map((data, index) => (
+                <div key={index} className="text-lg">
+                  {data.support}
+                </div>
+              ))}
             </div>
-          ))}
+          </ScrollAnimationWrapper>
         </div>
-        <div className="text-center mt-8">
-          <Link to="/contact">
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-              Book an Appointment now
-            </button>
-          </Link>
+
+        <div className="flex flex-col items-center bg-gradient-to-b from-blue-100 via-blue-200 to-blue-50 py-10 px-4 lg:px-0">
+          <ScrollAnimationWrapper>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl">
+              {aboutUsData.map((about, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 p-6 rounded-lg shadow-md"
+                >
+                  <div className="flex justify-center mb-4">
+                    <about.icon className="text-4xl text-blue-500" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{about.title}</h3>
+                  <p className="text-lg">{about.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/contact">
+                <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                  Book an Appointment now
+                </button>
+              </Link>
+            </div>
+          </ScrollAnimationWrapper>
         </div>
-      </div>
-      <div className="mb-8 text-center">
-        <h2 className="text-2xl font-semibold mb-4">Meet Our Leadership</h2>
-        <img
-          src={Tinka}
-          alt="founder picture"
-          className="w-1/2 mx-auto rounded-lg shadow-md"
-        />
-      </div>
-      <Testimonial />
-      <div className="text-center mt-8">
-        <Link to="/contact">
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-            Book an Appointment now
-          </button>
-        </Link>
+
+        <ScrollAnimationWrapper>
+          <Testimonial />
+          <div className="text-center">
+            <Link to="/contact">
+              <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 hover:scale-95 transition duration-300">
+                Book an Appointment now
+              </button>
+            </Link>
+          </div>
+        </ScrollAnimationWrapper>
       </div>
     </main>
   );

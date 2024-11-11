@@ -1,5 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom";
 
 const statsData = [
   {
@@ -25,15 +26,15 @@ const statsData = [
 
 const MentalHealthStats = () => {
   return (
-    <div className="bg-[#005ab0] text-white px-4 md:px-24 py-8">
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div className="bg-[#005ab0] text-white px-4 md:px-12 lg:px-24 py-8">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Side */}
         <div className="text-center md:text-left font-serif text-white">
           <h2 className="md:text-4xl text-3xl font-bold mb-4">
             You don't have to <br /> struggle alone. <br /> Get help today
           </h2>
           <button className="mt-4 px-6 py-3 bg-white text-[#005ab0] font-semibold rounded hover:bg-gray-300 hover:scale-95 transition duration-300">
-            Explore Levels of Care
+            <Link to="/contact"> Explore Levels of Care</Link>
           </button>
         </div>
 

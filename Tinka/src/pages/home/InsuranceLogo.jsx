@@ -60,7 +60,7 @@ const InsuranceLogo = () => {
             className="mb-2"
           />
           <h2 className="font-medium text-lg text-blue-700">
-            585+ insurance plans accepted
+            156+ insurance plans accepted
           </h2>
         </div>
         <Slider {...settings}>

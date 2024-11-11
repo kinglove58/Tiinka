@@ -9,15 +9,15 @@ function WhyChooseUs({
   reverse = false,
 }) {
   return (
-    <div className="container mx-auto font-sans px-4 md:px-20">
+    <div className="container mx-auto font-sans px-4 md:px-20 ">
       <div
         className={`flex flex-col-reverse  pb-2 ${
           reverse ? "md:flex-row-reverse" : "md:flex-row"
         } items-center justify-between w-full`}
       >
         {/* Left Section */}
-        <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
-          <img src={img} alt={imgAlt} className="w-full max-w-md" />
+        <div className="md:w-1/2 flex justify-center mb-4 md:mb-0 sm:mt-4">
+          <img src={img} alt={imgAlt} className="w-full max-w-md shadow-md " />
         </div>
         {/* Right Section */}
         <div className="md:w-1/2 text-center md:text-left max-w-lg bg-white rounded-lg shadow-sm p-6">

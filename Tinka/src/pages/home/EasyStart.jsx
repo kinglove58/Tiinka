@@ -36,7 +36,7 @@ const EasyStart = () => {
           </div>
         </div>
 
-        <Link to="/contant">
+        <Link to="/contact">
           <button className="mt-12 mb-0 px-6 py-3 bg-white text-blue-600 hover:scale-95 font-semibold rounded hover:bg-gray-200 transition duration-300">
             Let's Do This
           </button>

@@ -59,36 +59,6 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Couples-Therapy",
-    name: "Couples Therapy",
-    id_sub: "Strengthen and nurture your relationship",
-    title1: "Get support in navigating your relationship ",
-    title1Des:
-      "Whether you’re dating, engaged, or married, relationships can be challenging. If you and your partner are experiencing a rough patch, are considering separating, or simply want to become better communicators and partners in life, Tinka Health can help you.",
-    btnText: "Let's Do It",
-    title2: "What you can achieve with couples therapy",
-    title2Des:
-      "Couples therapy involves three people: you, your partner, and your therapist. Relationships can get messy! Tinka Health can help you identify what’s causing a breakdown and guide you in navigating the road ahead. Here is how we can support you and your partner on this journey.",
-    title2List: [
-      "Work through infidelity, dishonesty, and other trust-breaking behaviors.",
-      "Open the door for an intimate, honest conversation with your partner.",
-      "Discuss how outside parties are negatively impacting your relationship.",
-      "Get support in navigating loss, traumatic situations, or difficult life changes.",
-      "Set healthy boundaries with your partner, in-laws, and work. ",
-      "Identify negative communication and behavioral patterns in the relationship. ",
-      "Address relationship disappointment, hurt, resentment, and trauma.",
-    ],
-    title3: "Tinka Health’s promise for your mental health journey",
-    title3Des:
-      "Relationships are HARD, but you don’t have to face the challenges alone. Whether you’re working through a rough patch or need help addressing significant issues, Tinka Health is here to support you and your partner. Couples counseling can strengthen your bond, improve communication, and help you find lasting satisfaction together.",
-    title3List: [
-      "Tinka Health is dedicated to helping you and your partner navigate complex issues and strengthen your bond. We’re always ready to think creatively to help you grow together.",
-      "Your trust is our priority. We ensure total privacy, and we will never share information or choose sides without your consent.",
-      "We embrace what makes both you and your partner unique. Tinka Health helps you grow as a couple while honoring the individuality each of you brings to the relationship.",
-      "Tinka Health offers a safe, comfortable virtual environment, allowing you and your partner to address challenges from the privacy of your own space, wherever you feel most at ease.",
-    ],
-  },
-  {
     id: "Bipolar-Disorder",
     name: "Bipolar Disorder",
     id_sub: "Manage mood swings and live with stability",

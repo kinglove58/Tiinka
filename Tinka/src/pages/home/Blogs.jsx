@@ -15,7 +15,7 @@ function Blogs() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/blogs/3")
+    fetch("http://localhost:8000/api/blogs/4")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -42,7 +42,9 @@ function Blogs() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Learn More Therapy Work</h1>
+      <h1 className="text-4xl text-[#005ab0] font-bold mb-8 text-center">
+        Resources to Help You
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <div
