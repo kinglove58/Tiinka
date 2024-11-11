@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { insuranceLogoData } from "./insuranceLogoData";
-import insuranceIcon from "../../assets/images/logo/insurance logo/insuranceLogo.png";
+import insuranceIcon from "/images/logo/insurance_logo/insuranceLogo.png";
 
 const InsuranceLogo = () => {
   const settings = {

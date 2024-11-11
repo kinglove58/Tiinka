@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import TinkaLogo from "../assets/images/logo/Tinka_health_logo.png";
+import TinkaLogo from "/images/logo/Tinka_health_logo.png";
 import servicesDataList from "../pages/services/serviceData";
 import { BlogContext } from "./BlogContext";
 

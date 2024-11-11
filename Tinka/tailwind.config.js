@@ -9,9 +9,7 @@ export default {
       },
       backgroundImage: {
         "custom-image":
-          "url('/src/assets/images/img mental health/contact_us/appointment.png')",
-        "aboutUs-image":
-          "url('/src/assets/images/img mental health/aboutUs/about.png')",
+          "url(/images/img_mental_health/contact_us/appointment.png)",
       },
     },
   },

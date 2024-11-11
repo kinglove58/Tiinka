@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import TeletherapyImg from "../../assets/images/img mental health/hero/teletherapyimg.png";
+import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.png";
 
 function Hero() {
   // State to hold the index of the current word

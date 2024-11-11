@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import WhyChooseUs from "./WhyChooseUs";
-import laugh from "../../assets/images/img mental health/why choose us/laugh/laugh.png";
-import sleep from "../../assets/images/img mental health/why choose us/sleep better/sleep.png";
-import teen from "../../assets/images/img mental health/why choose us/teen/teen.png";
+import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.png";
+import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.png";
+import teen from "/images/img_mental_health/why_choose_us/teen/teen.png";
 import { FaArrowRight } from "react-icons/fa";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 

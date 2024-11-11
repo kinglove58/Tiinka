@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import TinkaLogo from "../assets/images/logo/Tinka-HS-LOGO-22.png";
+import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import service_data from "../pages/services/serviceData";
-import Teletherapy from "../assets/images/img mental health/hero/teletherapy.png";
+import Teletherapy from "/images/img_mental_health/hero/teletherapy.png";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaArrowRight } from "react-icons/fa";

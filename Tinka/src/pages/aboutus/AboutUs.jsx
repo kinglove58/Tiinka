@@ -4,7 +4,7 @@ import { GiLovers } from "react-icons/gi";
 import Testimonial from "../home/Testimonial";
 import { Link } from "react-router-dom";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
-import aboutImage from "../../assets/images/img mental health/aboutUs/about.png";
+import aboutImage from "/images/img_mental_health/aboutUs/about.png";
 
 const supportData = [
   {
