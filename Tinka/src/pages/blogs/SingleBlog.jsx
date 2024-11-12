@@ -4,6 +4,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import slugify from "slugify";
 import { BlogContext } from "../../components/BlogContext";
+import MentalHealthStats from "../home/MentalHealthStats";
 
 function SingleBlog() {
   const { blogs } = useContext(BlogContext);
@@ -67,73 +68,74 @@ function SingleBlog() {
   const slug = slugify(blog.title, { lower: true });
 
   return (
-    <div className="container mx-auto px-4 md:px-16 py-8 mt-24">
+    <div className="mx-auto px-4 md:px-16 py-8 pt-24 bg-white">
       <div className="max-w-3xl mx-auto">
-        <div className="mb-4">
-          <p>Updated on: {new Date(blog.updated_at).toLocaleDateString()}</p>
+        <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+        <div className="mb-4 flex flex-row">
+          <p className="mr-4">
+            Updated on: {new Date(blog.updated_at).toLocaleDateString()}
+          </p>
           <p>
             Time to read: {Math.ceil(blog.body.split(" ").length / 200)} min
             read
           </p>
         </div>
-        <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-16">
           <img
             src={`http://localhost:8000${blog.image}`}
             alt={blog.title}
-            className="w-full h-64 object-cover"
+            className="w-full h-full object-contain"
           />
-          <div className="p-4">
-            <div className="flex items-center space-x-4 mb-4 text-gray-600">
-              <FaCalendarAlt />
-              <span>{new Date(blog.created_at).toLocaleDateString()}</span>
-            </div>
-            <div
-              className="text-gray-700"
-              dangerouslySetInnerHTML={{ __html: blog.body }}
-            ></div>
-          </div>
         </div>
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Related Blogs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {relatedBlogs.map((relatedBlog) => (
-              <div
-                key={relatedBlog.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
-              >
+        <div className="p-4">
+          <div
+            className="text-gray-800 font-normal text-xl"
+            dangerouslySetInnerHTML={{ __html: blog.body }}
+          ></div>
+        </div>
+      </div>
+      <div className="mt-8">
+        <h2 className="text-3xl font-bold mb-4 text-center">Related Article</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {relatedBlogs.map((relatedBlog) => (
+            <div
+              key={relatedBlog.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
+            >
+              <Link to={`/blogs/${relatedBlog.id}`}>
+                <img
+                  src={`http://localhost:8000${relatedBlog.image}`}
+                  alt={relatedBlog.title}
+                  className="w-full h-48 object-cover"
+                />
+              </Link>
+              <div className="p-4">
                 <Link to={`/blogs/${relatedBlog.id}`}>
-                  <img
-                    src={`http://localhost:8000${relatedBlog.image}`}
-                    alt={relatedBlog.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
+                    {relatedBlog.title}
+                  </h1>
                 </Link>
-                <div className="p-4">
-                  <Link to={`/blogs/${relatedBlog.id}`}>
-                    <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
-                      {relatedBlog.title}
-                    </h1>
-                  </Link>
-                  <div className="flex items-center space-x-4 mb-4 text-gray-600">
-                    <FaCalendarAlt />
-                    <span>
-                      {new Date(relatedBlog.created_at).toLocaleDateString()}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
-                      <Link to={`/blogs/${relatedBlog.id}`}>
-                        <span className="hover:text-orange-600">Read More</span>
-                      </Link>
-                      <IoMdOpen />
-                    </button>
-                  </div>
+                <div className="flex items-center space-x-4 mb-4 text-gray-600">
+                  <FaCalendarAlt />
+                  <span>
+                    {new Date(relatedBlog.created_at).toLocaleDateString()}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
+                    <Link to={`/blogs/${relatedBlog.id}`}>
+                      <span className="hover:text-orange-600">Read More</span>
+                    </Link>
+                    <IoMdOpen />
+                  </button>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </div>
+      <div className="w-full mt-8">
+        <MentalHealthStats />
       </div>
     </div>
   );

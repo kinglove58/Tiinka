@@ -51,7 +51,7 @@ function Blogs() {
             key={blog.id}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
           >
-            <Link to={`/blog/${blog.id}`}>
+            <Link to={`/blogs/${blog.title}`}>
               <img
                 src={`http://localhost:8000${blog.image}`}
                 alt={blog.title}
@@ -60,7 +60,7 @@ function Blogs() {
             </Link>
 
             <div className="p-4">
-              <Link to={`/blog/${blog.id}`}>
+              <Link to={`/blogs/${blog.title}`}>
                 <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
                   {blog.title}
                 </h1>
@@ -77,7 +77,7 @@ function Blogs() {
               ></p>
               <div className="flex items-center justify-between">
                 <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
-                  <Link to={`/blog/${blog.id}`}>
+                  <Link to={`/blogs/${blog.title}`}>
                     <span className="hover:text-orange-600">Read More</span>
                   </Link>
                   <IoMdOpen />
