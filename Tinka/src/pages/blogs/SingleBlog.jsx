@@ -19,7 +19,7 @@ function SingleBlog() {
   const blogId = blogItem ? blogItem.id : id;
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/blog/${blogId}`)
+    fetch(`https://api.tinkahealthservices.com/api/blog/${blogId}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -38,7 +38,7 @@ function SingleBlog() {
 
   useEffect(() => {
     if (blog) {
-      fetch(`http://localhost:8000/api/blogs?keyword=${blog.title}`)
+      fetch(`https://api.tinkahealthservices.com/blogs?keyword=${blog.title}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -84,7 +84,7 @@ function SingleBlog() {
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-16">
             <img
-              src={`http://localhost:8000${blog.image}`}
+              src={`https://api.tinkahealthservices.com${blog.image}`}
               alt={blog.title}
               className="w-full h-full object-contain"
             />
@@ -108,7 +108,7 @@ function SingleBlog() {
               >
                 <Link to={`/blogs/${relatedBlog.id}`}>
                   <img
-                    src={`http://localhost:8000${relatedBlog.image}`}
+                    src={`https://api.tinkahealthservices.com${relatedBlog.image}`}
                     alt={relatedBlog.title}
                     className="w-full h-48 object-cover"
                   />

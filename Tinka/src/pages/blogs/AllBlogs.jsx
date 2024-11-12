@@ -66,7 +66,7 @@ function AllBlogs() {
             >
               <Link to={`/blogs/${blog.title}`}>
                 <img
-                  src={`http://localhost:8000${blog.image}`}
+                  src={`https://api.tinkahealthservices.com${blog.image}`}
                   alt={blog.title}
                   className="w-full h-48 object-cover"
                 />

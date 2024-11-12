@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavItem from "./components/NavItem";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop ";
+import ScrollToTop from "./components/ScrollToTop";
 import ScrollUp from "./components/ScrollUp";
 
 function App() {

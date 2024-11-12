@@ -15,7 +15,7 @@ function Blogs() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/blogs/4")
+    fetch("https://api.tinkahealthservices.com/api/blogs/4")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -53,7 +53,7 @@ function Blogs() {
           >
             <Link to={`/blogs/${blog.title}`}>
               <img
-                src={`http://localhost:8000${blog.image}`}
+                src={`https://api.tinkahealthservices.com${blog.image}`}
                 alt={blog.title}
                 className="w-full h-48 object-cover"
               />
@@ -71,10 +71,7 @@ function Blogs() {
                   <span>{new Date(blog.created_at).toLocaleDateString()}</span>
                 </div>
               </div>
-              <p
-                className="text-gray-700 mb-4"
-                dangerouslySetInnerHTML={{ __html: blog.body }}
-              ></p>
+
               <div className="flex items-center justify-between">
                 <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
                   <Link to={`/blogs/${blog.title}`}>

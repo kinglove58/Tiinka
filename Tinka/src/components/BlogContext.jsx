@@ -7,7 +7,7 @@ export const BlogProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/blogs/30")
+    fetch("https://api.tinkahealthservices.com/api/blogs/30")
       .then((response) => {
         if (!response.ok) {
           throw new Error(
