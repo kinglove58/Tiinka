@@ -113,10 +113,10 @@ function ContactUs() {
     <div className="container mx-auto px-4 py-8">
       <ScrollAnimationWrapper>
         <div className="bg-custom-image bg-cover bg-center h-64 flex items-center justify-center flex-col shadow-md">
-          <h1 className="text-white text-4xl font-bold font-serif">
+          <h1 className="text-white text-3xl md:text-4xl font-bold font-serif">
             You deserve to be happy
           </h1>
-          <p className="font-sans text-white text-2xl font-semibold">
+          <p className="font-sans text-white text-xl md:text-2xl font-semibold">
             And we are here to Help You
           </p>
         </div>

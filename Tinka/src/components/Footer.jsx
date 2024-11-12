@@ -33,9 +33,8 @@ const emergencyLinks = [
 ];
 
 const companyData = [
-  { value: "FAQS" },
-  { value: "Privacy Policy" },
-  { value: "Contact Us" },
+  { value: "Privacy Policy", link: "policy" },
+  { value: "Contact Us", link: "contact" },
 ];
 
 function Footer() {
@@ -145,7 +144,7 @@ function Footer() {
               {companyData.map((data, index) => (
                 <li key={index}>
                   <Link
-                    to={`/${data.value}`}
+                    to={`/${data.link}`}
                     className="text-white hover:text-blue-600 block px-2 py-1 rounded"
                   >
                     {data.value}

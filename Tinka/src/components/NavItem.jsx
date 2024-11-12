@@ -129,7 +129,7 @@ const NavItem = () => {
               className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300"
               onClick={handleLinkClick}
             >
-              <Link to={"/blogs"} className="h-10 lg:h-20 flex items-center">
+              <Link to={"/blogs"} className="h-5 lg:h-20 flex items-center">
                 Blogs
               </Link>
             </li>
