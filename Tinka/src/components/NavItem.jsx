@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.png";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import service_data from "../pages/services/serviceData";
 import Teletherapy from "/images/img_mental_health/hero/teletherapy.png";
@@ -84,13 +83,7 @@ const NavItem = () => {
                 Services {isHovered ? <FaAngleUp /> : <FaAngleDown />}
               </p>
               {isHovered && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-1 lg:flex items-center gap-2 bg-white"
-                >
+                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-1 lg:flex items-center gap-2 bg-white">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-5 lg:gap-x-3 w-2/3 bg-gray-50 p-6 rounded-xl">
                     {service_data.slice(0, 12).map((service) => (
                       <li
@@ -122,7 +115,7 @@ const NavItem = () => {
                       <FaArrowRight />
                     </Link>
                   </li>
-                </motion.div>
+                </div>
               )}
             </li>
             <li

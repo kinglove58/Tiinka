@@ -1,9 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import DatePicker from "react-datepicker";
 import { FaSpinner } from "react-icons/fa";
 import "react-datepicker/dist/react-datepicker.css";
-import Testimonial from "../home/Testimonial";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
+
+// Lazy load the Testimonial component
+const Testimonial = lazy(() => import("../home/Testimonial"));
+
+const FormField = ({
+  label,
+  name,
+  value,
+  onChange,
+  type = "text",
+  placeholder = "",
+  required = true,
+}) => (
+  <div className="mb-4">
+    <label className="block text-gray-700">{label}</label>
+    {type === "textarea" ? (
+      <textarea
+        name={name}
+        value={value}
+        onChange={onChange}
+        className="w-full p-2 border border-gray-300 rounded mt-2"
+        required={required}
+      ></textarea>
+    ) : (
+      <input
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="w-full p-2 border border-gray-300 rounded mt-2"
+        required={required}
+      />
+    )}
+  </div>
+);
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -125,103 +160,68 @@ function ContactUs() {
           className="bg-white p-8 rounded-lg shadow-md w-full"
         >
           <h2 className="text-2xl font-bold mb-4">Book an Appointment</h2>
-          <div className="mb-4">
-            <label className="block text-gray-700">Your Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              required
-            />
-          </div>
+          <FormField
+            label="Your Full Name"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+          />
           <div className="mb-4">
             <label className="block text-gray-700">Your Phone Number</label>
             <div className="flex space-x-4">
-              <input
-                type="text"
+              <FormField
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
                 placeholder="+1"
-                className="w-1/4 p-2 border border-gray-300 rounded mt-2"
                 required
               />
-              <input
-                type="text"
+              <FormField
                 name="number"
                 value={formData.number}
                 onChange={handleChange}
                 placeholder="1234567890"
-                className="w-3/4 p-2 border border-gray-300 rounded mt-2"
                 required
               />
             </div>
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">
-              What brings you to seek therapy at this time?
-            </label>
-            <textarea
-              name="therapyReason"
-              value={formData.therapyReason}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              required
-            ></textarea>
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">
-              How long have you been experiencing these challenges?
-            </label>
-            <textarea
-              name="challengeDuration"
-              value={formData.challengeDuration}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              required
-            ></textarea>
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">
-              Have you had any prior experience with therapy or other support?
-            </label>
-            <textarea
-              name="priorExperience"
-              value={formData.priorExperience}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              required
-            ></textarea>
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">
-              On a scale of 1 to 10, how motivated are you to work on these
-              goals?
-            </label>
-            <input
-              type="number"
-              name="motivation"
-              value={formData.motivation}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-2"
-              min="1"
-              max="10"
-              required
-            />
-          </div>
+          <FormField
+            label="Your Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            type="email"
+          />
+          <FormField
+            label="What brings you to seek therapy at this time?"
+            name="therapyReason"
+            value={formData.therapyReason}
+            onChange={handleChange}
+            type="textarea"
+          />
+          <FormField
+            label="How long have you been experiencing these challenges?"
+            name="challengeDuration"
+            value={formData.challengeDuration}
+            onChange={handleChange}
+            type="textarea"
+          />
+          <FormField
+            label="Have you had any prior experience with therapy or other support?"
+            name="priorExperience"
+            value={formData.priorExperience}
+            onChange={handleChange}
+            type="textarea"
+          />
+          <FormField
+            label="On a scale of 1 to 10, how motivated are you to work on these goals?"
+            name="motivation"
+            value={formData.motivation}
+            onChange={handleChange}
+            type="number"
+            min="1"
+            max="10"
+          />
           <div className="mb-4">
             <label className="block text-gray-700">
               Pick two convenient dates
@@ -244,11 +244,11 @@ function ContactUs() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600 transition duration-300 w-40" // Adjusted width
+              className="bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600 transition duration-300 w-40"
               disabled={loading}
             >
               {loading ? (
-                <FaSpinner className="animate-spin h-5 w-5 mx-auto" /> // Centered spinner
+                <FaSpinner className="animate-spin h-5 w-5 mx-auto" />
               ) : (
                 "Submit"
               )}
@@ -257,7 +257,9 @@ function ContactUs() {
           {message && <p className="mt-4 text-green-500">{message}</p>}
         </form>
         <div className="mt-10">
-          <Testimonial slidesToShow={2} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Testimonial slidesToShow={2} />
+          </Suspense>
         </div>
       </ScrollAnimationWrapper>
     </div>

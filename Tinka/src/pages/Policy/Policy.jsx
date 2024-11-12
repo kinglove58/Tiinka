@@ -7,7 +7,7 @@ function Policy() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/page/2")
+    fetch("https://api.tinkahealthservices.com/api/page/2")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
