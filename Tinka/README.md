@@ -1,8 +1,33 @@
-# React + Vite
+# Tinka Health Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tinka Health Services provides comprehensive mental health care solutions. Reclaim your hope and revive your stability with our expert services.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Tinka Health Services](#tinka-health-services)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Installation](#installation)
+
+## Introduction
+
+Tinka Health Services is dedicated to providing top-notch mental health care solutions. Our platform offers a range of services to help individuals navigate their mental health journey effectively and efficiently.
+
+## Features
+
+- Comprehensive mental health care solutions
+- User-friendly interface
+- Responsive design for mobile and desktop
+- Blog section with related articles
+- Contact form for easy communication
+- Secure and reliable
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/tinka-health-services.git
+   ```
