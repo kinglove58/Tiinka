@@ -11,6 +11,7 @@ import SingleService from "./pages/services/SingleService.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
 import AllBlogs from "./pages/blogs/AllBlogs.jsx";
 import { BlogProvider } from "./components/BlogContext";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/:id",
         element: <SingleBlog />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
