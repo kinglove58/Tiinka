@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 
-function Policy() {
+const Policy = () => {
   const [policy, setPolicy] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.tinkahealthservices.com/api/page/2")
-      .then((response) => {
+    const fetchPolicy = async () => {
+      try {
+        const response = await fetch(
+          "https://api.tinkahealthservices.com/api/page/2"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         setPolicy(data);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(error);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchPolicy();
   }, []);
 
   if (loading) {
@@ -36,7 +39,7 @@ function Policy() {
     <div className="container mx-auto py-14 md:py-16">
       <ScrollAnimationWrapper>
         <div className="text-center mb-4 w-full p-8 md:p-24 bg-[#005ab0] text-white">
-          <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold font-serif">
+          <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold">
             Terms & Condition
           </h1>
           <p className="mt-2 md:mt-4 text-sm md:text-md">
@@ -92,6 +95,6 @@ function Policy() {
       </ScrollAnimationWrapper>
     </div>
   );
-}
+};
 
-export default Policy;
+export default memo(Policy);
