@@ -1,11 +1,11 @@
-import React, { memo } from "react";
+import { memo, useMemo } from "react";
 import servicesDataList from "../services/serviceData";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Specialization = () => {
-  // Determine the number of services to display based on screen size
-  const servicesToShow = servicesDataList.slice(0, 12);
+  // Use useMemo to memoize the sliced data
+  const servicesToShow = useMemo(() => servicesDataList.slice(0, 12), []);
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -22,7 +22,7 @@ const Specialization = () => {
               to={`/services/${service.id}`}
               className="flex items-center justify-center"
             >
-              <span className="text-[#005ab0] font-sans hover:text-[#314499] font-medium text-center">
+              <span className="text-[#005ab0] hover:text-[#314499] font-medium text-center">
                 {service.name}
               </span>
               <IoChevronForwardOutline className="text-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2" />

@@ -9,7 +9,7 @@ export default {
       },
       backgroundImage: {
         "custom-image":
-          "url(/images/img_mental_health/contact_us/appointment.png)",
+          "url(/images/img_mental_health/contact_us/appointment.webp)",
       },
     },
   },

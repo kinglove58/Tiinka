@@ -1,4 +1,4 @@
-import React, { useState, useContext, memo } from "react";
+import React, { useState, useContext, memo, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import TinkaLogo from "/images/logo/Tinka_health_logo.png";
@@ -44,6 +44,13 @@ const Footer = () => {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
 
+  // Memoize the sliced data
+  const servicesToShow = useMemo(
+    () => servicesDataList.slice(0, 12),
+    [servicesDataList]
+  );
+  const blogsToShow = useMemo(() => blogs.slice(0, 7), [blogs]);
+
   return (
     <footer className="bg-[#333743] text-white py-8 mt-16">
       <div className="container mx-auto px-4">
@@ -55,6 +62,7 @@ const Footer = () => {
               src={TinkaLogo}
               alt="Tinka Health Services Logo"
               className="mb-4 w-32"
+              loading="lazy" // Lazy load the image
             />
             <p>Email us:</p>
             <p>
@@ -114,7 +122,7 @@ const Footer = () => {
                 isServicesOpen ? "block" : "hidden"
               } md:block`}
             >
-              {servicesDataList.map((service) => (
+              {servicesToShow.map((service) => (
                 <li key={service.id}>
                   <Link
                     to={`/services/${service.id}`}
@@ -168,7 +176,7 @@ const Footer = () => {
                 isResourcesOpen ? "block" : "hidden"
               } md:block`}
             >
-              {blogs.slice(0, 7).map((blog, index) => (
+              {blogsToShow.map((blog, index) => (
                 <li key={index}>
                   <Link
                     to={`/blogs/${blog.id}`}

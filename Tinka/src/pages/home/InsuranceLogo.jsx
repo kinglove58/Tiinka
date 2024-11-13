@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { insuranceLogoData } from "./insuranceLogoData";
-import insuranceIcon from "/images/logo/insurance_logo/insuranceLogo.png";
+import insuranceIcon from "/images/logo/insurance_logo/insuranceLogo.webp";
 
 const InsuranceLogo = () => {
   const settings = {
@@ -14,7 +14,8 @@ const InsuranceLogo = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000, // Increase autoplay speed to reduce frequent re-renders
+    pauseOnHover: true, // Pause on hover to improve user experience
     responsive: [
       {
         breakpoint: 1024,
@@ -66,8 +67,8 @@ const InsuranceLogo = () => {
           </h2>
         </div>
         <Slider {...settings}>
-          {insuranceLogoData.map((img, index) => (
-            <div key={index}>
+          {insuranceLogoData.map((img) => (
+            <div key={img.imgUrl}>
               <div className="flex justify-center items-center">
                 <img
                   src={img.imgUrl}

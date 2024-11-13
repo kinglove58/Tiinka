@@ -27,9 +27,7 @@ const Home = () => {
           <InsuranceLogo />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <Specialization />
-          </ScrollAnimationWrapper>
+          <Specialization />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
@@ -37,29 +35,19 @@ const Home = () => {
           </ScrollAnimationWrapper>
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <EasyStart />
-          </ScrollAnimationWrapper>
+          <EasyStart />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <Testimonial />
-          </ScrollAnimationWrapper>
+          <Testimonial />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <MentalHealthStats />
-          </ScrollAnimationWrapper>
+          <MentalHealthStats />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <Blogs />
-          </ScrollAnimationWrapper>
+          <Blogs />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <FAQs />
-          </ScrollAnimationWrapper>
+          <FAQs />
         </Suspense>
       </div>
     </main>

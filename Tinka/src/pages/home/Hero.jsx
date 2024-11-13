@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense, memo } from "react";
 import { Link } from "react-router-dom";
-import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.png";
+import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.webp";
 
 // Lazy load the CallVideoAction component
 const CallVideoAction = lazy(() => import("../../components/CallVideoAction"));
@@ -23,7 +23,7 @@ const Hero = () => {
   }, [words.length]);
 
   return (
-    <div className="mb-16 font-sans">
+    <div className="mb-16">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-12 lg:px-24 py-8 pt-12">
         {/* Left Side */}
@@ -37,7 +37,7 @@ const Hero = () => {
             understanding and empathy.
           </p>
           <Link to="/contact">
-            <button className="bg-blue-600 text-white text-lg px-6 py-3 rounded-md hover:bg-blue-700 font-sans">
+            <button className="bg-blue-600 text-white text-lg px-6 py-3 rounded-md hover:bg-blue-700">
               Let's Do It
             </button>
           </Link>
@@ -47,7 +47,8 @@ const Hero = () => {
           <img
             src={TeletherapyImg}
             alt="A person listening to counselling"
-            className="w-full max-w-md"
+            width={400} // Set explicit width
+            height={300} // Set explicit height
             loading="lazy" // Lazy load the image
           />
         </div>

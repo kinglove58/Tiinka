@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import CountUp from "react-countup";
 import { Link } from "react-router-dom";
 
 const statsData = [
@@ -29,7 +28,7 @@ const MentalHealthStats = () => {
     <div className="bg-[#005ab0] text-white px-4 md:px-12 lg:px-24 py-8">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Side */}
-        <div className="text-center md:text-left font-serif text-white">
+        <div className="text-center md:text-left text-white">
           <h2 className="md:text-4xl text-3xl font-bold mb-4">
             You don't have to <br /> struggle alone. <br /> Get help today
           </h2>
@@ -47,12 +46,12 @@ const MentalHealthStats = () => {
               key={index}
               className={`${stat.bgColor} flex flex-col items-center justify-center text-center p-6 rounded-lg w-full md:w-1/3`}
             >
-              <h3 className="text-4xl font-bold font-serif whitespace-nowrap">
-                <CountUp end={stat.value} duration={3.5} />
+              <h3 className="text-4xl font-bold whitespace-nowrap">
+                {stat.value}
                 {stat.value === 37 ? "%" : ""}
               </h3>
-              <p className="text-lg font-semibold font-sans">{stat.unit}</p>
-              <p className="mt-2 text-sm font-sans">{stat.description}</p>
+              <p className="text-lg font-semibold">{stat.unit}</p>
+              <p className="mt-2 text-sm">{stat.description}</p>
             </div>
           ))}
         </div>

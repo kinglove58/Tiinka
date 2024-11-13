@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { memo } from "react";
 import WhyChooseUs from "./WhyChooseUs";
-import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.png";
-import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.png";
-import teen from "/images/img_mental_health/why_choose_us/teen/teen.png";
+import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.webp";
+import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.webp";
+import teen from "/images/img_mental_health/why_choose_us/teen/teen.webp";
 import { FaArrowRight } from "react-icons/fa";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 
@@ -36,9 +36,7 @@ const ChooseUs = () => {
   return (
     <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50">
       <div className="text-center mb-16">
-        <h1 className="font-bold text-3xl capitalize font-serif">
-          Why Choose Us?
-        </h1>
+        <h1 className="font-bold text-3xl capitalize">Why Choose Us?</h1>
       </div>
       {whyChooseUsData.map((item, index) => (
         <ScrollAnimationWrapper key={index}>

@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.png";
+import React, { useState, useMemo, memo } from "react";
+import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import service_data from "../pages/services/serviceData";
-import Teletherapy from "/images/img_mental_health/hero/teletherapy.png";
+import { FaAngleDown, FaAngleUp, FaArrowRight } from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaArrowRight } from "react-icons/fa";
+import service_data from "../pages/services/serviceData";
+import Teletherapy from "/images/img_mental_health/hero/teletherapy.webp";
 
 const NavItem = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -40,11 +39,19 @@ const NavItem = () => {
     }
   };
 
+  // Memoize the sliced data
+  const servicesToShow = useMemo(
+    () => service_data.slice(0, 12),
+    [service_data]
+  );
+
   return (
-    <header className="h-20 fixed w-full top-0 right-0 bg-[#f1f2f6] text-gray-800 z-50 px-4 md:px-16 hover:bg-white font-sans">
+    <header className="h-20 fixed w-full top-0 right-0 bg-[#f1f2f6] text-gray-800 z-50 px-4 md:px-16 hover:bg-white">
       <div className="h-full flex justify-between items-center">
         <Link to={"/"}>
           <img
+            width={32}
+            height={32}
             src={TinkaLogo}
             alt="Tinka Health Services Logo"
             className="h-10 w-auto"
@@ -85,7 +92,7 @@ const NavItem = () => {
               {isHovered && (
                 <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-1 lg:flex items-center gap-2 bg-white">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-5 lg:gap-x-3 w-2/3 bg-gray-50 p-6 rounded-xl">
-                    {service_data.slice(0, 12).map((service) => (
+                    {servicesToShow.map((service) => (
                       <li
                         key={service.id}
                         className="w-full text-gray-800 hover:text-blue-800 transition duration-300"
@@ -149,4 +156,4 @@ const NavItem = () => {
   );
 };
 
-export default NavItem;
+export default memo(NavItem);

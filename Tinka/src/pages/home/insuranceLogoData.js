@@ -1,11 +1,11 @@
-import insurance1 from "/images/logo/insurance_logo/aetna.png";
-import insurance2 from "/images/logo/insurance_logo/bluecross.png";
-import insurance3 from "/images/logo/insurance_logo/ehp.png";
-import insurance4 from "/images/logo/insurance_logo/cigna.png";
-import insurance5 from "/images/logo/insurance_logo/carefirst.png";
-import insurance6 from "/images/logo/insurance_logo/kaiser.png";
-import insurance7 from "/images/logo/insurance_logo/medicaid.png";
-import insurance8 from "/images/logo/insurance_logo/united.png";
+import insurance1 from "/images/logo/insurance_logo/aetna.webp";
+import insurance2 from "/images/logo/insurance_logo/bluecross.webp";
+import insurance3 from "/images/logo/insurance_logo/ehp.webp";
+import insurance4 from "/images/logo/insurance_logo/cigna.webp";
+import insurance5 from "/images/logo/insurance_logo/carefirst.webp";
+import insurance6 from "/images/logo/insurance_logo/kaiser.webp";
+import insurance7 from "/images/logo/insurance_logo/medicaid.webp";
+import insurance8 from "/images/logo/insurance_logo/united.webp";
 
 export const insuranceLogoData = [
   {
