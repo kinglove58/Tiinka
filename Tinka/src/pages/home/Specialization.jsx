@@ -1,16 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import servicesDataList from "../services/serviceData";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-function Specialization() {
+const Specialization = () => {
   // Determine the number of services to display based on screen size
-  const servicesToShow =
-    window.innerWidth < 640
-      ? servicesDataList.slice(0, 6)
-      : window.innerWidth < 1024
-      ? servicesDataList.slice(0, 9)
-      : servicesDataList.slice(0, 12);
+  const servicesToShow = servicesDataList.slice(0, 12);
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -48,6 +43,6 @@ function Specialization() {
       </div>
     </div>
   );
-}
+};
 
-export default Specialization;
+export default memo(Specialization);

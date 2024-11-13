@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense, memo } from "react";
 import { Link } from "react-router-dom";
 import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.png";
 
-function Hero() {
+// Lazy load the CallVideoAction component
+const CallVideoAction = lazy(() => import("../../components/CallVideoAction"));
+
+const Hero = () => {
   // State to hold the index of the current word
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -45,41 +48,16 @@ function Hero() {
             src={TeletherapyImg}
             alt="A person listening to counselling"
             className="w-full max-w-md"
+            loading="lazy" // Lazy load the image
           />
         </div>
       </div>
       {/* Call to Action Section */}
-      <div className="bg-[#005ab0] text-white text-center py-8 px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center">
-          <div className="md:w-1/2 mb-4 md:mb-0">
-            <h2 className="text-2xl md:text-4xl font-semibold mb-4 font-serif">
-              You deserve to be happy
-            </h2>
-            <p className="max-w-xl mx-auto font-sans">
-              Your mental health care should be effective, easy, and fun.
-              Whatever life is bringing you, Tinka Health Services is here to
-              help you navigate it.
-            </p>
-          </div>
-          <div className="md:w-1/2 w-full">
-            <div
-              className="relative w-full"
-              style={{ paddingBottom: "56.25%" }}
-            >
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dXdKybDCASM?si=lk_NDkF7F4-PLRyG"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <CallVideoAction />
+      </Suspense>
     </div>
   );
-}
+};
 
-export default Hero;
+export default memo(Hero);

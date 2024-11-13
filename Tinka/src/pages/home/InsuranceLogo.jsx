@@ -1,3 +1,4 @@
+import React, { memo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +7,7 @@ import insuranceIcon from "/images/logo/insurance_logo/insuranceLogo.png";
 
 const InsuranceLogo = () => {
   const settings = {
-    arrows: false, // Changed from 'arrow' to 'arrows'
+    arrows: false,
     dots: false,
     infinite: true,
     speed: 500,
@@ -22,7 +23,7 @@ const InsuranceLogo = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          arrows: false, // Ensure arrows are false here as well
+          arrows: false,
         },
       },
       {
@@ -32,7 +33,7 @@ const InsuranceLogo = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          arrows: false, // Ensure arrows are false here as well
+          arrows: false,
         },
       },
       {
@@ -42,7 +43,7 @@ const InsuranceLogo = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          arrows: false, // Ensure arrows are false here as well
+          arrows: false,
         },
       },
     ],
@@ -50,7 +51,7 @@ const InsuranceLogo = () => {
 
   return (
     <div className="bg-gray-100 w-full mx-auto my-1 text-center">
-      <div className="container ">
+      <div className="container">
         <div className="flex flex-col items-center py-4">
           <img
             width={50}
@@ -58,6 +59,7 @@ const InsuranceLogo = () => {
             src={insuranceIcon}
             alt="insurance icon logo"
             className="mb-2"
+            loading="lazy" // Lazy load the image
           />
           <h2 className="font-medium text-lg text-blue-700">
             156+ insurance plans accepted
@@ -71,6 +73,7 @@ const InsuranceLogo = () => {
                   src={img.imgUrl}
                   alt="insurance logos"
                   className="w-40 h-40 object-contain"
+                  loading="lazy" // Lazy load the images
                 />
               </div>
             </div>
@@ -81,4 +84,4 @@ const InsuranceLogo = () => {
   );
 };
 
-export default InsuranceLogo;
+export default memo(InsuranceLogo);

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Inter", "serif"],
-        sans: ["Inter Light", "sans-serif"],
+        serif: ["serif"],
+        sans: ["sans-serif"],
       },
       backgroundImage: {
         "custom-image":

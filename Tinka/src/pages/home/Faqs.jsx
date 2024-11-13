@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 
 const faqData = [
   {
@@ -125,4 +125,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs;
+export default memo(FAQs);

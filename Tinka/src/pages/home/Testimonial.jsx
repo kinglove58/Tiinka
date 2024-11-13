@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonialData } from "./testimonialData";
 import { FaStar } from "react-icons/fa";
 
-function Testimonial() {
+const Testimonial = () => {
   const settings = {
     dots: true,
     autoplay: true,
@@ -68,6 +68,6 @@ function Testimonial() {
       </div>
     </div>
   );
-}
+};
 
-export default Testimonial;
+export default memo(Testimonial);

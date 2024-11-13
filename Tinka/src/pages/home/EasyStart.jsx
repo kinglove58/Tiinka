@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { memo } from "react";
+
 const EasyStart = () => {
   return (
     <div className="bg-[#005ab0] text-white py-16 pb-4 px-6 font-sans mb-20">
@@ -46,4 +48,4 @@ const EasyStart = () => {
   );
 };
 
-export default EasyStart;
+export default memo(EasyStart);

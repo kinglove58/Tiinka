@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, memo } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import TinkaLogo from "/images/logo/Tinka_health_logo.png";
@@ -37,8 +37,8 @@ const companyData = [
   { value: "Contact Us", link: "contact" },
 ];
 
-function Footer() {
-  const { blogs, error } = useContext(BlogContext);
+const Footer = () => {
+  const { blogs } = useContext(BlogContext);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
@@ -190,6 +190,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer;
+export default memo(Footer);

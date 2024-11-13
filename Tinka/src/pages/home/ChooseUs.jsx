@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { memo } from "react";
 import WhyChooseUs from "./WhyChooseUs";
 import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.png";
 import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.png";
@@ -31,9 +32,9 @@ const whyChooseUsData = [
   },
 ];
 
-const PickUs = () => {
+const ChooseUs = () => {
   return (
-    <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50  ">
+    <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50">
       <div className="text-center mb-16">
         <h1 className="font-bold text-3xl capitalize font-serif">
           Why Choose Us?
@@ -63,4 +64,4 @@ const PickUs = () => {
   );
 };
 
-export default PickUs;
+export default memo(ChooseUs);

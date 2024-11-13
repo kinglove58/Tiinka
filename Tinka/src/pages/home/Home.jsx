@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, memo } from "react";
 import Hero from "./Hero";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 
@@ -12,45 +12,51 @@ const MentalHealthStats = lazy(() => import("./MentalHealthStats"));
 const FAQs = lazy(() => import("./Faqs"));
 const Blogs = lazy(() => import("./Blogs"));
 
-function Home() {
+const LoadingFallback = () => (
+  <div className="flex justify-center items-center h-32">
+    <div className="loader">Loading...</div>
+  </div>
+);
+
+const Home = () => {
   return (
     <main className="md:pt-24 bg-[#f1f2f6]">
       <div>
         <Hero />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <InsuranceLogo />
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <Specialization />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <ChooseUs />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <EasyStart />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <Testimonial />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <MentalHealthStats />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <Blogs />
           </ScrollAnimationWrapper>
         </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <ScrollAnimationWrapper>
             <FAQs />
           </ScrollAnimationWrapper>
@@ -58,6 +64,6 @@ function Home() {
       </div>
     </main>
   );
-}
+};
 
-export default Home;
+export default memo(Home);

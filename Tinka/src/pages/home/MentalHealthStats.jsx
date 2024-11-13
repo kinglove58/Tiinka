@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import CountUp from "react-countup";
 import { Link } from "react-router-dom";
 
@@ -33,9 +33,11 @@ const MentalHealthStats = () => {
           <h2 className="md:text-4xl text-3xl font-bold mb-4">
             You don't have to <br /> struggle alone. <br /> Get help today
           </h2>
-          <button className="mt-4 px-6 py-3 bg-white text-[#005ab0] font-semibold rounded hover:bg-gray-300 hover:scale-95 transition duration-300">
-            <Link to="/contact"> Explore Levels of Care</Link>
-          </button>
+          <Link to="/contact">
+            <button className="mt-4 px-6 py-3 bg-white text-[#005ab0] font-semibold rounded hover:bg-gray-300 hover:scale-95 transition duration-300">
+              Explore Levels of Care
+            </button>
+          </Link>
         </div>
 
         {/* Right Side */}
@@ -59,4 +61,4 @@ const MentalHealthStats = () => {
   );
 };
 
-export default MentalHealthStats;
+export default memo(MentalHealthStats);
