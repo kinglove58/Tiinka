@@ -7,7 +7,7 @@ import ScrollToTop from "./components/ScrollToTop ";
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen w-screen bg-gray-200">
+      <div className="flex flex-col min-h-screen bg-gray-200">
         <ScrollToTop />
         <div>
           <NavItem />

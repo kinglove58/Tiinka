@@ -62,7 +62,7 @@ const Footer = () => {
               src={TinkaLogo}
               alt="Tinka Health Services Logo"
               className="mb-4 w-32"
-              loading="lazy" // Lazy load the image
+              loading="lazy"
             />
             <p>Email us:</p>
             <p>
@@ -84,7 +84,7 @@ const Footer = () => {
                 className="md:hidden mt-4 text-white hover:text-blue-600 flex items-center"
                 onClick={() => setIsEmergencyOpen(!isEmergencyOpen)}
               >
-                Emergency Links{" "}
+                Emergency Links
                 {isEmergencyOpen ? <FaAngleUp /> : <FaAngleDown />}
               </button>
               <ul
@@ -109,10 +109,10 @@ const Footer = () => {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
+              className="text-xl font-semibold mb-4 cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
-              Services{" "}
+              Services
               <span className="md:hidden">
                 {isServicesOpen ? <FaAngleUp /> : <FaAngleDown />}
               </span>
@@ -136,10 +136,10 @@ const Footer = () => {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
+              className="text-xl font-semibold mb-4 cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsCompanyOpen(!isCompanyOpen)}
             >
-              Company{" "}
+              Company
               <span className="md:hidden">
                 {isCompanyOpen ? <FaAngleUp /> : <FaAngleDown />}
               </span>
@@ -163,10 +163,10 @@ const Footer = () => {
           </div>
           <div>
             <h3
-              className="text-xl font-semibold mb-4 md:cursor-pointer flex items-center justify-between md:justify-start"
+              className="text-xl font-semibold mb-4 cursor-pointer flex items-center justify-between md:justify-start"
               onClick={() => setIsResourcesOpen(!isResourcesOpen)}
             >
-              Resources{" "}
+              Resources
               <span className="md:hidden">
                 {isResourcesOpen ? <FaAngleUp /> : <FaAngleDown />}
               </span>
