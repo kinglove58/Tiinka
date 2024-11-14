@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense, memo } from "react";
 import { Link } from "react-router-dom";
 import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.webp";
+import { PuffLoader } from "react-spinners";
 
 // Lazy load the CallVideoAction component
 const CallVideoAction = lazy(() => import("../../components/CallVideoAction"));
@@ -21,6 +22,12 @@ const Hero = () => {
     // Clear interval on component unmount
     return () => clearInterval(interval);
   }, [words.length]);
+
+  const LoadingFallback = () => (
+    <div className="flex justify-center items-center">
+      <PuffLoader color="#FF4500" size={80} />
+    </div>
+  );
 
   return (
     <div className="mb-16">
@@ -54,7 +61,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Call to Action Section */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingFallback />}>
         <CallVideoAction />
       </Suspense>
     </div>
