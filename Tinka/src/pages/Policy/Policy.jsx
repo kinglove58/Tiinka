@@ -1,17 +1,34 @@
-import React, { useEffect, useState, memo, useContext } from "react";
+import React, { useEffect, useState, memo } from "react";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
-import { BlogContext } from "../../BlogContext/BlogContext";
-import { PuffLoader } from "react-spinners";
 
 const Policy = () => {
-  const {policy, policyLoading, error} = useContext(BlogContext);
+  const [policy, setPolicy] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (policyLoading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <PuffLoader color="#FF4500" size={80} />
-      </div>
-    );
+  useEffect(() => {
+    const fetchPolicy = async () => {
+      try {
+        const response = await fetch(
+          "https://api.tinkahealthservices.com/api/page/2"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setPolicy(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchPolicy();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
   if (error) {
