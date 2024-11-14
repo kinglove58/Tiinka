@@ -1,39 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
+import {BlogContext} from "../../BlogContext/BlogContext"
 import { Link } from "react-router-dom";
+import { PuffLoader } from "react-spinners";
 
-const iconMap = {
-  FaUser: FaUser,
-  FaCalendarAlt: FaCalendarAlt,
-  IoMdOpen: IoMdOpen,
-};
 
 function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch("https://api.tinkahealthservices.com/api/blogs/4")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setBlogs(data.data); // Access the 'data' array from the API response
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+  const {blogs, loading, error} = useContext(BlogContext)
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <PuffLoader color="#FF4500" size={80} />
+      </div>
+    );
   }
 
   if (error) {
@@ -51,7 +33,7 @@ function Blogs() {
             key={blog.id}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
           >
-            <Link to={`/blogs/${blog.title}`}>
+            <Link to={`/blogs/${blog.slug}`}>
               <img
                 src={`https://api.tinkahealthservices.com${blog.image}`}
                 alt={blog.title}
@@ -60,7 +42,7 @@ function Blogs() {
             </Link>
 
             <div className="p-4">
-              <Link to={`/blogs/${blog.title}`}>
+              <Link to={`/blogs/${blog.slug}`}>
                 <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
                   {blog.title}
                 </h1>
@@ -74,10 +56,10 @@ function Blogs() {
 
               <div className="flex items-center justify-between">
                 <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
-                  <Link to={`/blogs/${blog.title}`}>
+                  <Link to={`/blogs/${blog.slug}`} className="flex items-center gap-1">
                     <span className="hover:text-orange-600">Read More</span>
+                    <IoMdOpen />
                   </Link>
-                  <IoMdOpen />
                 </button>
               </div>
             </div>

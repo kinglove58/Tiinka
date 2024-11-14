@@ -3,27 +3,19 @@ import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { BlogContext } from "../../components/BlogContext";
+import { BlogContext } from "../../BlogContext/BlogContext";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
-
-const iconMap = {
-  FaUser: FaUser,
-  FaCalendarAlt: FaCalendarAlt,
-  IoMdOpen: IoMdOpen,
-};
 
 function AllBlogs() {
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleBlogs, setVisibleBlogs] = useState(9);
 
-  const { blogs, filteredBlogs, loading, error, setFilteredBlogs } =
-    useContext(BlogContext);
+  const { blogs, filteredBlogs, setFilteredBlogs } = useContext(BlogContext);
 
   const handleSearch = (e) => {
-    const term = e.target.value.toLowerCase();
-    setSearchTerm(term);
+    setSearchTerm(e.target.value);
     const filtered = blogs.filter((blog) =>
-      blog.title.toLowerCase().includes(term)
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredBlogs(filtered);
   };
@@ -31,14 +23,6 @@ function AllBlogs() {
   const handleViewMore = () => {
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 6);
   };
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
 
   return (
     <div className="container mx-auto px-4 md:px-16 py-8 mt-24">
@@ -73,7 +57,7 @@ function AllBlogs() {
               </Link>
 
               <div className="p-4">
-                <Link to={`/blogs/${blog.title}`}>
+                <Link to={`/blogs/${blog.slug}`}>
                   <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
                     {blog.title}
                   </h1>
@@ -89,10 +73,10 @@ function AllBlogs() {
 
                 <div className="flex items-center justify-between">
                   <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
-                    <Link to={`/blogs/${blog.title}`}>
+                    <Link to={`/blogs/${blog.slug}`} className="flex items-center gap-1">
                       <span className="hover:text-orange-600">Read More</span>
+                      <IoMdOpen />
                     </Link>
-                    <IoMdOpen />
                   </button>
                 </div>
               </div>

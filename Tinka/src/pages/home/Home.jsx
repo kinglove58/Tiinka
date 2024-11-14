@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, memo } from "react";
 import Hero from "./Hero";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
+import { PuffLoader } from "react-spinners";
 
 // Lazy load the components
 const InsuranceLogo = lazy(() => import("./InsuranceLogo"));
@@ -13,9 +14,9 @@ const FAQs = lazy(() => import("./Faqs"));
 const Blogs = lazy(() => import("./Blogs"));
 
 const LoadingFallback = () => (
-  <div className="flex justify-center items-center h-32">
-    <div className="loader">Loading...</div>
-  </div>
+    <div className="flex justify-center items-center">
+      <PuffLoader color="#FF4500" size={80} />
+    </div>
 );
 
 const Home = () => {

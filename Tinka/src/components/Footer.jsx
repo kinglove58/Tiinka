@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import TinkaLogo from "/images/logo/Tinka_health_logo.png";
 import servicesDataList from "../pages/services/serviceData";
-import { BlogContext } from "./BlogContext";
+import { BlogContext } from "../BlogContext/BlogContext";
 
 const emergencyLinks = [
   {
@@ -179,7 +179,7 @@ const Footer = () => {
               {blogsToShow.map((blog, index) => (
                 <li key={index}>
                   <Link
-                    to={`/blogs/${blog.id}`}
+                    to={`/blogs/${blog.slug}`}
                     className="text-white hover:text-blue-600 block px-2 py-1 rounded"
                   >
                     {blog.title}
