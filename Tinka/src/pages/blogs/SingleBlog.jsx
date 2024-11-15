@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import { BlogContext } from "../../BlogContext/BlogContext";
 import MentalHealthStats from "../home/MentalHealthStats";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
-import {PuffLoader} from "react-spinners";
+import { PuffLoader } from "react-spinners";
 
 function SingleBlog() {
   const { blogs, loading, error } = useContext(BlogContext);
@@ -13,6 +13,18 @@ function SingleBlog() {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
 
   const blogItem = blogs.find((blog) => blog.slug === slug);
+
+  useEffect(() => {
+    if (blogItem) {
+      const titleWords = blogItem.title.toLowerCase().split(" ");
+      const related = blogs.filter((blog) => {
+        if (blog.slug === slug) return false;
+        const blogTitleWords = blog.title.toLowerCase().split(" ");
+        return titleWords.some((word) => blogTitleWords.includes(word));
+      });
+      setRelatedBlogs(related);
+    }
+  }, [blogItem, blogs, slug]);
 
   if (!blogItem) {
     return <div>No blog found</div>;
@@ -40,8 +52,8 @@ function SingleBlog() {
               Updated on: {new Date(blogItem.updated_at).toLocaleDateString()}
             </p>
             <p>
-              Time to read: {Math.ceil(blogItem.body.split(" ").length / 200)} min
-              read
+              Time to read: {Math.ceil(blogItem.body.split(" ").length / 200)}{" "}
+              min read
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-16">
@@ -49,6 +61,7 @@ function SingleBlog() {
               src={`https://api.tinkahealthservices.com${blogItem.image}`}
               alt={blogItem.title}
               className="w-full h-full object-contain"
+              loading="lazy"
             />
           </div>
           <div className="p-4">
@@ -58,10 +71,10 @@ function SingleBlog() {
             ></div>
           </div>
         </div>
-        { (relatedBlogs && relatedBlogs.length >= 1) &&
+        {relatedBlogs.length > 0 && (
           <div className="mt-8">
             <h2 className="text-3xl font-bold mb-4 text-center">
-              Related Article
+              Related Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedBlogs.map((relatedBlog) => (
@@ -69,15 +82,16 @@ function SingleBlog() {
                   key={relatedBlog.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
                 >
-                  <Link to={`/blogs/${relatedBlog.id}`}>
+                  <Link to={`/blogs/${relatedBlog.slug}`}>
                     <img
                       src={`https://api.tinkahealthservices.com${relatedBlog.image}`}
                       alt={relatedBlog.title}
                       className="w-full h-48 object-cover"
+                      loading="lazy"
                     />
                   </Link>
                   <div className="p-4">
-                    <Link to={`/blogs/${relatedBlog.id}`}>
+                    <Link to={`/blogs/${relatedBlog.slug}`}>
                       <h1 className="text-xl font-bold mb-2 hover:text-orange-600">
                         {relatedBlog.title}
                       </h1>
@@ -90,8 +104,10 @@ function SingleBlog() {
                     </div>
                     <div className="flex items-center justify-between">
                       <button className="flex items-center space-x-1 text-orange-500 hover:text-orange-600">
-                        <Link to={`/blogs/${relatedBlog.id}`}>
-                          <span className="hover:text-orange-600">Read More</span>
+                        <Link to={`/blogs/${relatedBlog.slug}`}>
+                          <span className="hover:text-orange-600">
+                            Read More
+                          </span>
                         </Link>
                         <IoMdOpen />
                       </button>
@@ -101,7 +117,7 @@ function SingleBlog() {
               ))}
             </div>
           </div>
-        }
+        )}
         <div className="w-full mt-8">
           <MentalHealthStats />
         </div>
