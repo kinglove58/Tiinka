@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo, useContext } from "react";
+import React, { memo, useContext } from "react";
 import { BlogContext } from "../../BlogContext/BlogContext";
 import { PuffLoader } from "react-spinners";
 
