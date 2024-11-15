@@ -21,7 +21,6 @@ export const BlogProvider = ({ children }) => {
       .trim();                    // Remove any trailing hyphens
   }
 
-
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
