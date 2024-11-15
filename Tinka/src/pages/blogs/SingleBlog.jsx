@@ -1,11 +1,12 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { Suspense, lazy, useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import { BlogContext } from "../../BlogContext/BlogContext";
-import MentalHealthStats from "../home/MentalHealthStats";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import { PuffLoader } from "react-spinners";
+
+const MentalHealthStats = lazy(() => import("../home/MentalHealthStats"));
 
 function SingleBlog() {
   const { blogs, loading, error } = useContext(BlogContext);
@@ -119,7 +120,9 @@ function SingleBlog() {
           </div>
         )}
         <div className="w-full mt-8">
-          <MentalHealthStats />
+          <Suspense fallback={<div>Loading...</div>}>
+            <MentalHealthStats />
+          </Suspense>
         </div>
       </div>
     </ScrollAnimationWrapper>

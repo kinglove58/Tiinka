@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, memo } from "react";
 import Hero from "./Hero";
-import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
 import { PuffLoader } from "react-spinners";
 
 // Lazy load the components
@@ -13,41 +12,33 @@ const MentalHealthStats = lazy(() => import("./MentalHealthStats"));
 const FAQs = lazy(() => import("./Faqs"));
 const Blogs = lazy(() => import("./Blogs"));
 
-const LoadingFallback = () => (
-    <div className="flex justify-center items-center">
-      <PuffLoader color="#FF4500" size={80} />
-    </div>
-);
-
 const Home = () => {
   return (
     <main className="md:pt-24 bg-[#f1f2f6]">
       <div>
         <Hero />
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <InsuranceLogo />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Specialization />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
-          <ScrollAnimationWrapper>
-            <ChooseUs />
-          </ScrollAnimationWrapper>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ChooseUs />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <EasyStart />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Testimonial />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <MentalHealthStats />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Blogs />
         </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <FAQs />
         </Suspense>
       </div>

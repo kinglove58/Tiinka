@@ -1,11 +1,12 @@
-import React, { memo } from "react";
+import React, { Suspense, lazy, memo } from "react";
 import { GoGoal } from "react-icons/go";
 import { FaEye } from "react-icons/fa";
 import { GiLovers } from "react-icons/gi";
-import Testimonial from "../home/Testimonial";
 import { Link } from "react-router-dom";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import aboutImage from "/images/img_mental_health/aboutUs/about.webp";
+
+const Testimonial = lazy(() => import("../home/Testimonial"));
 
 const supportData = [
   "Overcoming depression",
@@ -65,6 +66,8 @@ const AboutUs = () => {
             </h1>
             <div>
               <img
+                width={800}
+                height={600}
                 className="w-full rounded-xl"
                 src={aboutImage}
                 alt="about us image"
@@ -109,7 +112,9 @@ const AboutUs = () => {
           </ScrollAnimationWrapper>
         </div>
 
-        <Testimonial />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Testimonial />
+        </Suspense>
         <div className="text-center">
           <Link to="/contact">
             <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 hover:scale-95 transition duration-300">

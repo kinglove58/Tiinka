@@ -1,4 +1,12 @@
-import React, { memo } from "react";
+import React, { lazy, Suspense, memo } from "react";
+
+const YouTubeThumbnail = lazy(() => import("./YouTubeThumbnail"));
+
+const LoadingFallback = () => (
+  <div className="flex justify-center items-center">
+    <div className="loader">Loading...</div>
+  </div>
+);
 
 const CallVideoAction = () => {
   return (
@@ -15,17 +23,9 @@ const CallVideoAction = () => {
           </p>
         </div>
         <div className="md:w-1/2 w-full">
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/dXdKybDCASM?si=lk_NDkF7F4-PLRyG"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy" // Lazy load the iframe
-            ></iframe>
-          </div>
+          <Suspense fallback={<LoadingFallback />}>
+            <YouTubeThumbnail videoId="dXdKybDCASM" />
+          </Suspense>
         </div>
       </div>
     </div>

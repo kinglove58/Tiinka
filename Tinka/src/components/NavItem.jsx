@@ -1,4 +1,4 @@
-import React, { useState, useMemo, memo } from "react";
+import React, { useState, useMemo, memo, useCallback } from "react";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp, FaArrowRight } from "react-icons/fa";
@@ -11,39 +11,35 @@ const NavItem = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = useCallback(() => {
     if (window.innerWidth >= 1024) {
       setIsHovered(true);
     }
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     if (window.innerWidth >= 1024) {
       setIsHovered(false);
     }
-  };
+  }, []);
 
-  const handleServiceClick = () => {
+  const handleServiceClick = useCallback(() => {
     if (window.innerWidth < 1024) {
       setIsHovered(!isHovered);
     }
-  };
+  }, [isHovered]);
 
-  const handleMenu = () => {
+  const handleMenu = useCallback(() => {
     setShowMenu(!showMenu);
-  };
+  }, [showMenu]);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = useCallback(() => {
     if (window.innerWidth < 1024) {
       setShowMenu(false);
     }
-  };
+  }, []);
 
-  // Memoize the sliced data
-  const servicesToShow = useMemo(
-    () => service_data.slice(0, 12),
-    [service_data]
-  );
+  const servicesToShow = useMemo(() => service_data.slice(0, 12), []);
 
   return (
     <header className="h-20 fixed w-full top-0 right-0 bg-[#f1f2f6] text-gray-800 z-50 px-4 md:px-16 hover:bg-white">
@@ -51,13 +47,17 @@ const NavItem = () => {
         <Link to={"/"}>
           <img
             width={32}
-            height={32}
+            height={40}
             src={TinkaLogo}
             alt="Tinka Health Services Logo"
             className="h-10 w-auto"
           />
         </Link>
-        <div className="lg:hidden cursor-pointer" onClick={handleMenu}>
+        <div
+          className="lg:hidden cursor-pointer"
+          onClick={handleMenu}
+          aria-label="Toggle menu"
+        >
           {showMenu ? <RiCloseFill size={25} /> : <GiHamburgerMenu size={25} />}
         </div>
         <nav
@@ -72,14 +72,9 @@ const NavItem = () => {
               showMenu && "w-full flex-col overflow-auto"
             } h-full flex items-center gap-5`}
           >
-            <li
-              className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 text-nowrap"
-              onClick={handleLinkClick}
-            >
-              <Link to={"/about"} className="h-10 lg:h-20 flex items-center">
-                About Us
-              </Link>
-            </li>
+            <NavItemLink to="/about" onClick={handleLinkClick}>
+              About Us
+            </NavItemLink>
             <li
               className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 cursor-pointer"
               onMouseLeave={handleMouseLeave}
@@ -125,35 +120,31 @@ const NavItem = () => {
                 </div>
               )}
             </li>
-            <li
-              className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300"
-              onClick={handleLinkClick}
-            >
-              <Link to={"/blogs"} className="h-10 lg:h-20 flex items-center">
-                Blogs
-              </Link>
-            </li>
-            <li
-              className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300"
-              onClick={handleLinkClick}
-            >
-              <Link to={"/policy"} className="h-10 lg:h-20 flex items-center">
-                Policy
-              </Link>
-            </li>
-            <li
-              className="w-full h-20 font-semibold text-gray-800 hover:text-blue-800 transition duration-300 text-nowrap"
-              onClick={handleLinkClick}
-            >
-              <Link to={"/contact"} className="h-10 lg:h-20 flex items-center">
-                Contact Us
-              </Link>
-            </li>
+            <NavItemLink to="/blogs" onClick={handleLinkClick}>
+              Blogs
+            </NavItemLink>
+            <NavItemLink to="/policy" onClick={handleLinkClick}>
+              Policy
+            </NavItemLink>
+            <NavItemLink to="/contact" onClick={handleLinkClick}>
+              Contact Us
+            </NavItemLink>
           </ul>
         </nav>
       </div>
     </header>
   );
 };
+
+const NavItemLink = ({ to, onClick, children }) => (
+  <li
+    className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 text-nowrap"
+    onClick={onClick}
+  >
+    <Link to={to} className="h-10 lg:h-20 flex items-center">
+      {children}
+    </Link>
+  </li>
+);
 
 export default memo(NavItem);

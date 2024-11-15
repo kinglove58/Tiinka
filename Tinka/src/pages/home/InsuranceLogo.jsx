@@ -62,7 +62,7 @@ const InsuranceLogo = () => {
             className="mb-2"
             loading="lazy" // Lazy load the image
           />
-          <h2 className="font-medium text-lg text-blue-700">
+          <h2 className="font-medium text-lg text-blue-700  min-h-[30px] ">
             156+ insurance plans accepted
           </h2>
         </div>
@@ -72,6 +72,8 @@ const InsuranceLogo = () => {
               <div className="flex justify-center items-center">
                 <img
                   src={img.imgUrl}
+                  width="300"
+                  height="200"
                   alt="insurance logos"
                   className="w-40 h-40 object-contain"
                   loading="lazy" // Lazy load the images

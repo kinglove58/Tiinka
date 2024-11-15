@@ -54,6 +54,8 @@ function AllBlogs() {
             >
               <Link to={`/blogs/${blog.slug}`}>
                 <img
+                  width="100%"
+                  height={192}
                   src={`https://api.tinkahealthservices.com${blog.image}`}
                   alt={blog.title}
                   className="w-full h-48 object-cover"

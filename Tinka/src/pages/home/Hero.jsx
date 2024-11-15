@@ -54,9 +54,9 @@ const Hero = () => {
           <img
             src={TeletherapyImg}
             alt="A person listening to counselling"
+            sizes="(max-width: 600px) 400px, 800px"
             width={400} // Set explicit width
             height={300} // Set explicit height
-            loading="lazy" // Lazy load the image
           />
         </div>
       </div>
