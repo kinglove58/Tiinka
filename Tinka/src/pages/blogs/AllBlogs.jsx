@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { FaCalendarAlt, FaSearch } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { BlogContext } from "../../BlogContext/BlogContext";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 
@@ -25,6 +26,41 @@ function AllBlogs() {
 
   return (
     <div className="container mx-auto px-4 md:px-16 py-8 mt-24">
+      <Helmet>
+        <title>All Blogs - Tinka Health Services</title>
+        <meta
+          name="description"
+          content="Explore our collection of mental health blogs created just for you. Stay informed and inspired with Tinka Health Services."
+        />
+        <meta
+          name="keywords"
+          content="blogs, mental health, Tinka Health Services, health blogs"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com/blogs" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "Tinka Health Services Blogs",
+              "url": "https://tinkahealthservices.com/blogs",
+              "description": "Explore our collection of mental health blogs created just for you. Stay informed and inspired with Tinka Health Services.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Tinka Health Services",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://tinkahealthservices.com/logo.png"
+                }
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://tinkahealthservices.com/blogs"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
       <ScrollAnimationWrapper>
         <div className="flex justify-between items-center mb-8">
           <h1 className="md:text-3xl text-sm font-semibold text-[#005ab0]">

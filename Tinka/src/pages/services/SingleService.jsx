@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import service_data from "../services/serviceData";
 import { useEffect, useRef } from "react";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
+import { Helmet } from "react-helmet";
 
 function SingleService() {
   const { id } = useParams();
@@ -16,8 +17,41 @@ function SingleService() {
     }
   }, [secondDivRef]);
 
+  if (!service) {
+    return <div>Service not found</div>;
+  }
+
   return (
     <div className="pt-20">
+      <Helmet>
+        <title>{service.title1} - Tinka Health Services</title>
+        <meta name="description" content={service.title1Des} />
+        {service.keywords && (
+          <meta name="keywords" content={service.keywords.join(", ")} />
+        )}
+        <link
+          rel="canonical"
+          href={`https://tinkahealthservices.com/services/${id}`}
+        />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "${service.title1}",
+              "description": "${service.title1Des}",
+              "provider": {
+                "@type": "Organization",
+                "name": "Tinka Health Services",
+                "url": "https://tinkahealthservices.com",
+                "logo": "https://tinkahealthservices.com/logo.png"
+              },
+              "serviceType": "${service.serviceType}",
+              "url": "https://tinkahealthservices.com/services/${id}"
+            }
+          `}
+        </script>
+      </Helmet>
       <ScrollAnimationWrapper>
         <div className="min-h-[50vh] bg-blue-800 px-4 py-6 md:px-16 flex flex-col justify-center space-y-7">
           <h1 className="text-6xl font-bold text-white">{service.id}</h1>

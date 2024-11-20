@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, memo } from "react";
+import { Helmet } from "react-helmet";
 import Hero from "./Hero";
-import { PuffLoader } from "react-spinners";
 
 // Lazy load the components
 const InsuranceLogo = lazy(() => import("./InsuranceLogo"));
@@ -15,6 +15,34 @@ const Blogs = lazy(() => import("./Blogs"));
 const Home = () => {
   return (
     <main className="md:pt-24 bg-[#f1f2f6]">
+      <Helmet>
+        <title>Home - Tinka Health Services</title>
+        <meta
+          name="description"
+          content="Welcome to Tinka Health Services. We provide the best health services."
+        />
+        <meta
+          name="keywords"
+          content="health, services, Tinka, insurance, mental health"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Tinka Health Services",
+              "url": "https://tinkahealthservices.com",
+              "logo": "https://tinkahealthservices.com/logo.png",
+              "sameAs": [
+                "https://www.facebook.com/tinkahealthservices",
+                "https://www.twitter.com/tinkahealthservices",
+                "https://www.instagram.com/tinkahealthservices"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
       <div>
         <Hero />
         <Suspense fallback={<div>Loading...</div>}>

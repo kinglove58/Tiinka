@@ -1,4 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet";
 import DatePicker from "react-datepicker";
 import { FaSpinner } from "react-icons/fa";
 import "react-datepicker/dist/react-datepicker.css";
@@ -146,9 +147,42 @@ function ContactUs() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <Helmet>
+        <title>Contact Us - Tinka Health Services</title>
+        <meta
+          name="description"
+          content="Contact Tinka Health Services to book an appointment or ask any questions you may have."
+        />
+        <meta
+          name="keywords"
+          content="contact, appointment, Tinka Health Services, health services"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com/contact" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Tinka Health Services",
+              "url": "https://tinkahealthservices.com",
+              "logo": "https://tinkahealthservices.com/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-800-555-5555",
+                "contactType": "Customer Service"
+              },
+              "sameAs": [
+                "https://www.facebook.com/tinkahealthservices",
+                "https://www.twitter.com/tinkahealthservices",
+                "https://www.instagram.com/tinkahealthservices"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
       <ScrollAnimationWrapper>
         <div className="bg-custom-image bg-cover bg-center h-64 flex items-center justify-center flex-col shadow-md">
-          <h1 className="text-white text-3xl md:text-4xl font-bold font-serif">
+          <h1 className="text-white text-2xl md:text-4xl font-bold font-serif">
             You deserve to be happy
           </h1>
           <p className="font-sans text-white text-xl md:text-2xl font-semibold">

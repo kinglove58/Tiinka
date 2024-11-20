@@ -5,6 +5,7 @@ import { IoMdOpen } from "react-icons/io";
 import { BlogContext } from "../../BlogContext/BlogContext";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import { PuffLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
 
 const MentalHealthStats = lazy(() => import("../home/MentalHealthStats"));
 
@@ -45,6 +46,45 @@ function SingleBlog() {
 
   return (
     <ScrollAnimationWrapper>
+      <Helmet>
+        <title>{blogItem.title} - Tinka Health Services</title>
+        <meta name="description" content={blogItem.description} />
+        {blogItem.keywords && (
+          <meta name="keywords" content={blogItem.keywords.join(", ")} />
+        )}
+        <link
+          rel="canonical"
+          href={`https://tinkahealthservices.com/blogs/${slug}`}
+        />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "${blogItem.title}",
+              "image": "https://api.tinkahealthservices.com${blogItem.image}",
+              "author": {
+                "@type": "Person",
+                "name": "${blogItem.author}"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Tinka Health Services",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://tinkahealthservices.com/logo.png"
+                }
+              },
+              "datePublished": "${new Date(blogItem.created_at).toISOString()}",
+              "dateModified": "${new Date(blogItem.updated_at).toISOString()}",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://tinkahealthservices.com/blogs/${slug}"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
       <div className="mx-auto px-4 md:px-16 py-8 pt-24 bg-white">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">{blogItem.title}</h1>

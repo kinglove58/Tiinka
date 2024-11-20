@@ -5,6 +5,7 @@ import { GiLovers } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import aboutImage from "/images/img_mental_health/aboutUs/about.webp";
+import { Helmet } from "react-helmet";
 
 const Testimonial = lazy(() => import("../home/Testimonial"));
 
@@ -58,6 +59,35 @@ const AboutUsItem = memo(({ icon: Icon, title, description }) => (
 const AboutUs = () => {
   return (
     <main className="mx-auto py-16 bg-white">
+      <Helmet>
+        <title>About Us - Tinka Health Services</title>
+        <meta
+          name="description"
+          content="Learn more about Tinka Health Services, our mission, vision, and values. We are dedicated to providing quality mental health care."
+        />
+        <meta
+          name="keywords"
+          content="about us, Tinka Health Services, mental health, mission, vision, values"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com/about" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Tinka Health Services",
+              "url": "https://tinkahealthservices.com",
+              "logo": "https://tinkahealthservices.com/logo.png",
+              "description": "Learn more about Tinka Health Services, our mission, vision, and values. We are dedicated to providing quality mental health care.",
+              "sameAs": [
+                "https://www.facebook.com/tinkahealthservices",
+                "https://www.twitter.com/tinkahealthservices",
+                "https://www.instagram.com/tinkahealthservices"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
       <div>
         <ScrollAnimationWrapper>
           <div className="py-16 bg-gradient-to-b from-white to-blue-50">

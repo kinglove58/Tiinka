@@ -1,9 +1,9 @@
-import { StrictMode, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { BlogProvider } from "./BlogContext/BlogContext.jsx"
+import { BlogProvider } from "./BlogContext/BlogContext.jsx";
 import Home from "../src/pages/home/Home.jsx";
 import AboutUs from "./pages/aboutus/AboutUs.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
