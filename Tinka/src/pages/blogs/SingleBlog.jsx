@@ -99,6 +99,8 @@ function SingleBlog() {
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-16">
             <img
+              width="100%"
+              height={192}
               src={`https://api.tinkahealthservices.com${blogItem.image}`}
               alt={blogItem.title}
               className="w-full h-full object-contain"
@@ -125,6 +127,8 @@ function SingleBlog() {
                 >
                   <Link to={`/blogs/${relatedBlog.slug}`}>
                     <img
+                      width="100%"
+                      height={192}
                       src={`https://api.tinkahealthservices.com${relatedBlog.image}`}
                       alt={relatedBlog.title}
                       className="w-full h-48 object-cover"

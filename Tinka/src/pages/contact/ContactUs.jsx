@@ -73,7 +73,7 @@ function ContactUs() {
   };
 
   const validateNumber = (number) => {
-    const re = /^[0-9\b]+$/;
+    const re = /^[0-9\b+]+$/;
     return re.test(String(number));
   };
 
