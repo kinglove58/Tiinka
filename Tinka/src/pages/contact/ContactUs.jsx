@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import { FaSpinner } from "react-icons/fa";
 import "react-datepicker/dist/react-datepicker.css";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 // Lazy load the Testimonial component
 const Testimonial = lazy(() => import("../home/Testimonial"));
@@ -44,8 +46,7 @@ const FormField = ({
 function ContactUs() {
   const [formData, setFormData] = useState({
     fullName: "",
-    countryCode: "",
-    number: "",
+    phone: "",
     email: "",
     therapyReason: "",
     challengeDuration: "",
@@ -63,6 +64,10 @@ function ContactUs() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
+
   const handleDateChange = (date, name) => {
     setFormData({ ...formData, [name]: date });
   };
@@ -70,11 +75,6 @@ function ContactUs() {
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
-  };
-
-  const validateNumber = (number) => {
-    const re = /^[0-9\b+]+$/;
-    return re.test(String(number));
   };
 
   const handleSubmit = (e) => {
@@ -85,10 +85,7 @@ function ContactUs() {
       return;
     }
 
-    if (
-      !validateNumber(formData.countryCode) ||
-      !validateNumber(formData.number)
-    ) {
+    if (!formData.phone) {
       setMessage("Please enter a valid phone number.");
       return;
     }
@@ -98,7 +95,7 @@ function ContactUs() {
     // Map formData to the expected parameter names
     const payload = {
       name: formData.fullName,
-      phone: `${formData.countryCode}${formData.number}`,
+      phone: formData.phone,
       email: formData.email,
       therapy: formData.therapyReason,
       challenges: formData.challengeDuration,
@@ -108,7 +105,7 @@ function ContactUs() {
       }, Preferred Dates: ${formData.date1.toLocaleDateString()} and ${formData.date2.toLocaleDateString()}`,
     };
 
-    fetch("http://localhost:8000/api/send_mail", {
+    fetch("https://api.tinkahealthservices.com/api/send_mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -126,8 +123,7 @@ function ContactUs() {
         setLoading(false);
         setFormData({
           fullName: "",
-          countryCode: "",
-          number: "",
+          phone: "",
           email: "",
           therapyReason: "",
           challengeDuration: "",
@@ -202,22 +198,13 @@ function ContactUs() {
           />
           <div className="mb-4">
             <label className="block text-gray-700">Your Phone Number</label>
-            <div className="flex space-x-4">
-              <FormField
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-                placeholder="+1"
-                required
-              />
-              <FormField
-                name="number"
-                value={formData.number}
-                onChange={handleChange}
-                placeholder="1234567890"
-                required
-              />
-            </div>
+            <PhoneInput
+              placeholder="Enter phone number"
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              defaultCountry="US"
+              required
+            />
           </div>
           <FormField
             label="Your Email"
