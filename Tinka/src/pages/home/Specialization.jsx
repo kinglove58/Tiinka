@@ -13,10 +13,12 @@ const Specialization = () => {
         Tinka Health Services Specialize in:
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
-        {servicesToShow.map((service) => (
+        {servicesToShow.map((service, index) => (
           <div
             key={service.id}
-            className="bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex justify-center items-center max-w-xs"
+            className={`bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex justify-center items-center max-w-xs ${
+              index >= 9 ? "hidden lg:flex" : "flex"
+            }`}
           >
             <Link
               to={`/services/${service.id}`}
