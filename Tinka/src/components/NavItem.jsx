@@ -128,7 +128,16 @@ const NavItem = () => {
             </NavItemLink>
             <NavItemLink to="/contact" onClick={handleLinkClick}>
               Contact Us
-            </NavItemLink>
+            </NavItemLink>{" "}
+            <a
+              href="https://portal.kareo.com/pp-webapp/app/new/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+              className="whitespace-nowrap font-bold hover:text-blue-800"
+            >
+              Patient Portal
+            </a>
           </ul>
         </nav>
       </div>
