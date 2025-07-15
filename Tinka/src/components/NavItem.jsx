@@ -127,7 +127,7 @@ const NavItem = () => {
               Policy
             </NavItemLink>
             <NavItemLink to="/contact" onClick={handleLinkClick}>
-              Contact Us
+              Book An Appointment
             </NavItemLink>{" "}
             <a
               href="https://portal.kareo.com/pp-webapp/app/new/login"

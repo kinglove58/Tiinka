@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--	created with www.mysitemapgenerator.com	-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://tinkahealthservices.com/</loc>
-	<lastmod>2024-11-20T17:57:20+01:00</lastmod>
-	<priority>0.8</priority>
+	<lastmod>2024-11-20</lastmod>
 </url>
 <url>
 	<loc>https://tinkahealthservices.com/about</loc>
-	<lastmod>2024-11-20T17:57:20+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2024-11-20</lastmod>
 </url>
 <url>
 	<loc>https://tinkahealthservices.com/contact</loc>
-	<lastmod>2024-11-20T17:57:20+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2024-11-20</lastmod>
 </url>
 <url>
 	<loc>https://tinkahealthservices.com/blogs</loc>
-	<lastmod>2024-11-20T17:57:20+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2024-11-20</lastmod>
 </url>
 <url>
 	<loc>https://tinkahealthservices.com/policy</loc>
-	<lastmod>2024-11-20T17:57:20+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2024-11-20</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/depression-in-women-explained-why-it-happens-and-how-to-overcome-it</loc>
+	<lastmod>2025-03-19</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/differences-between-bipolar-1-vs-bipolar-2-disorder</loc>
+	<lastmod>2025-03-01</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/15-things-to-do-if-youre-feeling-lonely</loc>
+	<lastmod>2025-02-20</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/why-am-i-feeling-sad-for-no-reason</loc>
+	<lastmod>2025-01-21</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/reasons-why-you-cant-sleep-at-night-and-possible-solutions</loc>
+	<lastmod>2025-12-11</lastmod>
+</url>
+<url>
+	<loc>https://tinkahealthservices.com/blogs/reducing-anxiety-through-breath-focus-techniques</loc>
+	<lastmod>2025-01-21</lastmod>
 </url>
 </urlset>
+
+

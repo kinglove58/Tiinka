@@ -7,12 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "axios": "^1.7.7",
     "framer-motion": "^11.11.11",
     "react": "^18.3.1",
+    "react-cookie-consent": "^9.0.0",
     "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",

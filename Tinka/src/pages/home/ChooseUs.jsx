@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { memo } from "react";
+import { useState, memo } from "react";
 import WhyChooseUs from "./WhyChooseUs";
 import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.webp";
 import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.webp";
 import teen from "/images/img_mental_health/why_choose_us/teen/teen.webp";
 import { FaArrowRight } from "react-icons/fa";
 import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
+import BookingModal from "../../components/BookingModal"; // ✅ Import the modal
 
 const whyChooseUsData = [
   {
@@ -33,11 +33,14 @@ const whyChooseUsData = [
 ];
 
 const ChooseUs = () => {
+  const [showModal, setShowModal] = useState(false); // ✅ Modal state
+
   return (
     <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50">
       <div className="text-center mb-16">
         <h1 className="font-bold text-3xl capitalize">Why Choose Us?</h1>
       </div>
+
       {whyChooseUsData.map((item, index) => (
         <ScrollAnimationWrapper key={index}>
           <WhyChooseUs
@@ -45,19 +48,24 @@ const ChooseUs = () => {
             imgAlt={item.imgAlt}
             title={item.title}
             subTitle={item.subTitle}
-            showArrow={item.showArrow !== false} // Default to true if not specified
-            reverse={index % 2 !== 0} // Reverse layout for odd-indexed items
+            showArrow={item.showArrow !== false}
+            reverse={index % 2 !== 0}
           />
         </ScrollAnimationWrapper>
       ))}
+
       <div className="flex justify-around items-center mt-8 mb-10">
-        <Link to="/services">
-          <button className="flex hover:scale-95 transition duration-300 mt-8 md:mt-12 mb-8 md:mb-12 justify-around items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800">
-            <FaArrowRight className="text-white-600 text-xl mr-4" />
-            <span>Let's Do This</span>
-          </button>
-        </Link>
+        <button
+          className="flex hover:scale-95 transition duration-300 mt-8 md:mt-12 mb-8 md:mb-12 justify-around items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800"
+          onClick={() => setShowModal(true)} // ✅ Open modal
+        >
+          <FaArrowRight className="text-white-600 text-xl mr-4" />
+          <span>Book an Appointment</span>
+        </button>
       </div>
+
+      {/* ✅ Reusable Booking Modal */}
+      <BookingModal show={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
 };

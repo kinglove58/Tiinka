@@ -1,7 +1,10 @@
 import React, { useState, useContext, memo, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { TiSocialYoutubeCircular } from "react-icons/ti";
+import { FaXTwitter } from "react-icons/fa6";
 import TinkaLogo from "/images/logo/Tinka_health_logo.png";
+import { FaInstagram } from "react-icons/fa6";
 import servicesDataList from "../pages/services/serviceData";
 import { BlogContext } from "../BlogContext/BlogContext";
 
@@ -64,15 +67,18 @@ const Footer = () => {
               className="mb-4 w-32"
               loading="lazy"
             />
-            <p>Email us:</p>
-            <p>
-              <a
-                href="mailto:info@tinkahealthservices.com"
-                className="text-white hover:text-blue-600"
-              >
-                info@tinkahealthservices.com
+            <p>connect with us</p>
+            <div className="flex items-center justify-start gap-3">
+              <a href="https://www.youtube.com/@TinkaHealthServices">
+                <TiSocialYoutubeCircular className="text-red-400 w-6 h-6" />
               </a>
-            </p>
+              <a href="https://x.com/Tinkahealthserv">
+                <FaXTwitter className="text-white w-6 h-6" />
+              </a>
+              <a href="https://www.instagram.com/tinkahealthservices/">
+                <FaInstagram className="text-red-400 w-6 h-6" />
+              </a>
+            </div>
             <div className="mt-4">
               <div className="flex items-center text-center bg-[#4b4e57] border-2 rounded-lg">
                 <p>

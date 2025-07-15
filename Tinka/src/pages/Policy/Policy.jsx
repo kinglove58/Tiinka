@@ -67,7 +67,7 @@ const Policy = () => {
             We reserve the right to modify this Notice of Privacy Practices at
             any time. If the terms of the Notice are changed, the new terms will
             apply to all your health information, whether created or received by
-            Mentia Health and Wellness LLC before or after the date on which the
+           Tinka Health Services before or after the date on which the
             Notice is changed. Any material changes will be promptly posted in
             our office and on our website, if applicable.
           </p>

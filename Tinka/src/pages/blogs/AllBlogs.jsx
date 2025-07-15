@@ -34,7 +34,7 @@ function AllBlogs() {
         />
         <meta
           name="keywords"
-          content="blogs, mental health, Tinka Health Services, health blogs"
+          content="blogs, mental health, Tinka Health Services, health blogs, ADHD blogs, psychology"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/blogs" />
         <script type="application/ld+json">
@@ -88,6 +88,21 @@ function AllBlogs() {
               key={blog.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
             >
+              <Helmet>
+                <title>{blog.title} - Tinka Health Services</title>
+                <meta
+                  name="description"
+                  content={blog.description || blog.title}
+                />
+                <meta
+                  name="keywords"
+                  content={`mental health, blogs, ${blog.title}`}
+                />
+                <link
+                  rel="canonical"
+                  href={`https://tinkahealthservices.com/blogs/${blog.slug}`}
+                />
+              </Helmet>
               <Link to={`/blogs/${blog.slug}`}>
                 <img
                   width="100%"

@@ -3,9 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        serif: ["serif"],
-        sans: ["sans-serif"],
+      typography: {
+        DEFAULT: {
+          css: {
+            ".blog-item ul a": {
+              color: "#1a202c", // Default link color
+              textDecoration: "none",
+              transition: "color 0.3s ease",
+            },
+            ".blog-item ul a:hover": {
+              color: "#1616a1", // Hover color
+              textDecoration: "none",
+            },
+          },
+        },
       },
       backgroundImage: {
         "custom-image":
@@ -13,5 +24,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import { memo } from "react";
+import { useState, memo } from "react";
+import BookingModal from "../../components/BookingModal"; // ✅ Import modal
 
 const EasyStart = () => {
+  const [showModal, setShowModal] = useState(false); // ✅ Modal state
+
   return (
     <div className="bg-[#005ab0] text-white py-16 pb-4 px-6 font-sans mb-20">
       <div className="max-w-4xl mx-auto text-center">
@@ -38,11 +40,16 @@ const EasyStart = () => {
           </div>
         </div>
 
-        <Link to="/contact">
-          <button className="mt-12 mb-0 px-6 py-3 bg-white text-blue-600 hover:scale-95 font-semibold rounded hover:bg-gray-200 transition duration-300">
-            Let's Do This
-          </button>
-        </Link>
+        {/* ✅ Button to open modal */}
+        <button
+          onClick={() => setShowModal(true)}
+          className="mt-12 mb-0 px-6 py-3 bg-white text-blue-600 hover:scale-95 font-semibold rounded hover:bg-gray-200 transition duration-300"
+        >
+          Let's Do This
+        </button>
+
+        {/* ✅ Modal component */}
+        <BookingModal show={showModal} onClose={() => setShowModal(false)} />
       </div>
     </div>
   );

@@ -109,11 +109,12 @@ function SingleBlog() {
           </div>
           <div className="p-4">
             <div
-              className="text-gray-800 font-normal text-xl"
+              className="prose lg:prose-xl md:prose-lg sm:prose-sm prose-gray blog-item"
               dangerouslySetInnerHTML={{ __html: blogItem.body }}
             ></div>
           </div>
         </div>
+
         {relatedBlogs.length > 0 && (
           <div className="mt-8">
             <h2 className="text-3xl font-bold mb-4 text-center">
