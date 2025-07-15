@@ -109,6 +109,7 @@ const NavItem = () => {
                       alt="Teletherapy"
                       className="h-auto"
                     />
+
                     <Link
                       to="/contact"
                       className="absolute top-[50%] left-[15%] hover:bg-white border-2 text-white hover:text-black p-2 md:p-4 border-solid rounded-full border-white"
@@ -127,7 +128,7 @@ const NavItem = () => {
               Policy
             </NavItemLink>
             <NavItemLink to="/contact" onClick={handleLinkClick}>
-              Book An Appointment
+              Contact Us
             </NavItemLink>{" "}
             <a
               href="https://portal.kareo.com/pp-webapp/app/new/login"

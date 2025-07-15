@@ -1,10 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import service_data from "../services/serviceData";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import { Helmet } from "react-helmet";
+import BookingModal from "../../components/BookingModal";
 
 function SingleService() {
+   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
   const service = service_data.find((data) => data.id === id);
 
@@ -66,9 +68,17 @@ function SingleService() {
               <p className="text-gray-700 font-semibold text-2xl mb-10">
                 {service.title1Des}
               </p>
-              <button className="px-6 bg-blue-800 text-white h-[50px] rounded-md hover:bg-blue-700 transition duration-500">
-                {service.btnText}
-              </button>
+               {/* ✅ Button to open modal */}
+                        <button
+                          onClick={() => setShowModal(true)}
+                          className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+                        >
+                          {service.btnText}
+                        </button>
+              
+                        {/* ✅ Modal component */}
+                        <BookingModal show={showModal} onClose={() => setShowModal(false)} />
+              
             </div>
             <div className="mt-16">
               <h3 className="font-bold text-2xl text-blue-800 mb-8">
