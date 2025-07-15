@@ -77,7 +77,7 @@ function App() {
         }}
       >
         This website uses cookies to enhance your experience. You can accept or
-        reject tracking preferences.
+        reject.
       </CookieConsent>
     </>
   );

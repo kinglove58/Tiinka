@@ -135,7 +135,7 @@ const NavItem = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
-              className="whitespace-nowrap font-bold hover:text-blue-800"
+              className="whitespace-nowrap font-semibold hover:text-blue-800"
             >
               Patient Portal
             </a>

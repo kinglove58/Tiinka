@@ -2,6 +2,7 @@ import React, { Suspense, lazy, memo } from "react";
 import { Helmet } from "react-helmet";
 import Hero from "./Hero";
 import Locations from "./Locations"; // Import the new Locations component
+import MentalDetails from "../../components/MentalDetails";
 
 // Lazy load the components
 const InsuranceLogo = lazy(() => import("./InsuranceLogo"));
@@ -47,6 +48,9 @@ const Home = () => {
       <div>
         <Hero />
         <Suspense fallback={<div>Loading...</div>}>
+          <MentalDetails />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
           <Locations />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
@@ -66,9 +70,6 @@ const Home = () => {
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <MentalHealthStats />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Blogs />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <FAQs />

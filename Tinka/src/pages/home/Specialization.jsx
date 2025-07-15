@@ -12,7 +12,30 @@ const Specialization = () => {
       <h1 className="text-4xl text-[#005ab0] font-bold mb-6 text-center">
         Tinka Health Services Specialize in:
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
+      <div className="sm:hidden flex overflow-x-auto gap-x-3 mx-2 pb-4 scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100">
+        {/* Mobile horizontal scroll, two by two */}
+        {servicesToShow.map((service, index) => (
+          <div
+            key={service.id}
+            className={`bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex flex-col justify-center items-center min-w-[48%] max-w-xs mx-1 ${
+              index >= 9 ? "hidden" : "flex"
+            }`}
+            style={{ flex: "0 0 48%" }}
+          >
+            <Link
+              to={`/services/${service.id}`}
+              className="flex items-center justify-center"
+            >
+              <span className="text-[#005ab0] hover:text-[#314499] font-medium text-center">
+                {service.name}
+              </span>
+              <IoChevronForwardOutline className="text-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2" />
+            </Link>
+          </div>
+        ))}
+      </div>
+      <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
+        {/* Desktop and tablet grid */}
         {servicesToShow.map((service, index) => (
           <div
             key={service.id}

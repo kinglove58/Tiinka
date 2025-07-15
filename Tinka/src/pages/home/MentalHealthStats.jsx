@@ -26,7 +26,7 @@ const statsData = [
 const MentalHealthStats = () => {
   return (
     <div className="bg-[#005ab0] text-white px-4 md:px-12 lg:px-24 py-8">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center">
         {/* Left Side */}
         <div className="text-center md:text-left text-white">
           <h2 className="md:text-4xl text-3xl font-bold mb-4">
