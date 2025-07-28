@@ -10,6 +10,7 @@ import SingleBlog from "./pages/blogs/SingleBlog.jsx";
 import AllBlogs from "./pages/blogs/AllBlogs.jsx";
 import SingleService from "./pages/services/SingleService.jsx";
 import ContactUs from "./pages/contact/ContactUs.jsx";
+import TinkaBooking from "./pages/booking/TinkaBookingEmbed.jsx";
 
 // Lazy load the components
 
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/tinkahealthservicesbooking",
+        element: <TinkaBooking />,
+      },
+      {
+        path: "/booking",
+        element: <TinkaBooking />,
       },
       {
         path: "/services/:id",

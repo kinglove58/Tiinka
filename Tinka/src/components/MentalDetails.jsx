@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { mentalDetailContent } from "../constant/mentaldetailcontent";
 import BookingModal from "./BookingModal";
+import BookingLink from "./BookingLink";
 
 const MentalDetails = () => {
   const [showModal, setShowModal] = useState(false);
@@ -52,7 +53,7 @@ const MentalDetails = () => {
                 {section.actions && (
                   <div className="space-x-4 mt-4">
                     {section.actions.map((action, i) => (
-                      <button
+                      <BookingLink
                         key={i}
                         className={
                           action.type === "primary"
@@ -61,7 +62,7 @@ const MentalDetails = () => {
                         }
                       >
                         {action.label}
-                      </button>
+                      </BookingLink>
                     ))}
                   </div>
                 )}
@@ -101,7 +102,7 @@ const MentalDetails = () => {
                 {section.actions && (
                   <div className="space-x-4 mt-4">
                     {section.actions.map((action, i) => (
-                      <button
+                      <BookingLink
                         type="button"
                         aria-controls="booking-modal"
                         aria-expanded={showModal}
@@ -110,7 +111,7 @@ const MentalDetails = () => {
                         className="bg-blue-600 text-white px-6 py-2 rounded-xl shadow"
                       >
                         {action.label}
-                      </button>
+                      </BookingLink>
                     ))}
                   </div>
                 )}
@@ -128,11 +129,6 @@ const MentalDetails = () => {
           )}
         </section>
       ))}
-      <BookingModal
-        show={showModal}
-        onClose={() => setShowModal(false)}
-        id="booking-modal"
-      />
     </div>
   );
 };

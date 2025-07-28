@@ -1,7 +1,7 @@
 import { useState, useEffect, lazy, Suspense, memo } from "react";
 import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.webp";
 import { PuffLoader } from "react-spinners";
-import BookingModal from "../../components/BookingModal"; // ✅ Import here
+import BookingLink from "../../components/BookingLink";
 
 const CallVideoAction = lazy(() => import("../../components/CallVideoAction"));
 
@@ -44,12 +44,7 @@ const Hero = () => {
           </p>
 
           {/* Book Button */}
-          <button
-            className="bg-blue-600 text-white text-lg px-6 py-3 rounded-md hover:bg-blue-700"
-            onClick={() => setShowIframe(true)}
-          >
-            Book an Appointment
-          </button>
+          <BookingLink> Book an Appointment</BookingLink>
         </div>
 
         {/* Right Side */}
@@ -65,7 +60,8 @@ const Hero = () => {
       </div>
 
       {/* Use the extracted component */}
-      <BookingModal show={showIframe} onClose={() => setShowIframe(false)} />
+
+      {/* <BookingModal show={showIframe} onClose={() => setShowIframe(false)} /> */}
 
       {/* Call to Action */}
       <Suspense fallback={<LoadingFallback />}>
