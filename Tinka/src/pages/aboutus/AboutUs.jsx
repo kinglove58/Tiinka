@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo, useState } from "react";
+import { Suspense, lazy, memo, useState } from "react";
 import { GoGoal } from "react-icons/go";
 import { FaEye } from "react-icons/fa";
 import { GiLovers } from "react-icons/gi";

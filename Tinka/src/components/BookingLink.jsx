@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const BookingLink = ({ className = "", children = "Book an Appointment" }) => {

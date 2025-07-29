@@ -70,10 +70,9 @@ function App() {
         declineButtonClasses="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded-md transition"
         onAccept={() => {
           loadTrackingScripts();
-          console.log("✅ Cookies accepted.");
         }}
         onDecline={() => {
-          console.log("❌ Cookies declined.");
+          // Cookies declined
         }}
       >
         This website uses cookies to enhance your experience. You can accept or

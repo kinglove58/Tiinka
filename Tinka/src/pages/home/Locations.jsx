@@ -1,4 +1,3 @@
-import React from "react";
 import { FaPhoneAlt } from "react-icons/fa"; // Import the phone icon
 
 const Locations = () => {
