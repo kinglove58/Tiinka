@@ -10,6 +10,10 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.tinkahealthservices\.com [NC]
 RewriteRule ^(.*)$ https://tinkahealthservices.com/$1 [L,R=301]
 
+# Redirect legacy booking route to canonical booking URL
+RewriteCond %{REQUEST_URI} ^/tinkahealthservicesbooking/?$ [NC]
+RewriteRule ^(.*)$ https://tinkahealthservices.com/booking [L,R=301]
+
 # Redirect all requests to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

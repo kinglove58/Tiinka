@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { insuranceLogoData } from "./insuranceLogoData";
@@ -63,8 +64,14 @@ const InsuranceLogo = () => {
             loading="lazy" // Lazy load the image
           />
           <h2 className="font-medium text-lg text-blue-700  min-h-[30px] ">
-            156+ insurance plans accepted
+            Insurance accepted including Medicaid and Medicare
           </h2>
+          <Link
+            to="/insurance-we-accept"
+            className="mt-2 text-sm text-blue-700 font-semibold hover:underline"
+          >
+            See full insurance list for Maryland, DC and Virginia
+          </Link>
         </div>
         <Slider {...settings}>
           {insuranceLogoData.map((img) => (

@@ -4,11 +4,37 @@ import { Helmet } from "react-helmet";
 const BlogStructuredData = ({ blog, slug }) => {
   if (!blog) return null;
 
+  const contentPreview =
+    blog.excerpt ||
+    String(blog.body || "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 160) ||
+    blog.title;
+
+  const keywordList = Array.isArray(blog.keywords)
+    ? blog.keywords
+    : typeof blog.keywords === "string"
+      ? blog.keywords.split(",").map((k) => k.trim())
+      : [];
+
+  const mergedKeywords = [
+    ...keywordList,
+    "mental health",
+    "psychiatry",
+    "medication management",
+    "telehealth psychiatry",
+    "Maryland",
+    "Washington DC",
+    "Virginia",
+  ];
+
   const blogStructuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: blog.title,
-    description: blog.excerpt || blog.title,
+    description: contentPreview,
     author: {
       "@type": "Organization",
       name: "Tinka Health Services",
@@ -19,7 +45,7 @@ const BlogStructuredData = ({ blog, slug }) => {
       name: "Tinka Health Services",
       logo: {
         "@type": "ImageObject",
-        url: "https://tinkahealthservices.com/logo.png",
+        url: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
       },
     },
     datePublished: new Date(blog.created_at).toISOString(),
@@ -31,20 +57,14 @@ const BlogStructuredData = ({ blog, slug }) => {
     url: `https://tinkahealthservices.com/blogs/${slug}`,
     image: blog.image
       ? `https://api.tinkahealthservices.com${blog.image}`
-      : "https://tinkahealthservices.com/logo.png",
+      : "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
     articleSection: "Mental Health",
-    keywords: [
-      "mental health",
-      "therapy",
-      "wellness",
-      "Tinka Health Services",
-      "Virginia mental health",
-      "Maryland mental health",
-    ],
+    keywords: mergedKeywords,
     about: {
       "@type": "Thing",
       name: "Mental Health",
-      description: "Mental health and wellness information",
+      description:
+        "Mental health and wellness information for Maryland, Washington DC, and Virginia",
     },
   };
 

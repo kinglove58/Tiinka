@@ -12,10 +12,66 @@ function AllBlogs() {
 
   const { blogs, filteredBlogs, setFilteredBlogs } = useContext(BlogContext);
 
+  const structuredBlogs = (Array.isArray(filteredBlogs) ? filteredBlogs : [])
+    .filter((blog) => blog?.slug && blog?.title)
+    .slice(0, 20);
+
+  const blogPageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Tinka Health Services Mental Health Blog",
+    url: "https://tinkahealthservices.com/blogs",
+    description:
+      "Mental health education, treatment insights, and practical resources for individuals and families in Maryland, Washington DC, and Virginia.",
+    publisher: {
+      "@type": "Organization",
+      name: "Tinka Health Services",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://tinkahealthservices.com/blogs",
+    },
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://tinkahealthservices.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: "https://tinkahealthservices.com/blogs",
+      },
+    ],
+  };
+
+  const blogListStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Tinka Health Services Blog Articles",
+    itemListElement: structuredBlogs.map((blog, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://tinkahealthservices.com/blogs/${blog.slug}`,
+      name: blog.title,
+    })),
+  };
+
   const handleSearch = (e) => {
     e.preventDefault();
     const filtered = blogs.filter((blog) =>
-      blog.title.toLowerCase().includes(searchTerm.toLowerCase())
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setFilteredBlogs(filtered);
   };
@@ -27,44 +83,46 @@ function AllBlogs() {
   return (
     <div className="container mx-auto px-4 md:px-16 py-8 mt-24">
       <Helmet>
-        <title>All Blogs - Tinka Health Services</title>
+        <title>
+          Mental Health Blog in MD, DC and VA | Tinka Health Services
+        </title>
         <meta
           name="description"
-          content="Explore our collection of mental health blogs created just for you. Stay informed and inspired with Tinka Health Services."
+          content="Explore mental health articles from Tinka Health Services on anxiety, depression, ADHD, medication management, and telehealth psychiatry care for Maryland, Washington DC, and Virginia."
         />
         <meta
           name="keywords"
-          content="blogs, mental health, Tinka Health Services, health blogs, ADHD blogs, psychology"
+          content="mental health blog maryland, mental health blog washington dc, mental health blog virginia, psychiatry blog, adhd blog, anxiety treatment blog, depression treatment blog"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/blogs" />
+        <meta
+          property="og:title"
+          content="Mental Health Blog in MD, DC and VA | Tinka Health Services"
+        />
+        <meta
+          property="og:description"
+          content="Read practical mental health resources and psychiatry insights for individuals and families across MD, DC, and VA."
+        />
+        <meta
+          property="og:url"
+          content="https://tinkahealthservices.com/blogs"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Blog",
-              "name": "Tinka Health Services Blogs",
-              "url": "https://tinkahealthservices.com/blogs",
-              "description": "Explore our collection of mental health blogs created just for you. Stay informed and inspired with Tinka Health Services.",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Tinka Health Services",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://tinkahealthservices.com/logo.png"
-                }
-              },
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://tinkahealthservices.com/blogs"
-              }
-            }
-          `}
+          {JSON.stringify(blogPageStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(blogListStructuredData)}
         </script>
       </Helmet>
       <ScrollAnimationWrapper>
         <div className="flex justify-between items-center mb-8">
           <h1 className="md:text-3xl text-sm font-semibold text-[#005ab0]">
-            The Best Mental Health Blogs Created Just for You!
+            Mental Health Blog for Maryland, Washington DC and Virginia
           </h1>
           <form onSubmit={handleSearch} className="relative">
             <input
@@ -82,27 +140,41 @@ function AllBlogs() {
             </button>
           </form>
         </div>
+
+        <div className="mb-6 bg-blue-50 border border-blue-100 rounded-lg p-4">
+          <p className="text-gray-700 text-sm md:text-base">
+            Learn about common mental health conditions, treatment options, and
+            care tips from our psychiatric team. Explore resources that support
+            better outcomes for individuals and families in MD, DC, and VA.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-3">
+            <Link
+              to="/telehealth-psychiatry-md-dc-va"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Telehealth Psychiatry
+            </Link>
+            <Link
+              to="/insurance-we-accept"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Insurance We Accept
+            </Link>
+            <Link
+              to="/meet-our-provider"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Meet Our Provider
+            </Link>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredBlogs.slice(0, visibleBlogs).map((blog) => (
             <div
               key={blog.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300"
             >
-              <Helmet>
-                <title>{blog.title} - Tinka Health Services</title>
-                <meta
-                  name="description"
-                  content={blog.description || blog.title}
-                />
-                <meta
-                  name="keywords"
-                  content={`mental health, blogs, ${blog.title}`}
-                />
-                <link
-                  rel="canonical"
-                  href={`https://tinkahealthservices.com/blogs/${blog.slug}`}
-                />
-              </Helmet>
               <Link to={`/blogs/${blog.slug}`}>
                 <img
                   width="100%"

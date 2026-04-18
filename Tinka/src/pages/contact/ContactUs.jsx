@@ -1,6 +1,7 @@
 import React, { useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { FaSpinner } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 
 const Testimonial = lazy(() => import("../home/Testimonial"));
@@ -57,21 +58,88 @@ function ContactUs() {
   return (
     <div className="container mx-auto px-4 py-8">
       <Helmet>
-        <title>Contact Us - Tinka Health Services</title>
+        <title>
+          Contact Psychiatric Provider in MD, DC and VA | Tinka Health Services
+        </title>
         <meta
           name="description"
-          content="Contact Tinka Health Services to book an appointment or ask any questions you may have."
+          content="Contact Tinka Health Services to book telehealth psychiatry appointments and medication management services in Maryland, Washington DC, and Virginia. Accepting new patients and major insurance including Medicaid and Medicare."
+        />
+        <meta
+          name="keywords"
+          content="contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, medication management services, accepting new patients"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/contact" />
+        <meta
+          property="og:title"
+          content="Contact Psychiatric Provider in MD, DC and VA | Tinka Health Services"
+        />
+        <meta
+          property="og:description"
+          content="Book appointments and get support for psychiatric care, medication management, and telehealth services across MD, DC, and VA."
+        />
+        <meta
+          property="og:url"
+          content="https://tinkahealthservices.com/contact"
+        />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact Tinka Health Services",
+              "url": "https://tinkahealthservices.com/contact",
+              "about": {
+                "@type": "MedicalOrganization",
+                "name": "Tinka Health Services",
+                "telephone": "+1 443-295-6600",
+                "areaServed": [
+                  { "@type": "AdministrativeArea", "name": "Maryland" },
+                  { "@type": "AdministrativeArea", "name": "Washington DC" },
+                  { "@type": "AdministrativeArea", "name": "Virginia" }
+                ]
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <ScrollAnimationWrapper>
         <div className="bg-custom-image bg-cover bg-center h-64 flex items-center justify-center flex-col shadow-md">
-          <h1 className="text-white text-2xl md:text-4xl font-bold font-serif">
+          <h1 className="text-white text-2xl md:text-4xl font-bold font-serif text-center px-3">
             You deserve to be happy
           </h1>
-          <p className="font-sans text-white text-xl md:text-2xl font-semibold">
-            And we are here to Help You
+          <p className="font-sans text-white text-xl md:text-2xl font-semibold text-center px-3">
+            And we are here to help you in MD, DC and VA
           </p>
+        </div>
+
+        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mt-6 mb-6">
+          <p className="text-gray-700 text-sm md:text-base">
+            Reach out to schedule telehealth psychiatry appointments and
+            medication management services. We accept many insurance plans,
+            including Medicaid and Medicare, and are accepting new patients.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-3">
+            <a
+              href="tel:+14432956600"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
+            >
+              Call 443-295-6600
+            </a>
+            <Link
+              to="/insurance-we-accept"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Insurance We Accept
+            </Link>
+            <Link
+              to="/telehealth-psychiatry-md-dc-va"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Telehealth Psychiatry
+            </Link>
+          </div>
         </div>
 
         {/* ✅ Contact Form with Formspree */}

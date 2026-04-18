@@ -16,6 +16,23 @@ function SingleBlog() {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
 
   const blogItem = blogs.find((blog) => blog.slug === slug);
+  const plainBody = String(blogItem?.body || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const metaDescription =
+    blogItem?.excerpt ||
+    (plainBody
+      ? `${plainBody.slice(0, 155)}...`
+      : "Read this mental health article from Tinka Health Services.");
+  const readTimeMinutes = Math.max(
+    1,
+    Math.ceil(plainBody.split(" ").length / 200),
+  );
+  const keywordContent = Array.isArray(blogItem?.keywords)
+    ? blogItem.keywords.join(", ")
+    : blogItem?.keywords ||
+      "mental health blog, psychiatry, medication management, telehealth psychiatry, maryland, washington dc, virginia";
 
   useEffect(() => {
     if (blogItem) {
@@ -29,10 +46,6 @@ function SingleBlog() {
     }
   }, [blogItem, blogs, slug]);
 
-  if (!blogItem) {
-    return <div>No blog found</div>;
-  }
-
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -45,19 +58,37 @@ function SingleBlog() {
     return <div>Error: {error.message}</div>;
   }
 
+  if (!blogItem) {
+    return <div className="pt-28 text-center">No blog found</div>;
+  }
+
   return (
     <ScrollAnimationWrapper>
       <BlogStructuredData blog={blogItem} slug={slug} />
       <Helmet>
-        <title>{blogItem.title} - Tinka Health Services</title>
-        <meta name="description" content={blogItem.description} />
-        {blogItem.keywords && (
-          <meta name="keywords" content={blogItem.keywords.join(", ")} />
-        )}
+        <title>{blogItem.title} | Tinka Health Services Blog</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywordContent} />
         <link
           rel="canonical"
           href={`https://tinkahealthservices.com/blogs/${slug}`}
         />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={blogItem.title} />
+        <meta property="og:description" content={metaDescription} />
+        <meta
+          property="og:url"
+          content={`https://tinkahealthservices.com/blogs/${slug}`}
+        />
+        {blogItem.image && (
+          <meta
+            property="og:image"
+            content={`https://api.tinkahealthservices.com${blogItem.image}`}
+          />
+        )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blogItem.title} />
+        <meta name="twitter:description" content={metaDescription} />
       </Helmet>
       <div className="mx-auto px-4 md:px-16 py-8 pt-24 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -66,10 +97,7 @@ function SingleBlog() {
             <p className="mr-4">
               Updated on: {new Date(blogItem.updated_at).toLocaleDateString()}
             </p>
-            <p>
-              Time to read: {Math.ceil(blogItem.body.split(" ").length / 200)}{" "}
-              min read
-            </p>
+            <p>Time to read: {readTimeMinutes} min read</p>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-16">
             <img
@@ -138,6 +166,39 @@ function SingleBlog() {
             </div>
           </div>
         )}
+
+        <div className="mt-10 bg-blue-50 border border-blue-100 rounded-lg p-5">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            Continue Your Care Journey
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/services"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Explore Services
+            </Link>
+            <Link
+              to="/telehealth-psychiatry-md-dc-va"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Telehealth Psychiatry
+            </Link>
+            <Link
+              to="/insurance-we-accept"
+              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+            >
+              Insurance We Accept
+            </Link>
+            <Link
+              to="/booking"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
+            >
+              Book Appointment
+            </Link>
+          </div>
+        </div>
+
         <div className="w-full mt-8">
           <Suspense fallback={<div>Loading...</div>}>
             <MentalHealthStats />

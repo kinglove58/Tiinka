@@ -1,24 +1,62 @@
 import React, { memo, useContext } from "react";
 import { BlogContext } from "../../BlogContext/BlogContext";
 import { PuffLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
 
 const Policy = () => {
   const { policy, policyLoading, error } = useContext(BlogContext);
+  const stripHtml = (value = "") =>
+    value
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  const policyBodyText = stripHtml(policy?.body || "");
+  const policyTitle = policy?.title
+    ? `${policy.title} | Tinka Health Services`
+    : "Terms and Conditions | Tinka Health Services";
+  const policyDescription = policyBodyText
+    ? `${policyBodyText.slice(0, 155)}...`
+    : "Review the terms and conditions and privacy details for care at Tinka Health Services.";
 
   if (policyLoading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <PuffLoader color="#FF4500" size={80} />
-      </div>
+      <>
+        <Helmet>
+          <title>{policyTitle}</title>
+          <meta name="description" content={policyDescription} />
+          <link rel="canonical" href="https://tinkahealthservices.com/policy" />
+        </Helmet>
+        <div className="flex justify-center items-center min-h-screen">
+          <PuffLoader color="#FF4500" size={80} />
+        </div>
+      </>
     );
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <>
+        <Helmet>
+          <title>{policyTitle}</title>
+          <meta name="description" content={policyDescription} />
+          <link rel="canonical" href="https://tinkahealthservices.com/policy" />
+        </Helmet>
+        <div>Error: {error.message}</div>
+      </>
+    );
   }
 
   return (
     <div className="container mx-auto py-14 md:py-16">
+      <Helmet>
+        <title>{policyTitle}</title>
+        <meta name="description" content={policyDescription} />
+        <meta
+          name="keywords"
+          content="policy, terms and conditions, mental health policy, tinka health services"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com/policy" />
+      </Helmet>
       <div className="text-center mb-4 w-full p-8 md:p-24 bg-[#005ab0] text-white">
         <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold">
           Terms & Condition
@@ -67,9 +105,9 @@ const Policy = () => {
             We reserve the right to modify this Notice of Privacy Practices at
             any time. If the terms of the Notice are changed, the new terms will
             apply to all your health information, whether created or received by
-           Tinka Health Services before or after the date on which the
-            Notice is changed. Any material changes will be promptly posted in
-            our office and on our website, if applicable.
+            Tinka Health Services before or after the date on which the Notice
+            is changed. Any material changes will be promptly posted in our
+            office and on our website, if applicable.
           </p>
         </div>
       </div>

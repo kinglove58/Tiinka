@@ -25,43 +25,88 @@ const expertiseList = [
 ];
 
 const MeetOurProvider = () => {
+  const providerProfileStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    name: "Meet the Provider - Dr. Seliat Dosunmu",
+    description:
+      "Profile of Dr. Seliat Dosunmu, founder and medical director of Tinka Health Services, serving Maryland, Washington DC, and Virginia.",
+    url: "https://tinkahealthservices.com/meet-our-provider",
+    about: {
+      "@type": "Person",
+      name: "Dr. Seliat Dosunmu",
+      jobTitle: "Founder & Medical Director",
+      affiliation: {
+        "@type": "MedicalOrganization",
+        name: "Tinka Health Services",
+        url: "https://tinkahealthservices.com",
+      },
+      alumniOf: "Brandman University",
+      hasCredential: ["DNP", "FNP-C", "PMHNP-BC"],
+      knowsAbout: expertiseList,
+      worksFor: {
+        "@type": "MedicalOrganization",
+        name: "Tinka Health Services",
+      },
+    },
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://tinkahealthservices.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Meet Our Provider",
+        item: "https://tinkahealthservices.com/meet-our-provider",
+      },
+    ],
+  };
+
   return (
     <main className="bg-white py-20 lg:py-24">
       <Helmet>
-        <title>Meet Our Provider - Tinka Health Services</title>
+        <title>
+          Meet Our Psychiatric Provider | Dr. Seliat Dosunmu | Tinka Health
+        </title>
         <meta
           name="description"
-          content="Get to know Dr. Seliat Dosunmu, founder and medical director of Tinka Health Services. Learn about her background, expertise, and approach to compassionate mental health care."
+          content="Meet Dr. Seliat Dosunmu, psychiatric provider and medical director at Tinka Health Services. Learn about her expertise in medication management, anxiety, depression, ADHD, PTSD, and mental health care in MD, DC, and VA."
+        />
+        <meta
+          name="keywords"
+          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management specialist, PMHNP provider"
         />
         <link
           rel="canonical"
           href="https://tinkahealthservices.com/meet-our-provider"
         />
+        <meta
+          property="og:title"
+          content="Meet Our Psychiatric Provider | Dr. Seliat Dosunmu"
+        />
+        <meta
+          property="og:description"
+          content="Learn about Dr. Dosunmu's expertise and care philosophy for mental health services in MD, DC, and VA."
+        />
+        <meta
+          property="og:url"
+          content="https://tinkahealthservices.com/meet-our-provider"
+        />
+        <meta property="og:type" content="profile" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "ProfilePage",
-              "name": "Meet the Provider - Dr. Seliat Dosunmu",
-              "description": "Profile of Dr. Seliat Dosunmu, founder and medical director of Tinka Health Services.",
-              "about": {
-                "@type": "Person",
-                "name": "Dr. Seliat Dosunmu",
-                "jobTitle": "Founder & Medical Director",
-                "affiliation": {
-                  "@type": "MedicalOrganization",
-                  "name": "Tinka Health Services"
-                },
-                "alumniOf": "Brandman University",
-                "hasCredential": [
-                  "DNP",
-                  "FNP-C",
-                  "PMHNP-BC"
-                ],
-                "knowsAbout": ${JSON.stringify(expertiseList)}
-              }
-            }
-          `}
+          {JSON.stringify(providerProfileStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Helmet>
 
@@ -248,6 +293,20 @@ const MeetOurProvider = () => {
               >
                 Book an Appointment
               </Link>
+              <div className="mt-5 flex flex-wrap justify-center gap-3">
+                <Link
+                  to="/insurance-we-accept"
+                  className="inline-flex items-center justify-center rounded-lg border border-white px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                >
+                  Insurance We Accept
+                </Link>
+                <Link
+                  to="/telehealth-psychiatry-md-dc-va"
+                  className="inline-flex items-center justify-center rounded-lg border border-white px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                >
+                  Telehealth Psychiatry
+                </Link>
+              </div>
             </div>
           </div>
         </ScrollAnimationWrapper>

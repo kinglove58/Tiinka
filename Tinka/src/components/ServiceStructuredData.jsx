@@ -14,8 +14,8 @@ const ServiceStructuredData = ({ service }) => {
       "@type": "MedicalOrganization",
       name: "Tinka Health Services",
       url: "https://tinkahealthservices.com",
-      logo: "https://tinkahealthservices.com/logo.png",
-      telephone: "+1-XXX-XXX-XXXX", // Replace with actual phone number
+      logo: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+      telephone: "+1 443-295-6600",
       address: {
         "@type": "PostalAddress",
         streetAddress: "5457 Twin Knolls Road, Suite 300",
@@ -28,6 +28,10 @@ const ServiceStructuredData = ({ service }) => {
         {
           "@type": "State",
           name: "Virginia",
+        },
+        {
+          "@type": "State",
+          name: "Washington DC",
         },
         {
           "@type": "State",

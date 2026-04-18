@@ -34,16 +34,40 @@ const AboutUs = () => {
   return (
     <main className="mx-auto py-16 bg-white">
       <Helmet>
-        <title>About Us - Tinka Health Services</title>
+        <title>
+          About Tinka Health Services | Psychiatric Provider in MD, DC and VA
+        </title>
         <meta
           name="description"
-          content="Learn more about Tinka Health Services, our mission, vision, and values. We are dedicated to providing quality mental health care."
+          content="Learn about Tinka Health Services, a psychiatric provider serving Maryland, Washington DC, and Virginia with medication management services, telehealth psychiatry appointments, and compassionate mental health care."
         />
         <meta
           name="keywords"
-          content="about us, Tinka Health Services, mental health, mission, vision, values"
+          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management services, telehealth psychiatry appointments, accepting new patients"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/about" />
+        <meta
+          property="og:title"
+          content="About Tinka Health Services | Psychiatric Provider in MD, DC and VA"
+        />
+        <meta
+          property="og:description"
+          content="Compassionate psychiatric and behavioral health services in Maryland, Washington DC, and Virginia with telehealth and in-person options."
+        />
+        <meta
+          property="og:url"
+          content="https://tinkahealthservices.com/about"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Tinka Health Services | Psychiatric Provider in MD, DC and VA"
+        />
+        <meta
+          name="twitter:description"
+          content="Meet the team behind Tinka Health Services and explore our mission for accessible, high-quality mental health care across MD, DC, and VA."
+        />
         <script type="application/ld+json">
           {`
             {
@@ -56,13 +80,17 @@ const AboutUs = () => {
                 "@type": "MedicalOrganization",
                 "name": "Tinka Health Services",
                 "url": "https://tinkahealthservices.com",
-                "logo": "https://tinkahealthservices.com/logo.png",
-                "description": "Mental health care organization providing comprehensive therapy and psychiatric services in Virginia and Maryland.",
+                "logo": "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+                "description": "Mental health care organization providing comprehensive therapy and psychiatric services in Maryland, Washington DC, and Virginia.",
                 "foundingDate": "2020",
                 "areaServed": [
                   {
                     "@type": "State",
                     "name": "Virginia"
+                  },
+                  {
+                    "@type": "State",
+                    "name": "Washington DC"
                   },
                   {
                     "@type": "State",
@@ -81,6 +109,28 @@ const AboutUs = () => {
                   "https://www.youtube.com/@TinkaHealthServices"
                 ]
               }
+            }
+          `}
+        </script>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://tinkahealthservices.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About",
+                  "item": "https://tinkahealthservices.com/about"
+                }
+              ]
             }
           `}
         </script>
@@ -235,6 +285,39 @@ const AboutUs = () => {
               >
                 Book An Appointment
               </button>
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link
+                to="/insurance-we-accept"
+                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+              >
+                Insurance We Accept
+              </Link>
+              <Link
+                to="/telehealth-psychiatry-md-dc-va"
+                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+              >
+                Telehealth Psychiatry
+              </Link>
+              <Link
+                to="/maryland-psychiatrist"
+                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+              >
+                Maryland Psychiatry
+              </Link>
+              <Link
+                to="/dc-psychiatrist"
+                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+              >
+                DC Psychiatry
+              </Link>
+              <Link
+                to="/virginia-psychiatrist"
+                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+              >
+                Virginia Psychiatry
+              </Link>
             </div>
           </ScrollAnimationWrapper>
         </section>

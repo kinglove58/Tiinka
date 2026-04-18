@@ -1,0 +1,8 @@
+date,page_type,page_url,keyword_group,query,impressions,clicks,ctr_percent,avg_position,booking_starts,booking_completions,conversion_rate_percent,notes
+2026-04-15,homepage,https://tinkahealthservices.com/,money,"psychiatric provider maryland",0,0,0,0,0,0,0,"baseline"
+2026-04-15,insurance,https://tinkahealthservices.com/insurance-we-accept,insurance,"psychiatrist accepting medicaid",0,0,0,0,0,0,0,"baseline"
+2026-04-15,location-md,https://tinkahealthservices.com/maryland-psychiatrist,location,"maryland psychiatrist",0,0,0,0,0,0,0,"baseline"
+2026-04-15,location-dc,https://tinkahealthservices.com/dc-psychiatrist,location,"dc psychiatrist",0,0,0,0,0,0,0,"baseline"
+2026-04-15,location-va,https://tinkahealthservices.com/virginia-psychiatrist,location,"virginia psychiatrist",0,0,0,0,0,0,0,"baseline"
+2026-04-15,telehealth,https://tinkahealthservices.com/telehealth-psychiatry-md-dc-va,money,"telehealth psychiatry md",0,0,0,0,0,0,0,"baseline"
+2026-04-15,booking,https://tinkahealthservices.com/booking,insurance,"medicaid psychiatry appointment",0,0,0,0,0,0,0,"baseline"

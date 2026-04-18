@@ -68,14 +68,18 @@ const NavItem = () => {
             className="h-10 w-auto"
           />
         </Link>
-        <div
+        <button
+          type="button"
           className="lg:hidden cursor-pointer"
           onClick={handleMenu}
           aria-label="Toggle menu"
+          aria-expanded={showMenu}
+          aria-controls="primary-navigation"
         >
           {showMenu ? <RiCloseFill size={25} /> : <GiHamburgerMenu size={25} />}
-        </div>
+        </button>
         <nav
+          id="primary-navigation"
           className={`${
             showMenu
               ? "flex absolute top-20 left-0 w-full px-6 py-6 shadow-md min-h-[50vh] bg-white"
@@ -96,10 +100,7 @@ const NavItem = () => {
             >
               Primary & Preventive Care
             </NavItemLink>
-            <NavItemLink to="/meet-our-provider" onClick={handleLinkClick}>
-              Meet Our Provider
-            </NavItemLink>
-            <li
+                      <li
               className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 cursor-pointer"
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
@@ -163,9 +164,7 @@ const NavItem = () => {
             <NavItemLink to="/blogs" onClick={handleLinkClick}>
               Blogs
             </NavItemLink>
-            <NavItemLink to="/policy" onClick={handleLinkClick}>
-              Policy
-            </NavItemLink>
+            
             <NavItemLink to="/contact" onClick={handleLinkClick}>
               Contact Us
             </NavItemLink>{" "}

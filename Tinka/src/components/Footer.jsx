@@ -36,6 +36,11 @@ const emergencyLinks = [
 ];
 
 const companyData = [
+  { value: "Insurance We Accept", link: "insurance-we-accept" },
+  { value: "Telehealth Psychiatry", link: "telehealth-psychiatry-md-dc-va" },
+  { value: "Maryland Psychiatry", link: "maryland-psychiatrist" },
+  { value: "DC Psychiatry", link: "dc-psychiatrist" },
+  { value: "Virginia Psychiatry", link: "virginia-psychiatrist" },
   { value: "Privacy Policy", link: "policy" },
   { value: "Contact Us", link: "contact" },
   { value: "Book Appointment", link: "tinkahealthservicesbooking" },
@@ -49,10 +54,7 @@ const Footer = () => {
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
 
   // Memoize the sliced data
-  const servicesToShow = useMemo(
-    () => servicesDataList.slice(0, 6),
-    [servicesDataList]
-  );
+  const servicesToShow = useMemo(() => servicesDataList.slice(0, 6), []);
   const blogsToShow = useMemo(() => blogs.slice(0, 4), [blogs]);
 
   return (
@@ -70,13 +72,22 @@ const Footer = () => {
             />
             <p>connect with us</p>
             <div className="flex items-center justify-start gap-3">
-              <a href="https://www.youtube.com/@TinkaHealthServices">
+              <a
+                href="https://www.youtube.com/@TinkaHealthServices"
+                aria-label="Visit Tinka Health Services on YouTube"
+              >
                 <TiSocialYoutubeCircular className="text-red-400 w-6 h-6" />
               </a>
-              <a href="https://x.com/Tinkahealthserv">
+              <a
+                href="https://x.com/Tinkahealthserv"
+                aria-label="Visit Tinka Health Services on X"
+              >
                 <FaXTwitter className="text-white w-6 h-6" />
               </a>
-              <a href="https://www.instagram.com/tinkahealthservices/">
+              <a
+                href="https://www.instagram.com/tinkahealthservices/"
+                aria-label="Visit Tinka Health Services on Instagram"
+              >
                 <FaInstagram className="text-red-400 w-6 h-6" />
               </a>
             </div>
@@ -135,7 +146,7 @@ const Footer = () => {
                     to={`/services/${service.id}`}
                     className="text-white hover:text-blue-600 block px-2 py-1 rounded"
                   >
-                    {service.id}
+                    {service.name}
                   </Link>
                 </li>
               ))}

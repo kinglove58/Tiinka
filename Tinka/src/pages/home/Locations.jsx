@@ -1,5 +1,6 @@
 import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Locations = () => {
   const scrollContainerRef = useRef(null);
@@ -62,6 +63,12 @@ const Locations = () => {
                   +1 571-349-8285
                 </a>
               </p>
+              <Link
+                to="/virginia-psychiatrist"
+                className="inline-block mt-2 text-blue-100 hover:text-white underline"
+              >
+                Virginia psychiatric services
+              </Link>
             </div>
             <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1 min-w-[260px] max-w-md flex-shrink-0 mx-2">
               <h3 className="text-lg font-semibold">Washington, DC</h3>
@@ -76,6 +83,12 @@ const Locations = () => {
                   +1 202-933-4300
                 </a>
               </p>
+              <Link
+                to="/dc-psychiatrist"
+                className="inline-block mt-2 text-blue-100 hover:text-white underline"
+              >
+                Washington DC psychiatric services
+              </Link>
             </div>
             <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1 min-w-[260px] max-w-md flex-shrink-0 mx-2">
               <h3 className="text-lg font-semibold">Maryland (MD)</h3>
@@ -90,6 +103,12 @@ const Locations = () => {
                   +1 443-295-6600
                 </a>
               </p>
+              <Link
+                to="/maryland-psychiatrist"
+                className="inline-block mt-2 text-blue-100 hover:text-white underline"
+              >
+                Maryland psychiatric services
+              </Link>
             </div>
           </div>
         </div>
@@ -109,6 +128,12 @@ const Locations = () => {
                 +1 571-349-8285
               </a>
             </p>
+            <Link
+              to="/virginia-psychiatrist"
+              className="inline-block mt-2 text-blue-100 hover:text-white underline"
+            >
+              Virginia psychiatric services
+            </Link>
           </div>
           <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">
             <h3 className="text-lg font-semibold">Washington, DC</h3>
@@ -123,6 +148,12 @@ const Locations = () => {
                 +1 202-933-4300
               </a>
             </p>
+            <Link
+              to="/dc-psychiatrist"
+              className="inline-block mt-2 text-blue-100 hover:text-white underline"
+            >
+              Washington DC psychiatric services
+            </Link>
           </div>
           <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">
             <h3 className="text-lg font-semibold">Maryland (MD)</h3>
@@ -137,6 +168,12 @@ const Locations = () => {
                 +1 443-295-6600
               </a>
             </p>
+            <Link
+              to="/maryland-psychiatrist"
+              className="inline-block mt-2 text-blue-100 hover:text-white underline"
+            >
+              Maryland psychiatric services
+            </Link>
           </div>
         </div>
       </div>

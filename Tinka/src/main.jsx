@@ -2,23 +2,48 @@ import { Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  Navigate,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import { BlogProvider } from "./BlogContext/BlogContext.jsx";
-import Home from "../src/pages/home/Home.jsx";
-import AboutUs from "./pages/aboutus/AboutUs.jsx";
-import MeetOurProvider from "./pages/aboutus/MeetOurProvider.jsx";
-import PrimaryPreventiveCare from "./pages/primary/PrimaryPreventiveCare.jsx";
-import SingleBlog from "./pages/blogs/SingleBlog.jsx";
-import AllBlogs from "./pages/blogs/AllBlogs.jsx";
-import SingleService from "./pages/services/SingleService.jsx";
-import Services from "./pages/services/Services.jsx";
-import ContactUs from "./pages/contact/ContactUs.jsx";
-import TinkaBooking from "./pages/booking/TinkaBookingEmbed.jsx";
 
 // Lazy load the components
+const Home = lazy(() => import("./pages/home/Home.jsx"));
+const AboutUs = lazy(() => import("./pages/aboutus/AboutUs.jsx"));
+const MeetOurProvider = lazy(
+  () => import("./pages/aboutus/MeetOurProvider.jsx"),
+);
+const PrimaryPreventiveCare = lazy(
+  () => import("./pages/primary/PrimaryPreventiveCare.jsx"),
+);
+const SingleBlog = lazy(() => import("./pages/blogs/SingleBlog.jsx"));
+const AllBlogs = lazy(() => import("./pages/blogs/AllBlogs.jsx"));
+const SingleService = lazy(() => import("./pages/services/SingleService.jsx"));
+const Services = lazy(() => import("./pages/services/Services.jsx"));
+const ContactUs = lazy(() => import("./pages/contact/ContactUs.jsx"));
+const TinkaBooking = lazy(
+  () => import("./pages/booking/TinkaBookingEmbed.jsx"),
+);
 
 const Policy = lazy(() => import("./pages/Policy/Policy.jsx"));
 const NotFound = lazy(() => import("./components/NotFound.jsx"));
+const InsuranceAccepted = lazy(
+  () => import("./pages/insurance/InsuranceAccepted.jsx"),
+);
+const MarylandPsychiatrist = lazy(
+  () => import("./pages/location/MarylandPsychiatrist.jsx"),
+);
+const DCPsychiatrist = lazy(
+  () => import("./pages/location/DCPsychiatrist.jsx"),
+);
+const VirginiaPsychiatrist = lazy(
+  () => import("./pages/location/VirginiaPsychiatrist.jsx"),
+);
+const TelehealthPsychiatry = lazy(
+  () => import("./pages/telehealth/TelehealthPsychiatry.jsx"),
+);
 
 const router = createBrowserRouter([
   {
@@ -55,11 +80,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/tinkahealthservicesbooking",
-        element: <TinkaBooking />,
+        element: <Navigate to="/booking" replace />,
       },
       {
         path: "/booking",
         element: <TinkaBooking />,
+      },
+      {
+        path: "/insurance-we-accept",
+        element: <InsuranceAccepted />,
+      },
+      {
+        path: "/maryland-psychiatrist",
+        element: <MarylandPsychiatrist />,
+      },
+      {
+        path: "/dc-psychiatrist",
+        element: <DCPsychiatrist />,
+      },
+      {
+        path: "/virginia-psychiatrist",
+        element: <VirginiaPsychiatrist />,
+      },
+      {
+        path: "/telehealth-psychiatry-md-dc-va",
+        element: <TelehealthPsychiatry />,
       },
       {
         path: "/services",
@@ -86,5 +131,5 @@ createRoot(document.getElementById("root")).render(
     <Suspense fallback={<div>Loading...</div>}>
       <RouterProvider router={router} />
     </Suspense>
-  </BlogProvider>
+  </BlogProvider>,
 );

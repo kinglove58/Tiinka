@@ -5,16 +5,16 @@ const BookingStructuredData = () => {
   const bookingStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Book an Appointment - Tinka Health Services",
+    name: "Book Psychiatric Appointment in MD, DC and VA | Tinka Health",
     description:
-      "Book your appointment with Tinka Health Services. Quick and easy online booking for mental health services in Virginia and Maryland.",
-    url: "https://tinkahealthservices.com/tinkahealthservicesbooking",
+      "Book telehealth and in-person psychiatric appointments with Tinka Health Services in Maryland, Washington DC, and Virginia. Accepting Medicaid, Medicare, and major insurance plans.",
+    url: "https://tinkahealthservices.com/booking",
     mainEntity: {
       "@type": "MedicalOrganization",
       name: "Tinka Health Services",
       url: "https://tinkahealthservices.com",
-      logo: "https://tinkahealthservices.com/logo.png",
-      telephone: "+1-XXX-XXX-XXXX", // Replace with actual phone number
+      logo: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+      telephone: "+1-410-870-0629",
       address: {
         "@type": "PostalAddress",
         streetAddress: "5457 Twin Knolls Road, Suite 300",
@@ -23,9 +23,12 @@ const BookingStructuredData = () => {
         postalCode: "21045",
         addressCountry: "US",
       },
+      areaServed: ["Maryland", "Washington, DC", "Virginia"],
+      medicalSpecialty: ["Psychiatry", "MentalHealth", "Telemedicine"],
+      healthPlanNetworkId: ["Medicaid", "Medicare", "Aetna", "CareFirst"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Mental Health Appointment Booking",
+        name: "Psychiatry and Mental Health Appointment Booking",
         itemListElement: [
           {
             "@type": "Offer",
@@ -75,7 +78,7 @@ const BookingStructuredData = () => {
         "@type": "Reservation",
         reservationFor: {
           "@type": "Service",
-          name: "Mental Health Appointment",
+          name: "Psychiatric Appointment",
         },
       },
     },

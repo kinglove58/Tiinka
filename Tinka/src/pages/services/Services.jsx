@@ -50,7 +50,7 @@ function Services() {
     (service) =>
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.id_sub.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.title1Des.toLowerCase().includes(searchTerm.toLowerCase())
+      service.title1Des.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   // Calculate pagination for filtered results
@@ -102,7 +102,7 @@ function Services() {
   const prevStat = () => {
     setIsAutoAdvancing(false);
     setCurrentStatIndex(
-      (prev) => (prev - 1 + statsData.length) % statsData.length
+      (prev) => (prev - 1 + statsData.length) % statsData.length,
     );
     setTimeout(() => setIsAutoAdvancing(true), 8000);
   };
@@ -140,7 +140,7 @@ function Services() {
         setCurrentStatIndex((prev) => (prev + 1) % statsData.length);
       } else {
         setCurrentStatIndex(
-          (prev) => (prev - 1 + statsData.length) % statsData.length
+          (prev) => (prev - 1 + statsData.length) % statsData.length,
         );
       }
       setTimeout(() => setIsAutoAdvancing(true), 8000);
@@ -149,16 +149,47 @@ function Services() {
   return (
     <div className="pt-20">
       <Helmet>
-        <title>Our Mental Health Services - Tinka Health Services</title>
+        <title>
+          Mental Health Services in MD, DC and VA | Tinka Health Services
+        </title>
         <meta
           name="description"
-          content="Comprehensive mental health services including therapy, counseling, and psychiatric care. Expert treatment for anxiety, depression, trauma, and more."
+          content="Explore mental health services in Maryland, Washington DC, and Virginia, including medication management services, therapy, telehealth psychiatry appointments, and support for anxiety, depression, ADHD, PTSD, and more."
         />
         <meta
           name="keywords"
-          content="mental health services, therapy, counseling, psychiatric care, anxiety treatment, depression therapy, trauma counseling, telehealth"
+          content="mental health services maryland, mental health services washington dc, mental health services virginia, medication management services, telehealth psychiatry appointments, psychiatric provider near me"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/services" />
+        <meta
+          property="og:title"
+          content="Mental Health Services in MD, DC and VA | Tinka Health Services"
+        />
+        <meta
+          property="og:description"
+          content="Find psychiatric and therapy services with telehealth and in-person options. Accepting new patients and major insurance including Medicaid and Medicare."
+        />
+        <meta
+          property="og:url"
+          content="https://tinkahealthservices.com/services"
+        />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Mental Health Services",
+            itemListElement: serviceData.map((service, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": "Service",
+                name: service.name,
+                url: `https://tinkahealthservices.com/services/${service.id}`,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -304,6 +335,11 @@ function Services() {
               We provide specialized care across various mental health
               disciplines, combining expertise with empathy to help you achieve
               lasting wellness and personal fulfillment.
+            </p>
+            <p className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6">
+              Serving Maryland, Washington DC, and Virginia with telehealth and
+              in-person options. Accepting new patients with same week
+              appointments available when possible.
             </p>
 
             {/* Search Bar */}
@@ -532,7 +568,7 @@ function Services() {
                       {[...Array(3)].map((_, index) => {
                         const pageNumber = Math.max(
                           2,
-                          Math.min(totalPages - 1, currentPage - 1 + index)
+                          Math.min(totalPages - 1, currentPage - 1 + index),
                         );
                         if (pageNumber === 1 || pageNumber === totalPages)
                           return null;
@@ -638,6 +674,24 @@ function Services() {
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 text-lg border-2 border-blue-600 hover:border-blue-700"
               >
                 Schedule Appointment
+              </Link>
+            </div>
+            <p className="text-sm text-blue-100 mt-4">
+              Accepting new patients with same week appointments when available.
+              We accept Medicaid, Medicare, and major insurance plans.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 justify-center">
+              <Link
+                to="/insurance-we-accept"
+                className="bg-white/10 border border-blue-200 text-white px-3 py-2 rounded-lg text-sm font-semibold"
+              >
+                Insurance We Accept
+              </Link>
+              <Link
+                to="/telehealth-psychiatry-md-dc-va"
+                className="bg-white/10 border border-blue-200 text-white px-3 py-2 rounded-lg text-sm font-semibold"
+              >
+                Telehealth Psychiatry
               </Link>
             </div>
           </div>

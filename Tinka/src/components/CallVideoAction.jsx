@@ -26,10 +26,10 @@ const CallVideoAction = () => {
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              to="/contact"
-              className="bg-white text-[#005ab0] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg min-w-[160px] text-center"
+              to="/telehealth-psychiatry-md-dc-va"
+              className="bg-white text-[#005ab0] px-6 py-3 rounded-lg font-semibold transition-colors  hover:scale-105 duration-300 shadow-lg min-w-[160px] text-center"
             >
-              Contact Us
+              Telehealth
             </Link>
             <Link
               to="/tinkahealthservicesbooking"

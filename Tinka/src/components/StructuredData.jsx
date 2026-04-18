@@ -13,19 +13,19 @@ const StructuredData = () => {
         url: "https://tinkahealthservices.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://tinkahealthservices.com/Tinka_health_logo.png",
+          url: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
           width: 600,
           height: 200,
         },
         image: {
           "@type": "ImageObject",
-          url: "https://tinkahealthservices.com/Tinka_health_logo.png",
+          url: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
         },
         description:
-          "Tinka Health Services provides comprehensive mental health care including therapy, psychiatric consultations, medication management, and wellness support in Virginia and Maryland.",
+          "Tinka Health Services provides comprehensive mental health care including therapy, psychiatric consultations, medication management, and wellness support in Maryland, Washington DC, and Virginia.",
         foundingDate: "2020",
         email: "info@tinkahealthservices.com",
-        telephone: "+1 443-295-6600", // Replace with actual phone number
+        telephone: "+1 443-295-6600",
         address: [
           {
             "@type": "PostalAddress",
@@ -48,6 +48,10 @@ const StructuredData = () => {
           {
             "@type": "State",
             name: "Virginia",
+          },
+          {
+            "@type": "State",
+            name: "Washington DC",
           },
           {
             "@type": "State",
@@ -173,7 +177,7 @@ const StructuredData = () => {
         url: "https://tinkahealthservices.com",
         name: "Tinka Health Services",
         description:
-          "Mental health care solutions in Virginia and Maryland. Reclaim your hope and revive your stability.",
+          "Mental health care solutions in Maryland, Washington DC, and Virginia. Reclaim your hope and revive your stability.",
         publisher: {
           "@id": "https://tinkahealthservices.com/#organization",
         },
@@ -206,7 +210,7 @@ const StructuredData = () => {
             name: "Who do you provide treatment for?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "We provide treatment to clients aged 12 and older who are located in Maryland and Virginia. Our services include individual therapy, children's therapy, and specialized mental health treatments.",
+              text: "We provide treatment to clients aged 12 and older who are located in Maryland, Washington DC, and Virginia. Our services include individual therapy, children's therapy, and specialized mental health treatments.",
             },
           },
           {
@@ -247,8 +251,9 @@ const StructuredData = () => {
         "@type": "LocalBusiness",
         "@id": "https://tinkahealthservices.com/#localbusiness",
         name: "Tinka Health Services",
-        image: "https://tinkahealthservices.com/logo.png",
-        telephone: "+1 443-295-6600", // Replace with actual phone number
+        image:
+          "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+        telephone: "+1 443-295-6600",
         address: {
           "@type": "PostalAddress",
           streetAddress: "5457 Twin Knolls Road, Suite 300",
@@ -259,8 +264,8 @@ const StructuredData = () => {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: 39.2037, // Replace with actual coordinates
-          longitude: -76.8618, // Replace with actual coordinates
+          latitude: 39.2037,
+          longitude: -76.8618,
         },
         url: "https://tinkahealthservices.com",
         sameAs: [
@@ -308,6 +313,10 @@ const StructuredData = () => {
           {
             "@type": "State",
             name: "Virginia",
+          },
+          {
+            "@type": "State",
+            name: "Washington DC",
           },
           {
             "@type": "State",

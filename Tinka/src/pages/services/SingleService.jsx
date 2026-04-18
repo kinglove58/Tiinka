@@ -10,6 +10,10 @@ function SingleService() {
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
   const service = service_data.find((data) => data.id === id);
+  const keywordContent = Array.isArray(service?.keywords)
+    ? service.keywords.join(", ")
+    : service?.keywords ||
+      `${service?.name || "mental health service"}, medication management services, telehealth psychiatry appointments, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia`;
 
   const hrRef = useRef(null);
   const secondDivRef = useRef(null);
@@ -28,15 +32,24 @@ function SingleService() {
     <div className="pt-20">
       <ServiceStructuredData service={service} />
       <Helmet>
-        <title>{service.title1} - Tinka Health Services</title>
+        <title>{service.title1} | Tinka Health Services</title>
         <meta name="description" content={service.title1Des} />
-        {service.keywords && (
-          <meta name="keywords" content={service.keywords.join(", ")} />
-        )}
+        <meta name="keywords" content={keywordContent} />
         <link
           rel="canonical"
           href={`https://tinkahealthservices.com/services/${id}`}
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={service.title1} />
+        <meta property="og:description" content={service.title1Des} />
+        <meta
+          property="og:url"
+          content={`https://tinkahealthservices.com/services/${id}`}
+        />
+        {service.image && <meta property="og:image" content={service.image} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={service.title1} />
+        <meta name="twitter:description" content={service.title1Des} />
       </Helmet>
       <ScrollAnimationWrapper>
         <div
@@ -81,6 +94,21 @@ function SingleService() {
               >
                 {service.btnText}
               </button>
+
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link
+                  to="/insurance-we-accept"
+                  className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+                >
+                  Insurance We Accept
+                </Link>
+                <Link
+                  to="/telehealth-psychiatry-md-dc-va"
+                  className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
+                >
+                  Telehealth Psychiatry
+                </Link>
+              </div>
 
               {/* ✅ Modal component */}
               <BookingModal
