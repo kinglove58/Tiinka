@@ -6,6 +6,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import service_data from "../pages/services/serviceData";
 import Teletherapy from "/images/img_mental_health/hero/teletherapy.webp";
+import BookingLink from "./BookingLink";
 
 const NavItem = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +40,21 @@ const NavItem = () => {
     }
   }, []);
 
-  const servicesToShow = useMemo(() => service_data.slice(0, 12), []);
+  const servicesToShow = useMemo(() => service_data, []);
+
+  // Function to shorten service names
+  const shortenServiceName = (name) => {
+    const shortNames = {
+      "Attention Deficit Hyperactivity Disorder": "ADHD",
+      "Obsessive Compulsive Disorder": "OCD",
+      "Post Traumatic Stress Disorder": "PTSD",
+      "Opioid Medication Assistant Treatment": "Opioid MAT",
+      "Medical Marijuana Certification": "Medical Cannabis",
+      "Autism Spectrum Disorder": "Autism Support",
+      "Medication Management": "Med Management",
+    };
+    return shortNames[name] || name;
+  };
 
   return (
     <header className="h-20 fixed w-full top-0 right-0 bg-[#f1f2f6] text-gray-800 z-50 px-4 md:px-16 hover:bg-white">
@@ -75,6 +90,15 @@ const NavItem = () => {
             <NavItemLink to="/about" onClick={handleLinkClick}>
               About Us
             </NavItemLink>
+            <NavItemLink
+              to="/primary-preventive-care"
+              onClick={handleLinkClick}
+            >
+              Primary & Preventive Care
+            </NavItemLink>
+            <NavItemLink to="/meet-our-provider" onClick={handleLinkClick}>
+              Meet Our Provider
+            </NavItemLink>
             <li
               className="w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 cursor-pointer"
               onMouseLeave={handleMouseLeave}
@@ -85,39 +109,54 @@ const NavItem = () => {
                 Services {isHovered ? <FaAngleUp /> : <FaAngleDown />}
               </p>
               {isHovered && (
-                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-1 lg:flex items-center gap-2 bg-white">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-3 w-full md:w-2/3 bg-gray-50 p-6 rounded-xl">
+                <div className="lg:absolute lg:top-20 w-full lg:right-0 border-t border-gray-500 shadow-md py-2 px-4 md:px-16 lg:py-4 bg-white">
+                  <div
+                    className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-6 lg:gap-x-3 lg:gap-y-2 w-full p-4 lg:p-6 rounded-xl relative overflow-hidden"
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url(${Teletherapy})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  >
                     {servicesToShow.map((service) => (
                       <li
                         key={service.id}
-                        className="w-full text-gray-800 hover:text-blue-800 transition duration-300"
+                        className="w-full text-gray-800 hover:text-blue-800 transition duration-300 relative z-10"
                         onClick={handleLinkClick}
                       >
                         <Link
                           to={`/services/${service.id}`}
-                          className="h-10 flex w-full"
+                          className="h-8 lg:h-10 flex w-full items-center text-sm lg:text-base font-semibold"
                           onClick={() => setIsHovered(false)}
+                          title={service.name}
                         >
-                          {service.name}
+                          {shortenServiceName(service.name)}
                         </Link>
                       </li>
                     ))}
+                    <li className="w-full border-t border-gray-400 pt-3 mt-3 lg:col-span-4 xl:col-span-6 relative z-10">
+                      <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 items-start lg:items-center">
+                        <Link
+                          to="/services"
+                          className="text-blue-600 hover:text-blue-800 transition duration-300 font-bold flex items-center"
+                          onClick={() => setIsHovered(false)}
+                        >
+                          View All Services →
+                        </Link>
+                        <BookingLink
+                          onClick={(e) => {
+                            handleLinkClick(e);
+                            setIsHovered(false);
+                          }}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition duration-300 flex items-center gap-2"
+                        >
+                          <FaArrowRight className="text-sm" />
+                          Book Appointment
+                        </BookingLink>
+                      </div>
+                    </li>
                   </div>
-                  <li className="w-full relative lg:w-2/4">
-                    <img
-                      src={Teletherapy}
-                      alt="Teletherapy"
-                      className="h-auto"
-                    />
-
-                    <Link
-                      to="/contact"
-                      className="absolute top-[50%] left-[15%] hover:bg-white border-2 text-white hover:text-black p-2 md:p-4 border-solid rounded-full border-white"
-                      onClick={handleLinkClick}
-                    >
-                      <FaArrowRight />
-                    </Link>
-                  </li>
                 </div>
               )}
             </li>

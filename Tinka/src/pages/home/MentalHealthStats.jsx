@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
+import BookingLink from "../../components/BookingLink";
 
 const statsData = [
   {
@@ -32,11 +33,7 @@ const MentalHealthStats = () => {
           <h2 className="md:text-4xl text-3xl font-bold mb-4">
             You don't have to <br /> struggle alone. <br /> Get help today
           </h2>
-          <Link to="/contact">
-            <button className="mt-4 px-6 py-3 bg-white text-[#005ab0] font-semibold rounded hover:bg-gray-300 hover:scale-95 transition duration-300">
-              Explore Levels of Care
-            </button>
-          </Link>
+          <BookingLink> Explore Levels of Care</BookingLink>
         </div>
 
         {/* Right Side */}

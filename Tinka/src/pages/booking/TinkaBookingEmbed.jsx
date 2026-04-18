@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import BookingStructuredData from "../../components/BookingStructuredData";
+import Testimonial from "../home/Testimonial";
 
 const TinkaBookingEmbed = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,6 +12,7 @@ const TinkaBookingEmbed = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <BookingStructuredData />
       <Helmet>
         <title>Book an Appointment - Tinka Health Services</title>
         <meta
@@ -39,8 +42,11 @@ const TinkaBookingEmbed = () => {
           <h1 className="text-3xl font-bold text-[#005ab0] mb-2">
             Book Your Appointment
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 mb-2">
             Schedule your appointment with our mental health professionals
+          </p>
+          <p className="text-gray-800 text-md">
+            We also serve patients in Virginia, Maryland, and Washington DC
           </p>
         </div>
 
@@ -70,6 +76,11 @@ const TinkaBookingEmbed = () => {
             importance="high"
           />
         </div>
+      </div>
+
+      {/* Testimonial section to encourage bookings */}
+      <div className="bg-gray-50 py-12">
+        <Testimonial />
       </div>
     </div>
   );

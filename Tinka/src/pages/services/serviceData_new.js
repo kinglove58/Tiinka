@@ -1,0 +1,357 @@
+const servicesDataList = [
+  {
+    id: "Addiction-Treatment",
+    name: "Addiction Treatment",
+    id_sub: "Comprehensive support for recovery and healing",
+    title1: "Break free from addiction with Tinka Health's compassionate care",
+    title1Des:
+      "Addiction is a complex disease that affects your brain, behavior, and relationships. Whether you're struggling with substance use, behavioral addictions, or both, recovery is possible. At Tinka Health, we provide evidence-based addiction treatment that addresses not just the addiction itself, but the underlying factors that contribute to it.",
+    btnText: "Start Recovery",
+    title2: "Is addiction controlling your life and relationships?",
+    title2Des:
+      "Addiction often starts as a way to cope with pain, stress, or trauma, but it quickly becomes a cycle that's difficult to break. You might feel ashamed, isolated, or hopeless about your situation. Addiction doesn't just affect you - it impacts everyone who cares about you. Here's how addiction can take over your life:",
+    title2List: [
+      "Loss of control over your substance use or behaviors despite negative consequences",
+      "Damaged relationships with family, friends, and romantic partners",
+      "Problems at work or school, including decreased performance or attendance",
+      "Financial difficulties due to spending money on substances or addictive behaviors",
+      "Legal problems or risky behaviors that put you or others in danger",
+      "Physical health complications and mental health issues like depression or anxiety",
+      "Isolation and withdrawal from activities and people you once enjoyed",
+      "Feelings of shame, guilt, and hopelessness about your ability to change",
+    ],
+    title3: "Tinka Health's goals for your recovery journey:",
+    title3Des:
+      "Recovery from addiction is a journey, not a destination. At Tinka Health, we believe that with the right support, anyone can overcome addiction and build a fulfilling life in recovery. We take a comprehensive approach that addresses the physical, emotional, and psychological aspects of addiction. Tinka Health will help you:",
+    title3List: [
+      "Develop a personalized treatment plan that addresses your specific addiction and underlying issues",
+      "Learn healthy coping strategies to manage triggers, cravings, and stressful situations",
+      "Address any co-occurring mental health conditions like depression, anxiety, or trauma",
+      "Build a strong support network and repair damaged relationships when possible",
+      "Understand the root causes of your addiction and develop insight into your patterns",
+      "Create a relapse prevention plan and develop tools for long-term recovery",
+      "Rebuild your life with purpose, meaning, and healthy habits that support your sobriety",
+    ],
+  },
+  {
+    id: "Adult-Psychiatry",
+    name: "Adult Psychiatry",
+    id_sub: "Comprehensive psychiatric care for adults",
+    title1: "Expert psychiatric care tailored for adult mental health needs",
+    title1Des:
+      "Adult psychiatry focuses on the diagnosis, treatment, and prevention of mental health disorders in adults. At Tinka Health, our psychiatric services combine medication management with therapeutic support to provide comprehensive care that addresses both the biological and psychological aspects of mental health conditions.",
+    btnText: "Get Psychiatric Care",
+    title2: "Are you struggling with complex mental health challenges?",
+    title2Des:
+      "Many adults experience mental health conditions that require specialized psychiatric care. These conditions can significantly impact your daily life, relationships, and overall well-being. Without proper treatment, psychiatric conditions can lead to:",
+    title2List: [
+      "Persistent symptoms that interfere with work or personal relationships",
+      "Difficulty managing emotions, thoughts, or behaviors",
+      "Physical symptoms related to mental health conditions",
+      "Increased risk of substance use or other harmful coping mechanisms",
+      "Social isolation and withdrawal from important activities",
+      "Decreased quality of life and overall functioning",
+    ],
+    title3: "How Tinka Health's Adult Psychiatry Services Help",
+    title3Des:
+      "Our adult psychiatry services provide comprehensive evaluation and treatment for a wide range of mental health conditions. Our experienced psychiatrists work closely with you to develop personalized treatment plans. Here's how we support your mental health:",
+    title3List: [
+      "Comprehensive psychiatric evaluations to accurately diagnose mental health conditions",
+      "Medication management and monitoring to optimize treatment effectiveness",
+      "Integration of therapy and medication for the best possible outcomes",
+      "Treatment of complex conditions including bipolar disorder, schizophrenia, and severe depression",
+      "Ongoing support and adjustment of treatment plans as needed",
+      "Collaboration with other healthcare providers for holistic care",
+      "Education about your condition and treatment options",
+    ],
+  },
+  {
+    id: "Anger-Management",
+    name: "Anger Management",
+    id_sub: "Learn healthy ways to express and control anger",
+    title1:
+      "Transform your relationship with anger through professional guidance",
+    title1Des:
+      "Anger is a natural emotion, but when it becomes overwhelming or destructive, it can damage relationships and negatively impact your life. Tinka Health's anger management services help you understand your triggers, develop healthy coping strategies, and learn to express anger in constructive ways.",
+    btnText: "Manage My Anger",
+    title2: "Is anger causing problems in your life?",
+    title2Des:
+      "Uncontrolled anger can have serious consequences for your relationships, career, and overall well-being. Many people struggle with anger management, and without proper support, it can lead to:",
+    title2List: [
+      "Damaged relationships with family, friends, and colleagues",
+      "Problems at work or school, including potential job loss",
+      "Legal issues or conflicts that could have been avoided",
+      "Physical health problems related to chronic stress and anger",
+      "Feelings of guilt, shame, and regret after angry outbursts",
+      "Social isolation and loss of important relationships",
+    ],
+    title3: "Tinka Health's Approach to Anger Management",
+    title3Des:
+      "Our anger management program is designed to help you gain control over your anger responses and develop healthier ways to cope with frustration and stress. Through evidence-based techniques, you'll learn to:",
+    title3List: [
+      "Identify your anger triggers and early warning signs",
+      "Develop better communication skills to express your needs without aggression",
+      "Practice conflict resolution strategies that protect your relationships",
+      "Build emotional regulation skills that help you stay calm under pressure",
+      "Address any underlying mental health conditions that might contribute to anger issues",
+    ],
+  },
+  {
+    id: "Anxiety-Disorders",
+    name: "Anxiety Disorders",
+    id_sub: "Find relief from overwhelming anxiety and worry",
+    title1: "Overcome anxiety with expert care and support",
+    title1Des:
+      "Anxiety disorders are among the most common mental health conditions, affecting millions of people. If you're struggling with persistent worry, fear, or panic, you're not alone. Tinka Health offers comprehensive treatment for various anxiety disorders, helping you regain control of your life and find lasting relief.",
+    btnText: "Get Relief Now",
+    title2: "Is anxiety controlling your life?",
+    title2Des:
+      "Anxiety can manifest in many ways and significantly impact your daily functioning. Whether you're experiencing generalized anxiety, panic attacks, social anxiety, or specific phobias, untreated anxiety can lead to:",
+    title2List: [
+      "Persistent worry and fear that interferes with daily activities",
+      "Physical symptoms like rapid heartbeat, sweating, or difficulty breathing",
+      "Avoidance of situations, people, or places that trigger anxiety",
+      "Sleep disturbances and chronic fatigue",
+      "Difficulty concentrating at work or school",
+      "Strained relationships due to anxiety-related behaviors",
+      "Development of depression or other mental health conditions",
+    ],
+    title3: "How Tinka Health Helps You Overcome Anxiety",
+    title3Des:
+      "Our comprehensive approach to treating anxiety disorders combines evidence-based therapies with personalized care. We'll work together to understand your specific anxiety triggers and develop effective coping strategies. Here's how we support your recovery:",
+    title3List: [
+      "Identify and challenge negative thought patterns that fuel anxiety",
+      "Learn practical relaxation and breathing techniques for immediate relief",
+      "Develop gradual exposure strategies to overcome specific fears and phobias",
+      "Build confidence and resilience through behavioral interventions",
+      "Address any underlying trauma or life stressors contributing to anxiety",
+      "Create a personalized toolkit of coping strategies for long-term management",
+    ],
+  },
+  {
+    id: "Bipolar-Disorder",
+    name: "Bipolar Disorder",
+    id_sub: "Manage mood swings and live with stability",
+    title1: "Get support for managing bipolar disorder with Tinka Health",
+    title1Des:
+      "If you are living with bipolar disorder, you might feel like a slave to your moods and emotions. At some points, you feel depressed, unmotivated, and withdrawn. However, at other times, you feel elated, impulsive, restless, agitated, and full of self-confidence. This emotional instability can greatly impact your life but Tinka Health is here to help you stabilize your moods and make healthier choices.",
+    btnText: "Let's Do It",
+    title2: "Does bipolar disorder make your moods unpredictable?",
+    title2Des:
+      "Bipolar disorder is characterized by mood swings between hypomania, mania, and major depressive episodes, with types ranging from Bipolar I (severe mania sometimes requiring hospitalization) to Bipolar II (major depressive episodes with less severe hypomania) and cyclothymia (frequent, less intense mood shifts). Manic episodes may bring heightened energy, irritability, and impulsive behaviors like overspending or risk-taking, which, despite the temporary high, often lead to serious consequences including:",
+    title2List: [
+      "Emotional crashes after manic episodes",
+      "Impulsive actions that might result in harm or regret",
+      "Substance use as a coping mechanism",
+      "Struggles with relationships",
+      "Fluctuations in sleep, appetite, and energy",
+      "Poor self-image or identity crises",
+    ],
+    title3: "Tinka Health's approach to therapy for bipolar disorder",
+    title3Des:
+      "Bipolar disorder affects everyone differently, and Tinka Health understands that your experience is unique. Our goal is to help you regulate your mood and regain control of your mental health. Here's how Tinka Health can support you:",
+    title3List: [
+      "Explore treatment options, including lifestyle changes, talk therapy, and potentially medication, to help you manage mood swings.",
+      "Reduce impulsive or risky behaviors that could impact your relationships, health, finances, or work.",
+      "Address depressive feelings, social withdrawal, and thoughts of self-harm.",
+      "Decrease substance use during mood episodes and find healthier coping mechanisms.",
+      "Understand how bipolar disorder affects your life and develop strategies to navigate periods of mania and depression effectively.",
+    ],
+  },
+  {
+    id: "Depression",
+    name: "Depression",
+    id_sub: "Find hope and healing from depression",
+    title1: "Overcome depression with compassionate, professional support",
+    title1Des:
+      "Depression is more than just feeling sad or going through a rough patch. It's a serious mental health condition that affects how you think, feel, and handle daily activities. At Tinka Health, we understand that depression can feel overwhelming and isolating, but with the right support and treatment, recovery is possible.",
+    btnText: "Start Healing",
+    title2: "Is depression affecting your daily life?",
+    title2Des:
+      "Depression can manifest in various ways and significantly impact every aspect of your life. If you're experiencing persistent sadness, loss of interest in activities, or other symptoms of depression, you may be dealing with:",
+    title2List: [
+      "Persistent feelings of sadness, emptiness, or hopelessness",
+      "Loss of interest or pleasure in activities you once enjoyed",
+      "Significant changes in appetite or weight",
+      "Sleep disturbances, including insomnia or oversleeping",
+      "Fatigue and decreased energy levels",
+      "Difficulty concentrating, making decisions, or remembering things",
+      "Feelings of worthlessness or excessive guilt",
+      "Thoughts of death or suicide",
+    ],
+    title3: "How Tinka Health Helps You Overcome Depression",
+    title3Des:
+      "Our approach to treating depression is comprehensive and personalized, combining evidence-based therapies with compassionate support. We'll work together to understand the root causes of your depression and develop effective strategies for healing. Here's how we support your recovery:",
+    title3List: [
+      "Identify and challenge negative thought patterns that contribute to depression",
+      "Develop healthy coping strategies for managing difficult emotions",
+      "Address any underlying trauma or life stressors that may be contributing to your depression",
+      "Build a support network and improve your relationships",
+      "Establish healthy routines and lifestyle habits that support mental wellness",
+      "Work on building self-esteem and rediscovering your sense of purpose",
+      "Create a personalized relapse prevention plan for long-term recovery",
+    ],
+  },
+  {
+    id: "Eating-Disorders",
+    name: "Eating Disorders",
+    id_sub: "Heal your relationship with food and your body",
+    title1: "Comprehensive treatment for eating disorders and recovery",
+    title1Des:
+      "Eating disorders are serious mental health conditions that affect people of all ages, genders, and backgrounds. Whether you're struggling with anorexia, bulimia, binge eating disorder, or another eating disorder, Tinka Health provides specialized care to help you heal your relationship with food and your body.",
+    btnText: "Start Recovery",
+    title2: "Is your relationship with food causing distress?",
+    title2Des:
+      "Eating disorders can have serious physical and emotional consequences. They often involve complex relationships between food, weight, body image, and underlying emotional issues. Common signs and impacts include:",
+    title2List: [
+      "Obsessive thoughts about food, weight, or body shape",
+      "Restrictive eating, binge eating, or purging behaviors",
+      "Social isolation and withdrawal from family and friends",
+      "Physical health complications related to eating behaviors",
+      "Emotional distress, anxiety, or depression related to food and body image",
+      "Interference with work, school, or daily activities",
+    ],
+    title3: "Tinka Health's Approach to Eating Disorder Recovery",
+    title3Des:
+      "Our comprehensive treatment approach addresses both the behavioral and underlying psychological aspects of eating disorders. We provide a safe, non-judgmental environment where healing can begin. Here's how we support your recovery:",
+    title3List: [
+      "Develop a healthy relationship with food and eating behaviors",
+      "Address underlying emotional issues that contribute to the eating disorder",
+      "Improve body image and self-esteem",
+      "Learn coping strategies for managing triggers and difficult emotions",
+      "Work on family dynamics and relationship issues that may be impacting recovery",
+      "Coordinate with medical professionals for comprehensive care",
+      "Build long-term recovery skills and relapse prevention strategies",
+    ],
+  },
+  {
+    id: "Insomnia",
+    name: "Insomnia",
+    id_sub: "Find restful sleep and peace of mind",
+    title1: "Tinka Health will help you tackle insomnia",
+    title1Des:
+      "Lack of sleep can turn your world upside down. Insomnia isn't just frustrating; it impacts every part of your life, from work productivity to emotional stability. If you're struggling with sleepless nights, Tinka Health is here to help you overcome insomnia and regain restful sleep.",
+    btnText: "Get My Sleep Back",
+    title2: "Is insomnia taking a toll on your life?",
+    title2Des:
+      "If you find yourself lying awake for hours, frustrated, anxious, or overwhelmed by endless thoughts, you're not alone. Many people try to solve insomnia by just relaxing or ignoring it, but without addressing its root causes, the cycle often continues night after night and this can lead to repercussions such as:",
+    title2List: [
+      "Daytime fatigue and difficulty concentrating",
+      "Strained relationships due to irritability or withdrawal",
+      "Increased risk of mental health issues, such as anxiety or depression",
+      "A weakened immune system, leading to frequent illness",
+      "Dependence on sleep medications that may lose effectiveness over time",
+    ],
+    title3: "Goals of Insomnia Therapy",
+    title3Des:
+      "The goal of insomnia therapy with Tinka Health is to uncover the causes of your sleeplessness and provide effective tools for better rest. When you work with a Tinka Health therapist, you'll learn how to:",
+    title3List: [
+      "Identify patterns and triggers for insomnia through journaling or sleep tracking.",
+      "Address any underlying mental or physical health issues that might be contributing to sleep disruptions.",
+      "Develop a bedtime routine and relaxation techniques tailored to your needs, helping you ease into restful sleep naturally.",
+      "Manage anxious thoughts and promote a healthy mindset about sleep, reducing sleep-related stress.",
+      "Improve lifestyle habits that contribute to better overall sleep quality, like diet and mindfulness practices",
+    ],
+  },
+  {
+    id: "Personality-Disorders",
+    name: "Personality Disorders",
+    id_sub: "Navigate personality challenges with professional support",
+    title1: "Specialized care for personality disorders and personal growth",
+    title1Des:
+      "Personality disorders can significantly impact how you think, feel, and behave in relationships and daily life. These conditions often develop early in life and can create ongoing challenges in work, relationships, and self-perception. Tinka Health provides specialized therapy designed to help individuals with personality disorders develop healthier coping strategies and improve their quality of life.",
+    btnText: "Get Support",
+    title2: "Are personality patterns affecting your relationships and life?",
+    title2Des:
+      "Personality disorders involve persistent patterns of thinking, feeling, and behaving that differ significantly from cultural expectations and cause distress or impairment. These patterns often lead to:",
+    title2List: [
+      "Difficulty maintaining stable, healthy relationships",
+      "Intense fear of abandonment or rejection",
+      "Problems with self-image and identity",
+      "Impulsive or self-destructive behaviors",
+      "Emotional instability and mood swings",
+      "Challenges with work or academic performance",
+      "Social isolation or conflict with others",
+    ],
+    title3: "Tinka Health's Approach to Personality Disorder Treatment",
+    title3Des:
+      "Treatment for personality disorders requires specialized approaches that focus on developing healthier patterns of thinking, feeling, and behaving. Our therapeutic interventions are designed to help you:",
+    title3List: [
+      "Develop greater self-awareness and understanding of your patterns",
+      "Learn healthier ways to cope with intense emotions",
+      "Improve interpersonal skills and relationship patterns",
+      "Build a more stable sense of self and identity",
+      "Reduce impulsive and self-destructive behaviors",
+      "Develop better problem-solving and communication skills",
+      "Create meaningful, lasting changes in your life",
+    ],
+  },
+  {
+    id: "Postpartum-Psychiatric-Disorders",
+    name: "Postpartum Psychiatric Disorders",
+    id_sub: "Support for new mothers facing mental health challenges",
+    title1: "Compassionate care for postpartum mental health conditions",
+    title1Des:
+      "The postpartum period can bring unexpected mental health challenges that go far beyond typical 'baby blues.' Postpartum psychiatric disorders, including postpartum depression, anxiety, and psychosis, are serious conditions that require professional support. Tinka Health provides specialized care for new mothers experiencing these challenges.",
+    btnText: "Get Support",
+    title2: "Are you struggling with postpartum mental health challenges?",
+    title2Des:
+      "Postpartum psychiatric disorders can develop during pregnancy or after childbirth and significantly impact your ability to care for yourself and your baby. These conditions are more common than many people realize and can include:",
+    title2List: [
+      "Persistent sadness, anxiety, or feelings of emptiness",
+      "Difficulty bonding with your baby",
+      "Overwhelming feelings of guilt, shame, or inadequacy as a mother",
+      "Severe mood swings or irritability",
+      "Thoughts of harming yourself or your baby",
+      "Loss of interest in activities you used to enjoy",
+      "Physical symptoms like fatigue, sleep disturbances, or appetite changes",
+    ],
+    title3: "How Tinka Health Supports New Mothers",
+    title3Des:
+      "Our specialized postpartum mental health services provide compassionate, evidence-based care designed specifically for new mothers. We understand the unique challenges of this period and provide support to help you:",
+    title3List: [
+      "Address symptoms of postpartum depression, anxiety, or other mood disorders",
+      "Develop healthy bonding with your baby",
+      "Navigate the challenges of new motherhood",
+      "Build a support system and improve relationships",
+      "Learn coping strategies for managing stress and overwhelm",
+      "Address any trauma related to pregnancy, childbirth, or early motherhood",
+      "Coordinate care with your healthcare providers for comprehensive support",
+    ],
+  },
+  {
+    id: "Stress-Burnout",
+    name: "Stress & Burnout",
+    id_sub: "Overcome overwhelm and reclaim your energy",
+    title1: "Recover from stress and burnout with professional guidance",
+    title1Des:
+      "Chronic stress and burnout can leave you feeling emotionally, physically, and mentally exhausted. Whether it's work-related stress, caregiver burnout, or overwhelming life circumstances, Tinka Health can help you develop effective strategies to manage stress, prevent burnout, and restore your well-being.",
+    btnText: "Find Relief",
+    title2: "Is chronic stress taking over your life?",
+    title2Des:
+      "Stress and burnout can affect every aspect of your life, from your physical health to your relationships and job performance. Common signs and consequences include:",
+    title2List: [
+      "Chronic fatigue and emotional exhaustion",
+      "Decreased productivity and motivation at work or home",
+      "Physical symptoms like headaches, muscle tension, or sleep problems",
+      "Irritability, anxiety, or depression",
+      "Difficulty concentrating or making decisions",
+      "Strained relationships with family, friends, or colleagues",
+      "Loss of enjoyment in activities you once found fulfilling",
+    ],
+    title3: "Tinka Health's Approach to Stress and Burnout Recovery",
+    title3Des:
+      "Our comprehensive approach to stress and burnout focuses on identifying the root causes of your stress and developing sustainable strategies for managing life's demands. We'll work together to help you:",
+    title3List: [
+      "Identify your specific stress triggers and patterns",
+      "Develop healthy coping strategies and stress management techniques",
+      "Improve work-life balance and set appropriate boundaries",
+      "Learn relaxation and mindfulness techniques for immediate stress relief",
+      "Address any underlying anxiety, depression, or other mental health concerns",
+      "Build resilience and develop a more sustainable approach to life's challenges",
+      "Create a personalized plan for preventing future burnout",
+    ],
+  },
+];
+
+export default servicesDataList;

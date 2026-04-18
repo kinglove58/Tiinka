@@ -40,7 +40,7 @@ const Hero = () => {
             understanding support every step of the way.
           </p>
           <p className="text-blue-500 md:mb-5 mb-2 text-lg md:max-w-lg">
-            Virtual services available — healing begins wherever you are.
+            Virtual care in Maryland, Virginia, and Washington, DC — healing starts right where you are.
           </p>
 
           {/* Book Button */}

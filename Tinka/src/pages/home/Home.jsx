@@ -48,17 +48,18 @@ const Home = () => {
       <div>
         <Hero />
         <Suspense fallback={<div>Loading...</div>}>
-          <MentalDetails />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
           <Locations />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
-          <InsuranceLogo />
+          <MentalDetails />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <Specialization />
         </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <InsuranceLogo />
+        </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
           <ChooseUs />
         </Suspense>

@@ -12,15 +12,14 @@ const Specialization = () => {
       <h1 className="text-4xl text-[#005ab0] font-bold mb-6 text-center">
         Tinka Health Services Specialize in:
       </h1>
-      <div className="sm:hidden flex overflow-x-auto gap-x-3 mx-2 pb-4 scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100">
-        {/* Mobile horizontal scroll, two by two */}
+      <div className="sm:hidden grid grid-cols-2 gap-x-3 gap-y-3 mx-2 pb-4">
+        {/* Mobile grid layout, two columns */}
         {servicesToShow.map((service, index) => (
           <div
             key={service.id}
-            className={`bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex flex-col justify-center items-center min-w-[48%] max-w-xs mx-1 ${
+            className={`bg-white hover:scale-95 transition-transform duration-300 shadow-md rounded-lg py-5 group flex flex-col justify-center items-center ${
               index >= 9 ? "hidden" : "flex"
             }`}
-            style={{ flex: "0 0 48%" }}
           >
             <Link
               to={`/services/${service.id}`}
@@ -56,15 +55,23 @@ const Specialization = () => {
         ))}
       </div>
       <div className="text-center mt-8 pb-16">
-        <p className="text-gray-700 mb-4">
-          Don't see what you're looking for? We can help with a wide range of
-          challenges.
-        </p>
-        <Link to="/services/Insomnia">
-          <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-3">
-            Check More
-          </button>
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link to="/contact">
+            <button className="bg-white-600 text-blue-700 font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white">
+              Contact Us
+            </button>
+          </Link>
+          <Link to="/services">
+            <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-0">
+              View more
+            </button>
+          </Link>
+          <Link to="/tinkahealthservicesbooking">
+            <button className="bg-white-600 text-blue-700 font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white">
+              Book Appointment
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

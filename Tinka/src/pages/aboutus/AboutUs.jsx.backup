@@ -1,0 +1,262 @@
+import { Suspense, lazy, memo, useState } from "react";
+import { GoGoal } from "react-icons/go";
+import { FaEye } from "react-icons/fa";
+import { GiLovers } from "react-ic              
+              <h3 className="text-2xl font-semibold text-[#005ab0] mb-4 mt-8">
+                Why Choose Us
+              </h3>
+              <ul className="text-gray-700 text-lg mb-6 ml-6 list-disc space-y-2">
+                <li><strong>Client-centered care:</strong> We respect your voice and your goals.</li>
+                <li><strong>Holistic support:</strong> We consider your mental, emotional, and social needs.</li>
+                <li><strong>Flexible access:</strong> Offering both in-person visits and secure telehealth options.</li>
+                <li><strong>Experienced team:</strong> Led by board-certified psychiatric professionals and clinicians committed to excellence.</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-[#005ab0] mb-4 mt-8">
+                Our Commitment
+              </h3>
+              <p className="text-blue-900 font-semibold text-lg mb-6">
+                We are more than a clinic—we are a partner in your wellness. At Tinka Health Services, we strive to reduce stigma, promote understanding, and create a safe space where every individual feels heard, valued, and supported.
+              </p>gi";
+import { Link } from "react-router-dom";
+import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
+import aboutImage from "/images/img_mental_health/aboutUs/about.webp";
+import { Helmet } from "react-helmet";
+import BookingModal from "../../components/BookingModal"; // ✅ Import modal
+
+const Testimonial = lazy(() => import("../home/Testimonial"));
+
+const supportData = [
+  "Overcoming depression",
+  "Handling grief and loss",
+  "Building self-esteem",
+  "Managing anger",
+  "Recovering from emotional abuse",
+  "Facing relationship challenges",
+  "Improving Sleep Health",
+  "Improving Focus and Productivity",
+  "and much more...",
+];
+
+const aboutUsData = [
+  {
+    icon: GoGoal,
+    title: "Our mission",
+    description:
+      "We make quality mental health care an integral part of people’s lives. We believe it has to be easily accessible and cost-efficient.",
+  },
+  {
+    icon: FaEye,
+    title: "Our vision",
+    description:
+      "We envision a world where everyone, everywhere, can get the unique support to live a better life.",
+  },
+  {
+    icon: GiLovers,
+    title: "Our values",
+    description:
+      "Empathy at every step. Uncompromised quality. Personalized, individual care. Embracing inclusivity and diversity. Innovation that elevates the therapeutic experience.",
+  },
+];
+
+const SupportItem = memo(({ support }) => (
+  <div className="text-lg">{support}</div>
+));
+
+const AboutUsItem = memo(({ icon: Icon, title, description }) => (
+  <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+    <div className="flex justify-center mb-4">
+      <Icon className="text-4xl text-blue-500" />
+    </div>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <p className="text-lg">{description}</p>
+  </div>
+));
+
+const AboutUs = () => {
+  const [showModal, setShowModal] = useState(false);
+  return (
+    <main className="mx-auto py-16 bg-white">
+      <Helmet>
+        <title>About Us - Tinka Health Services</title>
+        <meta
+          name="description"
+          content="Learn more about Tinka Health Services, our mission, vision, and values. We are dedicated to providing quality mental health care."
+        />
+        <meta
+          name="keywords"
+          content="about us, Tinka Health Services, mental health, mission, vision, values"
+        />
+        <link rel="canonical" href="https://tinkahealthservices.com/about" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About Us - Tinka Health Services",
+              "description": "Learn more about Tinka Health Services, our mission, vision, and values. We are dedicated to providing quality mental health care.",
+              "url": "https://tinkahealthservices.com/about",
+              "mainEntity": {
+                "@type": "MedicalOrganization",
+                "name": "Tinka Health Services",
+                "url": "https://tinkahealthservices.com",
+                "logo": "https://tinkahealthservices.com/logo.png",
+                "description": "Mental health care organization providing comprehensive therapy and psychiatric services in Virginia and Maryland.",
+                "foundingDate": "2020",
+                "areaServed": [
+                  {
+                    "@type": "State",
+                    "name": "Virginia"
+                  },
+                  {
+                    "@type": "State",
+                    "name": "Maryland"
+                  }
+                ],
+                "medicalSpecialty": [
+                  "Psychiatry",
+                  "Psychology",
+                  "Mental Health Counseling"
+                ],
+                "sameAs": [
+                  "https://www.facebook.com/tinkahealthservices",
+                  "https://www.instagram.com/tinkahealthservices",
+                  "https://x.com/Tinkahealthserv",
+                  "https://www.youtube.com/@TinkaHealthServices"
+                ]
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      <div>
+        <ScrollAnimationWrapper>
+          <div className="py-16 bg-gradient-to-b from-white to-blue-50">
+            <h1 className="lg:text-5xl md:text-4xl text-3xl text-center font-bold md:py-12 py-8 text-[#005ab0]">
+              We Help You to Reclaim Your Mental Health Stability
+            </h1>
+            <div>
+              <img
+                width={800}
+                height={600}
+                className="w-full rounded-xl"
+                src={aboutImage}
+                alt="about us image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
+        <div className="py-10 flex flex-col items-center bg-gradient-to-b from-blue-50 via-blue-50 to-blue-100 px-4 lg:px-0">
+          <ScrollAnimationWrapper>
+            <article className="w-full max-w-4xl">
+              <h2 className="text-3xl font-semibold text-[#005ab0] text-center mb-6">
+                About Tinka Health Services
+              </h2>
+              <p className="text-gray-700 text-lg mb-6">
+                At Tinka Health Services, we are dedicated to providing compassionate, comprehensive, and evidence-based behavioral health care to individuals and families across our communities. Our mission is to break down barriers to mental health treatment by offering accessible, personalized, and culturally sensitive services that empower clients to lead healthier and more fulfilling lives.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-[#005ab0] mb-4 mt-8">
+                Who We Are
+              </h3>
+              <p className="text-gray-700 text-lg mb-6">
+                Founded by experienced healthcare professionals with a passion for mental wellness, Tinka Health Services brings together a team of licensed clinicians, psychiatric providers, and support staff who share one goal: to support the whole person. We believe mental health care should be collaborative, respectful, and tailored to each individual's unique journey.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-[#005ab0] mb-4 mt-8">
+                What We Do
+              </h3>
+              <p className="text-gray-700 text-lg mb-4">
+                We specialize in a wide range of mental health services, including:
+              </p>
+              <ul className="text-gray-700 text-lg mb-6 ml-6 list-disc space-y-2">
+                <li>Psychiatric evaluations & medication management</li>
+                <li>Individual, family, and group therapy</li>
+                <li>Support for depression, anxiety, bipolar disorder, ADHD, trauma, and substance use</li>
+                <li>Children, adolescent, and adult behavioral health services</li>
+                <li>Telehealth and in-person appointments for flexibility and convenience</li>
+              </ul>
+              <p className="text-gray-700 text-lg mb-6">
+                Our providers work closely with clients to create personalized treatment plans that focus on building coping skills, restoring balance, and promoting long-term wellness.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-[#005ab0] mb-4 mt-8">
+                Our Approach
+              </h3>
+              <p className="text-gray-700 text-lg mb-6">
+                At Tinka Health Services, we understand that healing is not one-size-fits-all. We combine medical expertise with a human touch—listening first, guiding with empathy, and supporting each step forward. Whether you are beginning your mental health journey or continuing along the path of recovery, we are here to walk alongside you.
+              </p>
+              <p className="text-blue-900 font-semibold text-center text-lg">
+                Welcome to Tinka Health Services. Together, let’s take the next
+                step toward healing and growth.
+              </p>
+            </article>
+          </ScrollAnimationWrapper>
+        </div>
+        <div className="py-10 flex flex-col items-center bg-gradient-to-b from-blue-50 via-blue-50 to-blue-100 px-4 lg:px-0">
+          <ScrollAnimationWrapper>
+            <h2 className="text-3xl font-semibold text-[#005ab0] mb-8 text-center">
+              What we support people with:
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2 w-full max-w-4xl">
+              {supportData.map((support, index) => (
+                <SupportItem key={index} support={support} />
+              ))}
+            </div>
+          </ScrollAnimationWrapper>
+        </div>
+
+        <div className="flex flex-col items-center bg-gradient-to-b from-blue-100 via-blue-200 to-blue-50 py-10 px-4 lg:px-0">
+          <ScrollAnimationWrapper>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl">
+              {aboutUsData.map((about, index) => (
+                <AboutUsItem
+                  key={index}
+                  icon={about.icon}
+                  title={about.title}
+                  description={about.description}
+                />
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <button
+                type="button"
+                aria-controls="booking-modal"
+                aria-expanded={showModal}
+                onClick={() => setShowModal(true)}
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+              >
+                Book An Appointment
+              </button>
+            </div>
+          </ScrollAnimationWrapper>
+        </div>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Testimonial />
+        </Suspense>
+        <div className="text-center">
+          <button
+            type="button"
+            aria-controls="booking-modal"
+            aria-expanded={showModal}
+            onClick={() => setShowModal(true)}
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+          >
+            Let's Do This
+          </button>
+        </div>
+        {/* Single modal instance at root level for best practice */}
+        <BookingModal
+          show={showModal}
+          onClose={() => setShowModal(false)}
+          id="booking-modal"
+        />
+      </div>
+    </main>
+  );
+};
+
+export default memo(AboutUs);

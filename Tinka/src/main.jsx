@@ -6,9 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BlogProvider } from "./BlogContext/BlogContext.jsx";
 import Home from "../src/pages/home/Home.jsx";
 import AboutUs from "./pages/aboutus/AboutUs.jsx";
+import MeetOurProvider from "./pages/aboutus/MeetOurProvider.jsx";
+import PrimaryPreventiveCare from "./pages/primary/PrimaryPreventiveCare.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
 import AllBlogs from "./pages/blogs/AllBlogs.jsx";
 import SingleService from "./pages/services/SingleService.jsx";
+import Services from "./pages/services/Services.jsx";
 import ContactUs from "./pages/contact/ContactUs.jsx";
 import TinkaBooking from "./pages/booking/TinkaBookingEmbed.jsx";
 
@@ -31,6 +34,14 @@ const router = createBrowserRouter([
         element: <AboutUs />,
       },
       {
+        path: "/primary-preventive-care",
+        element: <PrimaryPreventiveCare />,
+      },
+      {
+        path: "/meet-our-provider",
+        element: <MeetOurProvider />,
+      },
+      {
         path: "/blogs",
         element: <AllBlogs />,
       },
@@ -49,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/booking",
         element: <TinkaBooking />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
       },
       {
         path: "/services/:id",

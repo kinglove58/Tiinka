@@ -38,6 +38,7 @@ const emergencyLinks = [
 const companyData = [
   { value: "Privacy Policy", link: "policy" },
   { value: "Contact Us", link: "contact" },
+  { value: "Book Appointment", link: "tinkahealthservicesbooking" },
 ];
 
 const Footer = () => {
@@ -49,10 +50,10 @@ const Footer = () => {
 
   // Memoize the sliced data
   const servicesToShow = useMemo(
-    () => servicesDataList.slice(0, 12),
+    () => servicesDataList.slice(0, 6),
     [servicesDataList]
   );
-  const blogsToShow = useMemo(() => blogs.slice(0, 7), [blogs]);
+  const blogsToShow = useMemo(() => blogs.slice(0, 4), [blogs]);
 
   return (
     <footer className="bg-[#333743] text-white py-8 mt-16">
@@ -138,6 +139,14 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li className="mt-4">
+                <Link
+                  to="/services"
+                  className="text-blue-400 hover:text-blue-600 font-semibold block px-2 py-1 rounded border border-blue-400 hover:border-blue-600 text-center"
+                >
+                  View All Services
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -192,6 +201,14 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li className="mt-4">
+                <Link
+                  to="/blogs"
+                  className="text-blue-400 hover:text-blue-600 font-semibold block px-2 py-1 rounded border border-blue-400 hover:border-blue-600 text-center"
+                >
+                  View All Resources
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useState, memo } from "react";
 import BookingModal from "../../components/BookingModal"; // ✅ Import modal
+import BookingLink from "../../components/BookingLink";
 
 const EasyStart = () => {
   const [showModal, setShowModal] = useState(false); // ✅ Modal state
@@ -41,12 +42,7 @@ const EasyStart = () => {
         </div>
 
         {/* ✅ Button to open modal */}
-        <button
-          onClick={() => setShowModal(true)}
-          className="mt-12 mb-0 px-6 py-3 bg-white text-blue-600 hover:scale-95 font-semibold rounded hover:bg-gray-200 transition duration-300"
-        >
-          Let's Do This
-        </button>
+        <BookingLink> Let's do it</BookingLink>
 
         {/* ✅ Modal component */}
         <BookingModal show={showModal} onClose={() => setShowModal(false)} />
