@@ -7,6 +7,12 @@ import React, {
   useState,
 } from "react";
 import { Helmet } from "react-helmet";
+import {
+  FiActivity,
+  FiArrowRight,
+  FiClipboard,
+  FiMapPin,
+} from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Hero from "./Hero";
 
@@ -143,81 +149,127 @@ const Home = () => {
       </Helmet>
       <div>
         <Hero />
-        <section className="px-4 md:px-12 lg:px-24 pb-8">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#005ab0] mb-4">
-              Psychiatric care and medication management in MD, DC and VA
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Tinka Health Services provides expert psychiatric care and
-              medication management for individuals in Maryland, Washington DC,
-              and Virginia. Our board-certified psychiatric nurse practitioners
-              specialize in treating anxiety, depression, ADHD, bipolar
-              disorder, PTSD and other mental health conditions through both
-              in-person and telehealth visits.
-            </p>
-            <p className="text-gray-700 mb-4">
-              We accept Medicaid, Medicare, and most major insurance plans,
-              including Kaiser Permanente (DC), CareFirst, Aetna, Cigna, Optum,
-              and Tricare. We are also available on platforms such as
-              SonderMind, Grow Therapy, and Rula to ensure accessible and
-              convenient care.
-            </p>
-            <p className="text-gray-700 mb-5 font-medium">
-              Accepting new patients. Same week appointments available.
-              Telehealth psychiatry appointments and medication management
-              services with insurance accepted including Medicaid and Medicare.
-            </p>
-            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 text-sm text-gray-700 mb-5">
-              <p>Psychiatric provider Maryland</p>
-              <p>Mental health provider DC</p>
-              <p>Psychiatric services Virginia</p>
-              <p>Medication management near me</p>
-              <p>Telehealth psychiatry MD, DC and VA</p>
-              <p>ADHD medication management provider</p>
+        <section className="px-4 pb-8">
+          <div className="overflow-hidden bg-gradient-to-br from-white via-[#f7f7f7] to-[#fafafa] shadow-sm">
+            <div className="grid gap-8 p-6 md:grid-cols-2 md:p-8 lg:p-10">
+              <div>
+                <h2 className="text-2xl font-semibold leading-tight text-[#005ab0] md:text-3xl lg:text-4xl">
+                  Psychiatric care and medication management in MD, DC and VA
+                </h2>
+                <div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <Link
+                      to="/maryland-psychiatrist"
+                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
+                    >
+                      Maryland Psychiatry
+                    </Link>
+                    <Link
+                      to="/dc-psychiatrist"
+                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
+                    >
+                      DC Psychiatry
+                    </Link>
+                    <Link
+                      to="/virginia-psychiatrist"
+                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
+                    >
+                      Virginia Psychiatry
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Tinka Health Services provides expert psychiatric care and
+                  medication management for individuals in Maryland, Washington
+                  DC, and Virginia. Our board-certified psychiatric nurse
+                  practitioners specialize in treating anxiety, depression,
+                  ADHD, bipolar disorder, PTSD and other mental health
+                  conditions through both in-person and telehealth visits.
+                </p>
+                <p>
+                  We accept Medicaid, Medicare, and most major insurance plans,
+                  including Kaiser Permanente (DC), CareFirst, Aetna, Cigna,
+                  Optum, and Tricare. We are also available on platforms such as
+                  SonderMind, Grow Therapy, and Rula to ensure accessible and
+                  convenient care.
+                </p>
+                <p>
+                  Accepting new patients. Same week appointments available.
+                  Telehealth psychiatry appointments and medication management
+                  services with insurance accepted including Medicaid and
+                  Medicare. weather in Psychiatric provider Maryland, Mental
+                  health provider DC, Psychiatric services Virginia, or
+                  Medication management near me or Telehealth psychiatry MD, DC
+                  and VA or ADHD medication management provider
+                </p>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                to="/booking"
-                className="bg-green-700 hover:bg-green-800 hover:scale-105 text-white px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                Book Appointment
-              </Link>
-              <Link
-                to="/insurance-we-accept"
-                className="bg-blue-600 hover:scale-105 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                View Insurance We Accept
-              </Link>
-              <Link
-                to="/telehealth-psychiatry-md-dc-va"
-                className="bg-white border hover:scale-105  border-blue-600 text-blue-700 px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                Telehealth Psychiatry
-              </Link>
-              <Link
-                to="/maryland-psychiatrist"
-                className="bg-white border hover:scale-105 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                Maryland Psychiatry
-              </Link>
-              <Link
-                to="/dc-psychiatrist"
-                className="bg-white border hover:scale-105 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                DC Psychiatry
-              </Link>
-              <Link
-                to="/virginia-psychiatrist"
-                className="bg-white border hover:scale-105 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition duration-300"
-              >
-                Virginia Psychiatry
-              </Link>
+
+            <div className="border-y border-[#d7e8fb] bg-white/80 px-6 py-7 md:px-8 lg:px-10">
+              <div className="grid gap-4 md:grid-cols-3">
+                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border-2 border-dashed border-[#5aa1e5] bg-[#f2f8ff] text-3xl text-[#005ab0]">
+                    <FiActivity aria-hidden="true" />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
+                    Get care for your specific condition
+                  </h3>
+                  <p className="text-sm mb-4 text-gray-600">
+                    Personalized support for anxiety, depression, ADHD, bipolar
+                    disorder, PTSD, and more.
+                  </p>
+                  <Link
+                    to="/booking"
+                    className="inline-flex text-sm items-center gap-2 rounded-lg bg-blue-700 px-4 mt-3 py-2 font-semibold text-white transition duration-300 hover:scale-103 hover:bg-blue-800"
+                  >
+                    Book Appointment
+                    <FiArrowRight aria-hidden="true" />
+                  </Link>
+                </article>
+
+                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-[#8fb7e4] bg-[#eef5ff] text-3xl text-[#005ab0]">
+                    <FiClipboard aria-hidden="true" />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
+                    We have the right insurance for you
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    we have the best insurance plans for you, including
+                    Medicaid, Medicare and major insurance providers in
+                    Maryland, DC and Virginia.
+                  </p>
+                  <Link
+                    to="/insurance-we-accept"
+                    className="rounded-lg mt-8 text-sm bg-blue-600 px-3 py-2 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-blue-700"
+                  >
+                    Insurance We Accept
+                  </Link>
+                </article>
+
+                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-[#8fb7e4] bg-[#eef5ff] text-3xl text-[#005ab0]">
+                    <FiMapPin aria-hidden="true" />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
+                    Book in-person or telehealth visits
+                  </h3>
+                  <p className="text-sm mb-6 text-gray-600">
+                    Choose flexible appointments in Maryland, DC, and Virginia,
+                    including virtual care options.
+                  </p>
+                  <Link
+                    to="/telehealth-psychiatry-md-dc-va"
+                    className="rounded-lg text-sm border border-blue-600 bg-white px-4 py-2 font-semibold text-blue-700 transition duration-300 hover:bg-blue-50"
+                  >
+                    Telehealth Psychiatry
+                  </Link>
+                </article>
+              </div>
             </div>
-            <p className="mt-4 rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white">
-              Prefer virtual care? Book online in under 2 minutes. We accept
-              Medicaid, Medicare, and major commercial insurance plans.
-            </p>
           </div>
         </section>
         <DeferredSection minHeight={260}>
