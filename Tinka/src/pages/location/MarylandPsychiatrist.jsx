@@ -1,10 +1,13 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import BookingLink from "../../components/BookingLink";
-import CanonicalLink from "../../components/CanonicalLink";
+import ServiceStylePage from "../shared/ServiceStylePage";
 
 const MarylandPsychiatrist = () => {
+  const canonicalUrl = "https://tinkahealthservices.com/maryland-psychiatrist";
+  const metaTitle =
+    "Psychiatric Provider in Maryland | Medicaid, Medicare and Telehealth | Tinka Health Services";
+  const metaDescription =
+    "Find a psychiatric provider in Maryland for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management. Tinka Health Services accepts Medicaid, Medicare, and major insurance plans with telehealth psychiatry appointments across Maryland.";
+
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -19,7 +22,7 @@ const MarylandPsychiatrist = () => {
         "@type": "ListItem",
         position: 2,
         name: "Maryland Psychiatrist",
-        item: "https://tinkahealthservices.com/maryland-psychiatrist",
+        item: canonicalUrl,
       },
     ],
   };
@@ -27,12 +30,15 @@ const MarylandPsychiatrist = () => {
   const marylandServiceStructuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "@id": "https://tinkahealthservices.com/maryland-psychiatrist#clinic",
+    "@id": `${canonicalUrl}#clinic`,
     name: "Tinka Health Services - Maryland Psychiatry",
-    url: "https://tinkahealthservices.com/maryland-psychiatrist",
+    url: canonicalUrl,
+    description: metaDescription,
+    image: "https://tinkahealthservices.com/images/services/Mental_Health.jpg",
     telephone: "+1 443-295-6600",
+    medicalSpecialty: "Psychiatry",
     areaServed: {
-      "@type": "AdministrativeArea",
+      "@type": "State",
       name: "Maryland",
     },
     availableService: [
@@ -49,103 +55,89 @@ const MarylandPsychiatrist = () => {
         name: "Telehealth Psychiatry",
       },
     ],
+    provider: {
+      "@type": "MedicalOrganization",
+      name: "Tinka Health Services",
+      url: "https://tinkahealthservices.com",
+      telephone: "+1 443-295-6600",
+    },
+  };
+
+  const marylandWebPageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metaTitle,
+    url: canonicalUrl,
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Tinka Health Services",
+      url: "https://tinkahealthservices.com",
+    },
+    about: {
+      "@type": "MedicalSpecialty",
+      name: "Psychiatry",
+    },
   };
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-28">
-      <CanonicalLink href="https://tinkahealthservices.com/maryland-psychiatrist" />
-      <Helmet>
-        <title>
-          Psychiatric Provider in Maryland | Medicaid and Medicare Accepted |
-          Tinka Health
-        </title>
-        <meta
-          name="description"
-          content="Tinka Health Services provides psychiatric care in Maryland with telehealth psychiatry appointments and medication management services. Accepting Medicaid, Medicare and major insurance plans."
-        />
-        <meta
-          name="keywords"
-          content="psychiatric provider in maryland, psychiatric nurse practitioner maryland, telehealth psychiatry maryland, psychiatric provider accepting medicaid maryland"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbStructuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(marylandServiceStructuredData)}
-        </script>
-      </Helmet>
-
-      <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-        Psychiatric Provider in Maryland
-      </h1>
-      <p className="text-xl text-blue-700 font-medium mb-6">
-        Accepting Medicaid and Medicare | Telehealth Available
-      </p>
-
-      <div className="space-y-4 text-gray-700 text-lg">
-        <p>
-          Tinka Health Services provides expert psychiatric care for patients
-          across Maryland. We specialize in medication management for anxiety,
-          depression, ADHD, bipolar disorder, and more.
-        </p>
-        <p>
-          We accept Medicaid, Medicare, and major insurance plans including
-          CareFirst, Aetna, Cigna, Optum, and Kaiser Permanente (Maryland).
-        </p>
-        <p>
-          Our services are available through secure telehealth psychiatry
-          appointments, making mental health care accessible from anywhere in
-          Maryland.
-        </p>
-        <p>
-          If you are searching for a psychiatric provider in Maryland who
-          accepts your insurance, we are here to help. Accepting new patients
-          with same week appointments available when possible.
-        </p>
-      </div>
-
-      <div className="mt-8 flex flex-wrap gap-3">
-        <BookingLink>Book Maryland Appointment</BookingLink>
-        <a
-          href="tel:+14432956600"
-          className="border border-blue-600 text-blue-700 px-5 py-3 rounded-lg font-semibold"
-        >
-          Call 443-295-6600
-        </a>
-      </div>
-
-      <section className="mt-10 bg-blue-50 border border-blue-100 rounded-xl p-6">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-          Explore Related Care
-        </h2>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            to="/insurance-we-accept"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Insurance Options
-          </Link>
-          <Link
-            to="/telehealth-psychiatry-md-dc-va"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Telehealth Psychiatry
-          </Link>
-          <Link
-            to="/dc-psychiatrist"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            DC Psychiatry
-          </Link>
-          <Link
-            to="/virginia-psychiatrist"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Virginia Psychiatry
-          </Link>
-        </div>
-      </section>
-    </main>
+    <ServiceStylePage
+      canonicalUrl={canonicalUrl}
+      currentPath="/maryland-psychiatrist"
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+      keywords={[
+        "psychiatric provider in maryland",
+        "maryland psychiatrist accepting medicaid",
+        "telehealth psychiatry maryland",
+        "medication management maryland",
+        "maryland psychiatric nurse practitioner",
+        "psychiatrist accepting medicare maryland",
+      ]}
+      heroTitle="Psychiatric Provider in Maryland"
+      heroSubtitle="Insurance-friendly telehealth psychiatry across Maryland"
+      intro={{
+        title: "Psychiatric care in Maryland designed for access and continuity",
+        description: [
+          "Tinka Health Services provides psychiatric evaluations, medication management, and follow-up care for adults across Maryland through secure telehealth psychiatry appointments.",
+          "We help patients manage anxiety, depression, ADHD, bipolar disorder, PTSD, insomnia, and related concerns while accepting Medicaid, Medicare, and major insurance plans used by Maryland residents.",
+        ],
+      }}
+      ctaText="Book Maryland Appointment"
+      callHref="tel:+14432956600"
+      callText="Call 443-295-6600"
+      sectionOne={{
+        title: "When Maryland patients reach out for psychiatric support",
+        description:
+          "Many adults start looking for psychiatric care when symptoms begin affecting work performance, relationships, concentration, sleep, or daily routines. Consistent treatment can make it easier to stabilize symptoms before they become more disruptive.",
+        items: [
+          "Persistent anxiety, panic, or overthinking that interferes with daily life",
+          "Depression, low motivation, or emotional burnout that does not improve",
+          "Difficulty focusing, staying organized, or managing ADHD symptoms",
+          "Mood swings, irritability, or symptoms that may point to bipolar disorder",
+          "Trauma-related symptoms, sleep disruption, or ongoing hypervigilance",
+          "Medication concerns or the need for a psychiatric evaluation and treatment plan",
+        ],
+      }}
+      sectionTwo={{
+        title: "How Tinka Health Services supports Maryland patients",
+        description:
+          "Our Maryland psychiatry services are built around timely access, individualized care, and clear follow-up planning so patients can stay engaged with treatment.",
+        items: [
+          "Comprehensive psychiatric evaluations to clarify symptoms, diagnoses, and next steps",
+          "Medication management visits with ongoing monitoring and treatment adjustments",
+          "Telehealth appointments that make care easier to access from anywhere in Maryland",
+          "Insurance-friendly scheduling with Medicaid, Medicare, and major plans accepted",
+          "Personalized treatment plans based on symptoms, health history, and treatment goals",
+          "Follow-up support focused on symptom improvement, function, and long-term stability",
+        ],
+      }}
+      structuredData={[
+        breadcrumbStructuredData,
+        marylandServiceStructuredData,
+        marylandWebPageStructuredData,
+      ]}
+    />
   );
 };
 

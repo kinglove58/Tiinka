@@ -1,10 +1,13 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import BookingLink from "../../components/BookingLink";
-import CanonicalLink from "../../components/CanonicalLink";
+import ServiceStylePage from "../shared/ServiceStylePage";
 
 const DCPsychiatrist = () => {
+  const canonicalUrl = "https://tinkahealthservices.com/dc-psychiatrist";
+  const metaTitle =
+    "Psychiatric Provider in Washington DC | DC Medicaid, Kaiser and Telehealth | Tinka Health Services";
+  const metaDescription =
+    "Find a psychiatric provider in Washington DC for anxiety, depression, ADHD, PTSD, and medication management. Tinka Health Services accepts DC Medicaid, Kaiser Permanente DC, AmeriHealth Caritas DC, CareFirst, and other insurance plans through telehealth psychiatry appointments.";
+
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -19,7 +22,7 @@ const DCPsychiatrist = () => {
         "@type": "ListItem",
         position: 2,
         name: "Washington DC Psychiatrist",
-        item: "https://tinkahealthservices.com/dc-psychiatrist",
+        item: canonicalUrl,
       },
     ],
   };
@@ -27,10 +30,13 @@ const DCPsychiatrist = () => {
   const dcServiceStructuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "@id": "https://tinkahealthservices.com/dc-psychiatrist#clinic",
+    "@id": `${canonicalUrl}#clinic`,
     name: "Tinka Health Services - Washington DC Psychiatry",
-    url: "https://tinkahealthservices.com/dc-psychiatrist",
+    url: canonicalUrl,
+    description: metaDescription,
+    image: "https://tinkahealthservices.com/images/services/Mental_Health.jpg",
     telephone: "+1 202-933-4300",
+    medicalSpecialty: "Psychiatry",
     areaServed: {
       "@type": "AdministrativeArea",
       name: "Washington DC",
@@ -49,102 +55,90 @@ const DCPsychiatrist = () => {
         name: "Telehealth Psychiatry",
       },
     ],
+    provider: {
+      "@type": "MedicalOrganization",
+      name: "Tinka Health Services",
+      url: "https://tinkahealthservices.com",
+      telephone: "+1 202-933-4300",
+    },
+  };
+
+  const dcWebPageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metaTitle,
+    url: canonicalUrl,
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Tinka Health Services",
+      url: "https://tinkahealthservices.com",
+    },
+    about: {
+      "@type": "MedicalSpecialty",
+      name: "Psychiatry",
+    },
   };
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-28">
-      <CanonicalLink href="https://tinkahealthservices.com/dc-psychiatrist" />
-      <Helmet>
-        <title>
-          Psychiatric Provider in Washington DC | Medicaid and Kaiser DC | Tinka
-          Health
-        </title>
-        <meta
-          name="description"
-          content="Tinka Health Services provides psychiatric care in Washington DC for anxiety, depression, ADHD and mood disorders. Accepting DC Medicaid, Kaiser DC and major insurance plans with telehealth options."
-        />
-        <meta
-          name="keywords"
-          content="psychiatric provider in washington dc, mental health provider dc, telehealth psychiatry dc medicaid, kaiser psychiatrist dc, amerihealth caritas dc mental health provider"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbStructuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(dcServiceStructuredData)}
-        </script>
-      </Helmet>
-
-      <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-        Psychiatric Provider in Washington DC
-      </h1>
-      <p className="text-xl text-red-700 font-medium mb-6">
-        Accepting Medicaid and Kaiser DC | Telehealth Available
-      </p>
-
-      <div className="space-y-4 text-gray-700 text-lg">
-        <p>
-          Tinka Health Services offers psychiatric care for individuals in
-          Washington DC. We provide medication management and mental health
-          treatment for anxiety, depression, ADHD, PTSD, and mood disorders.
-        </p>
-        <p>
-          We accept DC Medicaid, AmeriHealth Caritas DC, Kaiser Permanente DC,
-          CareFirst, and other major insurance plans.
-        </p>
-        <p>
-          Our telehealth psychiatry appointments allow you to access care
-          quickly and conveniently from your home.
-        </p>
-        <p>
-          If you are looking for a psychiatric provider in DC who accepts
-          Medicaid or Kaiser, we are currently accepting new patients and offer
-          same week appointments when available.
-        </p>
-      </div>
-
-      <div className="mt-8 flex flex-wrap gap-3">
-        <BookingLink>Book DC Appointment</BookingLink>
-        <a
-          href="tel:+12029334300"
-          className="border border-blue-600 text-blue-700 px-5 py-3 rounded-lg font-semibold"
-        >
-          Call 202-933-4300
-        </a>
-      </div>
-
-      <section className="mt-10 bg-red-50 border border-red-100 rounded-xl p-6">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-          Explore Related Care
-        </h2>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            to="/insurance-we-accept"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Insurance Options
-          </Link>
-          <Link
-            to="/telehealth-psychiatry-md-dc-va"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Telehealth Psychiatry
-          </Link>
-          <Link
-            to="/maryland-psychiatrist"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Maryland Psychiatry
-          </Link>
-          <Link
-            to="/virginia-psychiatrist"
-            className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-          >
-            Virginia Psychiatry
-          </Link>
-        </div>
-      </section>
-    </main>
+    <ServiceStylePage
+      canonicalUrl={canonicalUrl}
+      currentPath="/dc-psychiatrist"
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+      keywords={[
+        "psychiatric provider in washington dc",
+        "dc medicaid psychiatrist",
+        "kaiser psychiatrist dc",
+        "telehealth psychiatry dc",
+        "amerihealth caritas dc mental health provider",
+        "medication management washington dc",
+      ]}
+      heroTitle="Psychiatric Provider in Washington DC"
+      heroSubtitle="Telehealth psychiatry in DC with insurance-friendly access"
+      intro={{
+        title: "Psychiatric care for adults throughout Washington DC",
+        description: [
+          "Tinka Health Services provides psychiatric evaluations, medication management, and follow-up treatment for adults living in Washington DC through secure telehealth appointments.",
+          "We support patients with anxiety, depression, ADHD, PTSD, bipolar disorder, and mood concerns while accepting DC Medicaid, Kaiser Permanente DC, AmeriHealth Caritas DC, CareFirst, and other major insurance plans.",
+        ],
+      }}
+      ctaText="Book DC Appointment"
+      callHref="tel:+12029334300"
+      callText="Call 202-933-4300"
+      sectionOne={{
+        title:
+          "Mental health concerns Washington DC patients commonly bring to care",
+        description:
+          "Adults in DC often seek psychiatric treatment when symptoms begin to interfere with high-pressure schedules, emotional regulation, focus, sleep, or relationships. Early treatment can make symptoms more manageable and improve day-to-day function.",
+        items: [
+          "Anxiety, panic, or chronic stress that impacts work, school, or home life",
+          "Depression, hopelessness, or fatigue that makes it harder to stay engaged",
+          "ADHD symptoms that interfere with focus, planning, and productivity",
+          "PTSD symptoms, intrusive thoughts, or trauma-related sleep disruption",
+          "Mood instability, irritability, or concerns that may require psychiatric evaluation",
+          "The need for medication review, follow-up, or a more structured treatment plan",
+        ],
+      }}
+      sectionTwo={{
+        title: "Why patients in Washington DC choose Tinka Health Services",
+        description:
+          "Our DC psychiatry services are designed to help patients start treatment clearly, verify insurance early, and continue care through a flexible telehealth model.",
+        items: [
+          "Comprehensive psychiatric evaluations focused on diagnosis, symptoms, and treatment planning",
+          "Medication management for adults dealing with anxiety, mood, attention, and trauma-related symptoms",
+          "Telehealth visits that fit the pace of life in Washington DC without adding commute time",
+          "Insurance access that includes DC Medicaid, Kaiser Permanente DC, and other major plans",
+          "Follow-up appointments to monitor progress, medication response, and needed changes",
+          "A practical, patient-centered approach that helps move treatment forward with less friction",
+        ],
+      }}
+      structuredData={[
+        breadcrumbStructuredData,
+        dcServiceStructuredData,
+        dcWebPageStructuredData,
+      ]}
+    />
   );
 };
 
