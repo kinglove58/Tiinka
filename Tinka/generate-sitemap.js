@@ -2,39 +2,18 @@ import fs from "fs";
 import axios from "axios";
 import path from "path";
 import { fileURLToPath } from "url";
-import servicesDataList from "./src/pages/services/serviceData.js";
+import {
+  BLOG_API_URL,
+  getServiceRoutes,
+  staticRoutes,
+  toAbsoluteUrl,
+  normalizePath,
+} from "./seo-routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const API_URL = "https://api.tinkahealthservices.com/api/blogs";
-const BASE_URL = "https://tinkahealthservices.com";
 const SITEMAP_PATH = path.join(__dirname, "public", "sitemap.xml");
-
-const staticRoutes = [
-  { path: "", changefreq: "daily", priority: "1.0" },
-  { path: "/about", changefreq: "monthly", priority: "0.8" },
-  {
-    path: "/primary-preventive-care",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  { path: "/meet-our-provider", changefreq: "monthly", priority: "0.8" },
-  { path: "/blogs", changefreq: "weekly", priority: "0.8" },
-  { path: "/policy", changefreq: "yearly", priority: "0.3" },
-  { path: "/contact", changefreq: "weekly", priority: "0.9" },
-  { path: "/booking", changefreq: "weekly", priority: "0.9" },
-  { path: "/services", changefreq: "weekly", priority: "0.9" },
-  { path: "/insurance-we-accept", changefreq: "weekly", priority: "0.9" },
-  { path: "/maryland-psychiatrist", changefreq: "weekly", priority: "0.9" },
-  { path: "/dc-psychiatrist", changefreq: "weekly", priority: "0.9" },
-  { path: "/virginia-psychiatrist", changefreq: "weekly", priority: "0.9" },
-  {
-    path: "/telehealth-psychiatry-md-dc-va",
-    changefreq: "weekly",
-    priority: "0.9",
-  },
-];
 
 const escapeXml = (value) =>
   String(value)
@@ -43,14 +22,6 @@ const escapeXml = (value) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
-
-const normalizePath = (routePath) => {
-  if (!routePath) return "";
-  return routePath.startsWith("/") ? routePath : `/${routePath}`;
-};
-
-const toAbsoluteUrl = (routePath) =>
-  routePath === "" ? BASE_URL : `${BASE_URL}${routePath}`;
 
 const formatDate = (value) => {
   const date = value ? new Date(value) : new Date();
@@ -77,7 +48,7 @@ async function generateSitemap() {
   try {
     let blogs = [];
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(BLOG_API_URL);
       if (Array.isArray(response.data)) {
         blogs = response.data;
       } else if (response.data && Array.isArray(response.data.blogs)) {
@@ -121,10 +92,13 @@ async function generateSitemap() {
       addNode(route.path, formatDate(), route.changefreq, route.priority);
     });
 
-    servicesDataList.forEach((service) => {
-      if (service?.id) {
-        addNode(`/services/${service.id}`, formatDate(), "weekly", "0.8");
-      }
+    getServiceRoutes().forEach((serviceRoute) => {
+      addNode(
+        serviceRoute.path,
+        formatDate(),
+        serviceRoute.changefreq,
+        serviceRoute.priority,
+      );
     });
 
     blogs

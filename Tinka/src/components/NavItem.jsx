@@ -49,7 +49,6 @@ const NavItem = () => {
       "Obsessive Compulsive Disorder": "OCD",
       "Post Traumatic Stress Disorder": "PTSD",
       "Opioid Medication Assistant Treatment": "Opioid MAT",
-      "Medical Marijuana Certification": "Medical Cannabis",
       "Autism Spectrum Disorder": "Autism Support",
       "Medication Management": "Med Management",
     };

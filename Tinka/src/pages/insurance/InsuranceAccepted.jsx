@@ -25,6 +25,7 @@ const marylandInsurance = [
   "Amerigroup",
   "Behavioral Health Systems",
   "CareFirst (BCBS)",
+  "CareFirst BlueChoice",
   "Cigna",
   "ClaimDoc",
   "GEHA",
@@ -51,6 +52,7 @@ const dcInsurance = [
   "AmeriHealth Caritas DC",
   "AmeriHealth Caritas District of Columbia",
   "CareFirst",
+  "CareFirst BlueChoice",
   "Cigna",
   "ClaimDoc",
   "GEHA",
@@ -75,6 +77,7 @@ const virginiaInsurance = [
   "Aetna Better Health",
   "Anthem",
   "CareFirst",
+  "CareFirst BlueChoice",
   "Cigna",
   "ClaimDoc",
   "GEHA",
@@ -404,6 +407,13 @@ const InsuranceAccepted = () => {
       </header>
 
       <div className="mx-auto max-w-6xl px-4">
+        <div className="mb-6 rounded-2xl border border-blue-100 bg-white p-6 text-lg leading-8 text-slate-700 shadow-sm">
+          We accept most major insurance plans and will verify your insurance
+          benefits prior to your appointment. This allows you to be fully
+          informed of any out-of-pocket costs, copays, deductibles, or patient
+          responsibilities before your visit.
+        </div>
+
         <div className="grid gap-6">
           <StateInsuranceBlock
             title="Maryland Insurance Accepted"

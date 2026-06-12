@@ -19,7 +19,7 @@ const expertiseList = [
   "Anxiety-related disorders: generalized anxiety, panic disorder, OCD, PTSD",
   "Psychotic disorders: schizophrenia, schizoaffective disorder",
   "Neurodevelopmental conditions: ADHD and related behavioral concerns in children and adults",
-  "Substance use disorders: alcohol, cannabis, opioids, stimulants, and nicotine dependence",
+  "Substance use disorders: alcohol, opioids, stimulants, nicotine dependence, and related concerns",
   "Sleep disorders & stress-related conditions",
   "Integrated care for clients with both physical and behavioral health needs",
 ];

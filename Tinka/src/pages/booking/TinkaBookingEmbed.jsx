@@ -5,6 +5,55 @@ import BookingStructuredData from "../../components/BookingStructuredData";
 
 const Testimonial = lazy(() => import("../home/Testimonial"));
 
+const bookingPlatforms = [
+  "Tinka Health Services",
+  "Klarity",
+  "Grow Therapy",
+  "SonderMind",
+  "Rula",
+  "Zocdoc",
+];
+
+const PlatformAccessSection = () => (
+  <section className="mx-auto max-w-5xl rounded-2xl border border-[#d8e7f6] bg-[#f7fbff] p-6 shadow-sm md:p-8">
+    <div className="mx-auto max-w-4xl text-center">
+      <h2 className="mb-4 text-2xl font-bold text-[#005ab0] md:text-3xl">
+        Convenient Access to Care Through Multiple Platforms
+      </h2>
+      <p className="mb-5 text-base leading-8 text-slate-700 md:text-lg">
+        At Tinka Health Services, we are committed to making mental health care
+        accessible, flexible, and convenient. Patients may schedule directly
+        through our practice or through trusted healthcare and telehealth
+        platforms where our provider also offers consultations and psychiatric
+        services.
+      </p>
+      <div className="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {bookingPlatforms.map((platform) => (
+          <div
+            key={platform}
+            className="rounded-lg border border-[#c9dff3] bg-white px-4 py-3 font-semibold text-slate-800"
+          >
+            {platform}
+          </div>
+        ))}
+      </div>
+      <p className="mb-4 text-base leading-8 text-slate-700">
+        These platforms provide additional options for appointment scheduling,
+        insurance verification, and secure virtual visits, so patients can
+        access care in the way that best fits their needs and lifestyle.
+      </p>
+      <p className="mb-4 text-base leading-8 text-slate-700">
+        Our provider offers compassionate, patient-centered psychiatric care for
+        anxiety, depression, ADHD, mood disorders, trauma-related concerns, and
+        medication management services.
+      </p>
+      <p className="text-base font-semibold text-slate-800">
+        We look forward to partnering with you on your mental wellness journey.
+      </p>
+    </div>
+  </section>
+);
+
 const TinkaBookingEmbed = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -144,6 +193,10 @@ const TinkaBookingEmbed = () => {
         >
           <Testimonial />
         </Suspense>
+      </div>
+
+      <div className="bg-white px-4 py-12">
+        <PlatformAccessSection />
       </div>
     </div>
   );

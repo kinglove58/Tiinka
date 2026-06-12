@@ -491,42 +491,6 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Medical-Marijuana-Certification",
-    name: "Medical Marijuana Certification",
-    image: "/images/services/Medical_Marijuana_Certification.jpg",
-    imageAlt:
-      "Medical marijuana certification consultation with healthcare provider",
-    id_sub: "Professional medical cannabis evaluations and certifications",
-    title1: "Get certified for medical marijuana with expert evaluation",
-    title1Des:
-      "Medical marijuana can be an effective treatment option for various medical and mental health conditions. At Tinka Health, our qualified physicians provide thorough evaluations to determine if medical cannabis is appropriate for your condition and help you obtain legal certification in compliance with state regulations.",
-    btnText: "Get Certified",
-    title2: "Could medical marijuana help with your condition?",
-    title2Des:
-      "Medical marijuana has been shown to be effective for various conditions. Our certification process ensures you receive proper medical oversight:",
-    title2List: [
-      "Chronic pain and inflammatory conditions",
-      "PTSD and anxiety-related disorders",
-      "Depression and mood disorders",
-      "Epilepsy and seizure disorders",
-      "Cancer and chemotherapy-related symptoms",
-      "Glaucoma and other qualifying medical conditions",
-      "Sleep disorders and insomnia",
-    ],
-    title3: "Tinka Health's Medical Marijuana Certification Process",
-    title3Des:
-      "Our comprehensive evaluation ensures you receive appropriate care and legal protection:",
-    title3List: [
-      "Thorough medical history review and physical examination",
-      "Assessment of your qualifying medical condition",
-      "Discussion of medical marijuana as a treatment option",
-      "Education about dosing, strains, and delivery methods",
-      "Certification documentation and state registration assistance",
-      "Ongoing monitoring and follow-up care",
-      "Coordination with your existing healthcare providers",
-    ],
-  },
-  {
     id: "Medication-Management",
     name: "Medication Management",
     image: "/images/services/Medication_management.jpg",

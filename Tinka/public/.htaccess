@@ -14,16 +14,36 @@ RewriteRule ^(.*)$ https://tinkahealthservices.com/$1 [L,R=301]
 RewriteCond %{REQUEST_URI} ^/tinkahealthservicesbooking/?$ [NC]
 RewriteRule ^(.*)$ https://tinkahealthservices.com/booking [L,R=301]
 
-# Redirect all requests to index.html
+# Prevent direct indexing of generated helper files.
+RewriteCond %{THE_REQUEST} \s/+seo-pages/([^\s?]+)\.html [NC]
+RewriteRule ^seo-pages/(.+)\.html$ https://tinkahealthservices.com/$1 [L,R=301]
+
+# Keep canonical URLs slashless, matching the sitemap and canonical tags.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} .+/$
+RewriteRule ^(.+)/$ https://tinkahealthservices.com/$1 [L,R=301]
+
+# Serve route-specific SEO HTML generated at build time.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteCond %{DOCUMENT_ROOT}/seo-pages%{REQUEST_URI}.html -f
+RewriteRule ^(.+)$ /seo-pages/$1.html [L]
 
-# Serve static assets directly
-<FilesMatch "\.(html|js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
-  Header set Cache-Control "max-age=31536000, public"
-</FilesMatch>
+<IfModule mod_headers.c>
+  # HTML contains canonical and metadata signals, so keep it fresh for crawlers.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
 
-# Handle 404 errors
-ErrorDocument 404 /index.html
+  # Fingerprinted static assets can be cached aggressively.
+  <FilesMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Unknown URLs should not look like valid pages to Google.
+ErrorDocument 404 /404.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . - [R=404,L]
 </IfModule>
