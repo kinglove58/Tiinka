@@ -6,6 +6,16 @@ import { Helmet } from "react-helmet";
 import BookingModal from "../../components/BookingModal";
 import ServiceStructuredData from "../../components/ServiceStructuredData";
 
+const truncateDescription = (value, maxLength = 155) => {
+  const text = String(value || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength - 3).trim()}...`;
+};
+
 function SingleService() {
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
@@ -28,28 +38,34 @@ function SingleService() {
     return <div>Service not found</div>;
   }
 
+  const seoTitle = `${service.name} | Tinka Health Services`;
+  const seoDescription = truncateDescription(
+    service.title1Des ||
+      `${service.name} services from Tinka Health Services in Maryland, Washington DC, and Virginia.`,
+  );
+
   return (
     <div className="pt-20">
       <ServiceStructuredData service={service} />
       <Helmet>
-        <title>{service.title1} | Tinka Health Services</title>
-        <meta name="description" content={service.title1Des} />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
         <meta name="keywords" content={keywordContent} />
         <link
           rel="canonical"
           href={`https://tinkahealthservices.com/services/${id}`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={service.title1} />
-        <meta property="og:description" content={service.title1Des} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         <meta
           property="og:url"
           content={`https://tinkahealthservices.com/services/${id}`}
         />
         {service.image && <meta property="og:image" content={service.image} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={service.title1} />
-        <meta name="twitter:description" content={service.title1Des} />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
       </Helmet>
       <ScrollAnimationWrapper>
         <div

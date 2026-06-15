@@ -41,6 +41,7 @@ const companyData = [
   { value: "Maryland Psychiatry", link: "maryland-psychiatrist" },
   { value: "DC Psychiatry", link: "dc-psychiatrist" },
   { value: "Virginia Psychiatry", link: "virginia-psychiatrist" },
+  { value: "Herndon VA Psychiatry", link: "psychiatric-provider-herndon-va" },
   { value: "Privacy Policy", link: "policy" },
   { value: "Contact Us", link: "contact" },
   { value: "Book Appointment", link: "tinkahealthservicesbooking" },
@@ -94,7 +95,7 @@ const Footer = () => {
             <div className="mt-4">
               <div className="flex items-center text-center bg-[#4b4e57] border-2 rounded-lg">
                 <p>
-                  If you are in a life-threatening situation, don’t use this
+                  If you are in a life-threatening situation, don&apos;t use this
                   site. Please visit the sites below:
                 </p>
               </div>

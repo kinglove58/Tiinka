@@ -39,7 +39,7 @@ const AboutUs = () => {
         </title>
         <meta
           name="description"
-          content="Learn about Tinka Health Services, a psychiatric provider serving Maryland, Washington DC, and Virginia with medication management services, telehealth psychiatry appointments, and compassionate mental health care."
+          content="Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and medication management."
         />
         <meta
           name="keywords"

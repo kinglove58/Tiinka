@@ -43,6 +43,14 @@ const StructuredData = () => {
             postalCode: "20016",
             addressCountry: "US",
           },
+          {
+            "@type": "PostalAddress",
+            streetAddress: "585 Grove St, Suite 145",
+            addressLocality: "Herndon",
+            addressRegion: "VA",
+            postalCode: "20170",
+            addressCountry: "US",
+          },
         ],
         areaServed: [
           {
@@ -294,13 +302,43 @@ const StructuredData = () => {
             closes: "15:00",
           },
         ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          reviewCount: "125",
-          bestRating: "5",
-          worstRating: "1",
+      },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://tinkahealthservices.com/#herndon-clinic",
+        name: "Tinka Health Services - Herndon Psychiatry",
+        image:
+          "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
+        telephone: "+1 571-349-8285",
+        url: "https://tinkahealthservices.com/psychiatric-provider-herndon-va",
+        medicalSpecialty: "Psychiatry",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "585 Grove St, Suite 145",
+          addressLocality: "Herndon",
+          addressRegion: "VA",
+          postalCode: "20170",
+          addressCountry: "US",
         },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 38.9669109,
+          longitude: -77.3802178,
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "08:00",
+            closes: "18:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "09:00",
+            closes: "16:00",
+          },
+        ],
       },
       {
         "@type": "Service",

@@ -4,9 +4,9 @@ import ServiceStylePage from "../shared/ServiceStylePage";
 const DCPsychiatrist = () => {
   const canonicalUrl = "https://tinkahealthservices.com/dc-psychiatrist";
   const metaTitle =
-    "Psychiatric Provider in Washington DC | DC Medicaid, Kaiser and Telehealth | Tinka Health Services";
+    "Psychiatric Provider in Washington DC | Tinka Health";
   const metaDescription =
-    "Find a psychiatric provider in Washington DC for anxiety, depression, ADHD, PTSD, and medication management. Tinka Health Services accepts DC Medicaid, Kaiser Permanente DC, AmeriHealth Caritas DC, CareFirst, and other insurance plans through telehealth psychiatry appointments.";
+    "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and medication management with telehealth and insurance access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",

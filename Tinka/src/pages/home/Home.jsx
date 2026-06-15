@@ -14,7 +14,10 @@ import {
   FiMapPin,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import CallVideoAction from "../../components/CallVideoAction";
 import Hero from "./Hero";
+import RealAccessResults from "./RealAccessResults";
+import SeoTreatmentCards from "./SeoTreatmentCards";
 
 // Lazy load the components
 const Locations = lazy(() => import("./Locations"));
@@ -83,12 +86,11 @@ const Home = () => {
     <main className="md:pt-24 bg-[#f1f2f6]">
       <Helmet>
         <title>
-          Psychiatric Provider MD, DC and VA | Medicaid, Medicare Accepted |
-          Tinka Health
+          Psychiatric Provider MD, DC & VA | Tinka Health Services
         </title>
         <meta
           name="description"
-          content="Looking for a psychiatric provider near you? Tinka Health Services offers medication management and mental health care in Maryland, DC and Virginia. Accepting Medicaid, Medicare and major insurance. Telehealth available."
+          content="Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
         />
         <meta
           name="keywords"
@@ -99,11 +101,11 @@ const Home = () => {
         <meta property="og:site_name" content="Tinka Health Services" />
         <meta
           property="og:title"
-          content="Psychiatric Provider in Maryland, Washington DC and Virginia | Accepting Medicaid and Medicare"
+          content="Psychiatric Provider MD, DC & VA | Tinka Health Services"
         />
         <meta
           property="og:description"
-          content="Board-certified psychiatric nurse practitioners offering medication management and telehealth psychiatry appointments in MD, DC and VA. Accepting Medicaid, Medicare and major insurance plans."
+          content="Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
         />
         <meta property="og:url" content="https://tinkahealthservices.com" />
         <meta
@@ -113,17 +115,17 @@ const Home = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Psychiatric Provider MD, DC and VA | Medicaid, Medicare Accepted"
+          content="Psychiatric Provider MD, DC & VA | Tinka Health Services"
         />
         <meta
           name="twitter:description"
-          content="Telehealth psychiatry appointments and medication management services for anxiety, depression, ADHD, bipolar disorder and PTSD. Accepting new patients."
+          content="Telehealth psychiatry and medication management for anxiety, depression, ADHD, bipolar disorder, PTSD, and related concerns."
         />
         <link
           rel="preload"
           as="image"
           type="image/webp"
-          href="/images/img_mental_health/hero/teletherapyimg.webp"
+          href="/images/img_mental_health/hero/tinka-support-simple-hero.webp"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -149,7 +151,10 @@ const Home = () => {
       </Helmet>
       <div>
         <Hero />
-        <section className="px-4 pb-8">
+        <RealAccessResults />
+        <CallVideoAction />
+        <SeoTreatmentCards />
+        <section id="home-care-overview" className="px-4 pb-8 pt-10">
           <div className="overflow-hidden bg-gradient-to-br from-white via-[#f7f7f7] to-[#fafafa] shadow-sm">
             <div className="grid gap-8 p-6 md:grid-cols-2 md:p-8 lg:p-10">
               <div>
@@ -176,6 +181,12 @@ const Home = () => {
                     >
                       Virginia Psychiatry
                     </Link>
+                    <Link
+                      to="/psychiatric-provider-herndon-va"
+                      className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-800 transition duration-300 hover:scale-105"
+                    >
+                      Herndon, VA
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -199,11 +210,9 @@ const Home = () => {
                 <p>
                   Accepting new patients. Same week appointments available.
                   Telehealth psychiatry appointments and medication management
-                  services with insurance accepted including Medicaid and
-                  Medicare. weather in Psychiatric provider Maryland, Mental
-                  health provider DC, Psychiatric services Virginia, or
-                  Medication management near me or Telehealth psychiatry MD, DC
-                  and VA or ADHD medication management provider
+                  services are available for eligible patients, with local
+                  office access in Columbia, Washington DC, and Herndon,
+                  Virginia.
                 </p>
               </div>
             </div>

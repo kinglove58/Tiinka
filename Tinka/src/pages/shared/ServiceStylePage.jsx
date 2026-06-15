@@ -19,6 +19,10 @@ const DEFAULT_SIDE_RAIL_LINKS = [
     label: "Virginia Psychiatry",
   },
   {
+    to: "/psychiatric-provider-herndon-va",
+    label: "Herndon, VA Psychiatry",
+  },
+  {
     to: "/telehealth-psychiatry-md-dc-va",
     label: "Telehealth Psychiatry",
   },

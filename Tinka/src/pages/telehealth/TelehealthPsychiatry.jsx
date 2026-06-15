@@ -5,9 +5,9 @@ const TelehealthPsychiatry = () => {
   const canonicalUrl =
     "https://tinkahealthservices.com/telehealth-psychiatry-md-dc-va";
   const metaTitle =
-    "Telehealth Psychiatry in MD, DC and VA | Online Medication Management | Tinka Health Services";
+    "Telehealth Psychiatry in MD, DC & VA | Tinka Health";
   const metaDescription =
-    "Get telehealth psychiatry in Maryland, Washington DC, and Virginia with Tinka Health Services. Online psychiatric evaluations, medication management, and follow-up care are available from home with insurance accepted, including Medicaid and Medicare when eligible.";
+    "Get online psychiatric evaluations, medication management, and follow-up care from home in Maryland, DC, and Virginia.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",

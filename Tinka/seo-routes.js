@@ -1,4 +1,5 @@
 import servicesDataList from "./src/pages/services/serviceData.js";
+import { seoTreatmentRoutes } from "./src/pages/seo/seoPagesData.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs";
@@ -10,9 +11,9 @@ export const staticRoutes = [
     changefreq: "daily",
     priority: "1.0",
     title:
-      "Psychiatric Provider MD, DC and VA | Medicaid, Medicare Accepted | Tinka Health",
+      "Psychiatric Provider MD, DC & VA | Tinka Health Services",
     description:
-      "Looking for a psychiatric provider near you? Tinka Health Services offers medication management and mental health care in Maryland, DC and Virginia. Accepting Medicaid, Medicare and major insurance. Telehealth available.",
+      "Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access.",
     keywords:
       "psychiatric provider maryland, psychiatric nurse practitioner maryland, pmhnp near me, mental health provider dc, psychiatric services virginia, medication management near me, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia",
     h1: "Psychiatric care and medication management in MD, DC and VA",
@@ -23,7 +24,7 @@ export const staticRoutes = [
     priority: "0.8",
     title: "About Tinka Health Services | Psychiatric Provider in MD, DC and VA",
     description:
-      "Learn about Tinka Health Services, a psychiatric provider serving Maryland, Washington DC, and Virginia with medication management services, telehealth psychiatry appointments, and compassionate mental health care.",
+      "Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and medication management.",
     keywords:
       "psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management services, telehealth psychiatry appointments, accepting new patients",
     h1: "About Tinka Health Services",
@@ -78,10 +79,21 @@ export const staticRoutes = [
     title:
       "Contact Psychiatric Provider in MD, DC and VA | Tinka Health Services",
     description:
-      "Contact Tinka Health Services to book telehealth psychiatry appointments and medication management services in Maryland, Washington DC, and Virginia. Accepting new patients and major insurance including Medicaid and Medicare.",
+      "Contact Tinka Health Services to book telehealth psychiatry and medication management in Maryland, DC, and Virginia.",
     keywords:
       "contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, medication management services, accepting new patients",
     h1: "Contact Tinka Health Services",
+  },
+  {
+    path: "/referral",
+    changefreq: "weekly",
+    priority: "0.85",
+    title: "Refer a Patient | Tinka Health Services",
+    description:
+      "Refer a patient to Tinka Health Services for psychiatric evaluation, medication management, therapy support, and telehealth care in MD, DC, and VA.",
+    keywords:
+      "refer a patient, psychiatry referral, mental health referral, medication management referral, psychiatric evaluation referral",
+    h1: "Refer a Patient",
   },
   {
     path: "/booking",
@@ -89,7 +101,7 @@ export const staticRoutes = [
     priority: "0.9",
     title: "Book an Appointment | Tinka Health Services",
     description:
-      "Book a psychiatry appointment with Tinka Health Services directly or through trusted platforms including Klarity, Grow Therapy, SonderMind, Rula, and Zocdoc for medication management, psychiatric evaluation, and telehealth care in MD, DC, and VA.",
+      "Book a psychiatry appointment for medication management, psychiatric evaluation, and telehealth care in MD, DC, and VA.",
     keywords:
       "book psychiatry appointment, medication management appointment, telehealth psychiatry appointment, Klarity psychiatry, Grow Therapy psychiatry, SonderMind psychiatry, Rula psychiatry, Zocdoc psychiatry",
     h1: "Book an Appointment",
@@ -100,7 +112,7 @@ export const staticRoutes = [
     priority: "0.9",
     title: "Mental Health Services in MD, DC and VA | Tinka Health Services",
     description:
-      "Explore mental health services in Maryland, Washington DC, and Virginia, including medication management services, therapy, telehealth psychiatry appointments, and support for anxiety, depression, ADHD, PTSD, and more.",
+      "Explore medication management, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more.",
     keywords:
       "mental health services maryland, mental health services washington dc, mental health services virginia, medication management services, telehealth psychiatry appointments, psychiatric provider near me",
     h1: "Mental Health Services",
@@ -110,9 +122,9 @@ export const staticRoutes = [
     changefreq: "weekly",
     priority: "0.9",
     title:
-      "Psychiatrist Accepting Medicaid, Medicare and Insurance in MD, DC and VA | Tinka Health Services",
+      "Psychiatrist Accepting Insurance in MD, DC & VA | Tinka Health",
     description:
-      "See the insurance plans Tinka Health Services accepts in Maryland, Washington DC, and Virginia, plus mental health insurance benefits, coverage tips, and common insurance terms for psychiatry and telehealth care.",
+      "See accepted insurance plans for mental health care, psychiatry, medication management, and telehealth in Maryland, DC, and Virginia.",
     keywords:
       "psychiatrist that accepts medicaid near me, psychiatrist that takes medicare, mental health insurance coverage, psychiatric insurance coverage, telehealth psychiatry insurance, carefirst psychiatrist maryland, kaiser psychiatrist dc",
     h1: "Insurance We Accept",
@@ -122,9 +134,9 @@ export const staticRoutes = [
     changefreq: "weekly",
     priority: "0.9",
     title:
-      "Psychiatric Provider in Maryland | Medicaid, Medicare and Telehealth | Tinka Health Services",
+      "Psychiatric Provider in Maryland | Tinka Health Services",
     description:
-      "Find a psychiatric provider in Maryland for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management. Tinka Health Services accepts Medicaid, Medicare, and major insurance plans with telehealth psychiatry appointments across Maryland.",
+      "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management with telehealth access.",
     keywords:
       "psychiatric provider in maryland, maryland psychiatrist accepting medicaid, telehealth psychiatry maryland, medication management maryland, maryland psychiatric nurse practitioner, psychiatrist accepting medicare maryland",
     h1: "Psychiatric Provider in Maryland",
@@ -134,9 +146,9 @@ export const staticRoutes = [
     changefreq: "weekly",
     priority: "0.9",
     title:
-      "Psychiatric Provider in Washington DC | DC Medicaid, Kaiser and Telehealth | Tinka Health Services",
+      "Psychiatric Provider in Washington DC | Tinka Health",
     description:
-      "Find a psychiatric provider in Washington DC for anxiety, depression, ADHD, PTSD, and medication management. Tinka Health Services accepts DC Medicaid, Kaiser Permanente DC, AmeriHealth Caritas DC, CareFirst, and other insurance plans through telehealth psychiatry appointments.",
+      "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and medication management with telehealth and insurance access.",
     keywords:
       "psychiatric provider in washington dc, dc medicaid psychiatrist, kaiser psychiatrist dc, telehealth psychiatry dc, amerihealth caritas dc mental health provider, medication management washington dc",
     h1: "Psychiatric Provider in Washington DC",
@@ -146,25 +158,151 @@ export const staticRoutes = [
     changefreq: "weekly",
     priority: "0.9",
     title:
-      "Psychiatric Provider in Virginia | Medicaid, Medicare and Telehealth | Tinka Health Services",
+      "Psychiatric Provider in Virginia | Tinka Health Services",
     description:
-      "Find a psychiatric provider in Virginia for anxiety, depression, ADHD, bipolar disorder, and medication management. Tinka Health Services offers telehealth psychiatry across Virginia and accepts Medicaid, Medicare, Anthem, Aetna, Cigna, Optum, and other major insurance plans.",
+      "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and medication management with telehealth access.",
     keywords:
       "psychiatric provider in virginia, telehealth psychiatry virginia, virginia medicaid psychiatrist, psychiatrist accepting medicare virginia, medication management virginia, mental health provider virginia",
     h1: "Psychiatric Provider in Virginia",
+  },
+  {
+    path: "/psychiatric-provider-herndon-va",
+    changefreq: "weekly",
+    priority: "0.95",
+    title:
+      "Psychiatric Provider in Herndon, VA | Tinka Health",
+    description:
+      "Book psychiatric evaluations and medication management in Herndon, VA with telehealth psychiatry and accepted insurance plans.",
+    keywords:
+      "psychiatric provider Herndon VA, psychiatrist Herndon VA Medicaid, medication management Herndon VA, telehealth psychiatry Virginia, Virginia Medicaid psychiatrist, ADHD medication management Herndon, anxiety treatment Herndon VA, depression treatment Herndon VA",
+    h1: "Psychiatric Provider in Herndon, VA",
+    image:
+      "https://tinkahealthservices.com/images/img_mental_health/hero/teletherapyimg.webp",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          name:
+            "Psychiatric Provider in Herndon, VA | Medicaid & Telehealth | Tinka Health",
+          url: "https://tinkahealthservices.com/psychiatric-provider-herndon-va",
+          description:
+            "Book psychiatric evaluations and medication management in Herndon, VA. Tinka Health offers telehealth psychiatry across Virginia and accepts Medicaid, Medicare, and major insurance.",
+          isPartOf: {
+            "@type": "WebSite",
+            name: "Tinka Health Services",
+            url: "https://tinkahealthservices.com",
+          },
+          about: {
+            "@type": "MedicalSpecialty",
+            name: "Psychiatry",
+          },
+        },
+        {
+          "@type": "MedicalClinic",
+          "@id":
+            "https://tinkahealthservices.com/psychiatric-provider-herndon-va#herndon-clinic",
+          name: "Tinka Health Services - Herndon Psychiatry",
+          url: "https://tinkahealthservices.com/psychiatric-provider-herndon-va",
+          image:
+            "https://tinkahealthservices.com/images/img_mental_health/hero/teletherapyimg.webp",
+          telephone: "+1 571-349-8285",
+          medicalSpecialty: "Psychiatry",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "585 Grove St, Suite 145",
+            addressLocality: "Herndon",
+            addressRegion: "VA",
+            postalCode: "20170",
+            addressCountry: "US",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 38.9669109,
+            longitude: -77.3802178,
+          },
+          areaServed: [
+            { "@type": "City", name: "Herndon" },
+            { "@type": "City", name: "Reston" },
+            { "@type": "City", name: "Sterling" },
+            { "@type": "City", name: "Fairfax" },
+            { "@type": "State", name: "Virginia" },
+          ],
+          availableService: [
+            { "@type": "MedicalService", name: "Psychiatric Evaluation" },
+            { "@type": "MedicalService", name: "Medication Management" },
+            { "@type": "MedicalService", name: "Telehealth Psychiatry" },
+            { "@type": "MedicalService", name: "ADHD Medication Management" },
+            { "@type": "MedicalService", name: "Anxiety Treatment" },
+            { "@type": "MedicalService", name: "Depression Treatment" },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Are you accepting new psychiatry patients in Herndon, VA?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Yes. Tinka Health Services is accepting new patients for psychiatric evaluations, medication management, and eligible telehealth psychiatry visits in Virginia. Appointment availability can change, so booking early is recommended.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do you accept Virginia Medicaid, Medicare, and insurance?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Tinka Health Services accepts many insurance plans used by Virginia patients, including Medicaid (VA), Medicare, Aetna, Anthem, CareFirst, Cigna, Optum, Sentara Health Plan, Tricare, and VA Premier. Benefits should be verified before the first visit.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Can I book telehealth psychiatry if I live in Virginia?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Yes. Secure telehealth psychiatry may be available if you are located in Virginia at the time of your appointment and your plan allows virtual behavioral health care.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do you provide ADHD medication management in Herndon?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Tinka Health Services provides psychiatric evaluation and medication management for ADHD and related attention concerns when clinically appropriate.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What mental health conditions do you treat?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Common concerns include anxiety, depression, ADHD, bipolar disorder, PTSD, insomnia, stress, burnout, mood concerns, and related behavioral health needs.",
+              },
+            },
+          ],
+        },
+      ],
+    },
   },
   {
     path: "/telehealth-psychiatry-md-dc-va",
     changefreq: "weekly",
     priority: "0.9",
     title:
-      "Telehealth Psychiatry in MD, DC and VA | Online Medication Management | Tinka Health Services",
+      "Telehealth Psychiatry in MD, DC & VA | Tinka Health",
     description:
-      "Get telehealth psychiatry in Maryland, Washington DC, and Virginia with Tinka Health Services. Online psychiatric evaluations, medication management, and follow-up care are available from home with insurance accepted, including Medicaid and Medicare when eligible.",
+      "Get online psychiatric evaluations, medication management, and follow-up care from home in Maryland, DC, and Virginia.",
     keywords:
       "telehealth psychiatry maryland, telehealth psychiatry dc medicaid, telehealth psychiatry virginia, online psychiatric provider, virtual medication management, telehealth psychiatry covered by insurance",
     h1: "Telehealth Psychiatry in MD, DC and VA",
   },
+  ...seoTreatmentRoutes,
 ];
 
 export const normalizePath = (routePath) => {
@@ -194,7 +332,7 @@ export const getServiceRoutes = () =>
       path: `/services/${service.id}`,
       changefreq: "weekly",
       priority: "0.8",
-      title: `${service.title1 || service.name} | Tinka Health Services`,
+      title: `${service.name} | Tinka Health Services`,
       description:
         truncate(service.title1Des) ||
         `${service.name} services from Tinka Health Services.`,

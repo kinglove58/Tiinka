@@ -4,9 +4,9 @@ import ServiceStylePage from "../shared/ServiceStylePage";
 const MarylandPsychiatrist = () => {
   const canonicalUrl = "https://tinkahealthservices.com/maryland-psychiatrist";
   const metaTitle =
-    "Psychiatric Provider in Maryland | Medicaid, Medicare and Telehealth | Tinka Health Services";
+    "Psychiatric Provider in Maryland | Tinka Health Services";
   const metaDescription =
-    "Find a psychiatric provider in Maryland for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management. Tinka Health Services accepts Medicaid, Medicare, and major insurance plans with telehealth psychiatry appointments across Maryland.";
+    "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management with telehealth access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",

@@ -1,239 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
+  
+ <url>
     <loc>https://tinkahealthservices.com</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/about</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/primary-preventive-care</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/meet-our-provider</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/policy</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/contact</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://tinkahealthservices.com/referral</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://tinkahealthservices.com/booking</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/insurance-we-accept</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/maryland-psychiatrist</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/dc-psychiatrist</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/virginia-psychiatrist</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/psychiatric-provider-herndon-va</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/telehealth-psychiatry-md-dc-va</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://tinkahealthservices.com/adhd-treatment-medication-management-virginia</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/anxiety-psychiatrist-md</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/depression-medication-management-dc</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/online-psychiatrist-virginia</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/psychiatric-evaluation-md</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management-psychiatrist-dc</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/hypomanic-episodes-treatment</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/bipolar-treatment</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
     <loc>https://tinkahealthservices.com/services/Addiction-Treatment</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Adult-Psychiatry</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Agoraphobia</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Alzheimers-Disease</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Anger-Management</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Antidepressants</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Anxiety</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Attention-Deficit-Hyperactivity-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Autism-Spectrum-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Bereavement</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Bipolar-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Depression</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Eating-Disorders</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Mental-Health</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Medication-Management</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Obsessive-Compulsive-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Opioid-Medication-Assistant-Treatment</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Panic-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Post-Traumatic-Stress-Disorder</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Schizophrenia</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Stress-Management</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Substance-Abuse</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Suboxone-Treatment</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Grief-and-Loss</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services/Insomnia</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/adhd-medication-shortages-in-virginia-what-to-do-when-your-pharmacy-cant-fill-your-prescription</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/the-anxiety-epidemic-in-virginia-why-youre-not-alone-and-how-to-find-help-fast</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/antidepressant-side-effects-a-complete-guide-to-managing-medication-side-effects</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/psychiatric-medication-management-your-complete-guide-to-finding-the-right-provider-and-treatment-options</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/social-media-anxiety-how-constant-scrolling-is-affecting-your-mental-health</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/high-functioning-anxiety-signs-you-shouldnt-ignore-and-how-to-cope</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/burnout-in-young-adults-signs-causes-and-how-to-recover</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/what-are-hypomanic-episodes-and-how-to-cope</loc>
@@ -328,6 +431,48 @@
   <url>
     <loc>https://tinkahealthservices.com/blogs/why-am-i-feeling-sad-for-no-reason</loc>
     <lastmod>2025-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/social-media-anxiety-how-constant-scrolling-is-affecting-your-mental-health</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+   <url>
+    <loc>https://tinkahealthservices.com/blogs/high-functioning-anxiety-signs-you-shouldnt-ignore-and-how-to-cope</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+   <url>
+    <loc>https://tinkahealthservices.com/blogs/burnout-in-young-adults-signs-causes-and-how-to-recover</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+   <url>
+    <loc>https://tinkahealthservices.com/blogs/psychiatric-medication-management-your-complete-guide-to-finding-the-right-provider-and-treatment-options</loc>
+    <lastmod>2025-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+   <url>
+    <loc>https://tinkahealthservices.com/blogs/antidepressant-side-effects-a-complete-guide-to-managing-medication-side-effects</loc>
+    <lastmod>2025-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/the-anxiety-epidemic-in-virginia-why-youre-not-alone-and-how-to-find-help-fast</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+   <url>
+    <loc>https://tinkahealthservices.com/blogs/adhd-medication-shortages-in-virginia-what-to-do-when-your-pharmacy-cant-fill-your-prescription</loc>
+    <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { BlogProvider } from "./BlogContext/BlogContext.jsx";
+import { seoTreatmentPages } from "./pages/seo/seoPagesData.js";
 
 // Lazy load the components
 const Home = lazy(() => import("./pages/home/Home.jsx"));
@@ -23,6 +24,7 @@ const AllBlogs = lazy(() => import("./pages/blogs/AllBlogs.jsx"));
 const SingleService = lazy(() => import("./pages/services/SingleService.jsx"));
 const Services = lazy(() => import("./pages/services/Services.jsx"));
 const ContactUs = lazy(() => import("./pages/contact/ContactUs.jsx"));
+const Referral = lazy(() => import("./pages/referral/Referral.jsx"));
 const TinkaBooking = lazy(
   () => import("./pages/booking/TinkaBookingEmbed.jsx"),
 );
@@ -41,9 +43,13 @@ const DCPsychiatrist = lazy(
 const VirginiaPsychiatrist = lazy(
   () => import("./pages/location/VirginiaPsychiatrist.jsx"),
 );
+const HerndonPsychiatricProvider = lazy(
+  () => import("./pages/location/HerndonPsychiatricProvider.jsx"),
+);
 const TelehealthPsychiatry = lazy(
   () => import("./pages/telehealth/TelehealthPsychiatry.jsx"),
 );
+const SeoTreatmentPage = lazy(() => import("./pages/seo/SeoTreatmentPage.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -79,6 +85,10 @@ const router = createBrowserRouter([
         element: <ContactUs />,
       },
       {
+        path: "/referral",
+        element: <Referral />,
+      },
+      {
         path: "/tinkahealthservicesbooking",
         element: <Navigate to="/booking" replace />,
       },
@@ -103,9 +113,17 @@ const router = createBrowserRouter([
         element: <VirginiaPsychiatrist />,
       },
       {
+        path: "/psychiatric-provider-herndon-va",
+        element: <HerndonPsychiatricProvider />,
+      },
+      {
         path: "/telehealth-psychiatry-md-dc-va",
         element: <TelehealthPsychiatry />,
       },
+      ...seoTreatmentPages.map((page) => ({
+        path: page.path,
+        element: <SeoTreatmentPage pageId={page.id} />,
+      })),
       {
         path: "/services",
         element: <Services />,

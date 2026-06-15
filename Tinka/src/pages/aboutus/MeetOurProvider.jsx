@@ -74,11 +74,11 @@ const MeetOurProvider = () => {
     <main className="bg-white py-20 lg:py-24">
       <Helmet>
         <title>
-          Meet Our Psychiatric Provider | Dr. Seliat Dosunmu | Tinka Health
+          Meet Our Psychiatric Provider | Tinka Health Services
         </title>
         <meta
           name="description"
-          content="Meet Dr. Seliat Dosunmu, psychiatric provider and medical director at Tinka Health Services. Learn about her expertise in medication management, anxiety, depression, ADHD, PTSD, and mental health care in MD, DC, and VA."
+          content="Meet Dr. Seliat Dosunmu, psychiatric provider for medication management, anxiety, depression, ADHD, PTSD, and care in MD, DC, and VA."
         />
         <meta
           name="keywords"

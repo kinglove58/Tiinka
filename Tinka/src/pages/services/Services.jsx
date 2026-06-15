@@ -154,7 +154,7 @@ function Services() {
         </title>
         <meta
           name="description"
-          content="Explore mental health services in Maryland, Washington DC, and Virginia, including medication management services, therapy, telehealth psychiatry appointments, and support for anxiety, depression, ADHD, PTSD, and more."
+          content="Explore medication management, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more."
         />
         <meta
           name="keywords"
@@ -167,7 +167,7 @@ function Services() {
         />
         <meta
           property="og:description"
-          content="Find psychiatric and therapy services with telehealth and in-person options. Accepting new patients and major insurance including Medicaid and Medicare."
+          content="Find psychiatric and therapy services with telehealth, in-person options, and insurance-friendly access."
         />
         <meta
           property="og:url"

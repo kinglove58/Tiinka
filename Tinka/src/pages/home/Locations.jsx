@@ -64,10 +64,10 @@ const Locations = () => {
                 </a>
               </p>
               <Link
-                to="/virginia-psychiatrist"
+                to="/psychiatric-provider-herndon-va"
                 className="inline-block mt-2 text-blue-100 hover:text-white underline"
               >
-                Virginia psychiatric services
+                Herndon psychiatric services
               </Link>
             </div>
             <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1 min-w-[260px] max-w-md flex-shrink-0 mx-2">
@@ -129,10 +129,10 @@ const Locations = () => {
               </a>
             </p>
             <Link
-              to="/virginia-psychiatrist"
+              to="/psychiatric-provider-herndon-va"
               className="inline-block mt-2 text-blue-100 hover:text-white underline"
             >
-              Virginia psychiatric services
+              Herndon psychiatric services
             </Link>
           </div>
           <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">

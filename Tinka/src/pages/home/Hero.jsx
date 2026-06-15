@@ -1,106 +1,70 @@
-import { lazy, Suspense, memo, useEffect, useRef, useState } from "react";
+import { memo } from "react";
 import { Link } from "react-router-dom";
-import TeletherapyImg from "/images/img_mental_health/hero/teletherapyimg.webp";
 import BookingLink from "../../components/BookingLink";
 
-const CallVideoAction = lazy(() => import("../../components/CallVideoAction"));
+const heroImage =
+  "/images/img_mental_health/hero/tinka-support-simple-hero.webp";
 
 const Hero = () => {
-  const [showCallVideoAction, setShowCallVideoAction] = useState(false);
-  const callVideoActionRef = useRef(null);
-
-  useEffect(() => {
-    const node = callVideoActionRef.current;
-    if (!node) return;
-
-    if (!("IntersectionObserver" in window)) {
-      setShowCallVideoAction(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShowCallVideoAction(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px 0px" },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  const LoadingFallback = () => (
-    <div className="flex justify-center items-center py-4" aria-hidden="true">
-      <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-700" />
-    </div>
-  );
-
   return (
-    <div className="mb-16">
-      {/* Hero Section */}
-      <div className="flex flex-col md:flex-row md:text-start text-center items-center justify-between px-4 md:px-12 lg:px-24 py-8 pt-12">
-        {/* Left Side */}
-        <div className="md:w-1/2 mt-8 md:mt-0 md:mb-0 mb-12">
-          <h1 className="text-2xl md:text-4xl md:max-w-xl font-semibold text-gray-700 mb-4">
-            <span className="text-[#005ab0]">
-              Psychiatric Provider in Maryland, Washington DC and Virginia
+    <section className="relative isolate min-h-[calc(100vh-128px)] overflow-hidden bg-[#eef6fd]">
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 z-0 hidden h-full w-full object-cover object-[center_right] md:block"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] hidden md:block"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(244, 249, 253, 0.98) 0%, rgba(244, 249, 253, 0.92) 34%, rgba(244, 249, 253, 0.5) 58%, rgba(244, 249, 253, 0.08) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-128px)] max-w-7xl flex-col justify-center px-4 pb-10 pt-28 md:min-h-[calc(100vh-112px)] md:px-8 md:py-12 lg:px-12">
+        <div className="max-w-[760px]">
+          <h1 className="max-w-[720px] text-[44px] font-extrabold leading-[1.02] text-[#06192f] sm:text-[56px] md:text-[64px] lg:text-[64px] xl:text-[72px]">
+            Life gets overwhelming.
+            <span className="block text-[#005ab0]">
+              Support should be simple.
             </span>
-            <br />
-            Accepting Medicaid, Medicare and Major Insurance
           </h1>
-          <p className="text-gray-700 md:mb-2 mb-1 text-lg md:max-w-xl">
-            Now accepting Medicaid, Medicare and Kaiser (DC) with telehealth
-            psychiatry appointments across MD, DC and VA.
-          </p>
-          <p className="text-blue-700 md:mb-5 mb-2 text-lg md:max-w-xl">
-            Accepting new patients with same week appointments available when
-            possible.
+
+          <p className="mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:text-lg">
+            Easy, affordable mental health care across Maryland, Washington DC,
+            and Virginia accepting insurance
+            with convenient telehealth appointments.
           </p>
 
-          {/* Hero CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 items-center sm:items-start">
-            <BookingLink> Book an Appointment</BookingLink>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <BookingLink className="inline-flex items-center justify-center rounded-full bg-[#005ab0] px-7 py-4 text-base font-bold text-white shadow-[0_16px_35px_rgba(0,90,176,0.22)] hover:bg-[#00427f]">
+              Book an Appointment
+            </BookingLink>
             <Link
-              to="/meet-our-provider"
-              className="inline-block border-2 border-[#005ab0] text-[#005ab0] px-6 py-3 rounded-lg font-semibold hover:bg-[#005ab0] hover:text-white transition duration-300"
+              to="/insurance-we-accept"
+              className="inline-flex items-center justify-center rounded-full border border-[#9fc8ee] bg-white/75 px-7 py-4 text-base font-bold text-[#005ab0] shadow-sm backdrop-blur transition hover:border-[#005ab0] hover:bg-white"
             >
-              Meet Our Provider
+              Check Insurance We Accept
             </Link>
           </div>
-        </div>
 
-        {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center">
           <img
-            src={TeletherapyImg}
-            alt="A person listening to counselling"
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            className="mt-6 block h-auto w-full object-contain md:hidden"
             loading="eager"
-            fetchPriority="high"
             decoding="async"
-            sizes="(max-width: 600px) 400px, 800px"
-            width={400}
-            height={300}
-            className="w-full max-w-[800px] h-auto"
           />
         </div>
+
       </div>
-
-      {/* Use the extracted component */}
-
-      {/* <BookingModal show={showIframe} onClose={() => setShowIframe(false)} /> */}
-
-      {/* Call to Action */}
-      <div ref={callVideoActionRef} className="min-h-[100px]">
-        {showCallVideoAction ? (
-          <Suspense fallback={<LoadingFallback />}>
-            <CallVideoAction />
-          </Suspense>
-        ) : null}
-      </div>
-    </div>
+    </section>
   );
 };
 

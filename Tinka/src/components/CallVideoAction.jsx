@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, memo } from "react";
 import { Link } from "react-router-dom";
+import BookingLink from "./BookingLink";
 
 const YouTubeThumbnail = lazy(() => import("./YouTubeThumbnail"));
 
@@ -31,12 +32,11 @@ const CallVideoAction = () => {
             >
               Telehealth
             </Link>
-            <Link
-              to="/tinkahealthservicesbooking"
+            <BookingLink
               className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#005ab0] transition-all duration-300 min-w-[160px] text-center"
             >
               Book Appointment
-            </Link>
+            </BookingLink>
           </div>
         </div>
         <div className="md:w-1/2 w-full relative">

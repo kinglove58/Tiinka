@@ -63,7 +63,7 @@ function ContactUs() {
         </title>
         <meta
           name="description"
-          content="Contact Tinka Health Services to book telehealth psychiatry appointments and medication management services in Maryland, Washington DC, and Virginia. Accepting new patients and major insurance including Medicaid and Medicare."
+          content="Contact Tinka Health Services to book telehealth psychiatry and medication management in Maryland, DC, and Virginia."
         />
         <meta
           name="keywords"
@@ -76,7 +76,7 @@ function ContactUs() {
         />
         <meta
           property="og:description"
-          content="Book appointments and get support for psychiatric care, medication management, and telehealth services across MD, DC, and VA."
+          content="Book appointments for psychiatric care, medication management, and telehealth services across MD, DC, and VA."
         />
         <meta
           property="og:url"

@@ -16,8 +16,9 @@ import {
 } from "react-icons/fi";
 import BookingLink from "../../components/BookingLink";
 import CanonicalLink from "../../components/CanonicalLink";
-import heroBg from "./bg.png";
 import insuranceConsultationPhoto from "./photo1.png";
+
+const insuranceHeroImage = "/images/insurance/insurance-hero-consultation.png";
 
 const marylandInsurance = [
   "Aetna",
@@ -265,7 +266,8 @@ const InsuranceAccepted = () => {
     url: "https://tinkahealthservices.com/insurance-we-accept",
     description:
       "Tinka Health Services accepts major insurance plans for psychiatric care, medication management, and telehealth appointments across Maryland, Washington DC, and Virginia.",
-    image: "https://tinkahealthservices.com/images/insurance/insurance.png",
+    image:
+      "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.png",
     provider: {
       "@type": "MedicalOrganization",
       name: "Tinka Health Services",
@@ -311,16 +313,15 @@ const InsuranceAccepted = () => {
   };
 
   return (
-    <main className="pb-32 py-16">
+    <main className="bg-[#f4f7fb] pb-32 pt-20">
       <CanonicalLink href="https://tinkahealthservices.com/insurance-we-accept" />
       <Helmet>
         <title>
-          Psychiatrist Accepting Medicaid, Medicare and Insurance in MD, DC and
-          VA | Tinka Health Services
+          Psychiatrist Accepting Insurance in MD, DC & VA | Tinka Health
         </title>
         <meta
           name="description"
-          content="See the insurance plans Tinka Health Services accepts in Maryland, Washington DC, and Virginia, plus mental health insurance benefits, coverage tips, and common insurance terms for psychiatry and telehealth care."
+          content="See accepted insurance plans for mental health care, psychiatry, medication management, and telehealth in Maryland, DC, and Virginia."
         />
         <meta
           name="keywords"
@@ -329,7 +330,7 @@ const InsuranceAccepted = () => {
         <meta name="robots" content="index,follow" />
         <meta
           property="og:title"
-          content="Psychiatrist Accepting Medicaid, Medicare and Insurance in MD, DC and VA | Tinka Health Services"
+          content="Psychiatrist Accepting Insurance in MD, DC & VA | Tinka Health"
         />
         <meta
           property="og:description"
@@ -354,59 +355,59 @@ const InsuranceAccepted = () => {
         </script>
       </Helmet>
 
-      <header className="relative isolate mb-10 overflow-hidden">
-        <div className="absolute inset-0">
+      <header className="relative isolate mb-10 overflow-hidden bg-white md:min-h-[560px] md:bg-slate-100">
+        <div className="relative h-[310px] overflow-hidden bg-slate-100 md:hidden">
           <img
-            src={heroBg}
+            src={insuranceHeroImage}
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-cover opacity-80"
+            className="h-full w-full object-cover object-[68%_center]"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-white/0" />
         </div>
+        <img
+          src={insuranceHeroImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 hidden h-full w-full object-cover object-center md:block"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div
+          className="absolute inset-0 -z-10 hidden md:block"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.9) 34%, rgba(255,255,255,0.36) 62%, rgba(255,255,255,0.04) 100%)",
+          }}
+        />
 
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-4 pb-0 pt-6 md:grid-cols-[minmax(320px,560px)_1fr] md:items-end md:px-8 md:pt-10 lg:px-10">
-          <div className="self-end md:-ml-14 lg:-ml-20 md:-mb-8">
-            <img
-              src="/images/insurance/insurance.png"
-              alt="Smiling provider representing accessible insurance-supported care"
-              className="mx-auto w-full max-w-[1050px] object-contain md:mx-0 md:w-[126%] md:-translate-x-12 lg:-translate-x-24"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              width={760}
-              height={980}
-            />
-          </div>
-
-          <div className="max-w-2xl pb-2 md:pb-10">
-            <h1 className="mb-4 text-3xl font-bold leading-tight text-white md:text-5xl">
-              Insurances Accepted at Tinka Health Services in MD, DC and VA
-            </h1>
-            <p className="mb-5 text-lg text-white/95">
-              Find Tinka Health Services providers near you who accept your
-              insurance plan, making access to mental health care more
-              convenient and affordable. Tinka Health Services accepts many
-              major insurance plans, ensuring that quality mental health care is
-              accessible to a broader community.
+        <div className="relative z-10 mx-auto flex max-w-7xl items-center px-4 pb-10 pt-6 md:min-h-[560px] md:px-8 md:py-12 lg:px-12">
+          <div className="max-w-2xl rounded-2xl border border-blue-100 bg-white p-5 shadow-[0_18px_45px_-30px_rgba(8,44,86,0.45)] md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-blue-700 sm:text-sm">
+              Insurance-supported psychiatric care
             </p>
-            <div className="flex flex-wrap gap-3">
-              <BookingLink className="bg-[#ffffff] hover:bg-[#8cb5df] text-blue-900">
-                Book an Appointment
+            <h1 className="mb-5 text-3xl font-bold leading-tight text-slate-950 sm:text-4xl md:text-6xl">
+              Insurance Accepted for Mental Health Care
+            </h1>
+            <p className="max-w-xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+              Use your insurance for psychiatric evaluations, medication
+              management, therapy support, and eligible telehealth psychiatry
+              appointments across Maryland, Washington DC, and Virginia.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <BookingLink className="rounded-full bg-black px-6 py-3 text-white hover:bg-slate-900">
+                Book Appointment
               </BookingLink>
-              <a
-                href="tel:+14432956600"
-                className="rounded-lg border border-white/70 bg-white/10 px-5 py-3 font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/20"
-              >
-                Call 443-295-6600
-              </a>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-4">
+      <div id="accepted-insurance-plans" className="mx-auto max-w-6xl px-4">
         <div className="mb-6 rounded-2xl border border-blue-100 bg-white p-6 text-lg leading-8 text-slate-700 shadow-sm">
           We accept most major insurance plans and will verify your insurance
           benefits prior to your appointment. This allows you to be fully

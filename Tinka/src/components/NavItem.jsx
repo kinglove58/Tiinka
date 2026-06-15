@@ -163,7 +163,9 @@ const NavItem = () => {
             <NavItemLink to="/blogs" onClick={handleLinkClick}>
               Blogs
             </NavItemLink>
-            
+            <NavItemLink to="/referral" onClick={handleLinkClick}>
+              Refer Patient
+            </NavItemLink>
             <NavItemLink to="/contact" onClick={handleLinkClick}>
               Contact Us
             </NavItemLink>{" "}

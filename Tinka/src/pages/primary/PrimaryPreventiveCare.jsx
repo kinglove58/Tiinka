@@ -50,7 +50,7 @@ const PrimaryPreventiveCare = () => {
         </title>
         <meta
           name="description"
-          content="Primary and preventive care with telehealth psychiatry appointments, medication management services, and insurance accepted including Medicaid and Medicare in Maryland, Washington DC and Virginia."
+          content="Primary and preventive care support with medication management, telehealth access, and insurance-friendly appointments in MD, DC, and VA."
         />
         <meta
           name="keywords"

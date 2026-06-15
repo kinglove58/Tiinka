@@ -4,9 +4,9 @@ import ServiceStylePage from "../shared/ServiceStylePage";
 const VirginiaPsychiatrist = () => {
   const canonicalUrl = "https://tinkahealthservices.com/virginia-psychiatrist";
   const metaTitle =
-    "Psychiatric Provider in Virginia | Medicaid, Medicare and Telehealth | Tinka Health Services";
+    "Psychiatric Provider in Virginia | Tinka Health Services";
   const metaDescription =
-    "Find a psychiatric provider in Virginia for anxiety, depression, ADHD, bipolar disorder, and medication management. Tinka Health Services offers telehealth psychiatry across Virginia and accepts Medicaid, Medicare, Anthem, Aetna, Cigna, Optum, and other major insurance plans.";
+    "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and medication management with telehealth access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
