@@ -30,14 +30,25 @@ jobs:
       - name: Build production files
         run: npm run build
 
-      - name: Deploy dist to GoDaddy public_html
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.CPANEL_HOST }}
-          username: ${{ secrets.CPANEL_USERNAME }}
-          password: ${{ secrets.CPANEL_PASSWORD }}
-          port: ${{ secrets.CPANEL_PORT }}
-          source: "Tinka/dist/*"
-          target: ${{ secrets.CPANEL_TARGET_DIR }}
-          strip_components: 2
-          overwrite: true
+      - name: Install SFTP password helper
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Deploy dist to GoDaddy public_html over SFTP
+        shell: bash
+        env:
+          CPANEL_HOST: ${{ secrets.CPANEL_HOST }}
+          CPANEL_USERNAME: ${{ secrets.CPANEL_USERNAME }}
+          CPANEL_PASSWORD: ${{ secrets.CPANEL_PASSWORD }}
+          CPANEL_PORT: ${{ secrets.CPANEL_PORT }}
+          CPANEL_TARGET_DIR: ${{ secrets.CPANEL_TARGET_DIR }}
+        run: |
+          sshpass -p "$CPANEL_PASSWORD" sftp \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -P "$CPANEL_PORT" \
+            "$CPANEL_USERNAME@$CPANEL_HOST" <<SFTP_COMMANDS
+          cd $CPANEL_TARGET_DIR
+          put -r dist/* .
+          put dist/.htaccess .htaccess
+          bye
+          SFTP_COMMANDS
