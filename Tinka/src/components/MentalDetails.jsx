@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { mentalDetailContent } from "../constant/mentaldetailcontent";
+import { mentalDetailContent } from "../constant/mentalDetailContent";
 import BookingModal from "./BookingModal";
 import BookingLink from "./BookingLink";
 
