@@ -283,7 +283,7 @@ const AboutUs = () => {
                 onClick={() => setShowModal(true)}
                 className="inline-flex items-center justify-center rounded-lg bg-[#005ab0] px-8 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-blue-600"
               >
-                Book An Appointment
+                Book An Appoint
               </button>
             </div>
 
