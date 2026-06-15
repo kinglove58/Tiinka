@@ -2,8 +2,15 @@ import servicesDataList from "./src/pages/services/serviceData.js";
 import { seoTreatmentRoutes } from "./src/pages/seo/seoPagesData.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
-export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs";
+export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
 export const DEFAULT_IMAGE = `${BASE_URL}/images/logo/Tinka_health_logo.png`;
+
+export const createBlogSlug = (title) =>
+  String(title || "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .trim();
 
 export const staticRoutes = [
   {

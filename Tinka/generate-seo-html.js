@@ -5,6 +5,7 @@ import axios from "axios";
 import {
   BASE_URL,
   BLOG_API_URL,
+  createBlogSlug,
   DEFAULT_IMAGE,
   getStaticAndServiceRoutes,
   stripHtml,
@@ -152,6 +153,10 @@ const extractBlogs = async () => {
 const getBlogRoutes = async () => {
   const blogs = await extractBlogs();
   return blogs
+    .map((blog) => ({
+      ...blog,
+      slug: blog?.slug || createBlogSlug(blog?.title),
+    }))
     .filter((blog) => blog?.slug)
     .map((blog) => {
       const plainBody = stripHtml(blog.body);

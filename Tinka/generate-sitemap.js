@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import {
   BLOG_API_URL,
+  createBlogSlug,
   getServiceRoutes,
   staticRoutes,
   toAbsoluteUrl,
@@ -102,6 +103,10 @@ async function generateSitemap() {
     });
 
     blogs
+      .map((blog) => ({
+        ...blog,
+        slug: blog?.slug || createBlogSlug(blog?.title),
+      }))
       .filter((blog) => blog?.slug)
       .forEach((blog) => {
         addNode(
