@@ -2,6 +2,9 @@
 RewriteEngine On
 RewriteBase /
 
+# Let IndexNow verification read the exact key URL, including www/http.
+RewriteRule ^jzbj6w39zshfpsdr8rbvatswu151uuuu\.txt$ - [L]
+
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
