@@ -19,6 +19,9 @@ const DIST_DIR = path.join(__dirname, "dist");
 const INDEX_PATH = path.join(DIST_DIR, "index.html");
 const SEO_PAGES_DIR = path.join(DIST_DIR, "seo-pages");
 const NOT_FOUND_PATH = path.join(DIST_DIR, "404.html");
+const SITEMAP_PATH = path.join(__dirname, "public", "sitemap.xml");
+
+let blogApiUnavailable = false;
 
 const escapeHtml = (value) =>
   String(value ?? "")
@@ -31,6 +34,67 @@ const escapeAttribute = (value) =>
 
 const escapeRegExp = (value) =>
   String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const unescapeXml = (value) =>
+  String(value || "")
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
+    .replace(/&amp;/g, "&");
+
+const readTag = (node, tagName) => {
+  const match = node.match(new RegExp(`<${tagName}>([\\s\\S]*?)</${tagName}>`, "i"));
+  return match ? unescapeXml(match[1].trim()) : "";
+};
+
+const titleFromSlug = (slug) =>
+  String(slug || "")
+    .split("-")
+    .filter(Boolean)
+    .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
+    .join(" ");
+
+const getSitemapBlogRoutes = () => {
+  if (!fs.existsSync(SITEMAP_PATH)) {
+    return [];
+  }
+
+  const sitemap = fs.readFileSync(SITEMAP_PATH, "utf8");
+  const nodes = sitemap.match(/<url>[\s\S]*?<\/url>/g) || [];
+
+  return nodes
+    .map((node) => {
+      const loc = readTag(node, "loc");
+      try {
+        const url = new URL(loc);
+        const siteUrl = new URL(BASE_URL);
+        if (url.hostname.replace(/^www\./, "") !== siteUrl.hostname) {
+          return null;
+        }
+        if (!url.pathname.startsWith("/blogs/")) {
+          return null;
+        }
+
+        const slug = decodeURIComponent(url.pathname.replace(/^\/blogs\//, ""));
+        const title = titleFromSlug(slug) || "Mental Health Article";
+        return {
+          path: decodeURI(url.pathname),
+          title: `${title} | Tinka Health Services Blog`,
+          description:
+            "Read this mental health article from Tinka Health Services about psychiatry, medication management, telehealth care, and behavioral health support.",
+          keywords:
+            "mental health blog, psychiatry, medication management, telehealth psychiatry, maryland, washington dc, virginia",
+          h1: title,
+          image: DEFAULT_IMAGE,
+          ogType: "article",
+        };
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
+};
 
 const upsertTag = (html, regex, tag) => {
   if (regex.test(html)) {
@@ -145,6 +209,7 @@ const extractBlogs = async () => {
     if (Array.isArray(data?.data)) return data.data;
     if (Array.isArray(data?.data?.blogs)) return data.data.blogs;
   } catch (error) {
+    blogApiUnavailable = true;
     console.warn("Blog API unavailable during SEO HTML generation:", error.message);
   }
   return [];
@@ -152,6 +217,16 @@ const extractBlogs = async () => {
 
 const getBlogRoutes = async () => {
   const blogs = await extractBlogs();
+  if (blogApiUnavailable && blogs.length === 0) {
+    const fallbackBlogRoutes = getSitemapBlogRoutes();
+    if (fallbackBlogRoutes.length > 0) {
+      console.warn(
+        `Generated fallback SEO HTML for ${fallbackBlogRoutes.length} blog URLs from sitemap.`,
+      );
+    }
+    return fallbackBlogRoutes;
+  }
+
   return blogs
     .map((blog) => ({
       ...blog,

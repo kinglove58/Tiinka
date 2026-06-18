@@ -1,7 +1,7 @@
 import React, { useState, useMemo, memo, useCallback } from "react";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleUp, FaArrowRight } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaArrowRight, FaSearch } from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import service_data from "../pages/services/serviceData";
@@ -162,6 +162,15 @@ const NavItem = () => {
             </li>
             <NavItemLink to="/blogs" onClick={handleLinkClick}>
               Blogs
+            </NavItemLink>
+            <NavItemLink to="/conditions" onClick={handleLinkClick}>
+              Conditions
+            </NavItemLink>
+            <NavItemLink to="/search" onClick={handleLinkClick}>
+              <span className="inline-flex items-center gap-2">
+                <FaSearch aria-hidden="true" className="text-sm" />
+                Search
+              </span>
             </NavItemLink>
             <NavItemLink to="/referral" onClick={handleLinkClick}>
               Refer Patient

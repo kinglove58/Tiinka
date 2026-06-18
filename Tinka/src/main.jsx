@@ -25,6 +25,11 @@ const SingleService = lazy(() => import("./pages/services/SingleService.jsx"));
 const Services = lazy(() => import("./pages/services/Services.jsx"));
 const ContactUs = lazy(() => import("./pages/contact/ContactUs.jsx"));
 const Referral = lazy(() => import("./pages/referral/Referral.jsx"));
+const SearchPage = lazy(() => import("./pages/search/SearchPage.jsx"));
+const Conditions = lazy(() => import("./pages/conditions/Conditions.jsx"));
+const ConditionDetail = lazy(
+  () => import("./pages/conditions/ConditionDetail.jsx"),
+);
 const TinkaBooking = lazy(
   () => import("./pages/booking/TinkaBookingEmbed.jsx"),
 );
@@ -87,6 +92,18 @@ const router = createBrowserRouter([
       {
         path: "/referral",
         element: <Referral />,
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
+      },
+      {
+        path: "/conditions",
+        element: <Conditions />,
+      },
+      {
+        path: "/conditions/condition/:slug",
+        element: <ConditionDetail />,
       },
       {
         path: "/tinkahealthservicesbooking",

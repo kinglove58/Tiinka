@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node generate-sitemap.js",
+    "prebuild": "node generate-sanity-content.js && node generate-sitemap.js",
     "build": "vite build",
     "postbuild": "node generate-seo-html.js",
     "lint": "eslint .",

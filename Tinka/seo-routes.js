@@ -1,5 +1,6 @@
 import servicesDataList from "./src/pages/services/serviceData.js";
 import { seoTreatmentRoutes } from "./src/pages/seo/seoPagesData.js";
+import { sanityConditions } from "./src/generated/sanityConditions.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
@@ -101,6 +102,28 @@ export const staticRoutes = [
     keywords:
       "refer a patient, psychiatry referral, mental health referral, medication management referral, psychiatric evaluation referral",
     h1: "Refer a Patient",
+  },
+  {
+    path: "/search",
+    changefreq: "monthly",
+    priority: "0.55",
+    title: "Search Tinka Health Services",
+    description:
+      "Search Tinka Health Services for mental health services, accepted insurance, locations, blog articles, and appointment information.",
+    keywords:
+      "search Tinka Health Services, mental health services search, psychiatry blog search, insurance search",
+    h1: "Search Tinka Health Services",
+  },
+  {
+    path: "/conditions",
+    changefreq: "weekly",
+    priority: "0.86",
+    title: "Conditions We Support | Tinka Health Services",
+    description:
+      "Explore mental health conditions supported by Tinka Health Services, including evaluation, medication management, telehealth care, and insurance-friendly access.",
+    keywords:
+      "mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, medication management",
+    h1: "Find care by condition",
   },
   {
     path: "/booking",
@@ -355,7 +378,29 @@ export const getServiceRoutes = () =>
           : DEFAULT_IMAGE,
     }));
 
+export const getConditionRoutes = () =>
+  sanityConditions
+    .filter((condition) => condition?.slug && condition?.title)
+    .map((condition) => ({
+      path: `/conditions/condition/${condition.slug}`,
+      changefreq: "weekly",
+      priority: "0.86",
+      title:
+        condition.seoTitle ||
+        `${condition.title} Care | Tinka Health Services`,
+      description:
+        condition.metaDescription ||
+        condition.summary ||
+        `${condition.title} care information from Tinka Health Services.`,
+      keywords: Array.isArray(condition.keywords)
+        ? condition.keywords.join(", ")
+        : condition.keywords ||
+          `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`,
+      h1: condition.title,
+    }));
+
 export const getStaticAndServiceRoutes = () => [
   ...staticRoutes,
   ...getServiceRoutes(),
+  ...getConditionRoutes(),
 ];
