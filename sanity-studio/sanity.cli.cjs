@@ -1,4 +1,5 @@
 const { defineCliConfig, getStudioEnvironmentVariables } = require("sanity/cli");
+
 const studioEnv = getStudioEnvironmentVariables({
   envFile: {
     mode: "development",

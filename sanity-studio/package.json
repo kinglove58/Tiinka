@@ -2,6 +2,7 @@
   "name": "tinka-sanity-studio",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",

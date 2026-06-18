@@ -1,14 +1,14 @@
-const { defineConfig } = require("sanity");
-const { structureTool } = require("sanity/structure");
-const { visionTool } = require("@sanity/vision");
-const { schemaTypes } = require("./schemaTypes");
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
+import { schemaTypes } from "./schemaTypes/index.js";
 
 const projectId =
   process.env.SANITY_STUDIO_PROJECT_ID || process.env.SANITY_PROJECT_ID;
 const dataset =
   process.env.SANITY_STUDIO_DATASET || process.env.SANITY_DATASET || "production";
 
-module.exports = defineConfig({
+export default defineConfig({
   name: "tinkaHealthServices",
   title: "Tinka Health Services",
   projectId,
