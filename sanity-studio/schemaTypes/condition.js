@@ -1,6 +1,6 @@
-import { defineArrayMember, defineField, defineType } from "sanity";
+const { defineArrayMember, defineField, defineType } = require("sanity");
 
-export const condition = defineType({
+const condition = defineType({
   name: "condition",
   title: "Condition",
   type: "document",
@@ -116,3 +116,5 @@ export const condition = defineType({
     },
   },
 });
+
+module.exports = { condition };

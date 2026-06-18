@@ -1,3 +1,5 @@
-import { condition } from "./condition.js";
+const { condition } = require("./condition");
 
-export const schemaTypes = [condition];
+const schemaTypes = [condition];
+
+module.exports = { schemaTypes };
