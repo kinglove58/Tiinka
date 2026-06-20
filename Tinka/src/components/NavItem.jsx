@@ -1,7 +1,7 @@
 import React, { useState, useMemo, memo, useCallback } from "react";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleUp, FaArrowRight, FaSearch } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaArrowRight } from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import service_data from "../pages/services/serviceData";
@@ -10,6 +10,7 @@ import BookingLink from "./BookingLink";
 
 const NavItem = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isResourcesHovered, setIsResourcesHovered] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
@@ -30,6 +31,24 @@ const NavItem = () => {
     }
   }, [isHovered]);
 
+  const handleResourcesMouseEnter = useCallback(() => {
+    if (window.innerWidth >= 1024) {
+      setIsResourcesHovered(true);
+    }
+  }, []);
+
+  const handleResourcesMouseLeave = useCallback(() => {
+    if (window.innerWidth >= 1024) {
+      setIsResourcesHovered(false);
+    }
+  }, []);
+
+  const handleResourcesClick = useCallback(() => {
+    if (window.innerWidth < 1024) {
+      setIsResourcesHovered(!isResourcesHovered);
+    }
+  }, [isResourcesHovered]);
+
   const handleMenu = useCallback(() => {
     setShowMenu(!showMenu);
   }, [showMenu]);
@@ -38,6 +57,8 @@ const NavItem = () => {
     if (window.innerWidth < 1024) {
       setShowMenu(false);
     }
+    setIsHovered(false);
+    setIsResourcesHovered(false);
   }, []);
 
   const servicesToShow = useMemo(() => service_data, []);
@@ -160,18 +181,41 @@ const NavItem = () => {
                 </div>
               )}
             </li>
-            <NavItemLink to="/blogs" onClick={handleLinkClick}>
-              Blogs
-            </NavItemLink>
-            <NavItemLink to="/conditions" onClick={handleLinkClick}>
-              Conditions
-            </NavItemLink>
-            <NavItemLink to="/search" onClick={handleLinkClick}>
-              <span className="inline-flex items-center gap-2">
-                <FaSearch aria-hidden="true" className="text-sm" />
-                Search
-              </span>
-            </NavItemLink>
+            <li
+              className="relative w-full font-semibold text-gray-800 hover:text-blue-800 transition duration-300 cursor-pointer"
+              onMouseLeave={handleResourcesMouseLeave}
+              onMouseEnter={handleResourcesMouseEnter}
+              onClick={handleResourcesClick}
+            >
+              <p className="flex items-center h-10 lg:h-20 justify-between lg:gap-1 text-nowrap">
+                Resources{" "}
+                {isResourcesHovered ? <FaAngleUp /> : <FaAngleDown />}
+              </p>
+              {isResourcesHovered && (
+                <div className="lg:absolute lg:top-20 lg:left-0 lg:min-w-[220px] border-t lg:border border-gray-200 lg:shadow-lg py-2 bg-white">
+                  <ul className="space-y-1">
+                    <li>
+                      <Link
+                        to="/blogs"
+                        className="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-800"
+                        onClick={handleLinkClick}
+                      >
+                        Blogs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/conditions"
+                        className="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-800"
+                        onClick={handleLinkClick}
+                      >
+                        Conditions
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </li>
             <NavItemLink to="/referral" onClick={handleLinkClick}>
               Refer Patient
             </NavItemLink>

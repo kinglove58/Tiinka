@@ -42,6 +42,7 @@ const companyData = [
   { value: "DC Psychiatry", link: "dc-psychiatrist" },
   { value: "Virginia Psychiatry", link: "virginia-psychiatrist" },
   { value: "Herndon VA Psychiatry", link: "psychiatric-provider-herndon-va" },
+  { value: "Search", link: "search" },
   { value: "Privacy Policy", link: "policy" },
   { value: "Contact Us", link: "contact" },
   { value: "Book Appointment", link: "tinkahealthservicesbooking" },
