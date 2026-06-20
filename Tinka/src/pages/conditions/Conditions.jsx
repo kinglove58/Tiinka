@@ -74,12 +74,9 @@ const Conditions = () => (
         </div>
       ) : (
         <div className="mt-10 rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm">
-          <h2 className="text-2xl font-bold">Condition pages are being prepared</h2>
-          <p className="mt-3 max-w-2xl leading-7 text-slate-700">
-            The website is ready for Sanity-powered condition pages. Once
-            condition content is published in Sanity and the site rebuilds,
-            those pages will appear here.
-          </p>
+          <h2 className="text-2xl font-bold">
+            Condition pages are being prepared
+          </h2>
         </div>
       )}
     </section>
