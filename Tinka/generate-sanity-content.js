@@ -24,6 +24,20 @@ const conditionQuery = `*[_type == "condition" && defined(slug.current)] | order
   metaDescription,
   keywords,
   body,
+  sections[]{
+    title,
+    "slug": coalesce(slug.current, slug),
+    summary,
+    body,
+    bullets,
+    links[]{
+      label,
+      "slug": coalesce(slug.current, slug),
+      summary,
+      href
+    }
+  },
+  "image": image.asset->url,
   "updatedAt": coalesce(updatedAt, _updatedAt)
 }`;
 

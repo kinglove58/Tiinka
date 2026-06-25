@@ -1,6 +1,6 @@
 import servicesDataList from "./src/pages/services/serviceData.js";
 import { seoTreatmentRoutes } from "./src/pages/seo/seoPagesData.js";
-import { sanityConditions } from "./src/generated/sanityConditions.js";
+import { getConditionHubs } from "./src/pages/conditions/conditionHubData.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
@@ -379,7 +379,7 @@ export const getServiceRoutes = () =>
     }));
 
 export const getConditionRoutes = () =>
-  sanityConditions
+  getConditionHubs()
     .filter((condition) => condition?.slug && condition?.title)
     .map((condition) => ({
       path: `/conditions/condition/${condition.slug}`,

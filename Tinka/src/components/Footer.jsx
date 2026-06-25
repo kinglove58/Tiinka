@@ -36,6 +36,7 @@ const emergencyLinks = [
 ];
 
 const companyData = [
+  { value: "Primary & Preventive Care", link: "primary-preventive-care" },
   { value: "Insurance We Accept", link: "insurance-we-accept" },
   { value: "Telehealth Psychiatry", link: "telehealth-psychiatry-md-dc-va" },
   { value: "Maryland Psychiatry", link: "maryland-psychiatrist" },
