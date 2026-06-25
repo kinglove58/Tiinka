@@ -165,7 +165,7 @@ const NavItem = () => {
                 Conditions {isConditionsOpen ? <FaAngleUp /> : <FaAngleDown />}
               </p>
               {isConditionsOpen && (
-                <MegaMenu withPanel>
+                <MegaMenu>
                   {conditionTopics.map((condition) => (
                     <MegaMenuLink
                       key={condition.slug}
@@ -178,17 +178,7 @@ const NavItem = () => {
                       {shortenName(condition.title)}
                     </MegaMenuLink>
                   ))}
-                  <aside className="relative z-10 hidden rounded-lg border border-[#cfe3f6] bg-white/90 p-5 shadow-sm xl:block">
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#005ab0]">
-                      Condition guides
-                    </p>
-                    <p className="mt-3 text-sm leading-6 text-slate-700">
-                      Browse symptoms, treatment options, medication
-                      management, telehealth access, and insurance-friendly
-                      care by topic.
-                    </p>
-                  </aside>
-                  <MegaMenuFooter withPanel>
+                  <MegaMenuFooter>
                     <Link
                       to="/conditions"
                       className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
@@ -230,14 +220,10 @@ const NavItem = () => {
   );
 };
 
-const MegaMenu = ({ children, withPanel = false }) => (
+const MegaMenu = ({ children }) => (
   <div className="bg-white py-2 lg:absolute lg:right-0 lg:top-20 lg:w-full lg:border-t lg:border-gray-500 lg:px-16 lg:py-4 lg:shadow-md">
     <div
-      className={`relative grid grid-cols-1 gap-1 overflow-hidden rounded-xl p-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 ${
-        withPanel
-          ? "lg:grid-cols-4 xl:grid-cols-[repeat(4,minmax(0,1fr))_280px]"
-          : "lg:grid-cols-4 xl:grid-cols-6"
-      }`}
+      className="relative grid grid-cols-1 gap-1 overflow-hidden rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url(${Teletherapy})`,
         backgroundSize: "cover",
