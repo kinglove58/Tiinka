@@ -1,6 +1,11 @@
 import servicesDataList from "./src/pages/services/serviceData.js";
 import { seoTreatmentRoutes } from "./src/pages/seo/seoPagesData.js";
-import { getConditionHubs } from "./src/pages/conditions/conditionHubData.js";
+import {
+  getConditionHubPath,
+  getConditionHubs,
+  getConditionTopicPath,
+  getConditionTopicRoutes,
+} from "./src/pages/conditions/conditionHubData.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
@@ -382,7 +387,7 @@ export const getConditionRoutes = () =>
   getConditionHubs()
     .filter((condition) => condition?.slug && condition?.title)
     .map((condition) => ({
-      path: `/conditions/condition/${condition.slug}`,
+      path: getConditionHubPath(condition),
       changefreq: "weekly",
       priority: "0.86",
       title:
@@ -399,8 +404,35 @@ export const getConditionRoutes = () =>
       h1: condition.title,
     }));
 
+export const getConditionTopicSeoRoutes = () =>
+  getConditionTopicRoutes().map(({ condition, topic }) => ({
+    path: getConditionTopicPath(condition, topic),
+    changefreq: "weekly",
+    priority: "0.72",
+    title:
+      topic.seoTitle ||
+      `${topic.title} | ${condition.title} | Tinka Health Services`,
+    description:
+      topic.metaDescription ||
+      topic.summary ||
+      `${topic.title} information from Tinka Health Services.`,
+    keywords: Array.isArray(topic.keywords)
+      ? topic.keywords.join(", ")
+      : topic.keywords ||
+        `${topic.title}, ${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry`,
+    h1: topic.title,
+    image: topic.image?.startsWith("http")
+      ? topic.image
+      : condition.image?.startsWith("http")
+        ? condition.image
+        : condition.image
+          ? `${BASE_URL}${condition.image}`
+          : DEFAULT_IMAGE,
+  }));
+
 export const getStaticAndServiceRoutes = () => [
   ...staticRoutes,
   ...getServiceRoutes(),
   ...getConditionRoutes(),
+  ...getConditionTopicSeoRoutes(),
 ];

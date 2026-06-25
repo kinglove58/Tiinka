@@ -30,6 +30,9 @@ const Conditions = lazy(() => import("./pages/conditions/Conditions.jsx"));
 const ConditionDetail = lazy(
   () => import("./pages/conditions/ConditionDetail.jsx"),
 );
+const ConditionTopic = lazy(
+  () => import("./pages/conditions/ConditionTopic.jsx"),
+);
 const TinkaBooking = lazy(
   () => import("./pages/booking/TinkaBookingEmbed.jsx"),
 );
@@ -104,6 +107,14 @@ const router = createBrowserRouter([
       {
         path: "/conditions/condition/:slug",
         element: <ConditionDetail />,
+      },
+      {
+        path: "/:slug/default.htm",
+        element: <ConditionDetail />,
+      },
+      {
+        path: "/:slug/:topicSlug.htm",
+        element: <ConditionTopic />,
       },
       {
         path: "/tinkahealthservicesbooking",

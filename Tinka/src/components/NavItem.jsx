@@ -8,7 +8,7 @@ import Teletherapy from "/images/img_mental_health/hero/teletherapy.webp";
 import BookingLink from "./BookingLink";
 import serviceData from "../pages/services/serviceData";
 import {
-  createConditionSlug,
+  getConditionHubPath,
   getConditionHubs,
 } from "../pages/conditions/conditionHubData";
 
@@ -169,9 +169,7 @@ const NavItem = () => {
                   {conditionTopics.map((condition) => (
                     <MegaMenuLink
                       key={condition.slug}
-                      to={`/conditions/condition/${createConditionSlug(
-                        condition.slug,
-                      )}`}
+                      to={getConditionHubPath(condition)}
                       title={condition.title}
                       onClick={closeMenus}
                     >

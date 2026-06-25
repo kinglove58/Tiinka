@@ -19,6 +19,7 @@ const conditionQuery = `*[_type == "condition" && defined(slug.current)] | order
   _id,
   title,
   "slug": slug.current,
+  "pathSlug": pathSlug.current,
   summary,
   seoTitle,
   metaDescription,
@@ -30,6 +31,17 @@ const conditionQuery = `*[_type == "condition" && defined(slug.current)] | order
     summary,
     body,
     bullets,
+    topics[]{
+      title,
+      "slug": slug.current,
+      summary,
+      seoTitle,
+      metaDescription,
+      keywords,
+      body,
+      "image": image.asset->url,
+      href
+    },
     links[]{
       label,
       "slug": coalesce(slug.current, slug),

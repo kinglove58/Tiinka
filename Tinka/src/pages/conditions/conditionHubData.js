@@ -1,12 +1,22 @@
 import servicesDataList from "../services/serviceData.js";
 import { sanityConditions } from "../../generated/sanityConditions.js";
 
-export const createConditionSlug = (value = "") =>
-  String(value)
+const preferredPathSlugs = {
+  "Attention Deficit Hyperactivity Disorder": "add-adhd",
+  "Obsessive Compulsive Disorder": "ocd",
+  "Post Traumatic Stress Disorder": "ptsd",
+  "Autism Spectrum Disorder": "autism",
+};
+
+export const createConditionSlug = (value = "") => {
+  if (value == null) return "";
+
+  return String(value)
     .toLowerCase()
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+};
 
 const stripText = (value = "") =>
   String(value).replace(/\s+/g, " ").trim();
@@ -17,10 +27,54 @@ const truncateText = (value = "", maxLength = 155) => {
   return `${text.slice(0, maxLength - 3).trim()}...`;
 };
 
-const makeTopic = (label) => ({
-  label,
-  slug: createConditionSlug(label),
+const toPortableParagraph = (text) =>
+  text
+    ? [
+        {
+          _type: "block",
+          style: "normal",
+          children: [{ _type: "span", text }],
+        },
+      ]
+    : [];
+
+const getPathSlug = (service, sanity) =>
+  createConditionSlug(
+    sanity?.pathSlug ||
+      preferredPathSlugs[service.name] ||
+      sanity?.slug ||
+      service.name,
+  );
+
+export const getConditionHubPath = (condition) =>
+  `/${condition.pathSlug}/default.htm`;
+
+export const getConditionTopicPath = (condition, topic) =>
+  `/${condition.pathSlug}/${topic.slug}.htm`;
+
+const makeTopic = ({ title, summary, body, href }) => ({
+  title,
+  label: title,
+  slug: createConditionSlug(title),
+  summary,
+  body: body?.length ? body : toPortableParagraph(summary),
+  href,
 });
+
+const normalizeTopic = (topic, fallbackSummary) => {
+  const title = topic?.title || topic?.label || "Topic";
+
+  return {
+    ...topic,
+    title,
+    label: title,
+    slug: createConditionSlug(topic?.slug || title),
+    summary: topic?.summary || fallbackSummary || "",
+    body: topic?.body?.length
+      ? topic.body
+      : toPortableParagraph(topic?.summary || fallbackSummary || ""),
+  };
+};
 
 const buildFallbackSections = (service) => [
   {
@@ -30,10 +84,24 @@ const buildFallbackSections = (service) => [
       service.title1Des ||
       service.id_sub ||
       `Learn what ${service.name} can look like and when psychiatric support may help.`,
-    links: [
-      makeTopic(`What is ${service.name}?`),
-      makeTopic(`${service.name} signs and symptoms`),
-      makeTopic(`When to seek help for ${service.name}`),
+    topics: [
+      makeTopic({
+        title: `What is ${service.name}?`,
+        summary:
+          service.title1Des ||
+          `Learn the basics of ${service.name}, common symptoms, and when care may help.`,
+      }),
+      makeTopic({
+        title: `${service.name} signs and symptoms`,
+        summary:
+          service.title2Des ||
+          `Review signs and symptoms that may suggest ${service.name} is affecting daily life.`,
+      }),
+      makeTopic({
+        title: `When to seek help for ${service.name}`,
+        summary:
+          "Consider reaching out when symptoms affect work, school, relationships, sleep, safety, or daily routines.",
+      }),
     ],
   },
   {
@@ -43,10 +111,23 @@ const buildFallbackSections = (service) => [
       service.title2Des ||
       `${service.name} can affect mood, focus, sleep, relationships, work, or daily routines. A careful evaluation helps clarify what is happening and what kind of support fits.`,
     bullets: service.title2List || [],
-    links: [
-      makeTopic(`${service.name} symptoms`),
-      makeTopic(`${service.name} in daily life`),
-      makeTopic(`${service.name} warning signs`),
+    topics: [
+      makeTopic({
+        title: `${service.name} symptoms`,
+        summary:
+          service.title2Des ||
+          `Understand the symptoms commonly discussed in ${service.name} care.`,
+      }),
+      makeTopic({
+        title: `${service.name} in daily life`,
+        summary:
+          "Symptoms can show up differently at home, work, school, and in relationships.",
+      }),
+      makeTopic({
+        title: `${service.name} warning signs`,
+        summary:
+          "Warning signs can help patients and families know when professional support is appropriate.",
+      }),
     ],
   },
   {
@@ -56,10 +137,23 @@ const buildFallbackSections = (service) => [
       service.title3Des ||
       `Treatment for ${service.name} may include psychiatric evaluation, medication management, therapy support, and ongoing follow-up when clinically appropriate.`,
     bullets: service.title3List || [],
-    links: [
-      makeTopic(`${service.name} treatment options`),
-      makeTopic(`${service.name} medication management`),
-      makeTopic(`Telehealth care for ${service.name}`),
+    topics: [
+      makeTopic({
+        title: `${service.name} treatment options`,
+        summary:
+          service.title3Des ||
+          `Learn how treatment for ${service.name} may be planned and monitored.`,
+      }),
+      makeTopic({
+        title: `${service.name} medication management`,
+        summary:
+          "Medication management includes review, monitoring, adjustment, and follow-up when medicine is clinically appropriate.",
+      }),
+      makeTopic({
+        title: `Telehealth care for ${service.name}`,
+        summary:
+          "Eligible patients may be able to receive psychiatric evaluation and follow-up care by telehealth.",
+      }),
     ],
   },
   {
@@ -67,17 +161,19 @@ const buildFallbackSections = (service) => [
     slug: "care-access",
     summary:
       "Tinka Health Services supports eligible patients across Maryland, Washington DC, and Virginia with psychiatric evaluation, medication management, telehealth appointments, and insurance verification before care begins.",
-    links: [
-      {
-        label: "Book an appointment",
-        slug: "book-appointment",
+    topics: [
+      makeTopic({
+        title: "Book an appointment",
+        summary:
+          "Start with a clear appointment request so the care team can help you with next steps.",
         href: "/booking",
-      },
-      {
-        label: "Check insurance",
-        slug: "check-insurance",
+      }),
+      makeTopic({
+        title: "Check insurance",
+        summary:
+          "Review accepted insurance plans and prepare for benefit verification before your first visit.",
         href: "/insurance-we-accept",
-      },
+      }),
     ],
   },
 ];
@@ -88,24 +184,52 @@ const sanityBySlug = new Map(
     .map((condition) => [createConditionSlug(condition.slug), condition]),
 );
 
+const normalizeSections = (conditionTitle, sections = []) =>
+  sections.map((section) => {
+    const sectionSlug = createConditionSlug(section?.slug || section?.title);
+    const rawTopics =
+      Array.isArray(section?.topics) && section.topics.length > 0
+        ? section.topics
+        : section?.links || [];
+
+    return {
+      ...section,
+      title: section?.title || `${conditionTitle} topics`,
+      slug: sectionSlug,
+      topics: rawTopics.map((topic) => normalizeTopic(topic, section?.summary)),
+    };
+  });
+
 export const getConditionHubs = () =>
   servicesDataList
     .filter((service) => service?.id && service?.name)
     .map((service) => {
-      const slug = createConditionSlug(service.id);
+      const legacySlug = createConditionSlug(service.id);
       const sanity =
-        sanityBySlug.get(slug) ||
+        sanityBySlug.get(legacySlug) ||
         sanityBySlug.get(createConditionSlug(service.name));
       const title = sanity?.title || service.name;
       const summary =
         sanity?.summary ||
         service.id_sub ||
         truncateText(service.title1Des, 220);
+      const pathSlug = getPathSlug(service, sanity);
+      const sections =
+        Array.isArray(sanity?.sections) && sanity.sections.length > 0
+          ? normalizeSections(title, sanity.sections)
+          : normalizeSections(title, buildFallbackSections(service));
 
       return {
         ...sanity,
         service,
-        slug,
+        slug: legacySlug,
+        pathSlug,
+        aliases: [
+          legacySlug,
+          pathSlug,
+          createConditionSlug(service.name),
+          createConditionSlug(sanity?.slug),
+        ].filter(Boolean),
         title,
         summary,
         seoTitle: sanity?.seoTitle || `${title} Care Guide | Tinka Health`,
@@ -127,15 +251,42 @@ export const getConditionHubs = () =>
           ],
         image: sanity?.image || service.image || "/images/logo/Tinka_health_logo.png",
         imageAlt: service.imageAlt || `${title} care guide`,
-        sections:
-          Array.isArray(sanity?.sections) && sanity.sections.length > 0
-            ? sanity.sections
-            : buildFallbackSections(service),
+        sections,
         body: sanity?.body,
       };
     });
 
-export const getConditionHub = (slug) =>
-  getConditionHubs().find(
-    (condition) => condition.slug === createConditionSlug(slug),
+export const getConditionHub = (slug) => {
+  const normalizedSlug = createConditionSlug(slug);
+  return getConditionHubs().find((condition) =>
+    condition.aliases.includes(normalizedSlug),
+  );
+};
+
+export const getConditionTopic = (conditionSlug, topicSlug) => {
+  const condition = getConditionHub(conditionSlug);
+  const normalizedTopicSlug = createConditionSlug(topicSlug);
+
+  if (!condition) return null;
+
+  for (const section of condition.sections) {
+    const topic = section.topics?.find(
+      (item) => createConditionSlug(item.slug) === normalizedTopicSlug,
+    );
+
+    if (topic) {
+      return { condition, section, topic };
+    }
+  }
+
+  return null;
+};
+
+export const getConditionTopicRoutes = () =>
+  getConditionHubs().flatMap((condition) =>
+    condition.sections.flatMap((section) =>
+      (section.topics || [])
+        .filter((topic) => !topic.href)
+        .map((topic) => ({ condition, section, topic })),
+    ),
   );

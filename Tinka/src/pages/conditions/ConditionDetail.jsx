@@ -1,10 +1,14 @@
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
-import { FiArrowRight, FiCheckCircle, FiShield } from "react-icons/fi";
+import { FiArrowRight, FiShield } from "react-icons/fi";
 import BookingLink from "../../components/BookingLink";
 import CanonicalLink from "../../components/CanonicalLink";
 import PortableText from "./portableText";
-import { createConditionSlug, getConditionHub } from "./conditionHubData";
+import {
+  getConditionHub,
+  getConditionHubPath,
+  getConditionTopicPath,
+} from "./conditionHubData";
 
 const BASE_URL = "https://tinkahealthservices.com";
 
@@ -15,9 +19,6 @@ const textFromBlocks = (blocks = []) =>
     .join(" ")
     .replace(/\s+/g, " ")
     .trim();
-
-const getSectionId = (section, index) =>
-  createConditionSlug(section?.slug || section?.title || `section-${index + 1}`);
 
 const getAbsoluteImage = (image) => {
   if (!image) return `${BASE_URL}/images/logo/Tinka_health_logo.png`;
@@ -42,7 +43,7 @@ const ConditionDetail = () => {
     );
   }
 
-  const canonicalUrl = `${BASE_URL}/conditions/condition/${condition.slug}`;
+  const canonicalUrl = `${BASE_URL}${getConditionHubPath(condition)}`;
   const fallbackDescription =
     condition.summary ||
     textFromBlocks(condition.body).slice(0, 155) ||
@@ -54,7 +55,6 @@ const ConditionDetail = () => {
     ? condition.keywords.join(", ")
     : condition.keywords ||
       `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`;
-  const sections = condition.sections || [];
   const ogImage = getAbsoluteImage(condition.image);
 
   return (
@@ -130,14 +130,14 @@ const ConditionDetail = () => {
       </section>
 
       <nav
-        aria-label={`${condition.title} topics`}
+        aria-label={`${condition.title} topic clusters`}
         className="sticky top-20 z-30 border-y border-[#d6e8f7] bg-white/95 px-4 py-4 backdrop-blur md:px-8 lg:px-12"
       >
         <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto">
-          {sections.map((section, index) => (
+          {condition.sections.map((section) => (
             <a
-              key={getSectionId(section, index)}
-              href={`#${getSectionId(section, index)}`}
+              key={section.slug}
+              href={`#${section.slug}`}
               className="whitespace-nowrap rounded-full border border-[#cfe3f6] bg-[#f8fbff] px-4 py-2 text-sm font-bold text-[#005ab0] transition hover:border-[#005ab0] hover:bg-[#eaf5ff]"
             >
               {section.title}
@@ -157,11 +157,11 @@ const ConditionDetail = () => {
                 loading="lazy"
               />
               <div className="p-6">
-                <h2 className="text-2xl font-bold">Care access</h2>
+                <h2 className="text-2xl font-bold">Explore {condition.title}</h2>
                 <p className="mt-3 leading-7 text-slate-700">
-                  Psychiatric evaluation, medication management, and eligible
-                  telehealth care are available for patients across Maryland,
-                  Washington DC, and Virginia.
+                  Use these topic clusters to learn about symptoms, care
+                  options, medication management, telehealth access, and next
+                  steps.
                 </p>
                 <Link
                   to="/insurance-we-accept"
@@ -181,10 +181,10 @@ const ConditionDetail = () => {
               </article>
             )}
 
-            {sections.map((section, index) => (
+            {condition.sections.map((section, index) => (
               <article
-                id={getSectionId(section, index)}
-                key={getSectionId(section, index)}
+                id={section.slug}
+                key={section.slug}
                 className="scroll-mt-36 rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm md:p-8"
               >
                 <p className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-[#005ab0]">
@@ -194,41 +194,20 @@ const ConditionDetail = () => {
                   {section.title}
                 </h2>
                 {section.summary && (
-                  <p className="mt-4 text-base leading-8 text-slate-700 md:text-lg">
+                  <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700 md:text-lg">
                     {section.summary}
                   </p>
                 )}
 
-                <PortableText value={section.body} />
-
-                {Array.isArray(section.bullets) && section.bullets.length > 0 && (
-                  <ul className="mt-6 grid gap-3">
-                    {section.bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="flex gap-3 rounded-lg bg-[#f8fbff] p-4 leading-7 text-slate-700"
-                      >
-                        <FiCheckCircle
-                          aria-hidden="true"
-                          className="mt-1 h-5 w-5 shrink-0 text-[#005ab0]"
-                        />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {Array.isArray(section.links) && section.links.length > 0 && (
-                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                    {section.links.map((link) => (
-                      <TopicLink
-                        key={`${section.title}-${link.label}`}
-                        link={link}
-                        sectionId={getSectionId(section, index)}
-                      />
-                    ))}
-                  </div>
-                )}
+                <div className="mt-7 divide-y divide-[#d6e8f7] border-y border-[#d6e8f7]">
+                  {(section.topics || []).map((topic) => (
+                    <TopicRow
+                      key={topic.slug}
+                      condition={condition}
+                      topic={topic}
+                    />
+                  ))}
+                </div>
               </article>
             ))}
           </div>
@@ -238,30 +217,36 @@ const ConditionDetail = () => {
   );
 };
 
-const TopicLink = ({ link, sectionId }) => {
+const TopicRow = ({ condition, topic }) => {
   const className =
-    "group flex min-h-[74px] items-center justify-between gap-4 rounded-lg border border-[#d6e8f7] bg-[#f8fbff] px-4 py-3 font-bold text-[#06192f] transition hover:border-[#005ab0] hover:bg-[#eaf5ff]";
+    "group grid gap-2 py-6 transition hover:bg-[#f8fbff] md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)_auto] md:items-center md:px-4";
+  const content = (
+    <>
+      <h3 className="text-2xl font-extrabold leading-tight text-[#06192f]">
+        {topic.title}
+      </h3>
+      <p className="leading-7 text-slate-700">
+        {topic.summary || "Read this topic guide from Tinka Health Services."}
+      </p>
+      <FiArrowRight
+        aria-hidden="true"
+        className="hidden h-5 w-5 text-[#005ab0] transition group-hover:translate-x-1 md:block"
+      />
+    </>
+  );
 
-  if (link.href?.startsWith("/")) {
+  if (topic.href?.startsWith("/")) {
     return (
-      <Link to={link.href} className={className}>
-        <span>{link.label}</span>
-        <FiArrowRight
-          aria-hidden="true"
-          className="shrink-0 text-[#005ab0] transition group-hover:translate-x-1"
-        />
+      <Link to={topic.href} className={className}>
+        {content}
       </Link>
     );
   }
 
   return (
-    <a href={`#${sectionId}`} className={className}>
-      <span>{link.label}</span>
-      <FiArrowRight
-        aria-hidden="true"
-        className="shrink-0 text-[#005ab0] transition group-hover:translate-x-1"
-      />
-    </a>
+    <Link to={getConditionTopicPath(condition, topic)} className={className}>
+      {content}
+    </Link>
   );
 };
 

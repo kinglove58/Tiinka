@@ -7,6 +7,7 @@ import {
   BLOG_API_URL,
   createBlogSlug,
   getConditionRoutes,
+  getConditionTopicSeoRoutes,
   getServiceRoutes,
   staticRoutes,
   toAbsoluteUrl,
@@ -158,6 +159,15 @@ async function generateSitemap() {
         formatDate(),
         conditionRoute.changefreq,
         conditionRoute.priority,
+      );
+    });
+
+    getConditionTopicSeoRoutes().forEach((conditionTopicRoute) => {
+      addNode(
+        conditionTopicRoute.path,
+        formatDate(),
+        conditionTopicRoute.changefreq,
+        conditionTopicRoute.priority,
       );
     });
 

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { FiArrowRight, FiSearch } from "react-icons/fi";
 import CanonicalLink from "../../components/CanonicalLink";
-import { getConditionHubs } from "./conditionHubData";
+import { getConditionHubPath, getConditionHubs } from "./conditionHubData";
 
 const canonicalUrl = "https://tinkahealthservices.com/conditions";
 
@@ -63,7 +63,7 @@ const Conditions = () => (
                 "Learn about symptoms, treatment options, and care access from Tinka Health Services."}
             </p>
             <Link
-              to={`/conditions/condition/${condition.slug}`}
+              to={getConditionHubPath(condition)}
               className="mt-5 inline-flex items-center gap-2 font-bold text-[#005ab0] transition hover:text-[#00427f]"
             >
               Learn more
