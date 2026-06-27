@@ -7,13 +7,15 @@ export const condition = defineType({
   fields: [
     defineField({
       name: "title",
-      title: "Page Title",
+      title: "Condition Hub Title",
       type: "string",
+      description:
+        "The main condition hub name. Example: ADHD, Anxiety, Depression, Bipolar Disorder.",
       validation: (Rule) => Rule.required().max(90),
     }),
     defineField({
       name: "slug",
-      title: "URL Slug",
+      title: "Condition Slug",
       type: "slug",
       options: {
         source: "title",
@@ -26,7 +28,7 @@ export const condition = defineType({
       title: "Public URL Path Slug",
       type: "slug",
       description:
-        "Controls the WebMD-style URL. Example: add-adhd creates /add-adhd/default.htm.",
+        "Controls the WebMD-style hub URL. Example: add-adhd creates /add-adhd/default.htm. Leave blank to use the condition slug.",
       options: {
         source: "title",
         maxLength: 80,
@@ -80,8 +82,10 @@ export const condition = defineType({
     }),
     defineField({
       name: "body",
-      title: "Page Body",
+      title: "Hub Intro Body",
       type: "array",
+      description:
+        "Optional intro content that appears before the section/article clusters.",
       of: [
         defineArrayMember({
           type: "block",
@@ -119,267 +123,6 @@ export const condition = defineType({
               },
             ],
           },
-        }),
-      ],
-      validation: (Rule) => Rule.required().min(3),
-    }),
-    defineField({
-      name: "sections",
-      title: "Section Clusters",
-      type: "array",
-      description:
-        "Use these for the condition breakdown layers: overview, symptoms, treatment, access, and related article topics.",
-      of: [
-        defineArrayMember({
-          type: "object",
-          name: "sectionCluster",
-          title: "Section Cluster",
-          fields: [
-            defineField({
-              name: "title",
-              title: "Section Title",
-              type: "string",
-              validation: (Rule) => Rule.required().max(90),
-            }),
-            defineField({
-              name: "slug",
-              title: "Section Anchor",
-              type: "slug",
-              options: {
-                source: "title",
-                maxLength: 80,
-              },
-            }),
-            defineField({
-              name: "summary",
-              title: "Section Summary",
-              type: "text",
-              rows: 4,
-              validation: (Rule) => Rule.max(500),
-            }),
-            defineField({
-              name: "body",
-              title: "Section Body",
-              type: "array",
-              of: [
-                defineArrayMember({
-                  type: "block",
-                  styles: [
-                    { title: "Normal", value: "normal" },
-                    { title: "Heading 3", value: "h3" },
-                  ],
-                  lists: [
-                    { title: "Bullet", value: "bullet" },
-                    { title: "Numbered", value: "number" },
-                  ],
-                  marks: {
-                    decorators: [
-                      { title: "Strong", value: "strong" },
-                      { title: "Emphasis", value: "em" },
-                    ],
-                    annotations: [
-                      {
-                        name: "link",
-                        title: "Link",
-                        type: "object",
-                        fields: [
-                          defineField({
-                            name: "href",
-                            title: "URL",
-                            type: "url",
-                            validation: (Rule) =>
-                              Rule.uri({
-                                allowRelative: true,
-                                scheme: ["http", "https", "mailto", "tel"],
-                              }),
-                          }),
-                        ],
-                      },
-                    ],
-                  },
-                }),
-              ],
-            }),
-            defineField({
-              name: "bullets",
-              title: "Quick Bullets",
-              type: "array",
-              of: [defineArrayMember({ type: "string" })],
-            }),
-            defineField({
-              name: "topics",
-              title: "Topic Pages",
-              type: "array",
-              description:
-                "Add topic cards under this cluster. Each topic becomes its own page, for example /add-adhd/adhd-in-adults.htm.",
-              of: [
-                defineArrayMember({
-                  type: "object",
-                  name: "conditionTopic",
-                  title: "Condition Topic",
-                  fields: [
-                    defineField({
-                      name: "title",
-                      title: "Topic Title",
-                      type: "string",
-                      validation: (Rule) => Rule.required().max(110),
-                    }),
-                    defineField({
-                      name: "slug",
-                      title: "Topic URL Slug",
-                      type: "slug",
-                      options: {
-                        source: "title",
-                        maxLength: 96,
-                      },
-                      validation: (Rule) => Rule.required(),
-                    }),
-                    defineField({
-                      name: "summary",
-                      title: "Topic Brief",
-                      type: "text",
-                      rows: 3,
-                      description:
-                        "Short card text shown on the condition hub page.",
-                      validation: (Rule) => Rule.required().min(40).max(240),
-                    }),
-                    defineField({
-                      name: "image",
-                      title: "Topic Image",
-                      type: "image",
-                      options: {
-                        hotspot: true,
-                      },
-                    }),
-                    defineField({
-                      name: "seoTitle",
-                      title: "SEO Title",
-                      type: "string",
-                      validation: (Rule) => Rule.max(70),
-                    }),
-                    defineField({
-                      name: "metaDescription",
-                      title: "Meta Description",
-                      type: "text",
-                      rows: 3,
-                      validation: (Rule) => Rule.max(170),
-                    }),
-                    defineField({
-                      name: "keywords",
-                      title: "SEO Keywords",
-                      type: "array",
-                      of: [defineArrayMember({ type: "string" })],
-                      options: {
-                        layout: "tags",
-                      },
-                    }),
-                    defineField({
-                      name: "body",
-                      title: "Topic Article Body",
-                      type: "array",
-                      of: [
-                        defineArrayMember({
-                          type: "block",
-                          styles: [
-                            { title: "Normal", value: "normal" },
-                            { title: "Heading 2", value: "h2" },
-                            { title: "Heading 3", value: "h3" },
-                          ],
-                          lists: [
-                            { title: "Bullet", value: "bullet" },
-                            { title: "Numbered", value: "number" },
-                          ],
-                          marks: {
-                            decorators: [
-                              { title: "Strong", value: "strong" },
-                              { title: "Emphasis", value: "em" },
-                            ],
-                            annotations: [
-                              {
-                                name: "link",
-                                title: "Link",
-                                type: "object",
-                                fields: [
-                                  defineField({
-                                    name: "href",
-                                    title: "URL",
-                                    type: "url",
-                                    validation: (Rule) =>
-                                      Rule.uri({
-                                        allowRelative: true,
-                                        scheme: ["http", "https", "mailto", "tel"],
-                                      }),
-                                  }),
-                                ],
-                              },
-                            ],
-                          },
-                        }),
-                      ],
-                    }),
-                    defineField({
-                      name: "href",
-                      title: "Optional External/Internal URL",
-                      type: "url",
-                      description:
-                        "Only use this when the card should link somewhere else instead of creating a topic page.",
-                      validation: (Rule) =>
-                        Rule.uri({
-                          allowRelative: true,
-                          scheme: ["http", "https", "mailto", "tel"],
-                        }),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            defineField({
-              name: "links",
-              title: "Legacy Related Links",
-              type: "array",
-              of: [
-                defineArrayMember({
-                  type: "object",
-                  fields: [
-                    defineField({
-                      name: "label",
-                      title: "Link Label",
-                      type: "string",
-                      validation: (Rule) => Rule.required().max(90),
-                    }),
-                    defineField({
-                      name: "slug",
-                      title: "Topic Slug",
-                      type: "slug",
-                      options: {
-                        source: "label",
-                        maxLength: 96,
-                      },
-                    }),
-                    defineField({
-                      name: "summary",
-                      title: "Short Summary",
-                      type: "text",
-                      rows: 2,
-                      validation: (Rule) => Rule.max(240),
-                    }),
-                    defineField({
-                      name: "href",
-                      title: "Optional URL",
-                      type: "url",
-                      description:
-                        "Use for a live article URL. Leave empty to keep the link inside this section.",
-                      validation: (Rule) =>
-                        Rule.uri({
-                          allowRelative: true,
-                          scheme: ["http", "https", "mailto", "tel"],
-                        }),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          ],
         }),
       ],
     }),

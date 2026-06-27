@@ -52,13 +52,14 @@ export const getConditionHubPath = (condition) =>
 export const getConditionTopicPath = (condition, topic) =>
   `/${condition.pathSlug}/${topic.slug}.htm`;
 
-const makeTopic = ({ title, summary, body, href }) => ({
+const makeTopic = ({ title, summary, body, href, order }) => ({
   title,
   label: title,
   slug: createConditionSlug(title),
   summary,
   body: body?.length ? body : toPortableParagraph(summary),
   href,
+  order,
 });
 
 const normalizeTopic = (topic, fallbackSummary) => {
@@ -73,13 +74,25 @@ const normalizeTopic = (topic, fallbackSummary) => {
     body: topic?.body?.length
       ? topic.body
       : toPortableParagraph(topic?.summary || fallbackSummary || ""),
+    order: Number.isFinite(topic?.order) ? topic.order : 9999,
   };
 };
+
+const sortByOrderThenTitle = (items = []) =>
+  [...items].sort((a, b) => {
+    const orderA = Number.isFinite(a?.order) ? a.order : 9999;
+    const orderB = Number.isFinite(b?.order) ? b.order : 9999;
+
+    if (orderA !== orderB) return orderA - orderB;
+    return String(a?.title || "").localeCompare(String(b?.title || ""));
+  });
 
 const buildFallbackSections = (service) => [
   {
     title: `${service.name} overview`,
     slug: "overview",
+    order: 10,
+    visibleCount: 5,
     summary:
       service.title1Des ||
       service.id_sub ||
@@ -107,6 +120,8 @@ const buildFallbackSections = (service) => [
   {
     title: "Symptoms and daily impact",
     slug: "symptoms-daily-impact",
+    order: 20,
+    visibleCount: 5,
     summary:
       service.title2Des ||
       `${service.name} can affect mood, focus, sleep, relationships, work, or daily routines. A careful evaluation helps clarify what is happening and what kind of support fits.`,
@@ -133,6 +148,8 @@ const buildFallbackSections = (service) => [
   {
     title: "Treatment and medication options",
     slug: "treatment-medication-options",
+    order: 30,
+    visibleCount: 5,
     summary:
       service.title3Des ||
       `Treatment for ${service.name} may include psychiatric evaluation, medication management, therapy support, and ongoing follow-up when clinically appropriate.`,
@@ -159,6 +176,8 @@ const buildFallbackSections = (service) => [
   {
     title: "Access care with Tinka Health Services",
     slug: "care-access",
+    order: 40,
+    visibleCount: 5,
     summary:
       "Tinka Health Services supports eligible patients across Maryland, Washington DC, and Virginia with psychiatric evaluation, medication management, telehealth appointments, and insurance verification before care begins.",
     topics: [
@@ -178,83 +197,184 @@ const buildFallbackSections = (service) => [
   },
 ];
 
-const sanityBySlug = new Map(
-  sanityConditions
-    .filter((condition) => condition?.slug)
-    .map((condition) => [createConditionSlug(condition.slug), condition]),
-);
+const getSanityKeys = (condition = {}) =>
+  [
+    condition.slug,
+    condition.pathSlug,
+    condition.title,
+    condition.serviceSlug,
+  ].map(createConditionSlug).filter(Boolean);
+
+const sanityBySlug = sanityConditions.reduce((lookup, condition) => {
+  getSanityKeys(condition).forEach((key) => {
+    if (!lookup.has(key)) {
+      lookup.set(key, condition);
+    }
+  });
+
+  return lookup;
+}, new Map());
 
 const normalizeSections = (conditionTitle, sections = []) =>
-  sections.map((section) => {
-    const sectionSlug = createConditionSlug(section?.slug || section?.title);
+  sortByOrderThenTitle(sections).map((section) => {
+    const title = section?.title || `${conditionTitle} topics`;
+    const sectionSlug = createConditionSlug(section?.slug || title);
     const rawTopics =
       Array.isArray(section?.topics) && section.topics.length > 0
         ? section.topics
         : section?.links || [];
 
+    const normalizedTopics = rawTopics.map((topic, index) =>
+      normalizeTopic(
+        {
+          ...topic,
+          order: Number.isFinite(topic?.order) ? topic.order : index,
+        },
+        section?.summary,
+      ),
+    );
+
     return {
       ...section,
-      title: section?.title || `${conditionTitle} topics`,
+      title,
       slug: sectionSlug,
-      topics: rawTopics.map((topic) => normalizeTopic(topic, section?.summary)),
+      visibleCount: Number.isFinite(section?.visibleCount)
+        ? section.visibleCount
+        : 5,
+      topics: sortByOrderThenTitle(normalizedTopics),
     };
   });
 
-export const getConditionHubs = () =>
-  servicesDataList
-    .filter((service) => service?.id && service?.name)
-    .map((service) => {
-      const legacySlug = createConditionSlug(service.id);
-      const sanity =
-        sanityBySlug.get(legacySlug) ||
-        sanityBySlug.get(createConditionSlug(service.name));
-      const title = sanity?.title || service.name;
-      const summary =
-        sanity?.summary ||
-        service.id_sub ||
-        truncateText(service.title1Des, 220);
-      const pathSlug = getPathSlug(service, sanity);
-      const sections =
-        Array.isArray(sanity?.sections) && sanity.sections.length > 0
-          ? normalizeSections(title, sanity.sections)
-          : normalizeSections(title, buildFallbackSections(service));
+const getMatchingSanityForService = (service) => {
+  const legacySlug = createConditionSlug(service.id);
+  const nameSlug = createConditionSlug(service.name);
+  const preferredSlug = createConditionSlug(preferredPathSlugs[service.name]);
+  const exactMatch = sanityBySlug.get(legacySlug) || sanityBySlug.get(nameSlug);
 
-      return {
-        ...sanity,
-        service,
-        slug: legacySlug,
-        pathSlug,
-        aliases: [
-          legacySlug,
-          pathSlug,
-          createConditionSlug(service.name),
-          createConditionSlug(sanity?.slug),
-        ].filter(Boolean),
+  if (exactMatch) {
+    return { sanity: exactMatch, pathOnly: false };
+  }
+
+  if (preferredSlug && sanityBySlug.has(preferredSlug)) {
+    return { sanity: sanityBySlug.get(preferredSlug), pathOnly: true };
+  }
+
+  return { sanity: null, pathOnly: false };
+};
+
+const buildServiceCondition = (service) => {
+  const legacySlug = createConditionSlug(service.id);
+  const { sanity, pathOnly } = getMatchingSanityForService(service);
+  const hubSanity = pathOnly ? null : sanity;
+  const title = hubSanity?.title || service.name;
+  const summary =
+    hubSanity?.summary ||
+    service.id_sub ||
+    truncateText(service.title1Des, 220);
+  const pathSlug = getPathSlug(service, sanity);
+  const sections =
+    Array.isArray(sanity?.sections) && sanity.sections.length > 0
+      ? normalizeSections(title, sanity.sections)
+      : normalizeSections(title, buildFallbackSections(service));
+
+  return {
+    ...sanity,
+    service,
+    slug: legacySlug,
+    pathSlug,
+    aliases: [
+      legacySlug,
+      pathSlug,
+      createConditionSlug(service.name),
+      createConditionSlug(hubSanity?.slug),
+      createConditionSlug(hubSanity?.pathSlug),
+    ].filter(Boolean),
+    title,
+    summary,
+    seoTitle: hubSanity?.seoTitle || `${title} Care Guide | Tinka Health`,
+    metaDescription:
+      hubSanity?.metaDescription ||
+      truncateText(
+        service.title1Des ||
+          `${title} care information from Tinka Health Services.`,
+      ),
+    keywords:
+      hubSanity?.keywords || [
         title,
-        summary,
-        seoTitle: sanity?.seoTitle || `${title} Care Guide | Tinka Health`,
-        metaDescription:
-          sanity?.metaDescription ||
-          truncateText(
-            service.title1Des ||
-              `${title} care information from Tinka Health Services.`,
-          ),
-        keywords:
-          sanity?.keywords || [
-            title,
-            `${title} treatment`,
-            `${title} medication management`,
-            "telehealth psychiatry",
-            "Maryland",
-            "Washington DC",
-            "Virginia",
-          ],
-        image: sanity?.image || service.image || "/images/logo/Tinka_health_logo.png",
-        imageAlt: service.imageAlt || `${title} care guide`,
-        sections,
-        body: sanity?.body,
-      };
-    });
+        `${title} treatment`,
+        `${title} medication management`,
+        "telehealth psychiatry",
+        "Maryland",
+        "Washington DC",
+        "Virginia",
+      ],
+    image: hubSanity?.image || service.image || "/images/logo/Tinka_health_logo.png",
+    imageAlt:
+      hubSanity?.imageAlt || service.imageAlt || `${title} care guide`,
+    sections,
+    body: hubSanity?.body,
+  };
+};
+
+const buildSanityOnlyCondition = (sanity) => {
+  const title = sanity?.title || "Condition";
+  const slug = createConditionSlug(sanity?.slug || title);
+  const pathSlug = createConditionSlug(sanity?.pathSlug || slug);
+  const sections = normalizeSections(title, sanity?.sections || []);
+
+  return {
+    ...sanity,
+    slug,
+    pathSlug,
+    aliases: [slug, pathSlug, createConditionSlug(title)].filter(Boolean),
+    title,
+    summary:
+      sanity?.summary ||
+      `${title} care information from Tinka Health Services.`,
+    seoTitle: sanity?.seoTitle || `${title} Care Guide | Tinka Health`,
+    metaDescription:
+      sanity?.metaDescription ||
+      `${title} care information from Tinka Health Services.`,
+    keywords:
+      sanity?.keywords || [
+        title,
+        `${title} treatment`,
+        `${title} medication management`,
+        "telehealth psychiatry",
+      ],
+    image: sanity?.image || "/images/logo/Tinka_health_logo.png",
+    imageAlt: sanity?.imageAlt || `${title} care guide`,
+    sections,
+    body: sanity?.body,
+  };
+};
+
+export const getConditionHubs = () => {
+  const serviceHubs = servicesDataList
+    .filter((service) => service?.id && service?.name)
+    .map(buildServiceCondition);
+
+  const usedAliases = new Set(
+    serviceHubs.flatMap((condition) => condition.aliases || []),
+  );
+  const usedPathSlugs = new Set(
+    serviceHubs.map((condition) => createConditionSlug(condition.pathSlug)),
+  );
+  const sanityOnlyHubs = sanityConditions
+    .filter((sanity) => {
+      const slug = createConditionSlug(sanity?.slug || sanity?.title);
+      const pathSlug = createConditionSlug(sanity?.pathSlug || slug);
+
+      return (
+        slug &&
+        !usedAliases.has(slug) &&
+        !usedPathSlugs.has(pathSlug)
+      );
+    })
+    .map(buildSanityOnlyCondition);
+
+  return [...serviceHubs, ...sanityOnlyHubs];
+};
 
 export const getConditionHub = (slug) => {
   const normalizedSlug = createConditionSlug(slug);

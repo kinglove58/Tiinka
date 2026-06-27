@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { FiArrowRight, FiShield } from "react-icons/fi";
@@ -56,6 +57,9 @@ const ConditionDetail = () => {
     : condition.keywords ||
       `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`;
   const ogImage = getAbsoluteImage(condition.image);
+  const visibleSections = condition.sections.filter(
+    (section) => (section.topics || []).length > 0,
+  );
 
   return (
     <main className="bg-[#f4f8fc] text-[#06192f]">
@@ -134,7 +138,7 @@ const ConditionDetail = () => {
         className="sticky top-20 z-30 border-y border-[#d6e8f7] bg-white/95 px-4 py-4 backdrop-blur md:px-8 lg:px-12"
       >
         <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto">
-          {condition.sections.map((section) => (
+          {visibleSections.map((section) => (
             <a
               key={section.slug}
               href={`#${section.slug}`}
@@ -147,91 +151,120 @@ const ConditionDetail = () => {
       </nav>
 
       <section className="px-4 py-12 md:px-8 md:py-16 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[360px_minmax(0,1fr)]">
-          <aside className="lg:sticky lg:top-36 lg:self-start">
-            <div className="overflow-hidden rounded-lg border border-[#cfe3f6] bg-white shadow-sm">
-              <img
-                src={condition.image}
-                alt={condition.imageAlt}
-                className="h-64 w-full object-cover"
-                loading="lazy"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-bold">Explore {condition.title}</h2>
-                <p className="mt-3 leading-7 text-slate-700">
-                  Use these topic clusters to learn about symptoms, care
-                  options, medication management, telehealth access, and next
-                  steps.
-                </p>
-                <Link
-                  to="/insurance-we-accept"
-                  className="mt-5 inline-flex items-center gap-2 font-bold text-[#005ab0] hover:text-[#00427f]"
-                >
-                  Check accepted insurance
-                  <FiArrowRight aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-          </aside>
+        <div className="mx-auto max-w-7xl space-y-10">
+          {condition.body && (
+            <article className="rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm md:p-8">
+              <PortableText value={condition.body} />
+            </article>
+          )}
 
-          <div className="space-y-8">
-            {condition.body && (
-              <article className="rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm md:p-8">
-                <PortableText value={condition.body} />
-              </article>
-            )}
-
-            {condition.sections.map((section, index) => (
-              <article
-                id={section.slug}
-                key={section.slug}
-                className="scroll-mt-36 rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm md:p-8"
-              >
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-[#005ab0]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h2 className="text-3xl font-extrabold leading-tight md:text-4xl">
-                  {section.title}
-                </h2>
-                {section.summary && (
-                  <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700 md:text-lg">
-                    {section.summary}
-                  </p>
-                )}
-
-                <div className="mt-7 divide-y divide-[#d6e8f7] border-y border-[#d6e8f7]">
-                  {(section.topics || []).map((topic) => (
-                    <TopicRow
-                      key={topic.slug}
-                      condition={condition}
-                      topic={topic}
-                    />
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+          {visibleSections.map((section, index) => (
+            <SectionCluster
+              key={section.slug}
+              condition={condition}
+              section={section}
+              index={index}
+              total={visibleSections.length}
+            />
+          ))}
         </div>
       </section>
     </main>
   );
 };
 
+const SectionCluster = ({ condition, section, index, total }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const topics = section.topics || [];
+  const visibleCount = Number.isFinite(section.visibleCount)
+    ? section.visibleCount
+    : 5;
+  const shownTopics = isExpanded ? topics : topics.slice(0, visibleCount);
+  const hasMore = topics.length > visibleCount;
+  const image = section.image || condition.image;
+  const imageAlt = section.imageAlt || condition.imageAlt;
+
+  return (
+    <article
+      id={section.slug}
+      className="scroll-mt-36 rounded-lg border border-[#cfe3f6] bg-white p-5 shadow-sm md:p-8"
+    >
+      <div className="border-b border-[#d6e8f7] pb-4">
+        <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#005ab0]">
+          {index + 1} of {total} / {section.title}
+        </p>
+      </div>
+
+      <div className="mt-7 grid gap-7 lg:grid-cols-[minmax(280px,410px)_minmax(0,1fr)] lg:items-start">
+        <div className="lg:sticky lg:top-36">
+          <div className="overflow-hidden rounded-lg border border-[#cfe3f6] bg-[#f8fbff] shadow-sm">
+            <img
+              src={image}
+              alt={imageAlt}
+              className="h-64 w-full object-cover sm:h-80 lg:h-[520px]"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div className="min-w-0">
+          <h2 className="text-3xl font-extrabold leading-tight md:text-4xl">
+            {section.title}
+          </h2>
+          {section.summary && (
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700 md:text-lg">
+              {section.summary}
+            </p>
+          )}
+
+          <div className="mt-7 divide-y divide-[#d6e8f7] border-y border-[#d6e8f7]">
+            {shownTopics.map((topic) => (
+              <TopicRow
+                key={topic.slug}
+                condition={condition}
+                topic={topic}
+              />
+            ))}
+          </div>
+
+          {hasMore && (
+            <button
+              type="button"
+              onClick={() => setIsExpanded((current) => !current)}
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#9fc8ee] bg-white px-5 py-3 font-bold text-[#005ab0] shadow-sm transition hover:border-[#005ab0] hover:bg-[#f4f9fd]"
+              aria-expanded={isExpanded}
+            >
+              {isExpanded ? "Show less" : "View more"}
+              <FiArrowRight
+                aria-hidden="true"
+                className={`transition ${isExpanded ? "-rotate-90" : ""}`}
+              />
+            </button>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+};
+
 const TopicRow = ({ condition, topic }) => {
   const className =
-    "group grid gap-2 py-6 transition hover:bg-[#f8fbff] md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)_auto] md:items-center md:px-4";
+    "group block py-6 transition hover:bg-[#f8fbff] md:px-4";
   const content = (
     <>
       <h3 className="text-2xl font-extrabold leading-tight text-[#06192f]">
         {topic.title}
       </h3>
-      <p className="leading-7 text-slate-700">
+      <p className="mt-3 max-w-3xl leading-7 text-slate-700">
         {topic.summary || "Read this topic guide from Tinka Health Services."}
       </p>
-      <FiArrowRight
-        aria-hidden="true"
-        className="hidden h-5 w-5 text-[#005ab0] transition group-hover:translate-x-1 md:block"
-      />
+      <span className="mt-4 inline-flex items-center gap-2 font-extrabold text-[#005ab0] underline decoration-2 underline-offset-8 transition group-hover:text-[#00427f]">
+        View more
+        <FiArrowRight
+          aria-hidden="true"
+          className="h-4 w-4 transition group-hover:translate-x-1"
+        />
+      </span>
     </>
   );
 
