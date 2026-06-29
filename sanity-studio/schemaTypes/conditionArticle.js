@@ -163,7 +163,7 @@ export const conditionArticle = defineType({
       type: "array",
       of: richTextBlocks,
       description:
-        "Full article content for the separate article page.",
+        "Full article content for the article page. The Article Title is the page H1. Use Heading 2 / Heading 3 from the style dropdown for body sections, or paste headings as ## Heading / ### Heading.",
       validation: (Rule) => Rule.required().min(3),
     }),
     defineField({

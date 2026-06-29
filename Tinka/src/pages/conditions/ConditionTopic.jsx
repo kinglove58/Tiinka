@@ -4,6 +4,7 @@ import { FiArrowLeft, FiArrowRight, FiShield } from "react-icons/fi";
 import BookingLink from "../../components/BookingLink";
 import CanonicalLink from "../../components/CanonicalLink";
 import PortableText from "./portableText";
+import { getPortableTextHeadings } from "./portableTextUtils";
 import {
   getConditionHubPath,
   getConditionTopic,
@@ -48,6 +49,12 @@ const ConditionTopic = () => {
     : topic.keywords ||
       `${topic.title}, ${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry`;
   const image = getAbsoluteImage(topic.image || condition.image);
+  const articleToc = [
+    { id: "article-title", level: 1, text: topic.title },
+    ...getPortableTextHeadings(topic.body, {
+      skipFirstHeadingText: topic.title,
+    }),
+  ];
 
   return (
     <main className="bg-[#f4f8fc] text-[#06192f]">
@@ -75,7 +82,10 @@ const ConditionTopic = () => {
           <p className="mt-7 text-sm font-bold uppercase tracking-[0.18em] text-[#005ab0]">
             {section.title}
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-tight md:text-6xl">
+          <h1
+            id="article-title"
+            className="mt-3 scroll-mt-32 text-4xl font-extrabold leading-tight md:text-6xl"
+          >
             {topic.title}
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
@@ -100,7 +110,11 @@ const ConditionTopic = () => {
       <section className="px-4 py-12 md:px-8 md:py-16 lg:px-12">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article className="rounded-lg border border-[#cfe3f6] bg-white p-6 shadow-sm md:p-9">
-            <PortableText value={topic.body} />
+            <ArticleTableOfContents items={articleToc} />
+            <PortableText
+              value={topic.body}
+              skipFirstHeadingText={topic.title}
+            />
           </article>
 
           <aside className="lg:sticky lg:top-28 lg:self-start">
@@ -130,6 +144,37 @@ const ConditionTopic = () => {
         </div>
       </section>
     </main>
+  );
+};
+
+const ArticleTableOfContents = ({ items = [] }) => {
+  const visibleItems = items.filter((item) => item?.id && item?.text);
+
+  if (visibleItems.length <= 1) return null;
+
+  return (
+    <nav
+      aria-label="Article table of contents"
+      className="mb-9 rounded-lg border border-[#cfe3f6] bg-[#f8fbff] p-5"
+    >
+      <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#005ab0]">
+        On this page
+      </p>
+      <ol className="mt-4 grid gap-3">
+        {visibleItems.map((item) => (
+          <li key={item.id}>
+            <a
+              href={`#${item.id}`}
+              className={`block font-bold leading-6 text-[#06192f] transition hover:text-[#005ab0] ${
+                item.level > 2 ? "pl-4 text-sm" : ""
+              }`}
+            >
+              {item.text}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
   );
 };
 

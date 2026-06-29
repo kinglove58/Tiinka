@@ -6,6 +6,10 @@ import {
   getConditionTopicPath,
   getConditionTopicRoutes,
 } from "./src/pages/conditions/conditionHubData.js";
+import {
+  getPortableBlockText,
+  getPortableTextBlocks,
+} from "./src/pages/conditions/portableTextUtils.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
@@ -360,23 +364,18 @@ export const truncate = (value, maxLength = 155) => {
   return `${text.slice(0, maxLength - 3).trim()}...`;
 };
 
-const blockText = (block) =>
-  (block?.children || [])
-    .map((child) => child?.text || "")
-    .join("")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const portableTextToSeoContent = (blocks = []) =>
+const portableTextToSeoContent = (blocks = [], skipFirstHeadingText = "") =>
   Array.isArray(blocks)
-    ? blocks
-        .map((block) => {
-          const text = blockText(block);
+    ? getPortableTextBlocks(blocks, { skipFirstHeadingText })
+        .filter((item) => !item.skip)
+        .map((item) => {
+          const { block, heading } = item;
+          const text = heading?.text || getPortableBlockText(block);
           if (!text) return null;
 
           if (block.listItem) return { type: "li", text };
-          if (block.style === "h2") return { type: "h2", text };
-          if (block.style === "h3") return { type: "h3", text };
+          if (heading?.level === 2) return { type: "h2", text };
+          if (heading?.level === 3) return { type: "h3", text };
           return { type: "p", text };
         })
         .filter(Boolean)
@@ -384,7 +383,7 @@ const portableTextToSeoContent = (blocks = []) =>
 
 const conditionHubSeoContent = (condition) => [
   { type: "p", text: condition.summary },
-  ...portableTextToSeoContent(condition.body),
+  ...portableTextToSeoContent(condition.body, condition.title),
   ...(condition.sections || []).flatMap((section) => [
     { type: "h2", text: section.title },
     { type: "p", text: section.summary },
@@ -469,7 +468,7 @@ export const getConditionTopicSeoRoutes = () =>
         : condition.image
           ? `${BASE_URL}${condition.image}`
           : DEFAULT_IMAGE,
-    seoContent: portableTextToSeoContent(topic.body),
+    seoContent: portableTextToSeoContent(topic.body, topic.title),
   }));
 
 export const getStaticAndServiceRoutes = () => [
