@@ -186,7 +186,7 @@ const ArticleTableOfContents = ({ items = [] }) => {
             <button
               type="button"
               onClick={() => setIsExpanded((current) => !current)}
-              className="inline-flex items-center gap-3 rounded-md bg-white px-3.5 py-3 text-base font-semibold leading-6 text-[#06192f] shadow-sm transition hover:bg-[#eaf5ff] hover:text-[#005ab0] focus:outline-none focus:ring-2 focus:ring-[#005ab0] sm:px-4 sm:text-lg"
+              className="inline-flex items-center gap-3 rounded-md bg-white px-3.5 py-3 text-base font-semibold leading-6 text-[#06192f] shadow-sm transition hover:bg-[#eaf5ff] hover:text-[#005ab0] focus:outline-none focus:ring-2 focus:ring-[#005ab0] sm:px-4 sm:text-[16px]"
               aria-expanded={isExpanded}
               aria-controls="article-toc-list"
             >
