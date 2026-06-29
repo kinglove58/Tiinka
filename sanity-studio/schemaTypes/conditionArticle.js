@@ -117,6 +117,14 @@ export const conditionArticle = defineType({
       },
     }),
     defineField({
+      name: "imageUrl",
+      title: "Static Image URL",
+      type: "string",
+      description:
+        "Optional. Use a public image path if the article image is stored in the website files.",
+      validation: (Rule) => Rule.max(260),
+    }),
+    defineField({
       name: "imageAlt",
       title: "Image Alt Text",
       type: "string",

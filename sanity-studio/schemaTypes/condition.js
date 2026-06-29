@@ -35,6 +35,14 @@ export const condition = defineType({
       },
     }),
     defineField({
+      name: "serviceSlug",
+      title: "Matching Website Service Slug",
+      type: "string",
+      description:
+        "Optional. Use this when the condition should replace an existing service hub. Example: attention-deficit-hyperactivity-disorder.",
+      validation: (Rule) => Rule.max(120),
+    }),
+    defineField({
       name: "summary",
       title: "Hero Summary",
       type: "text",
@@ -52,6 +60,20 @@ export const condition = defineType({
       },
       description:
         "Optional page image. If empty, the website uses the matching service image.",
+    }),
+    defineField({
+      name: "imageUrl",
+      title: "Static Image URL",
+      type: "string",
+      description:
+        "Optional. Use a public image path such as /images/conditions/adhd/hero.webp when the image is stored in the website files.",
+      validation: (Rule) => Rule.max(260),
+    }),
+    defineField({
+      name: "imageAlt",
+      title: "Image Alt Text",
+      type: "string",
+      validation: (Rule) => Rule.max(140),
     }),
     defineField({
       name: "seoTitle",

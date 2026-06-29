@@ -52,6 +52,14 @@ export const conditionSection = defineType({
         "Optional left-side image for this breakdown. If empty, the condition image is used.",
     }),
     defineField({
+      name: "imageUrl",
+      title: "Static Image URL",
+      type: "string",
+      description:
+        "Optional. Use a public image path such as /images/conditions/adhd/overview.webp when the image is stored in the website files.",
+      validation: (Rule) => Rule.max(260),
+    }),
+    defineField({
       name: "imageAlt",
       title: "Image Alt Text",
       type: "string",

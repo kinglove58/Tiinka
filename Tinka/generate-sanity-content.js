@@ -58,6 +58,7 @@ const contentQuery = `{
     title,
     "slug": slug.current,
     "pathSlug": pathSlug.current,
+    serviceSlug,
     summary,
     seoTitle,
     metaDescription,
@@ -76,7 +77,7 @@ const contentQuery = `{
         metaDescription,
         keywords,
         body,
-        "image": image.asset->url,
+        "image": coalesce(imageUrl, image.asset->url),
         imageAlt,
         href
       },
@@ -87,7 +88,7 @@ const contentQuery = `{
         href
       }
     },
-    "image": image.asset->url,
+    "image": coalesce(imageUrl, image.asset->url),
     imageAlt,
     "updatedAt": coalesce(updatedAt, _updatedAt)
   },
@@ -96,7 +97,7 @@ const contentQuery = `{
     title,
     "slug": slug.current,
     summary,
-    "image": image.asset->url,
+    "image": coalesce(imageUrl, image.asset->url),
     imageAlt,
     order,
     visibleCount,
@@ -113,7 +114,7 @@ const contentQuery = `{
     metaDescription,
     keywords,
     body,
-    "image": image.asset->url,
+    "image": coalesce(imageUrl, image.asset->url),
     imageAlt,
     order,
     "conditionId": condition->_id,
