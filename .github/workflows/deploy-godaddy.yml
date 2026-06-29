@@ -47,13 +47,46 @@ jobs:
           CPANEL_PORT: ${{ secrets.CPANEL_PORT }}
           CPANEL_TARGET_DIR: ${{ secrets.CPANEL_TARGET_DIR }}
         run: |
-          sshpass -p "$CPANEL_PASSWORD" sftp \
-            -o StrictHostKeyChecking=no \
-            -o UserKnownHostsFile=/dev/null \
-            -P "$CPANEL_PORT" \
-            "$CPANEL_USERNAME@$CPANEL_HOST" <<SFTP_COMMANDS
-          cd $CPANEL_TARGET_DIR
+          set -euo pipefail
+
+          : "${CPANEL_HOST:?CPANEL_HOST secret is required}"
+          : "${CPANEL_USERNAME:?CPANEL_USERNAME secret is required}"
+          : "${CPANEL_PASSWORD:?CPANEL_PASSWORD secret is required}"
+          : "${CPANEL_TARGET_DIR:?CPANEL_TARGET_DIR secret is required}"
+
+          CPANEL_PORT="${CPANEL_PORT:-22}"
+
+          if [[ "$CPANEL_PORT" == "2082" || "$CPANEL_PORT" == "2083" ]]; then
+            echo "::warning::CPANEL_PORT is set to a cPanel web-login port. SFTP normally uses the SSH port, usually 22."
+          fi
+
+          deploy_once() {
+            sshpass -p "$CPANEL_PASSWORD" sftp \
+              -o BatchMode=no \
+              -o ConnectTimeout=30 \
+              -o PreferredAuthentications=password \
+              -o PubkeyAuthentication=no \
+              -o StrictHostKeyChecking=no \
+              -o UserKnownHostsFile=/dev/null \
+              -P "$CPANEL_PORT" \
+              "$CPANEL_USERNAME@$CPANEL_HOST" <<SFTP_COMMANDS
+          cd ${CPANEL_TARGET_DIR}
           put -r dist/* .
           put dist/.htaccess .htaccess
           bye
           SFTP_COMMANDS
+          }
+
+          for attempt in 1 2 3; do
+            echo "Starting SFTP deploy attempt ${attempt}/3..."
+            if deploy_once; then
+              echo "SFTP deploy completed."
+              exit 0
+            fi
+
+            echo "::warning::SFTP deploy attempt ${attempt}/3 failed. Check CPANEL_HOST and CPANEL_PORT. GoDaddy SFTP usually needs the server hostname or IP and SSH port 22."
+            sleep $((attempt * 20))
+          done
+
+          echo "::error::SFTP deploy failed after 3 attempts. Confirm SSH Access is enabled in GoDaddy and GitHub secrets use the SFTP host plus SSH port, not the cPanel URL/port."
+          exit 1
