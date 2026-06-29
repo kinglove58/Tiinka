@@ -188,17 +188,109 @@ const renderSeoContent = (content = []) => {
   return html;
 };
 
-const buildNoScriptContent = (route) => `
+const primaryLinks = [
+  { path: "", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/meet-our-provider", label: "Meet Our Provider" },
+  { path: "/services", label: "Services" },
+  { path: "/conditions", label: "Conditions" },
+  { path: "/insurance-we-accept", label: "Insurance We Accept" },
+  { path: "/blogs", label: "Blog" },
+  { path: "/maryland-psychiatrist", label: "Maryland Psychiatrist" },
+  { path: "/dc-psychiatrist", label: "Washington DC Psychiatrist" },
+  { path: "/virginia-psychiatrist", label: "Virginia Psychiatrist" },
+  { path: "/booking", label: "Book an Appointment" },
+  { path: "/contact", label: "Contact" },
+];
+
+const maxRelatedLinks = 60;
+
+const firstSegment = (routePath) =>
+  String(routePath || "").replace(/^\/+/, "").split("/")[0] || "";
+
+const linkLabelFor = (route) => route.h1 || route.title || route.path;
+
+const dedupeLinks = (links = []) => {
+  const seen = new Set();
+  return links.filter((link) => {
+    if (!link || link.path == null || seen.has(link.path)) return false;
+    seen.add(link.path);
+    return true;
+  });
+};
+
+const renderLinkList = (links = []) =>
+  links
+    .map(
+      (link) =>
+        `\n            <li><a href="${escapeAttribute(
+          toAbsoluteUrl(link.path),
+        )}">${escapeHtml(link.label)}</a></li>`,
+    )
+    .join("");
+
+const topLevelLinksFor = (route, allRoutes = []) =>
+  allRoutes
+    .filter((candidate) => {
+      if (!candidate?.path || candidate.path === route.path) return false;
+      const normalizedPath = candidate.path.replace(/^\/+/, "");
+      return normalizedPath && !normalizedPath.includes("/");
+    })
+    .map((candidate) => ({
+      path: candidate.path,
+      label: linkLabelFor(candidate),
+    }));
+
+const relatedLinksFor = (route, allRoutes = []) => {
+  const segment = firstSegment(route.path);
+  if (!segment) return [];
+
+  return allRoutes
+    .filter((candidate) => {
+      if (!candidate?.path || candidate.path === route.path) return false;
+      return firstSegment(candidate.path) === segment;
+    })
+    .slice(0, maxRelatedLinks)
+    .map((candidate) => ({
+      path: candidate.path,
+      label: linkLabelFor(candidate),
+    }));
+};
+
+const buildNoScriptContent = (route, allRoutes = []) => {
+  const primaryNavLinks = primaryLinks.filter((link) => link.path !== route.path);
+  const relatedLinks = relatedLinksFor(route, allRoutes);
+  const moreLinks = topLevelLinksFor(route, allRoutes).filter(
+    (link) => !primaryLinks.some((primaryLink) => primaryLink.path === link.path),
+  );
+  const internalLinks = dedupeLinks([
+    ...primaryNavLinks,
+    ...relatedLinks,
+    ...moreLinks,
+  ]);
+
+  const relatedBlock = internalLinks.length
+    ? `
+        <nav aria-label="Internal links">
+          <h2>Helpful links</h2>
+          <ul>${renderLinkList(internalLinks)}
+          </ul>
+        </nav>`
+    : "";
+
+  return `
     <noscript>
       <main>
         <h1>${escapeHtml(route.h1 || route.title)}</h1>
         <p>${escapeHtml(route.description)}</p>
         ${renderSeoContent(route.seoContent)}
         <p><a href="${escapeAttribute(toAbsoluteUrl(route.path))}">${escapeHtml(toAbsoluteUrl(route.path))}</a></p>
+        ${relatedBlock}
       </main>
     </noscript>`;
+};
 
-const applySeo = (template, route) => {
+const applySeo = (template, route, allRoutes = []) => {
   const canonicalUrl = toAbsoluteUrl(route.path);
   const image = route.image || DEFAULT_IMAGE;
   let html = template;
@@ -240,7 +332,10 @@ const applySeo = (template, route) => {
     /<noscript>\s*<main>[\s\S]*?<\/main>\s*<\/noscript>/i,
     "",
   );
-  html = html.replace('<div id="root"></div>', `<div id="root"></div>${buildNoScriptContent(route)}`);
+  html = html.replace(
+    '<div id="root"></div>',
+    `<div id="root"></div>${buildNoScriptContent(route, allRoutes)}`,
+  );
 
   return html;
 };
@@ -325,7 +420,7 @@ const writeRouteHtml = (route, html) => {
   fs.writeFileSync(filePath, html, "utf8");
 };
 
-const writeNotFoundHtml = (template) => {
+const writeNotFoundHtml = (template, allRoutes = []) => {
   const notFoundRoute = {
     path: "/404",
     title: "Page Not Found | Tinka Health Services",
@@ -335,7 +430,11 @@ const writeNotFoundHtml = (template) => {
     robots: "noindex,nofollow",
     h1: "Page Not Found",
   };
-  fs.writeFileSync(NOT_FOUND_PATH, applySeo(template, notFoundRoute), "utf8");
+  fs.writeFileSync(
+    NOT_FOUND_PATH,
+    applySeo(template, notFoundRoute, allRoutes),
+    "utf8",
+  );
 };
 
 async function generateSeoHtml() {
@@ -347,8 +446,10 @@ async function generateSeoHtml() {
   const routes = await getRoutes();
 
   fs.rmSync(SEO_PAGES_DIR, { recursive: true, force: true });
-  routes.forEach((route) => writeRouteHtml(route, applySeo(template, route)));
-  writeNotFoundHtml(template);
+  routes.forEach((route) =>
+    writeRouteHtml(route, applySeo(template, route, routes)),
+  );
+  writeNotFoundHtml(template, routes);
 
   console.log(`Generated SEO HTML for ${routes.length} indexable routes.`);
 }
