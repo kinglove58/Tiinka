@@ -144,11 +144,56 @@ const buildStructuredData = (route) => ({
   },
 });
 
+const renderSeoContent = (content = []) => {
+  if (!Array.isArray(content) || content.length === 0) return "";
+
+  let html = "";
+  let isListOpen = false;
+
+  const closeList = () => {
+    if (!isListOpen) return;
+    html += "\n          </ul>";
+    isListOpen = false;
+  };
+
+  content.forEach((item) => {
+    const text = String(item?.text || "").trim();
+    if (!text) return;
+
+    if (item.type === "li") {
+      if (!isListOpen) {
+        html += "\n          <ul>";
+        isListOpen = true;
+      }
+      html += `\n            <li>${escapeHtml(text)}</li>`;
+      return;
+    }
+
+    closeList();
+
+    if (item.type === "h2") {
+      html += `\n          <h2>${escapeHtml(text)}</h2>`;
+      return;
+    }
+
+    if (item.type === "h3") {
+      html += `\n          <h3>${escapeHtml(text)}</h3>`;
+      return;
+    }
+
+    html += `\n          <p>${escapeHtml(text)}</p>`;
+  });
+
+  closeList();
+  return html;
+};
+
 const buildNoScriptContent = (route) => `
     <noscript>
       <main>
         <h1>${escapeHtml(route.h1 || route.title)}</h1>
         <p>${escapeHtml(route.description)}</p>
+        ${renderSeoContent(route.seoContent)}
         <p><a href="${escapeAttribute(toAbsoluteUrl(route.path))}">${escapeHtml(toAbsoluteUrl(route.path))}</a></p>
       </main>
     </noscript>`;

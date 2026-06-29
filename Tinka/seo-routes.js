@@ -360,6 +360,41 @@ export const truncate = (value, maxLength = 155) => {
   return `${text.slice(0, maxLength - 3).trim()}...`;
 };
 
+const blockText = (block) =>
+  (block?.children || [])
+    .map((child) => child?.text || "")
+    .join("")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const portableTextToSeoContent = (blocks = []) =>
+  Array.isArray(blocks)
+    ? blocks
+        .map((block) => {
+          const text = blockText(block);
+          if (!text) return null;
+
+          if (block.listItem) return { type: "li", text };
+          if (block.style === "h2") return { type: "h2", text };
+          if (block.style === "h3") return { type: "h3", text };
+          return { type: "p", text };
+        })
+        .filter(Boolean)
+    : [];
+
+const conditionHubSeoContent = (condition) => [
+  { type: "p", text: condition.summary },
+  ...portableTextToSeoContent(condition.body),
+  ...(condition.sections || []).flatMap((section) => [
+    { type: "h2", text: section.title },
+    { type: "p", text: section.summary },
+    ...(section.topics || []).flatMap((topic) => [
+      { type: "h3", text: topic.title },
+      { type: "p", text: topic.summary },
+    ]),
+  ]),
+].filter((item) => item?.text);
+
 export const getServiceRoutes = () =>
   servicesDataList
     .filter((service) => service?.id)
@@ -402,6 +437,12 @@ export const getConditionRoutes = () =>
         : condition.keywords ||
           `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`,
       h1: condition.title,
+      image: condition.image?.startsWith("http")
+        ? condition.image
+        : condition.image
+          ? `${BASE_URL}${condition.image}`
+          : DEFAULT_IMAGE,
+      seoContent: conditionHubSeoContent(condition),
     }));
 
 export const getConditionTopicSeoRoutes = () =>
@@ -428,6 +469,7 @@ export const getConditionTopicSeoRoutes = () =>
         : condition.image
           ? `${BASE_URL}${condition.image}`
           : DEFAULT_IMAGE,
+    seoContent: portableTextToSeoContent(topic.body),
   }));
 
 export const getStaticAndServiceRoutes = () => [
