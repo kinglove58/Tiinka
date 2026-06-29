@@ -95,9 +95,7 @@ const ConditionDetail = () => {
 
       <section className="bg-white px-4 py-16 pt-28 md:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#005ab0]">
-            Condition guide
-          </p>
+          
           <div className="grid gap-8 lg:grid-cols-[0.9fr_0.55fr] lg:items-center">
             <div>
               <h1 className="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
