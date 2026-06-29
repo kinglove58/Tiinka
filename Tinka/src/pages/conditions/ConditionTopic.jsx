@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
-import { FiArrowLeft, FiArrowRight, FiShield } from "react-icons/fi";
+import {
+  FiArrowLeft,
+  FiArrowRight,
+  FiChevronDown,
+  FiShield,
+} from "react-icons/fi";
 import BookingLink from "../../components/BookingLink";
 import CanonicalLink from "../../components/CanonicalLink";
 import PortableText from "./portableText";
@@ -12,6 +18,7 @@ import {
 } from "./conditionHubData";
 
 const BASE_URL = "https://tinkahealthservices.com";
+const INITIAL_TOC_ITEMS = 4;
 
 const getAbsoluteImage = (image) => {
   if (!image) return `${BASE_URL}/images/logo/Tinka_health_logo.png`;
@@ -148,31 +155,51 @@ const ConditionTopic = () => {
 };
 
 const ArticleTableOfContents = ({ items = [] }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const visibleItems = items.filter((item) => item?.id && item?.text);
 
   if (visibleItems.length <= 1) return null;
 
+  const hasMoreItems = visibleItems.length > INITIAL_TOC_ITEMS;
+  const shownItems = isExpanded
+    ? visibleItems
+    : visibleItems.slice(0, INITIAL_TOC_ITEMS);
+
   return (
     <nav
       aria-label="Article table of contents"
-      className="mb-9 rounded-lg border border-[#cfe3f6] bg-[#f8fbff] p-5"
+      className="mb-10 rounded-lg bg-[#f5f5f4] p-3 sm:p-4"
     >
-      <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#005ab0]">
-        On this page
-      </p>
-      <ol className="mt-4 grid gap-3">
-        {visibleItems.map((item) => (
-          <li key={item.id}>
+      <ol id="article-toc-list" className="flex flex-wrap gap-2 sm:gap-3">
+        {shownItems.map((item) => (
+          <li key={item.id} className="min-w-0">
             <a
               href={`#${item.id}`}
-              className={`block font-bold leading-6 text-[#06192f] transition hover:text-[#005ab0] ${
-                item.level > 2 ? "pl-4 text-sm" : ""
-              }`}
+              className="block rounded-md bg-white px-3.5 py-3 text-base font-semibold leading-6 text-[#06192f] shadow-sm transition hover:bg-[#eaf5ff] hover:text-[#005ab0] focus:outline-none focus:ring-2 focus:ring-[#005ab0] sm:px-4 sm:text-lg"
             >
               {item.text}
             </a>
           </li>
         ))}
+        {hasMoreItems && (
+          <li>
+            <button
+              type="button"
+              onClick={() => setIsExpanded((current) => !current)}
+              className="inline-flex items-center gap-3 rounded-md bg-white px-3.5 py-3 text-base font-semibold leading-6 text-[#06192f] shadow-sm transition hover:bg-[#eaf5ff] hover:text-[#005ab0] focus:outline-none focus:ring-2 focus:ring-[#005ab0] sm:px-4 sm:text-lg"
+              aria-expanded={isExpanded}
+              aria-controls="article-toc-list"
+            >
+              {isExpanded ? "Show fewer" : "More topics"}
+              <FiChevronDown
+                aria-hidden="true"
+                className={`h-5 w-5 text-[#005ab0] transition ${
+                  isExpanded ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </li>
+        )}
       </ol>
     </nav>
   );
