@@ -7,6 +7,11 @@ import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import { PuffLoader } from "react-spinners";
 import { Helmet } from "react-helmet";
 import BlogStructuredData from "../../components/BlogStructuredData";
+import {
+  buildBlogMetaDescription,
+  buildBlogSeoTitle,
+  stripHtmlText,
+} from "../../utils/seoText";
 
 const MentalHealthStats = lazy(() => import("../home/MentalHealthStats"));
 
@@ -16,15 +21,12 @@ function SingleBlog() {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
 
   const blogItem = blogs.find((blog) => blog.slug === slug);
-  const plainBody = String(blogItem?.body || "")
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  const metaDescription =
-    blogItem?.excerpt ||
-    (plainBody
-      ? `${plainBody.slice(0, 155)}...`
-      : "Read this mental health article from Tinka Health Services.");
+  const plainBody = stripHtmlText(blogItem?.body || "");
+  const seoTitle = buildBlogSeoTitle(blogItem?.title || "Mental Health Article");
+  const metaDescription = buildBlogMetaDescription({
+    ...blogItem,
+    body: plainBody,
+  });
   const readTimeMinutes = Math.max(
     1,
     Math.ceil(plainBody.split(" ").length / 200),
@@ -66,7 +68,7 @@ function SingleBlog() {
     <ScrollAnimationWrapper>
       <BlogStructuredData blog={blogItem} slug={slug} />
       <Helmet>
-        <title>{blogItem.title} | Tinka Health Services Blog</title>
+        <title>{seoTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={keywordContent} />
         <link
@@ -74,7 +76,7 @@ function SingleBlog() {
           href={`https://tinkahealthservices.com/blogs/${slug}`}
         />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={blogItem.title} />
+        <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta
           property="og:url"
@@ -87,7 +89,7 @@ function SingleBlog() {
           />
         )}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={blogItem.title} />
+        <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={metaDescription} />
       </Helmet>
       <div className="mx-auto px-4 md:px-16 py-8 pt-24 bg-white">

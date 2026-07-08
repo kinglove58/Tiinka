@@ -39,6 +39,29 @@ const richTextBlocks = [
       ],
     },
   }),
+  defineArrayMember({
+    type: "image",
+    title: "Body Image",
+    options: {
+      hotspot: true,
+    },
+    fields: [
+      defineField({
+        name: "alt",
+        title: "Alt Text",
+        type: "string",
+        description:
+          "Describe the image for accessibility and search engines. Keep it natural and specific.",
+        validation: (Rule) => Rule.max(140),
+      }),
+      defineField({
+        name: "caption",
+        title: "Caption",
+        type: "string",
+        validation: (Rule) => Rule.max(180),
+      }),
+    ],
+  }),
 ];
 
 export const conditionArticle = defineType({
@@ -163,7 +186,7 @@ export const conditionArticle = defineType({
       type: "array",
       of: richTextBlocks,
       description:
-        "Full article content for the article page. The Article Title is the page H1. Use Heading 2 / Heading 3 from the style dropdown for body sections, or paste headings as ## Heading / ### Heading.",
+        "Full article content for the article page. The Article Title is the page H1. Use Heading 2 / Heading 3 from the style dropdown for body sections, or paste headings as ## Heading / ### Heading. You can also drag, upload, or paste images directly into this body.",
       validation: (Rule) => Rule.required().min(3),
     }),
     defineField({

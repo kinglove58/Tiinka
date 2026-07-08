@@ -52,6 +52,14 @@ const {
   SANITY_READ_TOKEN,
 } = process.env;
 
+const richTextProjection = `body[]{
+  ...,
+  _type == "image" => {
+    ...,
+    "assetUrl": asset->url
+  }
+}`;
+
 const contentQuery = `{
   "conditions": *[_type == "condition" && defined(slug.current)] | order(title asc) {
     _id,
@@ -63,11 +71,12 @@ const contentQuery = `{
     seoTitle,
     metaDescription,
     keywords,
+    "body": ${richTextProjection},
     sections[]{
       title,
       "slug": coalesce(slug.current, slug),
       summary,
-      body,
+      "body": ${richTextProjection},
       bullets,
       topics[]{
         title,
@@ -76,7 +85,7 @@ const contentQuery = `{
         seoTitle,
         metaDescription,
         keywords,
-        body,
+        "body": ${richTextProjection},
         "image": coalesce(imageUrl, image.asset->url),
         imageAlt,
         href
@@ -113,7 +122,7 @@ const contentQuery = `{
     seoTitle,
     metaDescription,
     keywords,
-    body,
+    "body": ${richTextProjection},
     "image": coalesce(imageUrl, image.asset->url),
     imageAlt,
     order,

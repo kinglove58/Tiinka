@@ -59,9 +59,42 @@ const renderChildren = (block) =>
     </span>
   ));
 
+const getImageSource = (block = {}) =>
+  block.assetUrl || block.asset?.url || block.url || block.imageUrl || "";
+
+const PortableImage = ({ block }) => {
+  const src = getImageSource(block);
+
+  if (!src) return null;
+
+  const alt = block.alt || block.caption || "Article image";
+
+  return (
+    <figure className="my-9 overflow-hidden rounded-lg border border-[#d6e8f7] bg-[#f8fbff] shadow-sm">
+      <img
+        src={src}
+        alt={alt}
+        className="max-h-[520px] w-full object-cover"
+        loading="lazy"
+      />
+      {block.caption && (
+        <figcaption className="border-t border-[#d6e8f7] bg-white px-4 py-3 text-sm leading-6 text-slate-600">
+          {block.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
+
 const PortableBlock = ({ item, asListItem = false }) => {
   const { block, heading, headingId } = item;
-  if (!block || block._type !== "block") return null;
+  if (!block) return null;
+
+  if (block._type === "image") {
+    return <PortableImage block={block} />;
+  }
+
+  if (block._type !== "block") return null;
 
   const text = getPortableBlockText(block);
   if (!text) return null;

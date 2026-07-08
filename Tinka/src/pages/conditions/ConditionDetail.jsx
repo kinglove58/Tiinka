@@ -10,6 +10,10 @@ import {
   getConditionHubPath,
   getConditionTopicPath,
 } from "./conditionHubData";
+import {
+  buildBrandedSeoTitle,
+  normalizeMetaDescription,
+} from "../../utils/seoText";
 
 const BASE_URL = "https://tinkahealthservices.com";
 
@@ -49,9 +53,13 @@ const ConditionDetail = () => {
     condition.summary ||
     textFromBlocks(condition.body).slice(0, 155) ||
     `${condition.title} care information from Tinka Health Services.`;
-  const description = condition.metaDescription || fallbackDescription;
-  const title =
-    condition.seoTitle || `${condition.title} Care | Tinka Health Services`;
+  const description = normalizeMetaDescription(
+    condition.metaDescription || fallbackDescription,
+    `${condition.title} care guide with symptoms, treatment options, medication management, telehealth access, and insurance-friendly care.`,
+  );
+  const title = buildBrandedSeoTitle(
+    condition.seoTitle || `${condition.title} Care Guide`,
+  );
   const keywords = Array.isArray(condition.keywords)
     ? condition.keywords.join(", ")
     : condition.keywords ||

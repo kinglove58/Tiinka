@@ -146,6 +146,29 @@ export const condition = defineType({
             ],
           },
         }),
+        defineArrayMember({
+          type: "image",
+          title: "Body Image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            defineField({
+              name: "alt",
+              title: "Alt Text",
+              type: "string",
+              description:
+                "Describe the image for accessibility and search engines. Keep it natural and specific.",
+              validation: (Rule) => Rule.max(140),
+            }),
+            defineField({
+              name: "caption",
+              title: "Caption",
+              type: "string",
+              validation: (Rule) => Rule.max(180),
+            }),
+          ],
+        }),
       ],
     }),
     defineField({

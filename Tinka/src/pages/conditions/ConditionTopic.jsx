@@ -16,6 +16,10 @@ import {
   getConditionTopic,
   getConditionTopicPath,
 } from "./conditionHubData";
+import {
+  buildConditionTopicMetaDescription,
+  buildConditionTopicSeoTitle,
+} from "../../utils/seoText";
 
 const BASE_URL = "https://tinkahealthservices.com";
 const INITIAL_TOC_ITEMS = 4;
@@ -45,12 +49,8 @@ const ConditionTopic = () => {
 
   const { condition, section, topic } = result;
   const canonicalUrl = `${BASE_URL}${getConditionTopicPath(condition, topic)}`;
-  const title =
-    topic.seoTitle || `${topic.title} | ${condition.title} | Tinka Health`;
-  const description =
-    topic.metaDescription ||
-    topic.summary ||
-    `${topic.title} information from Tinka Health Services.`;
+  const title = buildConditionTopicSeoTitle(topic, condition);
+  const description = buildConditionTopicMetaDescription(topic, condition);
   const keywords = Array.isArray(topic.keywords)
     ? topic.keywords.join(", ")
     : topic.keywords ||

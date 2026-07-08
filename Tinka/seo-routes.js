@@ -10,6 +10,12 @@ import {
   getPortableBlockText,
   getPortableTextBlocks,
 } from "./src/pages/conditions/portableTextUtils.js";
+import {
+  buildBrandedSeoTitle,
+  buildConditionTopicMetaDescription,
+  buildConditionTopicSeoTitle,
+  normalizeMetaDescription,
+} from "./src/utils/seoText.js";
 
 export const BASE_URL = "https://tinkahealthservices.com";
 export const BLOG_API_URL = "https://api.tinkahealthservices.com/api/blogs/30";
@@ -85,7 +91,7 @@ export const staticRoutes = [
     priority: "0.3",
     title: "Privacy Policy | Tinka Health Services",
     description:
-      "Review the privacy policy and patient information practices for Tinka Health Services.",
+      "Review Tinka Health Services privacy policy, terms, patient information practices, and how website or care-related information may be handled.",
     keywords: "privacy policy, patient privacy, Tinka Health Services policy",
     h1: "Privacy Policy",
   },
@@ -129,7 +135,7 @@ export const staticRoutes = [
     priority: "0.86",
     title: "Conditions We Support | Tinka Health Services",
     description:
-      "Explore mental health conditions supported by Tinka Health Services, including evaluation, medication management, telehealth care, and insurance-friendly access.",
+      "Explore mental health condition guides with symptoms, treatment options, medication management, telehealth care, and insurance-friendly access.",
     keywords:
       "mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, medication management",
     h1: "Find care by condition",
@@ -370,6 +376,21 @@ const portableTextToSeoContent = (blocks = [], skipFirstHeadingText = "") =>
         .filter((item) => !item.skip)
         .map((item) => {
           const { block, heading } = item;
+
+          if (block?._type === "image") {
+            const src =
+              block.assetUrl || block.asset?.url || block.url || block.imageUrl;
+
+            if (!src) return null;
+
+            return {
+              type: "img",
+              src,
+              alt: block.alt || block.caption || "",
+              caption: block.caption || "",
+            };
+          }
+
           const text = heading?.text || getPortableBlockText(block);
           if (!text) return null;
 
@@ -401,10 +422,12 @@ export const getServiceRoutes = () =>
       path: `/services/${service.id}`,
       changefreq: "weekly",
       priority: "0.8",
-      title: `${service.name} | Tinka Health Services`,
+      title: buildBrandedSeoTitle(service.name),
       description:
-        truncate(service.title1Des) ||
-        `${service.name} services from Tinka Health Services.`,
+        normalizeMetaDescription(
+          service.title1Des,
+          `${service.name} services from Tinka Health in Maryland, Washington DC, and Virginia.`,
+        ),
       keywords: Array.isArray(service.keywords)
         ? service.keywords.join(", ")
         : service.keywords ||
@@ -425,12 +448,14 @@ export const getConditionRoutes = () =>
       changefreq: "weekly",
       priority: "0.86",
       title:
-        condition.seoTitle ||
-        `${condition.title} Care | Tinka Health Services`,
+        buildBrandedSeoTitle(
+          condition.seoTitle || `${condition.title} Care Guide`,
+        ),
       description:
-        condition.metaDescription ||
-        condition.summary ||
-        `${condition.title} care information from Tinka Health Services.`,
+        normalizeMetaDescription(
+          condition.metaDescription || condition.summary,
+          `${condition.title} care guide with symptoms, treatment options, medication management, telehealth access, and insurance-friendly care.`,
+        ),
       keywords: Array.isArray(condition.keywords)
         ? condition.keywords.join(", ")
         : condition.keywords ||
@@ -449,13 +474,8 @@ export const getConditionTopicSeoRoutes = () =>
     path: getConditionTopicPath(condition, topic),
     changefreq: "weekly",
     priority: "0.72",
-    title:
-      topic.seoTitle ||
-      `${topic.title} | ${condition.title} | Tinka Health Services`,
-    description:
-      topic.metaDescription ||
-      topic.summary ||
-      `${topic.title} information from Tinka Health Services.`,
+    title: buildConditionTopicSeoTitle(topic, condition),
+    description: buildConditionTopicMetaDescription(topic, condition),
     keywords: Array.isArray(topic.keywords)
       ? topic.keywords.join(", ")
       : topic.keywords ||
@@ -472,7 +492,11 @@ export const getConditionTopicSeoRoutes = () =>
   }));
 
 export const getStaticAndServiceRoutes = () => [
-  ...staticRoutes,
+  ...staticRoutes.map((route) => ({
+    ...route,
+    title: buildBrandedSeoTitle(route.title || route.h1),
+    description: normalizeMetaDescription(route.description, route.h1),
+  })),
   ...getServiceRoutes(),
   ...getConditionRoutes(),
   ...getConditionTopicSeoRoutes(),

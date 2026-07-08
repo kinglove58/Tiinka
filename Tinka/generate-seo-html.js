@@ -10,8 +10,11 @@ import {
   getStaticAndServiceRoutes,
   stripHtml,
   toAbsoluteUrl,
-  truncate,
 } from "./seo-routes.js";
+import {
+  buildBlogMetaDescription,
+  buildBlogSeoTitle,
+} from "./src/utils/seoText.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -80,7 +83,7 @@ const getSitemapBlogRoutes = () => {
         const title = titleFromSlug(slug) || "Mental Health Article";
         return {
           path: decodeURI(url.pathname),
-          title: `${title} | Tinka Health Services Blog`,
+          title: buildBlogSeoTitle(title),
           description:
             "Read this mental health article from Tinka Health Services about psychiatry, medication management, telehealth care, and behavioral health support.",
           keywords:
@@ -157,6 +160,23 @@ const renderSeoContent = (content = []) => {
   };
 
   content.forEach((item) => {
+    if (item?.type === "img") {
+      const src = String(item.src || "").trim();
+      if (!src) return;
+
+      closeList();
+      html += `\n          <figure><img src="${escapeAttribute(
+        src,
+      )}" alt="${escapeAttribute(item.alt || "")}" loading="lazy" />`;
+
+      if (item.caption) {
+        html += `<figcaption>${escapeHtml(item.caption)}</figcaption>`;
+      }
+
+      html += "</figure>";
+      return;
+    }
+
     const text = String(item?.text || "").trim();
     if (!text) return;
 
@@ -375,19 +395,14 @@ const getBlogRoutes = async () => {
     .filter((blog) => blog?.slug)
     .map((blog) => {
       const plainBody = stripHtml(blog.body);
-      const description =
-        blog.excerpt ||
-        (plainBody
-          ? truncate(plainBody)
-          : "Read this mental health article from Tinka Health Services.");
       const image = blog.image
         ? `https://api.tinkahealthservices.com${blog.image}`
         : DEFAULT_IMAGE;
 
       return {
         path: `/blogs/${String(blog.slug).trim()}`,
-        title: `${blog.title || "Mental Health Article"} | Tinka Health Services Blog`,
-        description,
+        title: buildBlogSeoTitle(blog.title || "Mental Health Article"),
+        description: buildBlogMetaDescription({ ...blog, body: plainBody }),
         keywords: Array.isArray(blog.keywords)
           ? blog.keywords.join(", ")
           : blog.keywords ||
