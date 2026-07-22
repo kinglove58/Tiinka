@@ -1,5 +1,6 @@
 import servicesDataList from "../services/serviceData.js";
 import { sanityConditions } from "../../generated/sanityConditions.js";
+import { getConditionImage } from "./conditionImageData.js";
 
 const preferredPathSlugs = {
   "Attention Deficit Hyperactivity Disorder": "add-adhd",
@@ -272,6 +273,7 @@ const buildServiceCondition = (service) => {
     service.id_sub ||
     truncateText(service.title1Des, 220);
   const pathSlug = getPathSlug(service, sanity);
+  const conditionImage = getConditionImage(service.name);
   const sections =
     Array.isArray(sanity?.sections) && sanity.sections.length > 0
       ? normalizeSections(title, sanity.sections)
@@ -308,9 +310,16 @@ const buildServiceCondition = (service) => {
         "Washington DC",
         "Virginia",
       ],
-    image: hubSanity?.image || service.image || "/images/logo/Tinka_health_logo.png",
+    image:
+      hubSanity?.image ||
+      conditionImage?.src ||
+      service.image ||
+      "/images/logo/Tinka_health_logo.png",
     imageAlt:
-      hubSanity?.imageAlt || service.imageAlt || `${title} care guide`,
+      hubSanity?.imageAlt ||
+      conditionImage?.alt ||
+      service.imageAlt ||
+      `${title} care guide`,
     sections,
     body: hubSanity?.body,
   };

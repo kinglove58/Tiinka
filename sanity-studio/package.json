@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
-    "deploy": "sanity deploy"
+    "deploy": "sanity deploy",
+    "seed:conditions:check": "sanity exec scripts/seed-condition-library.cjs --with-user-token",
+    "seed:conditions": "sanity exec scripts/seed-condition-library.cjs --with-user-token -- --apply",
+    "sync:condition-images:check": "sanity exec scripts/sync-condition-images.cjs --with-user-token",
+    "sync:condition-images": "sanity exec scripts/sync-condition-images.cjs --with-user-token -- --apply"
   },
   "dependencies": {
     "@sanity/vision": "^3.99.0",

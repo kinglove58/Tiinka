@@ -356,6 +356,9 @@ const servicesDataList = [
   {
     id: "Bipolar-Disorder",
     name: "Bipolar Disorder",
+    image: "/images/services/Bipolar_Disorder.jpg",
+    imageAlt:
+      "Supportive psychiatric care for bipolar disorder and mood stability",
     id_sub: "Manage mood swings and live with stability",
     title1: "Get support for managing bipolar disorder with Tinka Health",
     title1Des:
