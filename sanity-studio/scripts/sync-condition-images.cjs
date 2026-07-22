@@ -85,7 +85,7 @@ const main = async () => {
   const batchSize = 100;
   let processed = 0;
 
-  console.log(`Prepared ${patches.length} Sanity draft image updates.`);
+  console.log(`Prepared ${patches.length} Sanity image updates.`);
 
   if (!shouldApply) {
     console.log("Dry run only. Re-run with --apply to update the image paths.");
@@ -102,10 +102,10 @@ const main = async () => {
 
     await transaction.commit({ visibility: "async" });
     processed += batch.length;
-    console.log(`Updated ${processed}/${patches.length} Sanity draft image references.`);
+    console.log(`Updated ${processed}/${patches.length} Sanity image references.`);
   }
 
-  console.log(`Condition image sync completed for ${patches.length} draft records.`);
+  console.log(`Condition image sync completed for ${patches.length} records.`);
 };
 
 main().catch((error) => {

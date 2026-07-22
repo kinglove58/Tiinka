@@ -356,7 +356,7 @@ const servicesDataList = [
   {
     id: "Bipolar-Disorder",
     name: "Bipolar Disorder",
-    image: "/images/services/Bipolar_Disorder.jpg",
+    image: "/images/conditions/library/bipolar-disorder-hero-v2.webp",
     imageAlt:
       "Supportive psychiatric care for bipolar disorder and mood stability",
     id_sub: "Manage mood swings and live with stability",
