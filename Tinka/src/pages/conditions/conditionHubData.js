@@ -84,7 +84,8 @@ const sortByOrderThenTitle = (items = []) =>
     const orderA = Number.isFinite(a?.order) ? a.order : 9999;
     const orderB = Number.isFinite(b?.order) ? b.order : 9999;
 
-    if (orderA !== orderB) return orderA - orderB;
+    if (orderA !== orderB) return
+     orderA - orderB;
     return String(a?.title || "").localeCompare(String(b?.title || ""));
   });
 
