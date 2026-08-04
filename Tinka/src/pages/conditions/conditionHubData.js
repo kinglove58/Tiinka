@@ -275,10 +275,9 @@ const buildServiceCondition = (service) => {
     truncateText(service.title1Des, 220);
   const pathSlug = getPathSlug(service, sanity);
   const conditionImage = getConditionImage(service.name);
-  const sections =
-    Array.isArray(sanity?.sections) && sanity.sections.length > 0
-      ? normalizeSections(title, sanity.sections)
-      : normalizeSections(title, buildFallbackSections(service));
+  const sections = sanity
+    ? normalizeSections(title, sanity.sections || [])
+    : normalizeSections(title, buildFallbackSections(service));
 
   return {
     ...sanity,

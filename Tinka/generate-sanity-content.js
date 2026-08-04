@@ -46,11 +46,17 @@ const loadLocalEnv = () => {
 loadLocalEnv();
 
 const {
-  SANITY_PROJECT_ID,
-  SANITY_DATASET = "production",
+  SANITY_PROJECT_ID: configuredProjectId,
+  SANITY_STUDIO_PROJECT_ID,
+  SANITY_DATASET: configuredDataset,
+  SANITY_STUDIO_DATASET,
   SANITY_API_VERSION = "2025-06-16",
   SANITY_READ_TOKEN,
 } = process.env;
+
+const SANITY_PROJECT_ID = configuredProjectId || SANITY_STUDIO_PROJECT_ID;
+const SANITY_DATASET =
+  configuredDataset || SANITY_STUDIO_DATASET || "production";
 
 const richTextProjection = `body[]{
   ...,
