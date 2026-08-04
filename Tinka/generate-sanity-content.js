@@ -9,37 +9,42 @@ const __dirname = path.dirname(__filename);
 
 const GENERATED_DIR = path.join(__dirname, "src", "generated");
 const CONDITIONS_PATH = path.join(GENERATED_DIR, "sanityConditions.js");
-const LOCAL_ENV_PATH = path.join(__dirname, ".env");
+const LOCAL_ENV_PATHS = [
+  path.join(__dirname, ".env.local"),
+  path.join(__dirname, ".env"),
+];
 
 const loadLocalEnv = () => {
-  if (!fs.existsSync(LOCAL_ENV_PATH)) return;
+  LOCAL_ENV_PATHS.forEach((envPath) => {
+    if (!fs.existsSync(envPath)) return;
 
-  const envText = fs.readFileSync(LOCAL_ENV_PATH, "utf8");
+    const envText = fs.readFileSync(envPath, "utf8");
 
-  envText.split(/\r?\n/).forEach((line) => {
-    const trimmedLine = line.trim();
+    envText.split(/\r?\n/).forEach((line) => {
+      const trimmedLine = line.trim();
 
-    if (!trimmedLine || trimmedLine.startsWith("#") || !line.includes("=")) {
-      return;
-    }
+      if (!trimmedLine || trimmedLine.startsWith("#") || !line.includes("=")) {
+        return;
+      }
 
-    const [rawKey, ...valueParts] = line.split("=");
-    const key = rawKey.trim();
+      const [rawKey, ...valueParts] = line.split("=");
+      const key = rawKey.trim();
 
-    if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key) || process.env[key]) {
-      return;
-    }
+      if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key) || process.env[key]) {
+        return;
+      }
 
-    let value = valueParts.join("=").trim();
-    const isQuoted =
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"));
+      let value = valueParts.join("=").trim();
+      const isQuoted =
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"));
 
-    if (isQuoted) {
-      value = value.slice(1, -1);
-    }
+      if (isQuoted) {
+        value = value.slice(1, -1);
+      }
 
-    process.env[key] = value;
+      process.env[key] = value;
+    });
   });
 };
 
