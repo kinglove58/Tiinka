@@ -245,9 +245,9 @@ const fetchContent = async () => {
     return;
   }
 
-  const host = SANITY_READ_TOKEN
-    ? `${SANITY_PROJECT_ID}.api.sanity.io`
-    : `${SANITY_PROJECT_ID}.apicdn.sanity.io`;
+  // Builds must see newly published documents immediately; the CDN can serve
+  // stale condition slugs for several minutes after a Sanity publish.
+  const host = `${SANITY_PROJECT_ID}.api.sanity.io`;
   const url = new URL(
     `https://${host}/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}`,
   );
