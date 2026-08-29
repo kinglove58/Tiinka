@@ -77,31 +77,6 @@ const RouteHeadManager = () => {
 };
 
 function App() {
-  useEffect(() => {
-    // Only load tracking scripts if consent is given
-    const hasConsent = document.cookie.includes("CookieConsent=true");
-    if (hasConsent) {
-      loadTrackingScripts();
-    }
-  }, []);
-
-  const loadTrackingScripts = () => {
-    // 🟢 Google Analytics - only loaded with consent
-    const gaScript = document.createElement("script");
-    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-ZNHLPY51ZS";
-    gaScript.async = true;
-    document.head.appendChild(gaScript);
-
-    const inlineScript = document.createElement("script");
-    inlineScript.innerHTML = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZNHLPY51ZS');
-  `;
-    document.head.appendChild(inlineScript);
-  };
-
   return (
     <>
       {/* Global Structured Data */}
@@ -131,12 +106,7 @@ function App() {
         buttonWrapperClasses="grid grid-cols-2 gap-2 sm:flex sm:shrink-0 sm:flex-row sm:gap-3"
         buttonClasses="w-full whitespace-nowrap rounded-md bg-yellow-400 px-3 py-2 text-sm font-semibold text-[#06192f] transition hover:bg-yellow-300 sm:w-auto sm:px-5"
         declineButtonClasses="w-full whitespace-nowrap rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-red-500 sm:w-auto sm:px-5"
-        onAccept={() => {
-          loadTrackingScripts(); // Only load Google Analytics on consent
-        }}
-        onDecline={() => {
-          // Cookies declined - no tracking
-        }}
+        onDecline={() => {}}
       >
         This website uses cookies to improve your experience.
       </CookieConsent>
