@@ -5,6 +5,10 @@ RewriteBase /
 # Let IndexNow verification read the exact key URL, including www/http.
 RewriteRule ^jzbj6w39zshfpsdr8rbvatswu151uuuu\.txt$ - [L]
 
+# Keep accidental subdomain crawls on the canonical website.
+RewriteCond %{HTTP_HOST} ^mail\.tinkahealthservices\.com$ [NC]
+RewriteRule ^(.*)$ https://tinkahealthservices.com/$1 [L,R=301]
+
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -16,6 +20,13 @@ RewriteRule ^(.*)$ https://tinkahealthservices.com/$1 [L,R=301]
 # Redirect legacy booking route to canonical booking URL
 RewriteCond %{REQUEST_URI} ^/tinkahealthservicesbooking/?$ [NC]
 RewriteRule ^(.*)$ https://tinkahealthservices.com/booking [L,R=301]
+
+# Redirect old condition/service URLs Google has already discovered.
+RewriteCond %{REQUEST_URI} ^/services/Personality-Disorders/?$ [NC]
+RewriteRule ^(.*)$ https://tinkahealthservices.com/conditions [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^/panic-disorder/panic-disorder-symptoms\.htm$ [NC]
+RewriteRule ^(.*)$ https://tinkahealthservices.com/panic-disorder/default.htm [L,R=301]
 
 # Prevent direct indexing of generated helper files.
 RewriteCond %{THE_REQUEST} \s/+seo-pages/([^\s?]+)\.html [NC]
