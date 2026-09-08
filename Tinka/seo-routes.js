@@ -413,7 +413,7 @@ const conditionHubSeoContent = (condition) => [
       { type: "p", text: topic.summary },
     ]),
   ]),
-].filter((item) => item?.text);
+].filter((item) => item?.text || (item?.type === "img" && item?.src));
 
 export const getServiceRoutes = () =>
   servicesDataList
@@ -438,6 +438,7 @@ export const getServiceRoutes = () =>
         : service.image
           ? `${BASE_URL}${service.image}`
           : DEFAULT_IMAGE,
+      imageAlt: service.imageAlt || `${service.name} care at Tinka Health Services`,
     }));
 
 export const getConditionRoutes = () =>
@@ -466,6 +467,7 @@ export const getConditionRoutes = () =>
         : condition.image
           ? `${BASE_URL}${condition.image}`
           : DEFAULT_IMAGE,
+      imageAlt: condition.imageAlt || `${condition.title} care guide`,
       seoContent: conditionHubSeoContent(condition),
     }));
 
@@ -488,6 +490,7 @@ export const getConditionTopicSeoRoutes = () =>
         : condition.image
           ? `${BASE_URL}${condition.image}`
           : DEFAULT_IMAGE,
+    imageAlt: topic.imageAlt || condition.imageAlt || `${topic.title} article`,
     seoContent: portableTextToSeoContent(topic.body, topic.title),
   }));
 

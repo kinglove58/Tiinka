@@ -6,6 +6,7 @@ import {
   BASE_URL,
   BLOG_API_URL,
   createBlogSlug,
+  DEFAULT_IMAGE,
   getConditionRoutes,
   getConditionTopicSeoRoutes,
   getServiceRoutes,
@@ -18,6 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITEMAP_PATH = path.join(__dirname, "public", "sitemap.xml");
+const IMAGE_SITEMAP_NAMESPACE = "http://www.google.com/schemas/sitemap-image/1.1";
 
 const unescapeXml = (value) =>
   String(value || "")
@@ -81,14 +83,159 @@ const formatDate = (value) => {
   return date.toISOString().split("T")[0];
 };
 
+const truncateText = (value, maxLength = 200) => {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (text.length <= maxLength) {
+    return text;
+  }
+  return `${text.slice(0, maxLength - 1).trim()}...`;
+};
+
+const normalizeImageUrl = (value) => {
+  const src = String(value || "").trim();
+  if (!src || src.startsWith("data:") || src.startsWith("blob:")) {
+    return "";
+  }
+
+  try {
+    const url = new URL(src, BASE_URL);
+    if (!["http:", "https:"].includes(url.protocol)) {
+      return "";
+    }
+    return url.href;
+  } catch {
+    return "";
+  }
+};
+
+const readNestedImageValue = (value) => {
+  if (!value) {
+    return "";
+  }
+  if (typeof value === "string") {
+    return value;
+  }
+  if (typeof value === "object") {
+    return (
+      value.url ||
+      value.src ||
+      value.path ||
+      value.asset?.url ||
+      value.asset?.src ||
+      value.asset?.path ||
+      ""
+    );
+  }
+  return "";
+};
+
+const getBlogImage = (blog) =>
+  readNestedImageValue(
+    blog?.image ||
+      blog?.imageUrl ||
+      blog?.featuredImage ||
+      blog?.featured_image ||
+      blog?.coverImage ||
+      blog?.cover_image ||
+      blog?.thumbnail,
+  );
+
+const normalizeImageEntry = (image, fallback = {}) => {
+  const source =
+    typeof image === "object"
+      ? readNestedImageValue(image.src || image.loc || image.url || image.image || image)
+      : image;
+  const loc = normalizeImageUrl(source);
+  if (!loc || loc === normalizeImageUrl(DEFAULT_IMAGE)) {
+    return null;
+  }
+
+  const title =
+    typeof image === "object"
+      ? image.title || image.alt || fallback.title
+      : fallback.title;
+  const caption =
+    typeof image === "object"
+      ? image.caption || image.description || fallback.caption
+      : fallback.caption;
+
+  return {
+    loc,
+    title: truncateText(title, 120),
+    caption: truncateText(caption, 200),
+  };
+};
+
+const getRouteImages = (route = {}) => {
+  const candidates = [];
+
+  if (route.image) {
+    candidates.push({
+      src: route.image,
+      title: route.imageAlt || route.h1 || route.title,
+      caption: route.description,
+    });
+  }
+
+  if (Array.isArray(route.seoContent)) {
+    route.seoContent
+      .filter((item) => item?.type === "img")
+      .forEach((item) => {
+        candidates.push({
+          src: item.src,
+          title: item.alt || route.h1 || route.title,
+          caption: item.caption || route.description,
+        });
+      });
+  }
+
+  const uniqueImages = new Map();
+  candidates
+    .map((image) =>
+      normalizeImageEntry(image, {
+        title: route.imageAlt || route.h1 || route.title,
+        caption: route.description,
+      }),
+    )
+    .filter(Boolean)
+    .forEach((image) => {
+      if (!uniqueImages.has(image.loc)) {
+        uniqueImages.set(image.loc, image);
+      }
+    });
+
+  return Array.from(uniqueImages.values()).slice(0, 10);
+};
+
+const buildImageTags = (images = []) =>
+  images
+    .map(
+      (image) => `
+    <image:image>
+      <image:loc>${escapeXml(image.loc)}</image:loc>${
+        image.title
+          ? `
+      <image:title>${escapeXml(image.title)}</image:title>`
+          : ""
+      }${
+        image.caption
+          ? `
+      <image:caption>${escapeXml(image.caption)}</image:caption>`
+          : ""
+      }
+    </image:image>`,
+    )
+    .join("");
+
 const buildUrlNode = (
   routePath,
   lastmod,
   changefreq = "weekly",
   priority = "0.8",
+  images = [],
 ) => `
   <url>
-    <loc>${escapeXml(encodeURI(toAbsoluteUrl(routePath)))}</loc>
+    <loc>${escapeXml(encodeURI(toAbsoluteUrl(routePath)))}</loc>${buildImageTags(images)}
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -129,6 +276,7 @@ async function generateSitemap() {
       lastmod,
       changefreq = "weekly",
       priority = "0.8",
+      images = [],
     ) => {
       const normalizedPath = normalizePath(routePath);
       if (uniqueRoutes.has(normalizedPath)) {
@@ -136,12 +284,18 @@ async function generateSitemap() {
       }
       uniqueRoutes.add(normalizedPath);
       allNodes.push(
-        buildUrlNode(normalizedPath, lastmod, changefreq, priority),
+        buildUrlNode(normalizedPath, lastmod, changefreq, priority, images),
       );
     };
 
     staticRoutes.forEach((route) => {
-      addNode(route.path, formatDate(), route.changefreq, route.priority);
+      addNode(
+        route.path,
+        formatDate(),
+        route.changefreq,
+        route.priority,
+        getRouteImages(route),
+      );
     });
 
     getServiceRoutes().forEach((serviceRoute) => {
@@ -150,6 +304,7 @@ async function generateSitemap() {
         formatDate(),
         serviceRoute.changefreq,
         serviceRoute.priority,
+        getRouteImages(serviceRoute),
       );
     });
 
@@ -159,6 +314,7 @@ async function generateSitemap() {
         formatDate(),
         conditionRoute.changefreq,
         conditionRoute.priority,
+        getRouteImages(conditionRoute),
       );
     });
 
@@ -168,6 +324,7 @@ async function generateSitemap() {
         formatDate(),
         conditionTopicRoute.changefreq,
         conditionTopicRoute.priority,
+        getRouteImages(conditionTopicRoute),
       );
     });
 
@@ -188,6 +345,22 @@ async function generateSitemap() {
           ),
           "weekly",
           "0.7",
+          getRouteImages({
+            title: blog.title,
+            h1: blog.title,
+            description:
+              blog.meta_description ||
+              blog.metaDescription ||
+              blog.description ||
+              blog.excerpt ||
+              blog.summary,
+            image: getBlogImage(blog),
+            imageAlt:
+              blog.imageAlt ||
+              blog.image_alt ||
+              blog.alt ||
+              blog.title,
+          }),
         );
       });
 
@@ -210,7 +383,7 @@ async function generateSitemap() {
     }
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="${IMAGE_SITEMAP_NAMESPACE}">
 ${allNodes.join("")}
 </urlset>`;
 
