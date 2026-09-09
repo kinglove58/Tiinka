@@ -182,7 +182,7 @@ function SingleService() {
                 {service_data.slice(0, 8).map((data) => (
                   <div key={data.id} className="group">
                     <Link
-                      to={`/services/${data.id}`}
+                      to={data.path || `/services/${data.id}`}
                       className={`block w-full px-4 py-3 rounded-lg transition-all duration-300 ease-in-out ${
                         data.id === service.id
                           ? "bg-blue-100 border-2 border-blue-600 text-blue-800 shadow-md"

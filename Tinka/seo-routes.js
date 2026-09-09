@@ -419,13 +419,13 @@ export const getServiceRoutes = () =>
   servicesDataList
     .filter((service) => service?.id)
     .map((service) => ({
-      path: `/services/${service.id}`,
+      path: service.path || `/services/${service.id}`,
       changefreq: "weekly",
-      priority: "0.8",
-      title: buildBrandedSeoTitle(service.name),
+      priority: service.priority || "0.8",
+      title: service.metaTitle || buildBrandedSeoTitle(service.name),
       description:
         normalizeMetaDescription(
-          service.title1Des,
+          service.metaDescription || service.title1Des,
           `${service.name} services from Tinka Health in Maryland, Washington DC, and Virginia.`,
         ),
       keywords: Array.isArray(service.keywords)
@@ -439,6 +439,16 @@ export const getServiceRoutes = () =>
           ? `${BASE_URL}${service.image}`
           : DEFAULT_IMAGE,
       imageAlt: service.imageAlt || `${service.name} care at Tinka Health Services`,
+      seoContent: service.seoContent || [
+        { type: "h2", text: service.title1 },
+        { type: "p", text: service.title1Des },
+        { type: "h2", text: service.title2 },
+        { type: "p", text: service.title2Des },
+        { type: "ul", items: service.title2List || [] },
+        { type: "h2", text: service.title3 },
+        { type: "p", text: service.title3Des },
+        { type: "ul", items: service.title3List || [] },
+      ].filter((item) => item?.text || item?.items?.length),
     }));
 
 export const getConditionRoutes = () =>

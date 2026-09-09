@@ -128,7 +128,7 @@ const NavItem = () => {
                   {servicesToShow.map((service) => (
                     <MegaMenuLink
                       key={service.id}
-                      to={`/services/${service.id}`}
+                      to={service.path || `/services/${service.id}`}
                       title={service.name}
                       onClick={closeMenus}
                     >

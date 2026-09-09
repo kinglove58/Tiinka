@@ -13,7 +13,7 @@ const ServiceGrid = () => {
           {serviceData.map((service) => (
             <Link
               key={service.id}
-              to={`/services/${service.id}`}
+              to={service.path || `/services/${service.id}`}
               className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-800 hover:text-blue-900 px-3 py-2 md:px-4 md:py-2 rounded-full text-sm md:text-base font-medium transition-all duration-300 hover:shadow-md border border-blue-200 hover:border-blue-300"
             >
               {service.name}

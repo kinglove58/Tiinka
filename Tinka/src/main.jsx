@@ -57,6 +57,9 @@ const HerndonPsychiatricProvider = lazy(
 const TelehealthPsychiatry = lazy(
   () => import("./pages/telehealth/TelehealthPsychiatry.jsx"),
 );
+const WeightLossManagement = lazy(
+  () => import("./pages/weight/WeightLossManagement.jsx"),
+);
 const SeoTreatmentPage = lazy(() => import("./pages/seo/SeoTreatmentPage.jsx"));
 
 const router = createBrowserRouter([
@@ -147,6 +150,14 @@ const router = createBrowserRouter([
       {
         path: "/telehealth-psychiatry-md-dc-va",
         element: <TelehealthPsychiatry />,
+      },
+      {
+        path: "/weight-loss-management",
+        element: <WeightLossManagement />,
+      },
+      {
+        path: "/services/Weight-Loss-Management",
+        element: <Navigate to="/weight-loss-management" replace />,
       },
       ...seoTreatmentPages.map((page) => ({
         path: page.path,

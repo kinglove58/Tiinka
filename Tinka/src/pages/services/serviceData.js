@@ -71,6 +71,90 @@ const servicesDataList = [
     ],
   },
   {
+    id: "Weight-Loss-Management",
+    path: "/weight-loss-management",
+    excludeFromConditionHub: true,
+    name: "Weight Loss Management",
+    metaTitle:
+      "Weight Loss Management in MD, DC & VA | Tinka Health Services",
+    metaDescription:
+      "Weight loss management with telehealth visits, lifestyle planning, clinical guidance, and follow-up care in Maryland, DC, and Virginia.",
+    priority: "0.9",
+    image: "/images/services/weight-loss-management-hero.png",
+    imageAlt:
+      "Telehealth weight loss management visit with clinician support",
+    id_sub:
+      "Telehealth-friendly support for healthy weight, habits, and long-term progress",
+    title1:
+      "Personalized weight loss management with clinical guidance and follow-up care",
+    title1Des:
+      "Weight loss is affected by health history, appetite, sleep, stress, medications, routines, and emotional patterns. Tinka Health Services provides weight loss management that combines lifestyle planning, clinical review, and follow-up support for eligible patients in Maryland, Washington DC, and Virginia. We do not ship weight-loss medication.",
+    btnText: "Start Weight Management",
+    title2: "Do you need structured support for weight loss?",
+    title2Des:
+      "Many people try diet plans without enough clinical support, follow-up, or attention to the daily barriers that make progress difficult. Weight loss management can help when you need a plan that is realistic, monitored, and adjusted over time.",
+    title2List: [
+      "Repeated attempts to lose weight without a sustainable plan",
+      "Stress, sleep, mood, or appetite patterns that affect consistency",
+      "Questions about whether medication may be appropriate or safe",
+      "Need for accountability and follow-up instead of one-time advice",
+      "Weight-related health concerns that should be reviewed clinically",
+      "A preference for telehealth visits when appropriate and available",
+    ],
+    title3: "How Tinka Health Services supports weight management",
+    title3Des:
+      "Our approach focuses on steady progress, practical goals, and safety. Your provider can help you understand the factors affecting your weight and create a plan that can be reviewed at follow-up visits.",
+    title3List: [
+      "Review your health history, medications, weight goals, and barriers",
+      "Build nutrition, activity, sleep, and behavior goals that fit daily life",
+      "Discuss medication options only when clinically appropriate",
+      "Monitor side effects, progress, and safety factors over time",
+      "Coordinate care when additional medical follow-up or labs may be needed",
+      "Offer telehealth access for eligible patients in MD, DC, and VA",
+    ],
+    seoContent: [
+      {
+        type: "h2",
+        text: "Telehealth weight loss management in Maryland, DC, and Virginia",
+      },
+      {
+        type: "p",
+        text: "Tinka Health Services helps adults build a safe and realistic weight management plan with clinical guidance, lifestyle support, and follow-up care. The service is designed for patients who want structure, accountability, and clear next steps.",
+      },
+      {
+        type: "h2",
+        text: "What weight loss management may include",
+      },
+      {
+        type: "ul",
+        items: [
+          "Medical and lifestyle review",
+          "Nutrition, activity, sleep, and habit planning",
+          "Medication education when appropriate",
+          "Telehealth follow-up for eligible patients",
+          "Insurance-friendly care coordination",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Medication delivery",
+      },
+      {
+        type: "p",
+        text: "Tinka Health Services does not deliver or ship weight-loss medication. If medication is clinically appropriate, your provider will explain safe options, monitoring, and next steps.",
+      },
+    ],
+    keywords: [
+      "weight loss management",
+      "medical weight loss telehealth",
+      "weight management Maryland",
+      "weight loss provider Washington DC",
+      "weight management Virginia",
+      "obesity care",
+      "lifestyle weight loss support",
+    ],
+  },
+  {
     id: "Agoraphobia",
     name: "Agoraphobia",
     image: "/images/services/Agoraphobia.jpg",

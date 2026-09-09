@@ -185,7 +185,9 @@ function Services() {
               item: {
                 "@type": "Service",
                 name: service.name,
-                url: `https://tinkahealthservices.com/services/${service.id}`,
+                url: `https://tinkahealthservices.com${
+                  service.path || `/services/${service.id}`
+                }`,
               },
             })),
           })}
@@ -415,7 +417,7 @@ function Services() {
               {currentServices.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/services/${service.id}`}
+                  to={service.path || `/services/${service.id}`}
                   className="group"
                 >
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 h-full border-l-4 border-blue-600 group-hover:border-blue-800">

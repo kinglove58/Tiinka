@@ -4,12 +4,15 @@ import { Helmet } from "react-helmet";
 const ServiceStructuredData = ({ service }) => {
   if (!service) return null;
 
+  const servicePath = service.path || `/services/${service.id}`;
+  const serviceUrl = `https://tinkahealthservices.com${servicePath}`;
+
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalTherapy",
     name: service.name,
     description: service.title1Des || service.id_sub,
-    url: `https://tinkahealthservices.com/services/${service.id}`,
+    url: serviceUrl,
     provider: {
       "@type": "MedicalOrganization",
       name: "Tinka Health Services",
@@ -69,7 +72,7 @@ const ServiceStructuredData = ({ service }) => {
         "@type": "ListItem",
         position: 3,
         name: service.name,
-        item: `https://tinkahealthservices.com/services/${service.id}`,
+        item: serviceUrl,
       },
     ],
   };

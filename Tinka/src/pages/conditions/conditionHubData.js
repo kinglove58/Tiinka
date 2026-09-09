@@ -360,7 +360,10 @@ const buildSanityOnlyCondition = (sanity) => {
 
 export const getConditionHubs = () => {
   const serviceHubs = servicesDataList
-    .filter((service) => service?.id && service?.name)
+    .filter(
+      (service) =>
+        service?.id && service?.name && !service.excludeFromConditionHub,
+    )
     .map(buildServiceCondition);
 
   const usedAliases = new Set(
