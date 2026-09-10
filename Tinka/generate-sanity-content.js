@@ -211,15 +211,15 @@ const buildGroupedConditions = ({ conditions = [], sections = [], articles = [] 
 
 const writeConditions = (conditions, sections = [], articles = []) => {
   fs.mkdirSync(GENERATED_DIR, { recursive: true });
-  const serializedConditions = JSON.stringify(conditions, null, 2).replace(
+  const serializedConditions = JSON.stringify(conditions).replace(
     /</g,
     "\\u003c",
   );
-  const serializedSections = JSON.stringify(sections, null, 2).replace(
+  const serializedSections = JSON.stringify(sections).replace(
     /</g,
     "\\u003c",
   );
-  const serializedArticles = JSON.stringify(articles, null, 2).replace(
+  const serializedArticles = JSON.stringify(articles).replace(
     /</g,
     "\\u003c",
   );

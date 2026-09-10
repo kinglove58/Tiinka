@@ -1,6 +1,6 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import {
   FiAlertCircle,
   FiCalendar,
@@ -91,7 +91,7 @@ const virginiaInsurance = [
   "Optima Health",
   "Optum",
   "Prime Health",
-  "Sentara Health Plan",
+  "Sentara Health Plans",
   "Tricare",
   "Unity (VA)",
   "VA Premier",
@@ -211,6 +211,12 @@ const StateInsuranceBlock = ({ title, plans, colorClass }) => (
   </section>
 );
 
+StateInsuranceBlock.propTypes = {
+  title: PropTypes.string.isRequired,
+  plans: PropTypes.arrayOf(PropTypes.string).isRequired,
+  colorClass: PropTypes.string.isRequired,
+};
+
 const CoverageStepCard = ({ icon: Icon, title, description }) => (
   <article className="rounded-3xl border border-[#d8e7f6] bg-white/70 p-6 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
     <div className="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-[#e9f3fb] text-5xl text-[#0b63b6]">
@@ -222,6 +228,12 @@ const CoverageStepCard = ({ icon: Icon, title, description }) => (
     <p className="text-base leading-8 text-slate-700">{description}</p>
   </article>
 );
+
+CoverageStepCard.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 const InsuranceTermCard = ({ icon: Icon, title, description }) => (
   <article className="overflow-hidden rounded-3xl border border-[#d6e6f4] bg-white shadow-[0_20px_45px_-30px_rgba(8,44,86,0.18)]">
@@ -236,6 +248,12 @@ const InsuranceTermCard = ({ icon: Icon, title, description }) => (
     </div>
   </article>
 );
+
+InsuranceTermCard.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 const InsuranceAccepted = () => {
   const breadcrumbStructuredData = {

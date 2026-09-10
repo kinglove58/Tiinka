@@ -45,7 +45,7 @@ const insurancePlans = [
   "Multiplan",
   "Optima Health",
   "Optum",
-  "Sentara Health Plan",
+  "Sentara Health Plans",
   "Tricare",
   "Unity (VA)",
   "VA Premier",
@@ -138,7 +138,7 @@ const faqs = [
   {
     question: "Do you accept Virginia Medicaid, Medicare, and insurance?",
     answer:
-      "Tinka Health Services accepts many insurance plans used by Virginia patients, including Medicaid (VA), Medicare, Aetna, Anthem, CareFirst, Cigna, Optum, Sentara Health Plan, Tricare, and VA Premier. Benefits should be verified before the first visit.",
+      "Tinka Health Services accepts many insurance plans used by Virginia patients, including Medicaid (VA), Medicare, Aetna, Anthem, CareFirst, Cigna, Optum, Sentara Health Plans, Tricare, and VA Premier. Benefits should be verified before the first visit.",
   },
   {
     question: "Can I book telehealth psychiatry if I live in Virginia?",
