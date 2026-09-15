@@ -1,10 +1,12 @@
-import React, { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { FaSpinner } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 
 const Testimonial = lazy(() => import("../home/Testimonial"));
+const contactFormEndpoint = "https://formspree.io/f/xzzaoopr";
 
 const FormField = ({
   label,
@@ -39,7 +41,18 @@ const FormField = ({
   </div>
 );
 
+FormField.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+};
+
 function ContactUs() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -53,6 +66,42 @@ function ContactUs() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const response = await fetch(contactFormEndpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(event.currentTarget),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact form submission failed.");
+      }
+
+      setFormData({
+        fullName: "",
+        phone: "",
+        email: "",
+        Message: "",
+      });
+      navigate("/contact-thank-you", {
+        state: { trackContactConversion: true },
+      });
+    } catch {
+      setMessage(
+        "We could not send your message. Please call 443-295-6600 or try again.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -144,8 +193,7 @@ function ContactUs() {
 
         {/* ✅ Contact Form with Formspree */}
         <form
-          action="https://formspree.io/f/xzzaoopr"
-          method="POST"
+          onSubmit={handleSubmit}
           className="bg-white p-8 rounded-lg shadow-md w-full"
         >
           <h2 className="text-2xl font-bold mb-4">We like to hear from You!</h2>
@@ -193,6 +241,12 @@ function ContactUs() {
             value="New Contact Form Submission - Tinka Health Services"
           />
           <input type="hidden" name="_replyto" value={formData.email} />
+
+          {message && (
+            <p className="rounded-md bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+              {message}
+            </p>
+          )}
 
           <div className="flex justify-center">
             <button

@@ -24,6 +24,9 @@ const AllBlogs = lazy(() => import("./pages/blogs/AllBlogs.jsx"));
 const SingleService = lazy(() => import("./pages/services/SingleService.jsx"));
 const Services = lazy(() => import("./pages/services/Services.jsx"));
 const ContactUs = lazy(() => import("./pages/contact/ContactUs.jsx"));
+const ContactThankYou = lazy(
+  () => import("./pages/contact/ContactThankYou.jsx"),
+);
 const Referral = lazy(() => import("./pages/referral/Referral.jsx"));
 const SearchPage = lazy(() => import("./pages/search/SearchPage.jsx"));
 const Conditions = lazy(() => import("./pages/conditions/Conditions.jsx"));
@@ -94,6 +97,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/contact-thank-you",
+        element: <ContactThankYou />,
       },
       {
         path: "/referral",
