@@ -1,12 +1,11 @@
-const TEBRA_BOOKING_URL =
-  "https://www.tebra.com/care/provider/seliat-dosunmu-dnp-pmhnp-bc-fnp-c-1023483484";
+import PropTypes from "prop-types";
 
 const BookingLink = ({
   className = "",
   children = "Book an Appointment",
   onClick,
-  href = TEBRA_BOOKING_URL,
-  target = "_blank",
+  href = "/booking",
+  target = "_self",
 }) => {
   // If the consumer provides a text- or bg- utility, prefer that instead of defaults
   const hasTextUtility = /\btext-[^\s!]+/.test(className);
@@ -42,6 +41,14 @@ const BookingLink = ({
       {children}
     </a>
   );
+};
+
+BookingLink.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  href: PropTypes.string,
+  target: PropTypes.string,
 };
 
 export default BookingLink;

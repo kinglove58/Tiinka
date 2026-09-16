@@ -1,7 +1,8 @@
-import React, { Suspense, lazy, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import BookingStructuredData from "../../components/BookingStructuredData";
+import { trackBookingClickConversion } from "../../utils/googleAdsTracking";
 
 const Testimonial = lazy(() => import("../home/Testimonial"));
 
@@ -56,6 +57,18 @@ const PlatformAccessSection = () => (
 
 const TinkaBookingEmbed = () => {
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const storageKey = "tinka_booking_conversion_tracked";
+
+    if (window.sessionStorage.getItem(storageKey)) {
+      return;
+    }
+
+    if (trackBookingClickConversion()) {
+      window.sessionStorage.setItem(storageKey, "true");
+    }
+  }, []);
 
   const handleIframeLoad = () => {
     setIsLoading(false);

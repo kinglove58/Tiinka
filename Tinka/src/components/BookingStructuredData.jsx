@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 
 const BookingStructuredData = () => {
@@ -66,8 +65,7 @@ const BookingStructuredData = () => {
       "@type": "ReserveAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate:
-          "https://d2oe0ra32qx05a.cloudfront.net/?practiceKey=k_1_108462",
+        urlTemplate: "https://tinkahealthservices.com/booking",
         inLanguage: "en-US",
         actionPlatform: [
           "http://schema.org/DesktopWebPlatform",

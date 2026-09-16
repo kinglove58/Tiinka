@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 const TinkaBooking = () => {
   useEffect(() => {
-    // Redirect to the external booking system
-    window.location.href =
-      "https://d2oe0ra32qx05a.cloudfront.net/?practiceKey=k_1_108462";
+    window.location.replace("/booking");
   }, []);
 
   return (
@@ -22,7 +20,7 @@ const TinkaBooking = () => {
         />
         <link
           rel="canonical"
-          href="https://tinkahealthservices.com/tinkahealthservicesbooking"
+          href="https://tinkahealthservices.com/booking"
         />
       </Helmet>
 
@@ -37,19 +35,17 @@ const TinkaBooking = () => {
             Book Your Appointment
           </h1>
           <p className="text-gray-600 mb-6">
-            You're being redirected to our secure booking platform...
+            You&apos;re being redirected to our secure booking platform...
           </p>
         </div>
 
         <div className="space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#005ab0] mx-auto"></div>
           <p className="text-sm text-gray-500">
-            If you're not redirected automatically,
+            If you&apos;re not redirected automatically,
             <a
-              href="https://d2oe0ra32qx05a.cloudfront.net/?practiceKey=k_1_108462"
+              href="/booking"
               className="text-[#005ab0] hover:underline ml-1"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               click here
             </a>

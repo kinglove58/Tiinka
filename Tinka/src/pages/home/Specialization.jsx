@@ -66,7 +66,7 @@ const Specialization = () => {
               View more
             </button>
           </Link>
-          <Link to="/tinkahealthservicesbooking">
+          <Link to="/booking">
             <button className="bg-white-600 text-blue-700 font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white">
               Book Appointment
             </button>
