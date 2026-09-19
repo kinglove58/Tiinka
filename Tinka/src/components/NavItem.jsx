@@ -82,7 +82,7 @@ const NavItem = () => {
 
   return (
     <header className="fixed right-0 top-0 z-50 w-full text-gray-800">
-      <div className="relative bg-[#06192f] text-white">
+      <div className="relative bg-[#005ab0] text-white">
         <button
           type="button"
           className="flex h-12 w-full items-center justify-between px-4 text-left lg:hidden"
@@ -99,62 +99,83 @@ const NavItem = () => {
 
         <div
           id="contact-details"
-          className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-900 bg-[#06192f] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
+          className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-700 bg-[#005ab0] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
         >
           <a
             href="tel:+14432956600"
             className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
           >
-            <FaPhoneAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
-            <span>Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045<br />443-295-6600</span>
+            <FaPhoneAlt
+              aria-hidden="true"
+              className="mt-1 shrink-0 text-blue-300"
+            />
+            <span>
+              Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045
+              <br />
+              443-295-6600
+            </span>
           </a>
           <a
             href="tel:+15713498285"
             className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
           >
-            <FaMapMarkerAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
-            <span>Virginia: 585 Grove St, Suite 145, Herndon, VA 20170<br />571-349-8285</span>
+            <FaMapMarkerAlt
+              aria-hidden="true"
+              className="mt-1 shrink-0 text-blue-300"
+            />
+            <span>
+              Virginia: 585 Grove St, Suite 145, Herndon, VA 20170
+              <br />
+              571-349-8285
+            </span>
           </a>
           <a
             href="tel:+12029334300"
             className="flex items-start gap-3 py-3 text-sm font-bold"
           >
-            <FaMapMarkerAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
-            <span>Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016<br />202-933-4300</span>
+            <FaMapMarkerAlt
+              aria-hidden="true"
+              className="mt-1 shrink-0 text-blue-300"
+            />
+            <span>
+              Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016
+              <br />
+              202-933-4300
+            </span>
           </a>
         </div>
 
         <div className="hidden h-16 items-center overflow-hidden lg:flex">
           <div className="mx-auto flex h-full items-center gap-5 px-4 text-xs md:gap-8 md:px-16">
-          <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
-            Visit or call us
-          </span>
-          <a
-            href="tel:+14432956600"
-            className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
-          >
-            <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
-            443-295-6600
-          </a>
-          <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
-            <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
-            <span>
-              <strong className="text-white">MD:</strong> 5457 Twin Knolls Rd,
-              Suite 300, Columbia
+            <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
+              Visit or call us
             </span>
-          </span>
-          <a
-            href="tel:+15713498285"
-            className="font-semibold text-blue-100 transition hover:text-white"
-          >
-            VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
-          </a>
-          <a
-            href="tel:+12029334300"
-            className="font-semibold text-blue-100 transition hover:text-white"
-          >
-            DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
-          </a>
+            <a
+              href="tel:+14432956600"
+              className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
+            >
+              <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
+              443-295-6600
+            </a>
+            <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
+              <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
+              <span>
+                <strong className="text-white">MD:</strong> 5457 Twin Knolls Rd,
+                Suite 300, Columbia
+              </span>
+            </span>
+            <a
+              href="tel:+15713498285"
+              className="font-semibold text-blue-100 transition hover:text-white"
+            >
+              VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
+            </a>
+            <a
+              href="tel:+12029334300"
+              className="font-semibold text-blue-100 transition hover:text-white"
+            >
+              DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
+            </a>
           </div>
         </div>
       </div>

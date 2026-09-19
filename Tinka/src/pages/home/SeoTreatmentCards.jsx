@@ -15,9 +15,7 @@ const SeoTreatmentCards = () => {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#005ab0]">
-            Find care by need
-          </p>
+         
           <h2
             id="seo-treatment-cards-heading"
             className="text-4xl font-extrabold leading-tight text-[#06192f] md:text-6xl"
@@ -43,9 +41,7 @@ const SeoTreatmentCards = () => {
                   />
                 </div>
                 <div className="p-5">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#005ab0]">
-                    {page.cardKeyword}
-                  </p>
+                  
                   <h3 className="mt-3 text-xl font-bold leading-tight text-[#06192f]">
                     {page.cardTitle}
                   </h3>

@@ -9,7 +9,7 @@ export const seoTreatmentPages = [
     image: imagePath("adhd-virginia.webp"),
     imageAlt:
       "Adult organizing notes during an online ADHD medication management appointment in Virginia",
-    cardTitle: "ADHD Treatment & Medication Management in Virginia",
+    cardTitle: "ADHD Treatment & Medication Management",
     cardKeyword: "ADHD medication management Virginia",
     cardDescription:
       "Evaluation, medication review, and follow-up care for adults with focus, organization, and impulsivity concerns.",
@@ -114,7 +114,7 @@ export const seoTreatmentPages = [
     image: imagePath("anxiety-md.webp"),
     imageAlt:
       "Maryland patient preparing for an online anxiety psychiatry appointment at home",
-    cardTitle: "Anxiety Psychiatrist in MD",
+    cardTitle: "Anxiety Psychiatrist",
     cardKeyword: "anxiety psychiatrist Maryland",
     cardDescription:
       "Psychiatric provider care for worry, panic, racing thoughts, sleep disruption, and anxiety medication questions.",
@@ -217,7 +217,7 @@ export const seoTreatmentPages = [
     image: imagePath("depression-dc.webp"),
     imageAlt:
       "Washington DC patient attending a depression medication management telehealth appointment",
-    cardTitle: "Depression Medication Management in DC",
+    cardTitle: "Depression Medication Management",
     cardKeyword: "depression medication management DC",
     cardDescription:
       "Evaluation and follow-up care for low mood, motivation changes, sleep shifts, and antidepressant questions.",
@@ -321,7 +321,7 @@ export const seoTreatmentPages = [
     image: imagePath("online-psychiatrist-virginia.webp"),
     imageAlt:
       "Virginia patient speaking with an online psychiatric provider by secure telehealth",
-    cardTitle: "Online Psychiatrist in Virginia",
+    cardTitle: "Online Psychiatrist",
     cardKeyword: "online psychiatrist Virginia",
     cardDescription:
       "Telepsychiatry for psychiatric evaluation, medication management, and follow-up care from a private location.",
@@ -425,7 +425,7 @@ export const seoTreatmentPages = [
     image: imagePath("psychiatric-evaluation-md.webp"),
     imageAlt:
       "Maryland patient meeting with a psychiatric provider for an evaluation",
-    cardTitle: "Psychiatric Evaluation in MD",
+    cardTitle: "Psychiatric Evaluation ",
     cardKeyword: "psychiatric evaluation Maryland",
     cardDescription:
       "A structured first step for Maryland patients who need clarity about symptoms, diagnosis, and treatment options.",
@@ -529,7 +529,7 @@ export const seoTreatmentPages = [
     image: imagePath("medication-management-dc.webp"),
     imageAlt:
       "Washington DC patient and psychiatric provider reviewing a medication management care plan",
-    cardTitle: "Medication Management Psychiatrist in DC",
+    cardTitle: "Medication Management Psychiatrist ",
     cardKeyword: "medication management psychiatrist DC",
     cardDescription:
       "Medication review, adjustments, side-effect monitoring, and follow-up support for Washington DC patients.",
