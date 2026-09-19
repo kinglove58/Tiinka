@@ -192,7 +192,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <BlogProvider>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={null}>
       <RouterProvider router={router} />
     </Suspense>
   </BlogProvider>,

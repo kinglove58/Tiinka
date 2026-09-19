@@ -163,34 +163,6 @@ function ContactUs() {
           </p>
         </div>
 
-        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mt-6 mb-6">
-          <p className="text-gray-700 text-sm md:text-base">
-            Reach out to schedule telehealth psychiatry appointments and
-            medication management services. We accept many insurance plans,
-            including Medicaid and Medicare, and are accepting new patients.
-          </p>
-          <div className="flex flex-wrap gap-3 mt-3">
-            <a
-              href="tel:+14432956600"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
-            >
-              Call 443-295-6600
-            </a>
-            <Link
-              to="/insurance-we-accept"
-              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-            >
-              Insurance We Accept
-            </Link>
-            <Link
-              to="/telehealth-psychiatry-md-dc-va"
-              className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-            >
-              Telehealth Psychiatry
-            </Link>
-          </div>
-        </div>
-
         {/* ✅ Contact Form with Formspree */}
         <form
           onSubmit={handleSubmit}

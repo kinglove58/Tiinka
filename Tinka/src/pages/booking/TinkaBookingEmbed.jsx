@@ -29,9 +29,7 @@ const TinkaBookingEmbed = () => {
     <div className="min-h-screen bg-white">
       <BookingStructuredData />
       <Helmet>
-        <title>
-          Book Psychiatry Appointment | Tinka Health Services
-        </title>
+        <title>Book Psychiatry Appointment | Tinka Health Services</title>
         <meta
           name="description"
           content="Book psychiatric evaluation, medication management, and telehealth care with Tinka Health Services in MD, DC, and VA."
@@ -82,44 +80,6 @@ const TinkaBookingEmbed = () => {
             Accepting Medicaid, Medicare, and major insurance plans. Accepting
             new patients with same week appointments available when possible.
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            <Link
-              to="/insurance-we-accept"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              Insurance We Accept
-            </Link>
-            <Link
-              to="/telehealth-psychiatry-md-dc-va"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              Telehealth Psychiatry
-            </Link>
-            <Link
-              to="/services"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              Explore Services
-            </Link>
-            <Link
-              to="/maryland-psychiatrist"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              Maryland Psychiatry
-            </Link>
-            <Link
-              to="/dc-psychiatrist"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              DC Psychiatry
-            </Link>
-            <Link
-              to="/virginia-psychiatrist"
-              className="bg-white border border-gray-300 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold"
-            >
-              Virginia Psychiatry
-            </Link>
-          </div>
         </div>
 
         <div className="w-full h-screen relative">
@@ -158,7 +118,6 @@ const TinkaBookingEmbed = () => {
           <Testimonial />
         </Suspense>
       </div>
-
     </div>
   );
 };
