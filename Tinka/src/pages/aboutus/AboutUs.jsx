@@ -286,39 +286,6 @@ const AboutUs = () => {
                 Book An Appointment
               </button>
             </div>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link
-                to="/insurance-we-accept"
-                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-              >
-                Insurance We Accept
-              </Link>
-              <Link
-                to="/telehealth-psychiatry-md-dc-va"
-                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-              >
-                Telehealth Psychiatry
-              </Link>
-              <Link
-                to="/maryland-psychiatrist"
-                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-              >
-                Maryland Psychiatry
-              </Link>
-              <Link
-                to="/dc-psychiatrist"
-                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-              >
-                DC Psychiatry
-              </Link>
-              <Link
-                to="/virginia-psychiatrist"
-                className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold"
-              >
-                Virginia Psychiatry
-              </Link>
-            </div>
           </ScrollAnimationWrapper>
         </section>
 
