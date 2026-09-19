@@ -1,6 +1,12 @@
 import React, { memo, useCallback, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleUp, FaArrowRight } from "react-icons/fa";
+import {
+  FaAngleDown,
+  FaAngleUp,
+  FaArrowRight,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
@@ -74,145 +80,186 @@ const NavItem = () => {
   }, []);
 
   return (
-    <header className="fixed right-0 top-0 z-50 h-20 w-full bg-[#f1f2f6] px-4 text-gray-800 hover:bg-white md:px-16">
-      <div className="flex h-full items-center justify-between">
-        <Link to="/" onClick={closeMenus}>
-          <img
-            width={32}
-            height={40}
-            src={TinkaLogo}
-            alt="Tinka Health Services Logo"
-            className="h-10 w-auto"
-          />
-        </Link>
-
-        <button
-          type="button"
-          className="cursor-pointer lg:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-          aria-expanded={showMenu}
-          aria-controls="primary-navigation"
-        >
-          {showMenu ? <RiCloseFill size={25} /> : <GiHamburgerMenu size={25} />}
-        </button>
-
-        <nav
-          id="primary-navigation"
-          className={`${
-            showMenu
-              ? "absolute left-0 top-20 flex min-h-[50vh] w-full bg-white px-6 py-6 shadow-md"
-              : "hidden"
-          } h-full lg:flex lg:flex-row`}
-        >
-          <ul
-            className={`${
-              showMenu ? "w-full flex-col overflow-auto" : ""
-            } flex h-full items-center gap-5`}
+    <header className="fixed right-0 top-0 z-50 w-full text-gray-800">
+      <div className="h-12 overflow-x-auto bg-[#06192f] text-white [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:h-16">
+        <div className="mx-auto flex h-full min-w-max items-center gap-5 px-4 text-xs md:justify-center md:gap-8 md:px-16">
+          <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
+            Visit or call us
+          </span>
+          <a
+            href="tel:+14432956600"
+            className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
           >
-            <NavItemLink to="/about" onClick={closeMenus}>
-              About Us
-            </NavItemLink>
+            <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
+            443-295-6600
+          </a>
+          <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
+            <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
+            <span>
+              <strong className="text-white">MD:</strong> 5457 Twin Knolls Rd,
+              Suite 300, Columbia
+            </span>
+          </span>
+          <a
+            href="tel:+15713498285"
+            className="font-semibold text-blue-100 transition hover:text-white"
+          >
+            VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
+          </a>
+          <a
+            href="tel:+12029334300"
+            className="font-semibold text-blue-100 transition hover:text-white"
+          >
+            DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
+          </a>
+        </div>
+      </div>
 
-            <li
-              className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
-              onMouseEnter={handleServiceMouseEnter}
-              onMouseLeave={handleServiceMouseLeave}
-              onClick={handleServiceClick}
-            >
-              <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
-                Services {isServicesOpen ? <FaAngleUp /> : <FaAngleDown />}
-              </p>
-              {isServicesOpen && (
-                <MegaMenu>
-                  {servicesToShow.map((service) => (
-                    <MegaMenuLink
-                      key={service.id}
-                      to={service.path || `/services/${service.id}`}
-                      title={service.name}
-                      onClick={closeMenus}
-                    >
-                      {shortenName(service.name)}
-                    </MegaMenuLink>
-                  ))}
-                  <MegaMenuFooter>
-                    <Link
-                      to="/services"
-                      className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
-                      onClick={closeMenus}
-                    >
-                      View All Services →
-                    </Link>
-                    <BookingLink
-                      onClick={closeMenus}
-                      className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition duration-300 hover:bg-blue-700"
-                    >
-                      <FaArrowRight className="text-sm" />
-                      Book Appointment
-                    </BookingLink>
-                  </MegaMenuFooter>
-                </MegaMenu>
-              )}
-            </li>
+      <div className="h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-16">
+        <div className="flex h-full items-center justify-between">
+          <Link to="/" onClick={closeMenus}>
+            <img
+              width={32}
+              height={40}
+              src={TinkaLogo}
+              alt="Tinka Health Services Logo"
+              className="h-10 w-auto"
+            />
+          </Link>
 
-            <li
-              className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
-              onMouseEnter={handleConditionMouseEnter}
-              onMouseLeave={handleConditionMouseLeave}
-              onClick={handleConditionClick}
-            >
-              <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
-                Conditions {isConditionsOpen ? <FaAngleUp /> : <FaAngleDown />}
-              </p>
-              {isConditionsOpen && (
-                <MegaMenu>
-                  {conditionTopics.map((condition) => (
-                    <MegaMenuLink
-                      key={condition.slug}
-                      to={getConditionHubPath(condition)}
-                      title={condition.title}
-                      onClick={closeMenus}
-                    >
-                      {shortenName(condition.title)}
-                    </MegaMenuLink>
-                  ))}
-                  <MegaMenuFooter>
-                    <Link
-                      to="/conditions"
-                      className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
-                      onClick={closeMenus}
-                    >
-                      View All Conditions →
-                    </Link>
-                    <BookingLink
-                      onClick={closeMenus}
-                      className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition duration-300 hover:bg-blue-700"
-                    >
-                      <FaArrowRight className="text-sm" />
-                      Book Appointment
-                    </BookingLink>
-                  </MegaMenuFooter>
-                </MegaMenu>
-              )}
-            </li>
+          <button
+            type="button"
+            className="cursor-pointer lg:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={showMenu}
+            aria-controls="primary-navigation"
+          >
+            {showMenu ? (
+              <RiCloseFill size={25} />
+            ) : (
+              <GiHamburgerMenu size={25} />
+            )}
+          </button>
 
-            <NavItemLink to="/blogs" onClick={closeMenus}>
-              Blogs
-            </NavItemLink>
-            <NavItemLink to="/referral" onClick={closeMenus}>
-              Refer Patient
-            </NavItemLink>
-            <a
-              href="https://portal.kareo.com/pp-webapp/app/new/login"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenus}
-              className="whitespace-nowrap font-semibold hover:text-blue-800"
+          <nav
+            id="primary-navigation"
+            className={`${
+              showMenu
+                ? "absolute left-0 top-32 flex min-h-[50vh] w-full bg-white px-6 py-6 shadow-md"
+                : "hidden"
+            } h-full lg:flex lg:flex-row`}
+          >
+            <ul
+              className={`${
+                showMenu ? "w-full flex-col overflow-auto" : ""
+              } flex h-full items-center gap-5`}
             >
-              Patient Portal
-            </a>
-          </ul>
-        </nav>
+              <NavItemLink to="/about" onClick={closeMenus}>
+                About Us
+              </NavItemLink>
+
+              <li
+                className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
+                onMouseEnter={handleServiceMouseEnter}
+                onMouseLeave={handleServiceMouseLeave}
+                onClick={handleServiceClick}
+              >
+                <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
+                  Services {isServicesOpen ? <FaAngleUp /> : <FaAngleDown />}
+                </p>
+                {isServicesOpen && (
+                  <MegaMenu>
+                    {servicesToShow.map((service) => (
+                      <MegaMenuLink
+                        key={service.id}
+                        to={service.path || `/services/${service.id}`}
+                        title={service.name}
+                        onClick={closeMenus}
+                      >
+                        {shortenName(service.name)}
+                      </MegaMenuLink>
+                    ))}
+                    <MegaMenuFooter>
+                      <Link
+                        to="/services"
+                        className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
+                        onClick={closeMenus}
+                      >
+                        View All Services →
+                      </Link>
+                      <BookingLink
+                        onClick={closeMenus}
+                        className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition duration-300 hover:bg-blue-700"
+                      >
+                        <FaArrowRight className="text-sm" />
+                        Book Appointment
+                      </BookingLink>
+                    </MegaMenuFooter>
+                  </MegaMenu>
+                )}
+              </li>
+
+              <li
+                className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
+                onMouseEnter={handleConditionMouseEnter}
+                onMouseLeave={handleConditionMouseLeave}
+                onClick={handleConditionClick}
+              >
+                <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
+                  Conditions{" "}
+                  {isConditionsOpen ? <FaAngleUp /> : <FaAngleDown />}
+                </p>
+                {isConditionsOpen && (
+                  <MegaMenu>
+                    {conditionTopics.map((condition) => (
+                      <MegaMenuLink
+                        key={condition.slug}
+                        to={getConditionHubPath(condition)}
+                        title={condition.title}
+                        onClick={closeMenus}
+                      >
+                        {shortenName(condition.title)}
+                      </MegaMenuLink>
+                    ))}
+                    <MegaMenuFooter>
+                      <Link
+                        to="/conditions"
+                        className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
+                        onClick={closeMenus}
+                      >
+                        View All Conditions →
+                      </Link>
+                      <BookingLink
+                        onClick={closeMenus}
+                        className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition duration-300 hover:bg-blue-700"
+                      >
+                        <FaArrowRight className="text-sm" />
+                        Book Appointment
+                      </BookingLink>
+                    </MegaMenuFooter>
+                  </MegaMenu>
+                )}
+              </li>
+
+              <NavItemLink to="/blogs" onClick={closeMenus}>
+                Blogs
+              </NavItemLink>
+              <NavItemLink to="/referral" onClick={closeMenus}>
+                Refer Patient
+              </NavItemLink>
+              <a
+                href="https://portal.kareo.com/pp-webapp/app/new/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenus}
+                className="whitespace-nowrap font-semibold hover:text-blue-800"
+              >
+                Patient Portal
+              </a>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );

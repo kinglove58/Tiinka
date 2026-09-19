@@ -46,10 +46,10 @@ const Hero = () => {
               Book an Appointment
             </BookingLink>
             <Link
-              to="/insurance-we-accept"
+              to="/contact"
               className="inline-flex items-center justify-center rounded-full border border-[#9fc8ee] bg-white/75 px-7 py-4 text-base font-bold text-[#005ab0] shadow-sm backdrop-blur transition hover:border-[#005ab0] hover:bg-white"
             >
-              Check Insurance We Accept
+              Contact Us
             </Link>
           </div>
 

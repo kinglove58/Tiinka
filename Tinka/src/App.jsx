@@ -37,7 +37,9 @@ const removeDuplicateManagedHeadTags = () => {
     if (tags.length <= 1) return;
 
     const preferredTag =
-      [...tags].reverse().find((tag) => tag.hasAttribute("data-react-helmet")) ||
+      [...tags]
+        .reverse()
+        .find((tag) => tag.hasAttribute("data-react-helmet")) ||
       tags[tags.length - 1];
 
     tags.forEach((tag) => {
@@ -86,7 +88,7 @@ function App() {
       <div className="flex flex-col min-h-screen bg-gray-200">
         <ScrollToTop />
         <NavItem />
-        <div className="flex-grow">
+        <div className="flex-grow pt-12 lg:pt-16">
           <Outlet />
         </div>
         <Footer />
