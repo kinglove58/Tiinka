@@ -56,19 +56,9 @@ const Specialization = () => {
       </div>
       <div className="text-center mt-8 pb-16">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link to="/contact">
-            <button className="bg-white-600 text-blue-700 font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white">
-              Contact Us
-            </button>
-          </Link>
           <Link to="/services">
             <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-0">
               View more
-            </button>
-          </Link>
-          <Link to="/booking">
-            <button className="bg-white-600 text-blue-700 font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white">
-              Book Appointment
             </button>
           </Link>
         </div>
