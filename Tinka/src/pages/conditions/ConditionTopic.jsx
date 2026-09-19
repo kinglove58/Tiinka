@@ -12,6 +12,7 @@ import CanonicalLink from "../../components/CanonicalLink";
 import PortableText from "./portableText";
 import { getPortableTextHeadings } from "./portableTextUtils";
 import {
+  createConditionSlug,
   getConditionHubPath,
   getConditionTopic,
   getConditionTopicPath,
@@ -31,7 +32,39 @@ const getAbsoluteImage = (image) => {
 
 const ConditionTopic = () => {
   const { slug, topicSlug } = useParams();
-  const result = getConditionTopic(slug, topicSlug);
+  const baseResult = getConditionTopic(slug, topicSlug);
+  const [fetchedResult, setFetchedResult] = useState(null);
+
+  useEffect(() => {
+    if (baseResult && baseResult.topic && !baseResult.topic.body) {
+      const baseCondition = baseResult.condition;
+      const jsonSlug = baseCondition.sanitySlug || baseCondition.slug;
+      if (jsonSlug && baseCondition._id) {
+        fetch(`/data/conditions/${jsonSlug}.json`)
+          .then(res => res.json())
+          .then(data => {
+            const fullCondition = { ...baseCondition, ...data };
+            const normalizedTopicSlug = createConditionSlug(topicSlug);
+            let fullSection = null;
+            let fullTopic = null;
+            for (const s of fullCondition.sections) {
+              const t = s.topics?.find(t => createConditionSlug(t.slug) === normalizedTopicSlug);
+              if (t) {
+                fullSection = s;
+                fullTopic = t;
+                break;
+              }
+            }
+            if (fullTopic) {
+              setFetchedResult({ condition: fullCondition, section: fullSection, topic: fullTopic });
+            }
+          })
+          .catch(err => console.error("Failed to load full topic data", err));
+      }
+    }
+  }, [baseResult, topicSlug]);
+
+  const result = fetchedResult || baseResult;
 
   if (!result) {
     return (

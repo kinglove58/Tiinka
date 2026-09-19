@@ -63,14 +63,6 @@ export const BlogProvider = ({ children }) => {
     fetchPolicy();
   }, []);
   
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <PuffLoader color="#FF4500" size={80} />
-      </div>
-    );
-  }
-
   const value = {
     blogs,
     filteredBlogs,

@@ -1,5 +1,5 @@
 import servicesDataList from "../services/serviceData.js";
-import { sanityConditions } from "../../generated/sanityConditions.js";
+import { sanityConditionsList as sanityConditions } from "../../generated/sanityConditionsList.js";
 import { getConditionImage } from "./conditionImageData.js";
 
 const preferredPathSlugs = {
@@ -284,6 +284,7 @@ const buildServiceCondition = (service) => {
     service,
     slug: legacySlug,
     pathSlug,
+    sanitySlug: sanity?.slug,
     aliases: [
       legacySlug,
       pathSlug,

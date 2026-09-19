@@ -10,7 +10,6 @@ import {
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
-import Teletherapy from "/images/img_mental_health/hero/teletherapy.webp";
 import BookingLink from "./BookingLink";
 import serviceData from "../pages/services/serviceData";
 import {
@@ -32,6 +31,7 @@ const shortenName = (name) => shortNames[name] || name;
 const NavItem = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isConditionsOpen, setIsConditionsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const servicesToShow = useMemo(() => serviceData, []);
@@ -40,6 +40,7 @@ const NavItem = () => {
   const closeMenus = useCallback(() => {
     setIsServicesOpen(false);
     setIsConditionsOpen(false);
+    setIsContactOpen(false);
     if (window.innerWidth < 1024) {
       setShowMenu(false);
     }
@@ -81,8 +82,50 @@ const NavItem = () => {
 
   return (
     <header className="fixed right-0 top-0 z-50 w-full text-gray-800">
-      <div className="h-12 overflow-x-auto bg-[#06192f] text-white [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:h-16">
-        <div className="mx-auto flex h-full min-w-max items-center gap-5 px-4 text-xs md:justify-center md:gap-8 md:px-16">
+      <div className="relative bg-[#06192f] text-white">
+        <button
+          type="button"
+          className="flex h-12 w-full items-center justify-between px-4 text-left lg:hidden"
+          onClick={() => setIsContactOpen((value) => !value)}
+          aria-expanded={isContactOpen}
+          aria-controls="contact-details"
+        >
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-blue-200">
+            <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
+            Contact &amp; Locations
+          </span>
+          {isContactOpen ? <FaAngleUp /> : <FaAngleDown />}
+        </button>
+
+        <div
+          id="contact-details"
+          className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-900 bg-[#06192f] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
+        >
+          <a
+            href="tel:+14432956600"
+            className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
+          >
+            <FaPhoneAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
+            <span>Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045<br />443-295-6600</span>
+          </a>
+          <a
+            href="tel:+15713498285"
+            className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
+          >
+            <FaMapMarkerAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
+            <span>Virginia: 585 Grove St, Suite 145, Herndon, VA 20170<br />571-349-8285</span>
+          </a>
+          <a
+            href="tel:+12029334300"
+            className="flex items-start gap-3 py-3 text-sm font-bold"
+          >
+            <FaMapMarkerAlt aria-hidden="true" className="mt-1 shrink-0 text-blue-300" />
+            <span>Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016<br />202-933-4300</span>
+          </a>
+        </div>
+
+        <div className="hidden h-16 items-center overflow-hidden lg:flex">
+          <div className="mx-auto flex h-full items-center gap-5 px-4 text-xs md:gap-8 md:px-16">
           <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
             Visit or call us
           </span>
@@ -112,6 +155,7 @@ const NavItem = () => {
           >
             DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
           </a>
+          </div>
         </div>
       </div>
 
@@ -270,7 +314,7 @@ const MegaMenu = ({ children }) => (
     <div
       className="relative grid grid-cols-1 gap-1 overflow-hidden rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
       style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url(${Teletherapy})`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url('/images/img_mental_health/hero/teletherapy.webp')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

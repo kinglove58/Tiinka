@@ -48,31 +48,37 @@
     />
 
     <script id="mcjs">
-      !(function (c, h, i, m, p) {
-        (m = c.createElement(h)),
-          (p = c.getElementsByTagName(h)[0]),
-          (m.async = 1),
-          (m.src = i),
-          p.parentNode.insertBefore(m, p);
-      })(
-        document,
-        "script",
-        "https://chimpstatic.com/mcjs-connected/js/users/13f2c00dad29fda527de48ed9/88d16d2fd5ee458567a5d879f.js"
-      );
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          !(function (c, h, i, m, p) {
+            (m = c.createElement(h)),
+              (p = c.getElementsByTagName(h)[0]),
+              (m.async = 1),
+              (m.src = i),
+              p.parentNode.insertBefore(m, p);
+          })(
+            document,
+            "script",
+            "https://chimpstatic.com/mcjs-connected/js/users/13f2c00dad29fda527de48ed9/88d16d2fd5ee458567a5d879f.js"
+          );
+        }, 2000);
+      });
     </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/67321dab2480f5b4f59bb5a6/1icds7pcj";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/67321dab2480f5b4f59bb5a6/1icds7pcj";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          s0.parentNode.insertBefore(s1, s0);
+        }, 2500);
+      });
     </script>
     <!--End of Tawk.to Script-->
 

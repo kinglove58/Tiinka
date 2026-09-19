@@ -32,7 +32,22 @@ const getAbsoluteImage = (image) => {
 
 const ConditionDetail = () => {
   const { slug } = useParams();
-  const condition = getConditionHub(slug);
+  const baseCondition = getConditionHub(slug);
+  const [fetchedCondition, setFetchedCondition] = useState(null);
+
+  useEffect(() => {
+    if (baseCondition && !baseCondition.body) {
+      const jsonSlug = baseCondition.sanitySlug || baseCondition.slug;
+      if (jsonSlug && baseCondition._id) {
+        fetch(`/data/conditions/${jsonSlug}.json`)
+          .then(res => res.json())
+          .then(data => setFetchedCondition(data))
+          .catch(err => console.error("Failed to load full condition data", err));
+      }
+    }
+  }, [baseCondition]);
+
+  const condition = fetchedCondition ? { ...baseCondition, ...fetchedCondition } : baseCondition;
 
   if (!condition) {
     return (

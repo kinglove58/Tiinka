@@ -211,6 +211,35 @@ const buildGroupedConditions = ({ conditions = [], sections = [], articles = [] 
 
 const writeConditions = (conditions, sections = [], articles = []) => {
   fs.mkdirSync(GENERATED_DIR, { recursive: true });
+  const PUBLIC_DATA_DIR = path.join(__dirname, "public", "data", "conditions");
+  fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
+
+  const stripBody = (obj) => {
+    if (Array.isArray(obj)) return obj.map(stripBody);
+    if (obj !== null && typeof obj === 'object') {
+      const newObj = {};
+      for (const key in obj) {
+        if (key === 'body') continue;
+        newObj[key] = stripBody(obj[key]);
+      }
+      return newObj;
+    }
+    return obj;
+  };
+
+  const conditionsList = stripBody(conditions);
+  const serializedConditionsList = JSON.stringify(conditionsList).replace(/</g, "\\u003c");
+
+  // Write individual JSON files for each full condition
+  conditions.forEach(condition => {
+    const slug = createSlug(condition.slug || condition.title);
+    fs.writeFileSync(
+      path.join(PUBLIC_DATA_DIR, `${slug}.json`),
+      JSON.stringify(condition).replace(/</g, "\\u003c"),
+      "utf8"
+    );
+  });
+
   const serializedConditions = JSON.stringify(conditions).replace(
     /</g,
     "\\u003c",
@@ -222,6 +251,12 @@ const writeConditions = (conditions, sections = [], articles = []) => {
   const serializedArticles = JSON.stringify(articles).replace(
     /</g,
     "\\u003c",
+  );
+
+  fs.writeFileSync(
+    path.join(GENERATED_DIR, "sanityConditionsList.js"),
+    `export const sanityConditionsList = ${serializedConditionsList};\n`,
+    "utf8"
   );
 
   fs.writeFileSync(
