@@ -37,8 +37,8 @@ const Hero = () => {
 
           <p className="mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:text-lg">
             Easy, affordable mental health care across Maryland, Washington DC,
-            and Virginia accepting insurance
-            with convenient telehealth appointments.
+            and Virginia accepting insurance with convenient telehealth
+            appointments.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -62,7 +62,6 @@ const Hero = () => {
             decoding="async"
           />
         </div>
-
       </div>
     </section>
   );
