@@ -85,9 +85,7 @@ const Home = () => {
   return (
     <main className="md:pt-24 bg-[#f1f2f6]">
       <Helmet>
-        <title>
-          Psychiatric Provider MD, DC & VA | Tinka Health Services
-        </title>
+        <title>Psychiatric Provider MD, DC & VA | Tinka Health Services</title>
         <meta
           name="description"
           content="Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
@@ -161,34 +159,6 @@ const Home = () => {
                 <h2 className="text-2xl font-semibold leading-tight text-[#005ab0] md:text-3xl lg:text-4xl">
                   Psychiatric care and medication management in MD, DC and VA
                 </h2>
-                <div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <Link
-                      to="/maryland-psychiatrist"
-                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
-                    >
-                      Maryland Psychiatry
-                    </Link>
-                    <Link
-                      to="/dc-psychiatrist"
-                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
-                    >
-                      DC Psychiatry
-                    </Link>
-                    <Link
-                      to="/virginia-psychiatrist"
-                      className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition duration-300 hover:scale-105"
-                    >
-                      Virginia Psychiatry
-                    </Link>
-                    <Link
-                      to="/psychiatric-provider-herndon-va"
-                      className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-800 transition duration-300 hover:scale-105"
-                    >
-                      Herndon, VA
-                    </Link>
-                  </div>
-                </div>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -214,69 +184,6 @@ const Home = () => {
                   office access in Columbia, Washington DC, and Herndon,
                   Virginia.
                 </p>
-              </div>
-            </div>
-
-            <div className="border-y border-[#d7e8fb] bg-white/80 px-6 py-7 md:px-8 lg:px-10">
-              <div className="grid gap-4 md:grid-cols-3">
-                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border-2 border-dashed border-[#5aa1e5] bg-[#f2f8ff] text-3xl text-[#005ab0]">
-                    <FiActivity aria-hidden="true" />
-                  </div>
-                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
-                    Get care for your specific condition
-                  </h3>
-                  <p className="text-sm mb-4 text-gray-600">
-                    Personalized support for anxiety, depression, ADHD, bipolar
-                    disorder, PTSD, and more.
-                  </p>
-                  <Link
-                    to="/booking"
-                    className="inline-flex text-sm items-center gap-2 rounded-lg bg-blue-700 px-4 mt-3 py-2 font-semibold text-white transition duration-300 hover:scale-103 hover:bg-blue-800"
-                  >
-                    Book Appointment
-                    <FiArrowRight aria-hidden="true" />
-                  </Link>
-                </article>
-
-                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-[#8fb7e4] bg-[#eef5ff] text-3xl text-[#005ab0]">
-                    <FiClipboard aria-hidden="true" />
-                  </div>
-                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
-                    We have the right insurance for you
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    we have the best insurance plans for you, including
-                    Medicaid, Medicare and major insurance providers in
-                    Maryland, DC and Virginia.
-                  </p>
-                  <Link
-                    to="/insurance-we-accept"
-                    className="rounded-lg mt-8 text-sm bg-blue-600 px-3 py-2 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-blue-700"
-                  >
-                    Insurance We Accept
-                  </Link>
-                </article>
-
-                <article className="rounded-xl border border-[#cfe0f7] bg-white p-5 shadow-[0_8px_20px_rgba(0,90,176,0.08)]">
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-[#8fb7e4] bg-[#eef5ff] text-3xl text-[#005ab0]">
-                    <FiMapPin aria-hidden="true" />
-                  </div>
-                  <h3 className="mb-2 text-xl font-semibold text-[#1f2937]">
-                    Book in-person or telehealth visits
-                  </h3>
-                  <p className="text-sm mb-6 text-gray-600">
-                    Choose flexible appointments in Maryland, DC, and Virginia,
-                    including virtual care options.
-                  </p>
-                  <Link
-                    to="/telehealth-psychiatry-md-dc-va"
-                    className="rounded-lg text-sm border border-blue-600 bg-white px-4 py-2 font-semibold text-blue-700 transition duration-300 hover:bg-blue-50"
-                  >
-                    Telehealth Psychiatry
-                  </Link>
-                </article>
               </div>
             </div>
           </div>

@@ -103,19 +103,13 @@ const Locations = () => {
                   +1 443-295-6600
                 </a>
               </p>
-              <Link
-                to="/maryland-psychiatrist"
-                className="inline-block mt-2 text-blue-100 hover:text-white underline"
-              >
-                Maryland psychiatric services
-              </Link>
             </div>
           </div>
         </div>
 
         {/* Desktop Grid View */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 mx-auto py-2 text-center">
-          <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">
+        <div className="hidden md:grid md:grid-cols-3 gap-4 mx-auto py-1 text-center">
+          <div className="bg-blue-600 text-white py-4 rounded-lg space-y-1">
             <h3 className="text-lg font-semibold">Virginia (VA)</h3>
             <p>585 Grove St, Suite 145</p>
             <p>Herndon, VA 20170</p>
@@ -128,12 +122,6 @@ const Locations = () => {
                 +1 571-349-8285
               </a>
             </p>
-            <Link
-              to="/psychiatric-provider-herndon-va"
-              className="inline-block mt-2 text-blue-100 hover:text-white underline"
-            >
-              Herndon psychiatric services
-            </Link>
           </div>
           <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">
             <h3 className="text-lg font-semibold">Washington, DC</h3>
@@ -148,12 +136,6 @@ const Locations = () => {
                 +1 202-933-4300
               </a>
             </p>
-            <Link
-              to="/dc-psychiatrist"
-              className="inline-block mt-2 text-blue-100 hover:text-white underline"
-            >
-              Washington DC psychiatric services
-            </Link>
           </div>
           <div className="bg-blue-600 text-white py-6 rounded-lg space-y-1">
             <h3 className="text-lg font-semibold">Maryland (MD)</h3>
@@ -168,12 +150,6 @@ const Locations = () => {
                 +1 443-295-6600
               </a>
             </p>
-            <Link
-              to="/maryland-psychiatrist"
-              className="inline-block mt-2 text-blue-100 hover:text-white underline"
-            >
-              Maryland psychiatric services
-            </Link>
           </div>
         </div>
       </div>

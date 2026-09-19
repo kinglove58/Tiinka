@@ -65,44 +65,7 @@ const SeoTreatmentCards = () => {
           ))}
         </div>
 
-        <div className="mt-10 rounded-lg border border-[#cfe3f6] bg-white p-5 shadow-sm md:flex md:items-center md:justify-between md:gap-6 md:p-6">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#005ab0]">
-              Ready to schedule?
-            </p>
-            <h3 className="mt-2 text-2xl font-bold leading-tight text-[#06192f]">
-              Book through trusted provider profiles
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              Use Psychology Today to request an appointment or open our Google
-              Business profile for directions, reviews, and contact details.
-            </p>
-          </div>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-0 md:shrink-0">
-            <a
-              href={psychologyTodayUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#005ab0] px-6 py-4 text-base font-bold text-white shadow-[0_16px_35px_rgba(0,90,176,0.22)] transition hover:bg-[#00427f]"
-            >
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs font-black text-[#005ab0]">
-                PT
-              </span>
-              Book on Psychology Today
-              <FiExternalLink aria-hidden="true" className="h-4 w-4" />
-            </a>
-            <a
-              href={googleBusinessUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 rounded-full border border-[#9fc8ee] bg-white px-6 py-4 text-base font-bold text-[#005ab0] shadow-sm transition hover:border-[#005ab0] hover:bg-[#f4f9fd]"
-            >
-              <FiMapPin aria-hidden="true" className="h-5 w-5" />
-              Google Business Profile
-              <FiExternalLink aria-hidden="true" className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
