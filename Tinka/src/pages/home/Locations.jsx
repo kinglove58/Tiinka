@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import { FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-const Locations = () => {
+const Locations = ({ homepage = false }) => {
   const scrollContainerRef = useRef(null);
 
   const scrollLeft = () => {
@@ -18,6 +19,82 @@ const Locations = () => {
       behavior: "smooth",
     });
   };
+
+  if (homepage) {
+    const locations = [
+      {
+        title: "Virginia",
+        address: "585 Grove St, Suite 145",
+        city: "Herndon, VA 20170",
+        phone: "+1 571-349-8285",
+        tel: "+15713498285",
+        path: "/psychiatric-provider-herndon-va",
+      },
+      {
+        title: "Maryland",
+        address: "5457 Twin Knolls Road, Suite 300",
+        city: "Columbia, MD 21045",
+        phone: "+1 443-295-6600",
+        tel: "+14432956600",
+        path: "/maryland-psychiatrist",
+      },
+      {
+        title: "Washington, DC",
+        address: "4315 50th Street NW, Suite 100",
+        city: "Washington, DC 20016",
+        phone: "+1 202-933-4300",
+        tel: "+12029334300",
+        path: "/dc-psychiatrist",
+      },
+    ];
+    return (
+      <section
+        className="home-section bg-white"
+        aria-labelledby="home-locations-heading"
+      >
+        <div className="home-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 id="home-locations-heading" className="home-heading">
+              Care Near You
+            </h2>
+            <p className="home-copy mx-auto">
+              Access compassionate mental health care in Virginia, Maryland and
+              Washington, DC.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {locations.map((location) => (
+              <article
+                key={location.title}
+                className="relative rounded-lg border border-[#cfe3f6] bg-[#f4f8fc] p-5"
+              >
+                <h3 className="text-xl font-bold text-[#005ab0]">
+                  <Link
+                    to={location.path}
+                    className="after:absolute after:inset-0 after:rounded-lg hover:underline"
+                  >
+                    {location.title}
+                  </Link>
+                </h3>
+                <p className="mt-3 leading-7 text-slate-700">
+                  {location.address}
+                  <br />
+                  {location.city}
+                </p>
+                <a
+                  href={`tel:${location.tel}`}
+                  className="relative z-10 mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-[#005ab0]"
+                >
+                  <FaPhoneAlt aria-hidden="true" />
+                  {location.phone}
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-12">
@@ -156,5 +233,7 @@ const Locations = () => {
     </section>
   );
 };
+
+Locations.propTypes = { homepage: PropTypes.bool };
 
 export default Locations;

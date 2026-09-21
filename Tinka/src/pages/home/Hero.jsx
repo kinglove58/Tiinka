@@ -7,7 +7,7 @@ const heroImage =
 
 const Hero = () => {
   return (
-    <section className="relative isolate min-h-[calc(100vh-128px)] overflow-hidden bg-[#eef6fd]">
+    <section className="relative isolate overflow-hidden bg-[#eef6fd]">
       <img
         src={heroImage}
         alt=""
@@ -26,9 +26,9 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-128px)] max-w-7xl flex-col justify-center px-4 pb-10 pt-28 md:min-h-[calc(100vh-112px)] md:px-8 md:py-12 lg:px-12">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-8 md:min-h-[480px] md:px-8 md:py-12 lg:px-12">
         <div className="max-w-[760px]">
-          <h1 className="max-w-[720px] text-[44px] font-extrabold leading-[1.02] text-[#06192f] sm:text-[56px] md:text-[64px] lg:text-[64px] xl:text-[72px]">
+          <h1 className="max-w-[720px] text-[34px] font-extrabold leading-[1.02] text-[#06192f] sm:text-[44px] md:text-[48px] lg:text-[60px]">
             Life gets overwhelming.
             <span className="block text-[#005ab0]">
               Support should be simple.
@@ -36,9 +36,9 @@ const Hero = () => {
           </h1>
 
           <p className="mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:text-lg">
-            Easy, affordable mental health care across Maryland, Washington DC,
-            and Virginia accepting insurance with convenient telehealth
-            appointments.
+            Compassionate mental health care, psychiatric services and
+            medication management for adults across Virginia, Maryland and
+            Washington, DC.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -46,18 +46,21 @@ const Hero = () => {
               Book an Appointment
             </BookingLink>
             <Link
-              to="/contact"
+              to="/insurance-we-accept"
               className="inline-flex items-center justify-center rounded-full border border-[#9fc8ee] bg-white/75 px-7 py-4 text-base font-bold text-[#005ab0] shadow-sm backdrop-blur transition hover:border-[#005ab0] hover:bg-white"
             >
-              Contact Us
+              Check Insurance
             </Link>
           </div>
 
+          <p className="mt-4 text-sm font-medium text-slate-700">
+            Virtual and in-person care available.
+          </p>
           <img
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="mt-6 block h-auto w-full object-contain md:hidden"
+            className="mt-5 block h-32 w-full object-cover object-right sm:h-44 md:hidden"
             loading="eager"
             decoding="async"
           />

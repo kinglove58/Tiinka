@@ -1,54 +1,53 @@
-import { useState, memo } from "react";
-import BookingModal from "../../components/BookingModal"; // ✅ Import modal
+import { memo } from "react";
 import BookingLink from "../../components/BookingLink";
 
-const EasyStart = () => {
-  const [showModal, setShowModal] = useState(false); // ✅ Modal state
-
-  return (
-    <div className="bg-[#005ab0] text-white py-16 pb-4 px-6 font-sans mb-20">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8 font-serif">
-          Very Easy To get Started With Us
+const steps = [
+  {
+    title: "Book Your Appointment",
+    description:
+      "Choose a convenient appointment time and provide your basic information.",
+  },
+  {
+    title: "Meet Your Provider",
+    description:
+      "Talk through your symptoms, concerns, history and goals with your provider.",
+  },
+  {
+    title: "Begin Your Care Plan",
+    description:
+      "Receive a personalized treatment plan and ongoing support based on your needs.",
+  },
+];
+const EasyStart = () => (
+  <section
+    className="home-section bg-white"
+    aria-labelledby="home-start-heading"
+  >
+    <div className="home-container">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="home-eyebrow flex justify-center">Getting Started</p>
+        <h2 id="home-start-heading" className="home-heading">
+          Starting care can be simple
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center">
-            <div className="flex items-center justify-center w-14 h-14 bg-white text-blue-600 rounded-full text-2xl font-bold">
-              1
-            </div>
-            <h3 className="text-xl font-semibold mt-4 font-serif">
-              Filling the Appointment Form
-            </h3>
-            <p className="text-center mt-2">
-              Answer a few questions to get started and book a convenient time
-              with us. Be confident when sharing your thoughts and worries.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="flex items-center justify-center w-14 h-14 bg-white text-blue-600 rounded-full text-2xl font-bold">
-              2
-            </div>
-            <h3 className="text-xl font-semibold mt-4 font-serif">
-              We reach out to you!
-            </h3>
-            <p className="text-center mt-2">
-              Based on your information, we'll reach out to discuss the best
-              approach for your needs, with a choice of budget plans to fit your
-              lifestyle.
-            </p>
-          </div>
-        </div>
-
-        {/* ✅ Button to open modal */}
-        <BookingLink> Let's do it</BookingLink>
-
-        {/* ✅ Modal component */}
-        <BookingModal show={showModal} onClose={() => setShowModal(false)} />
       </div>
+      <ol className="mt-8 grid gap-8 md:grid-cols-3">
+        {steps.map(({ title, description }, index) => (
+          <li key={title}>
+            <span
+              className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#eaf5ff] text-xl font-bold text-[#005ab0]"
+              aria-hidden="true"
+            >
+              {index + 1}
+            </span>
+            <h3 className="text-xl font-bold text-[#06192f]">{title}</h3>
+            <p className="mt-3 leading-7 text-slate-700">{description}</p>
+          </li>
+        ))}
+      </ol>
+      <BookingLink className="home-button mt-8 w-full bg-[#005ab0] text-white sm:w-auto">
+        Book an Appointment
+      </BookingLink>
     </div>
-  );
-};
-
+  </section>
+);
 export default memo(EasyStart);

@@ -1,5 +1,6 @@
-import React, { memo, useCallback, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { memo, useCallback, useMemo, useState } from "react";
+import PropTypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
 import {
   FaAngleDown,
   FaAngleUp,
@@ -12,6 +13,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import BookingLink from "./BookingLink";
 import serviceData from "../pages/services/serviceData";
+import GoogleReviewBadge from "./GoogleReviewBadge";
 import {
   getConditionHubPath,
   getConditionHubs,
@@ -29,6 +31,7 @@ const shortNames = {
 const shortenName = (name) => shortNames[name] || name;
 
 const NavItem = () => {
+  const isHome = useLocation().pathname === "/";
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isConditionsOpen, setIsConditionsOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -55,10 +58,8 @@ const NavItem = () => {
   }, []);
 
   const handleServiceClick = useCallback(() => {
-    if (window.innerWidth < 1024) {
-      setIsServicesOpen((value) => !value);
-      setIsConditionsOpen(false);
-    }
+    setIsServicesOpen((value) => !value);
+    setIsConditionsOpen(false);
   }, []);
 
   const handleConditionMouseEnter = useCallback(() => {
@@ -70,10 +71,8 @@ const NavItem = () => {
   }, []);
 
   const handleConditionClick = useCallback(() => {
-    if (window.innerWidth < 1024) {
-      setIsConditionsOpen((value) => !value);
-      setIsServicesOpen(false);
-    }
+    setIsConditionsOpen((value) => !value);
+    setIsServicesOpen(false);
   }, []);
 
   const toggleMenu = useCallback(() => {
@@ -81,106 +80,144 @@ const NavItem = () => {
   }, []);
 
   return (
-    <header className="fixed right-0 top-0 z-50 w-full text-gray-800">
-      <div className="relative bg-[#005ab0] text-white">
-        <button
-          type="button"
-          className="flex h-12 w-full items-center justify-between px-4 text-left lg:hidden"
-          onClick={() => setIsContactOpen((value) => !value)}
-          aria-expanded={isContactOpen}
-          aria-controls="contact-details"
-        >
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-blue-200">
-            <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
-            Contact &amp; Locations
-          </span>
-          {isContactOpen ? <FaAngleUp /> : <FaAngleDown />}
-        </button>
-
-        <div
-          id="contact-details"
-          className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-700 bg-[#005ab0] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
-        >
-          <a
-            href="tel:+14432956600"
-            className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
-          >
-            <FaPhoneAlt
-              aria-hidden="true"
-              className="mt-1 shrink-0 text-blue-300"
-            />
-            <span>
-              Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045
-              <br />
-              443-295-6600
+    <header
+      className="fixed right-0 top-0 z-50 w-full text-gray-800"
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          closeMenus();
+          setShowMenu(false);
+        }
+      }}
+    >
+      {isHome ? (
+        <div className="bg-[#005ab0] text-white">
+          <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-2 px-3 text-xs sm:px-4 sm:text-sm lg:h-16 relative">
+            <span className="max-w-[130px] font-semibold leading-4 sm:max-w-none z-10">
+              Now accepting new patients
             </span>
-          </a>
-          <a
-            href="tel:+15713498285"
-            className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
-          >
-            <FaMapMarkerAlt
-              aria-hidden="true"
-              className="mt-1 shrink-0 text-blue-300"
-            />
-            <span>
-              Virginia: 585 Grove St, Suite 145, Herndon, VA 20170
-              <br />
-              571-349-8285
-            </span>
-          </a>
-          <a
-            href="tel:+12029334300"
-            className="flex items-start gap-3 py-3 text-sm font-bold"
-          >
-            <FaMapMarkerAlt
-              aria-hidden="true"
-              className="mt-1 shrink-0 text-blue-300"
-            />
-            <span>
-              Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016
-              <br />
-              202-933-4300
-            </span>
-          </a>
+            
+            <div className="absolute inset-0 hidden lg:flex items-center justify-center pointer-events-none">
+              <div className="pointer-events-auto">
+                <GoogleReviewBadge theme="dark" className="!bg-transparent !border-none !shadow-none !px-0" />
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-5 z-10">
+              <a
+                href="tel:+14432956600"
+                className="hidden min-h-11 items-center gap-2 font-semibold md:inline-flex"
+              >
+                <FaPhoneAlt aria-hidden="true" />
+                Call Us: 443-295-6600
+              </a>
+              <BookingLink className="!rounded-md !bg-white !px-3 !py-3 text-center !text-[#005ab0] hover:!bg-blue-50">
+                <span className="sm:hidden">Book Appointment</span>
+                <span className="hidden sm:inline">Book an Appointment</span>
+              </BookingLink>
+            </div>
+          </div>
         </div>
-
-        <div className="hidden h-16 items-center overflow-hidden lg:flex">
-          <div className="mx-auto flex h-full items-center gap-5 px-4 text-xs md:gap-8 md:px-16">
-            <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
-              Visit or call us
+      ) : (
+        <div className="relative bg-[#005ab0] text-white">
+          <button
+            type="button"
+            className="flex h-12 w-full items-center justify-between px-4 text-left lg:hidden"
+            onClick={() => setIsContactOpen((value) => !value)}
+            aria-expanded={isContactOpen}
+            aria-controls="contact-details"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-blue-200">
+              <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
+              Contact &amp; Locations
             </span>
+            {isContactOpen ? <FaAngleUp /> : <FaAngleDown />}
+          </button>
+
+          <div
+            id="contact-details"
+            className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-700 bg-[#005ab0] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
+          >
             <a
               href="tel:+14432956600"
-              className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
+              className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
             >
-              <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
-              443-295-6600
-            </a>
-            <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
-              <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
+              <FaPhoneAlt
+                aria-hidden="true"
+                className="mt-1 shrink-0 text-blue-300"
+              />
               <span>
-                <strong className="text-white">MD:</strong> 5457 Twin Knolls Rd,
-                Suite 300, Columbia
+                Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045
+                <br />
+                443-295-6600
               </span>
-            </span>
+            </a>
             <a
               href="tel:+15713498285"
-              className="font-semibold text-blue-100 transition hover:text-white"
+              className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
             >
-              VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
+              <FaMapMarkerAlt
+                aria-hidden="true"
+                className="mt-1 shrink-0 text-blue-300"
+              />
+              <span>
+                Virginia: 585 Grove St, Suite 145, Herndon, VA 20170
+                <br />
+                571-349-8285
+              </span>
             </a>
             <a
               href="tel:+12029334300"
-              className="font-semibold text-blue-100 transition hover:text-white"
+              className="flex items-start gap-3 py-3 text-sm font-bold"
             >
-              DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
+              <FaMapMarkerAlt
+                aria-hidden="true"
+                className="mt-1 shrink-0 text-blue-300"
+              />
+              <span>
+                Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016
+                <br />
+                202-933-4300
+              </span>
             </a>
           </div>
-        </div>
-      </div>
 
-      <div className="h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-16">
+          <div className="hidden h-16 items-center overflow-hidden lg:flex">
+            <div className="mx-auto flex h-full items-center gap-5 px-4 text-xs md:gap-8 md:px-16">
+              <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
+                Visit or call us
+              </span>
+              <a
+                href="tel:+14432956600"
+                className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
+              >
+                <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
+                443-295-6600
+              </a>
+              <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
+                <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
+                <span>
+                  <strong className="text-white">MD:</strong> 5457 Twin Knolls
+                  Rd, Suite 300, Columbia
+                </span>
+              </span>
+              <a
+                href="tel:+15713498285"
+                className="font-semibold text-blue-100 transition hover:text-white"
+              >
+                VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
+              </a>
+              <a
+                href="tel:+12029334300"
+                className="font-semibold text-blue-100 transition hover:text-white"
+              >
+                DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="relative h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-8 xl:px-16">
         <div className="flex h-full items-center justify-between">
           <Link to="/" onClick={closeMenus}>
             <img
@@ -188,13 +225,13 @@ const NavItem = () => {
               height={40}
               src={TinkaLogo}
               alt="Tinka Health Services Logo"
-              className="h-10 w-auto"
+              className="h-auto max-h-10 w-auto max-w-[220px] sm:max-w-[280px]"
             />
           </Link>
 
           <button
             type="button"
-            className="cursor-pointer lg:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center lg:hidden"
             onClick={toggleMenu}
             aria-label="Toggle menu"
             aria-expanded={showMenu}
@@ -211,14 +248,14 @@ const NavItem = () => {
             id="primary-navigation"
             className={`${
               showMenu
-                ? "absolute left-0 top-32 flex min-h-[50vh] w-full bg-white px-6 py-6 shadow-md"
+                ? "absolute left-0 top-20 flex max-h-[calc(100dvh-128px)] w-full overflow-y-auto bg-white px-6 py-6 shadow-md"
                 : "hidden"
-            } h-full lg:flex lg:flex-row`}
+            } lg:h-full lg:flex lg:flex-row`}
           >
             <ul
               className={`${
-                showMenu ? "w-full flex-col overflow-auto" : ""
-              } flex h-full items-center gap-5`}
+                showMenu ? "w-full flex-col" : ""
+              } flex items-center gap-5 lg:h-full`}
             >
               <NavItemLink to="/about" onClick={closeMenus}>
                 About Us
@@ -228,11 +265,15 @@ const NavItem = () => {
                 className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
                 onMouseEnter={handleServiceMouseEnter}
                 onMouseLeave={handleServiceMouseLeave}
-                onClick={handleServiceClick}
               >
-                <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
+                <button
+                  type="button"
+                  onClick={handleServiceClick}
+                  aria-expanded={isServicesOpen}
+                  className="flex min-h-11 w-full items-center justify-between lg:h-20 lg:gap-1"
+                >
                   Services {isServicesOpen ? <FaAngleUp /> : <FaAngleDown />}
-                </p>
+                </button>
                 {isServicesOpen && (
                   <MegaMenu>
                     {servicesToShow.map((service) => (
@@ -269,12 +310,16 @@ const NavItem = () => {
                 className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
                 onMouseEnter={handleConditionMouseEnter}
                 onMouseLeave={handleConditionMouseLeave}
-                onClick={handleConditionClick}
               >
-                <p className="flex h-10 items-center justify-between lg:h-20 lg:gap-1">
+                <button
+                  type="button"
+                  onClick={handleConditionClick}
+                  aria-expanded={isConditionsOpen}
+                  className="flex min-h-11 w-full items-center justify-between lg:h-20 lg:gap-1"
+                >
                   Conditions{" "}
                   {isConditionsOpen ? <FaAngleUp /> : <FaAngleDown />}
-                </p>
+                </button>
                 {isConditionsOpen && (
                   <MegaMenu>
                     {conditionTopics.map((condition) => (
@@ -313,15 +358,24 @@ const NavItem = () => {
               <NavItemLink to="/referral" onClick={closeMenus}>
                 Refer Patient
               </NavItemLink>
-              <a
-                href="https://portal.kareo.com/pp-webapp/app/new/login"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMenus}
-                className="whitespace-nowrap font-semibold hover:text-blue-800"
-              >
-                Patient Portal
-              </a>
+              {isHome && (
+                <li className="w-full md:hidden">
+                  <a href="tel:+14432956600" className="flex min-h-11 items-center gap-2 font-semibold">
+                    <FaPhoneAlt aria-hidden="true" /> Call Us: 443-295-6600
+                  </a>
+                </li>
+              )}
+              <li>
+                <a
+                  href="https://portal.kareo.com/pp-webapp/app/new/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenus}
+                  className="whitespace-nowrap font-semibold hover:text-blue-800"
+                >
+                  Patient Portal
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -332,8 +386,8 @@ const NavItem = () => {
 
 const MegaMenu = ({ children }) => (
   <div className="bg-white py-2 lg:absolute lg:right-0 lg:top-20 lg:w-full lg:border-t lg:border-gray-500 lg:px-16 lg:py-4 lg:shadow-md">
-    <div
-      className="relative grid grid-cols-1 gap-1 overflow-hidden rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
+    <ul
+      className="relative grid max-h-[calc(100dvh-160px)] grid-cols-1 gap-1 overflow-y-auto rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url('/images/img_mental_health/hero/teletherapy.webp')`,
         backgroundSize: "cover",
@@ -342,7 +396,7 @@ const MegaMenu = ({ children }) => (
       }}
     >
       {children}
-    </div>
+    </ul>
   </div>
 );
 
@@ -353,7 +407,7 @@ const MegaMenuLink = ({ to, title, onClick, children }) => (
   >
     <Link
       to={to}
-      className="flex h-8 w-full items-center text-sm font-semibold lg:h-10 lg:text-base"
+      className="flex min-h-11 w-full items-center py-2 text-sm font-semibold lg:text-base"
       title={title}
     >
       {children}
@@ -383,5 +437,22 @@ const NavItemLink = ({ to, onClick, children }) => (
     </Link>
   </li>
 );
+
+MegaMenu.propTypes = { children: PropTypes.node };
+MegaMenuLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  onClick: PropTypes.func,
+  children: PropTypes.node,
+};
+MegaMenuFooter.propTypes = {
+  children: PropTypes.node,
+  withPanel: PropTypes.bool,
+};
+NavItemLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  children: PropTypes.node,
+};
 
 export default memo(NavItem);

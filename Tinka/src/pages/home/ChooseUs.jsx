@@ -1,73 +1,96 @@
-import { memo } from "react";
-import { Link } from "react-router-dom";
-import WhyChooseUs from "./WhyChooseUs";
-import laugh from "/images/img_mental_health/why_choose_us/laugh/laugh.webp";
-import sleep from "/images/img_mental_health/why_choose_us/sleep_better/sleep.webp";
-import teen from "/images/img_mental_health/why_choose_us/teen/teen.webp";
-import { FaArrowRight } from "react-icons/fa";
-import ScrollAnimationWrapper from "./ScrollAnimationWrapper";
-import FastBookingButton from "../../components/FastBookingButton"; // ✅ Import faster booking
-import BookingLink from "../../components/BookingLink";
+import { memo, useRef } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-const whyChooseUsData = [
+const benefits = [
   {
-    img: laugh,
-    imgAlt: "people smiling",
-    title: "Because you deserve more smiles every day.",
-    subTitle:
-      "We bring joy to your journey by creating moments that uplift you, helping you experience genuine happiness in daily life.",
+    title: "Accessible",
+    description:
+      "Virtual and flexible care options designed to make getting support easier.",
+    image: "/images/seo/online-psychiatrist-virginia.webp",
+    imageAlt: "A woman speaking with a care provider by video from home",
   },
   {
-    img: teen,
-    imgAlt: "teen image",
-    title: "Because growing up comes with its battles.",
-    subTitle:
-      "Our services support young minds through the unique struggles of childhood and adolescence, providing tools to navigate challenges with resilience.",
+    title: "Personalized",
+    description:
+      "Care plans shaped around your symptoms, concerns and treatment goals.",
+    image: "/images/seo/medication-management-dc.webp",
+    imageAlt: "A provider and patient discussing a personalized care plan",
   },
   {
-    img: sleep,
-    imgAlt: "man and woman sleeping better",
-    title: "Because a quiet mind sleeps better.",
-    subTitle:
-      "We help you achieve peace of mind, leading to restful sleep and improved well-being, so you wake up ready to take on the day.",
-    showArrow: false,
+    title: "Continuous",
+    description:
+      "Support from your initial evaluation through ongoing treatment and follow-up.",
+    image: "/images/seo/psychiatric-evaluation-md.webp",
+    imageAlt: "A patient talking with a provider during a follow-up consultation",
   },
 ];
 
 const ChooseUs = () => {
+  const scrollContainerRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = direction === "left" ? -320 : 320;
+      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="pb-16 bg-gradient-to-b from-gray-100 via-blue-100 to-blue-50">
-      <div className="text-center mb-16">
-        <h1 className="font-bold text-3xl capitalize">Why Choose Us?</h1>
-      </div>
+    <section
+      className="home-section bg-[#f4f8fc]"
+      aria-labelledby="home-why-heading"
+    >
+      <div className="home-container">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="home-eyebrow flex justify-center">Why Tinka Health</p>
+          <h2 id="home-why-heading" className="home-heading">
+            Mental health care built around your life
+          </h2>
+        </div>
+        
+        <div className="flex justify-end gap-3 lg:hidden mb-2 mt-4">
+          <button
+            onClick={() => scroll("left")}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100 hover:text-[#005ab0]"
+            aria-label="Scroll left"
+          >
+            <FiChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100 hover:text-[#005ab0]"
+            aria-label="Scroll right"
+          >
+            <FiChevronRight className="h-5 w-5" />
+          </button>
+        </div>
 
-      {whyChooseUsData.map((item, index) => (
-        <ScrollAnimationWrapper key={index}>
-          <WhyChooseUs
-            img={item.img}
-            imgAlt={item.imgAlt}
-            title={item.title}
-            subTitle={item.subTitle}
-            showArrow={item.showArrow !== false}
-            reverse={index % 2 !== 0}
-          />
-        </ScrollAnimationWrapper>
-      ))}
-
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 mb-10">
-        <Link
-          to="/contact"
-          className="bg-white-600 text-blue-700 font-bold px-10 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 border bottom-3 border-blue-600 hover:text-white"
+        <div 
+          ref={scrollContainerRef}
+          className="mt-6 flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-8 pt-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
-          <span>Contact Us</span>
-        </Link>
-
-        <BookingLink className="flex hover:scale-95 transition duration-300 justify-center items-center bg-blue-700 text-white px-6 py-4 rounded-md hover:bg-blue-800">
-          <FaArrowRight className="text-white text-xl mr-4" />
-          <span>Book an Appointment</span>
-        </BookingLink>
+          {benefits.map(({ title, description, image, imageAlt }) => (
+            <div key={title} className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-auto shrink-0 lg:shrink snap-start overflow-hidden rounded-xl bg-white shadow-sm border border-gray-100 flex flex-col group">
+              <div className="relative overflow-hidden">
+                <img
+                  src={image}
+                  alt={imageAlt}
+                  width={960}
+                  height={720}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5 md:p-6 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold text-[#06192f] md:text-xl">{title}</h3>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-700">{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
