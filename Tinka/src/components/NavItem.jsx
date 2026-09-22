@@ -7,12 +7,11 @@ import {
   useRef,
 } from "react";
 import PropTypes from "prop-types";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   FaAngleDown,
   FaAngleUp,
   FaArrowRight,
-  FaMapMarkerAlt,
   FaPhoneAlt,
   FaFacebookF,
   FaInstagram,
@@ -42,13 +41,13 @@ const shortNames = {
 const shortenName = (name) => shortNames[name] || name;
 
 const NavItem = () => {
-  const isHome = useLocation().pathname === "/";
+
   const headerRef = useRef(null);
   useLayoutEffect(() => {
-    if (!isHome || !headerRef.current) return;
+    if (!headerRef.current) return;
     const updateHeight = () =>
       document.documentElement.style.setProperty(
-        "--home-header-height",
+        "--site-header-height",
         `${headerRef.current.offsetHeight}px`,
       );
     updateHeight();
@@ -56,12 +55,11 @@ const NavItem = () => {
     observer.observe(headerRef.current);
     return () => {
       observer.disconnect();
-      document.documentElement.style.removeProperty("--home-header-height");
+      document.documentElement.style.removeProperty("--site-header-height");
     };
-  }, [isHome]);
+  }, []);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isConditionsOpen, setIsConditionsOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const servicesToShow = useMemo(() => serviceData, []);
@@ -70,7 +68,6 @@ const NavItem = () => {
   const closeMenus = useCallback(() => {
     setIsServicesOpen(false);
     setIsConditionsOpen(false);
-    setIsContactOpen(false);
     if (window.innerWidth < 1024) {
       setShowMenu(false);
     }
@@ -117,7 +114,7 @@ const NavItem = () => {
         }
       }}
     >
-      {isHome ? (
+
         <div className="bg-[#005ab0] text-white" data-home-utility>
           <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-5 text-xs sm:px-8 lg:px-12">
             <span className="whitespace-nowrap font-semibold leading-5">
@@ -207,106 +204,6 @@ const NavItem = () => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className="relative bg-[#005ab0] text-white">
-          <button
-            type="button"
-            className="flex h-12 w-full items-center justify-between px-4 text-left lg:hidden"
-            onClick={() => setIsContactOpen((value) => !value)}
-            aria-expanded={isContactOpen}
-            aria-controls="contact-details"
-          >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-blue-200">
-              <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
-              Contact &amp; Locations
-            </span>
-            {isContactOpen ? <FaAngleUp /> : <FaAngleDown />}
-          </button>
-
-          <div
-            id="contact-details"
-            className={`${isContactOpen ? "block" : "hidden"} absolute left-0 top-12 z-20 w-full border-t border-blue-700 bg-[#005ab0] px-4 pb-4 pt-2 shadow-xl lg:hidden`}
-          >
-            <a
-              href="tel:+14432956600"
-              className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
-            >
-              <FaPhoneAlt
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-blue-300"
-              />
-              <span>
-                Maryland: 5457 Twin Knolls Rd, Suite 300, Columbia, MD 21045
-                <br />
-                443-295-6600
-              </span>
-            </a>
-            <a
-              href="tel:+15713498285"
-              className="flex items-start gap-3 border-b border-white/10 py-3 text-sm font-bold"
-            >
-              <FaMapMarkerAlt
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-blue-300"
-              />
-              <span>
-                Virginia: 585 Grove St, Suite 145, Herndon, VA 20170
-                <br />
-                571-349-8285
-              </span>
-            </a>
-            <a
-              href="tel:+12029334300"
-              className="flex items-start gap-3 py-3 text-sm font-bold"
-            >
-              <FaMapMarkerAlt
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-blue-300"
-              />
-              <span>
-                Washington, DC: 4315 50th St NW, Suite 100, Washington, DC 20016
-                <br />
-                202-933-4300
-              </span>
-            </a>
-          </div>
-
-          <div className="hidden h-16 items-center overflow-hidden lg:flex">
-            <div className="mx-auto flex h-full items-center gap-5 px-4 text-xs md:gap-8 md:px-16">
-              <span className="font-semibold uppercase tracking-[0.14em] text-blue-200">
-                Visit or call us
-              </span>
-              <a
-                href="tel:+14432956600"
-                className="inline-flex items-center gap-2 font-bold transition hover:text-blue-200"
-              >
-                <FaPhoneAlt aria-hidden="true" className="text-blue-300" />
-                443-295-6600
-              </a>
-              <span className="hidden items-center gap-2 text-slate-200 sm:inline-flex">
-                <FaMapMarkerAlt aria-hidden="true" className="text-blue-300" />
-                <span>
-                  <strong className="text-white">MD:</strong> 5457 Twin Knolls
-                  Rd, Suite 300, Columbia
-                </span>
-              </span>
-              <a
-                href="tel:+15713498285"
-                className="font-semibold text-blue-100 transition hover:text-white"
-              >
-                VA: 585 Grove St, Suite 145, Herndon &bull; 571-349-8285
-              </a>
-              <a
-                href="tel:+12029334300"
-                className="font-semibold text-blue-100 transition hover:text-white"
-              >
-                DC: 4315 50th St NW, Suite 100 &bull; 202-933-4300
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="relative h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-8 xl:px-16">
         <div className="flex h-full items-center justify-between">
           <Link to="/" onClick={closeMenus}>
@@ -336,14 +233,7 @@ const NavItem = () => {
 
           <nav
             id="primary-navigation"
-            style={
-              isHome
-                ? {
-                    maxHeight:
-                      "calc(100dvh - var(--home-header-height, 240px))",
-                  }
-                : undefined
-            }
+            style={{ maxHeight: "calc(100dvh - var(--site-header-height, 240px))" }}
             className={`${
               showMenu
                 ? "absolute left-0 top-20 flex max-h-[calc(100dvh-128px)] w-full overflow-y-auto bg-white px-6 py-6 shadow-md"
@@ -456,7 +346,7 @@ const NavItem = () => {
               <NavItemLink to="/referral" onClick={closeMenus}>
                 Refer Patient
               </NavItemLink>
-              {isHome && (
+
                 <li className="w-full md:hidden">
                   <a
                     href="tel:+14432956600"
@@ -465,7 +355,6 @@ const NavItem = () => {
                     <FaPhoneAlt aria-hidden="true" /> Call Us: 443-295-6600
                   </a>
                 </li>
-              )}
               <li>
                 <a
                   href="https://portal.kareo.com/pp-webapp/app/new/login"
@@ -488,7 +377,7 @@ const NavItem = () => {
 const MegaMenu = ({ children }) => (
   <div className="bg-white py-2 lg:absolute lg:right-0 lg:top-20 lg:w-full lg:border-t lg:border-gray-500 lg:px-16 lg:py-4 lg:shadow-md">
     <ul
-      className="relative grid max-h-[calc(100dvh-160px)] grid-cols-1 gap-1 overflow-y-auto rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
+      className="relative grid lg:max-h-[calc(100dvh-var(--site-header-height,240px)-32px)] grid-cols-1 gap-1 overflow-y-auto rounded-xl p-4 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-2 lg:p-6 xl:grid-cols-6"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95)), url('/images/img_mental_health/hero/teletherapy.webp')`,
         backgroundSize: "cover",

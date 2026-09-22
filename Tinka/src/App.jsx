@@ -88,7 +88,10 @@ function App() {
       <div className="flex flex-col min-h-screen bg-gray-200">
         <ScrollToTop />
         <NavItem />
-        <div className="flex-grow pt-12 lg:pt-16">
+        <div
+          className="flex-grow"
+          style={{ paddingTop: "calc(var(--site-header-height, 240px) - 80px)" }}
+        >
           <Outlet />
         </div>
         <Footer />

@@ -263,10 +263,10 @@ const RealAccessResults = () => {
 
         <div className="mt-10 flex justify-center md:mt-12">
           <Link
-            to="/insurance-we-accept"
+            to="/contact"
             className="inline-flex items-center text-center gap-3 rounded-lg bg-[#005ab0] px-6 py-4 text-base font-bold text-white shadow-[0_16px_35px_rgba(0,90,176,0.22)] transition hover:bg-[#00427f]"
           >
-            Check Insurance We Accept
+            Contact Us
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15">
               <FiArrowRight aria-hidden="true" className="h-5 w-5" />
             </span>

@@ -1,14 +1,9 @@
 .home-page {
   letter-spacing: 0;
-  padding-top: calc(var(--home-header-height, 240px) - 48px);
-}
-@media (min-width: 1024px) {
-  .home-page {
-    padding-top: calc(var(--home-header-height, 216px) - 64px);
-  }
+  padding-top: 80px;
 }
 #home-locations {
-  scroll-margin-top: calc(var(--home-header-height, 240px) + 16px);
+  scroll-margin-top: calc(var(--site-header-height, 240px) + 16px);
 }
 .home-page .home-section {
   padding: 48px 16px;
