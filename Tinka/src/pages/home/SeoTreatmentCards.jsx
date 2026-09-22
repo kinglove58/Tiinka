@@ -4,14 +4,46 @@ import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import serviceData from "../services/serviceData";
 
 const featuredServices = [
-  ["Addiction-Treatment", "Addiction Treatment", "Compassionate treatment and ongoing support for substance use and recovery."],
-  ["Weight-Loss-Management", "Weight Loss Management", "Personalized medical care and practical support for your weight management goals."],
-  ["Depression", "Depression", "Support for depression with treatment tailored to your symptoms and goals."],
-  ["Anxiety", "Anxiety", "Explore care for ongoing worry, panic and anxiety symptoms."],
-  ["Bipolar-Disorder", "Bipolar Disorder", "Personalized treatment and follow-up for mood stability."],
-  ["Attention-Deficit-Hyperactivity-Disorder", "ADHD", "Evaluation and personalized support for attention, focus and daily functioning."],
-  ["Schizophrenia", "Schizophrenia", "Individualized psychiatric care and ongoing support for daily life."],
-  ["Medication-Management", "Medication Management", "Review treatment benefits, side effects and ongoing medication needs."],
+  [
+    "Addiction-Treatment",
+    "Addiction Treatment",
+    "Compassionate treatment and ongoing support for substance use and recovery.",
+  ],
+  [
+    "Weight-Loss-Management",
+    "Weight Loss Management",
+    "Personalized medical care and practical support for your weight management goals.",
+  ],
+  [
+    "Depression",
+    "Depression",
+    "Support for depression with treatment tailored to your symptoms and goals.",
+  ],
+  [
+    "Anxiety",
+    "Anxiety",
+    "Explore care for ongoing worry, panic and anxiety symptoms.",
+  ],
+  [
+    "Bipolar-Disorder",
+    "Bipolar Disorder",
+    "Personalized treatment and follow-up for mood stability.",
+  ],
+  [
+    "Attention-Deficit-Hyperactivity-Disorder",
+    "ADHD",
+    "Evaluation and personalized support for attention, focus and daily functioning.",
+  ],
+  [
+    "Schizophrenia",
+    "Schizophrenia",
+    "Individualized psychiatric care and ongoing support for daily life.",
+  ],
+  [
+    "Medication-Management",
+    "Medication Management",
+    "Review treatment benefits, side effects and ongoing medication needs.",
+  ],
 ].map(([id, cardTitle, cardDescription]) => {
   const service = serviceData.find((item) => item.id === id);
   return {
@@ -59,15 +91,19 @@ const SeoTreatmentCards = () => {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 id="seo-treatment-cards-heading" className="home-heading">
+          <h2
+            id="seo-treatment-cards-heading"
+            className="text-xl font-bold text-[#06192f] md:text-2xl"
+          >
             Tinka Health Services Specializes In:
           </h2>
-          <p className="home-copy mx-auto">
-           Compassionate, personalized care designed to support your mental health, emotional well-being, and weight management goals.
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-slate-700 md:text-base">
+            Compassionate, personalized care designed to support your mental
+            health, emotional well-being, and weight management goals.
           </p>
         </div>
 
-        <div className="mt-6 flex justify-end gap-3">
+        <div className="mt-3 flex justify-end gap-3">
           <button
             type="button"
             aria-label="Previous services"
@@ -136,7 +172,7 @@ const SeoTreatmentCards = () => {
             </article>
           ))}
         </div>
-        <div className="mt-3 flex justify-center">
+        <div className="mt-2 flex justify-center">
           <Link
             to="/services"
             className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-[#005ab0] px-5 py-2 font-bold text-[#005ab0] transition hover:bg-blue-50"

@@ -81,6 +81,7 @@ const Home = () => (
     </Helmet>
     <Hero />
     <CallVideoAction />
+    <SeoTreatmentCards />
     <section
       className="home-section bg-white"
       aria-labelledby="restored-why-heading"
@@ -113,7 +114,6 @@ const Home = () => (
         />
       </div>
     </section>
-    <SeoTreatmentCards />
     <InsuranceLogo />
     <ChooseUs />
     <EasyStart />
