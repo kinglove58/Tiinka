@@ -5,14 +5,9 @@ import serviceData from "../services/serviceData";
 
 const featuredServices = [
   [
-    "Addiction-Treatment",
-    "Addiction Treatment",
-    "Compassionate treatment and ongoing support for substance use and recovery.",
-  ],
-  [
-    "Weight-Loss-Management",
-    "Weight Loss Management",
-    "Personalized medical care and practical support for your weight management goals.",
+    "Attention-Deficit-Hyperactivity-Disorder",
+    "ADHD Evaluation",
+    "Evaluation and personalized support for attention, focus and daily functioning.",
   ],
   [
     "Depression",
@@ -30,19 +25,24 @@ const featuredServices = [
     "Personalized treatment and follow-up for mood stability.",
   ],
   [
-    "Attention-Deficit-Hyperactivity-Disorder",
-    "ADHD",
-    "Evaluation and personalized support for attention, focus and daily functioning.",
+    "Medication-Management",
+    "Psychiatric Medication Management",
+    "Review treatment benefits, side effects and ongoing medication needs.",
+  ],
+  [
+    "Addiction-Treatment",
+    "Addiction Treatment",
+    "Compassionate treatment and ongoing support for substance use and recovery.",
+  ],
+  [
+    "Weight-Loss-Management",
+    "Weight Loss Management",
+    "Personalized medical care and practical support for your weight management goals.",
   ],
   [
     "Schizophrenia",
     "Schizophrenia",
     "Individualized psychiatric care and ongoing support for daily life.",
-  ],
-  [
-    "Medication-Management",
-    "Medication Management",
-    "Review treatment benefits, side effects and ongoing medication needs.",
   ],
 ].map(([id, cardTitle, cardDescription]) => {
   const service = serviceData.find((item) => item.id === id);
