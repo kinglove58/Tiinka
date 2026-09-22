@@ -138,7 +138,7 @@ const SeoTreatmentCards = () => {
           {featuredServices.map((page) => (
             <article
               key={page.id}
-              className="group w-[88%] shrink-0 snap-start overflow-hidden rounded-lg border border-[#cfe3f6] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-35px_rgba(0,90,176,0.55)] sm:w-[calc((100%-20px)/2)] xl:w-[calc((100%-60px)/4)]"
+              className="group w-[88%] shrink-0 snap-start overflow-hidden rounded-lg border border-[#cfe3f6] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-35px_rgba(0,90,176,0.55)] sm:w-[calc((100%-20px)/2)] lg:w-[calc((100%-60px)/4)] xl:w-[calc((100%-100px)/6)]"
             >
               <Link to={page.path} className="block">
                 <div className="aspect-[4/3] overflow-hidden bg-[#eaf5ff]">
