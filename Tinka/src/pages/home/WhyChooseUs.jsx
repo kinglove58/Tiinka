@@ -1,4 +1,5 @@
 import { memo } from "react";
+import PropTypes from "prop-types";
 import { FaArrowDownLong } from "react-icons/fa6";
 
 const WhyChooseUs = ({
@@ -29,7 +30,9 @@ const WhyChooseUs = ({
         </div>
         {/* Right Section */}
         <div className="md:w-1/2 text-center md:text-left max-w-lg bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-3xl text-gray-800 font-medium mb-4">{title}</h2>
+          <h3 className="text-2xl md:text-3xl text-gray-800 font-medium mb-4">
+            {title}
+          </h3>
           <p className="text-gray-600 mb-4">{subTitle}</p>
         </div>
       </div>
@@ -42,4 +45,12 @@ const WhyChooseUs = ({
   );
 };
 
+WhyChooseUs.propTypes = {
+  img: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  showArrow: PropTypes.bool,
+  reverse: PropTypes.bool,
+};
 export default memo(WhyChooseUs);

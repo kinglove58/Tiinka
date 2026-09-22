@@ -49,6 +49,7 @@ const Locations = ({ homepage = false }) => {
     ];
     return (
       <section
+        id="home-locations"
         className="home-section bg-white"
         aria-labelledby="home-locations-heading"
       >

@@ -1,4 +1,11 @@
-import { memo, useCallback, useMemo, useState } from "react";
+import {
+  memo,
+  useCallback,
+  useMemo,
+  useState,
+  useLayoutEffect,
+  useRef,
+} from "react";
 import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -7,7 +14,11 @@ import {
   FaArrowRight,
   FaMapMarkerAlt,
   FaPhoneAlt,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
@@ -32,6 +43,22 @@ const shortenName = (name) => shortNames[name] || name;
 
 const NavItem = () => {
   const isHome = useLocation().pathname === "/";
+  const headerRef = useRef(null);
+  useLayoutEffect(() => {
+    if (!isHome || !headerRef.current) return;
+    const updateHeight = () =>
+      document.documentElement.style.setProperty(
+        "--home-header-height",
+        `${headerRef.current.offsetHeight}px`,
+      );
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(headerRef.current);
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty("--home-header-height");
+    };
+  }, [isHome]);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isConditionsOpen, setIsConditionsOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -81,6 +108,7 @@ const NavItem = () => {
 
   return (
     <header
+      ref={headerRef}
       className="fixed right-0 top-0 z-50 w-full text-gray-800"
       onKeyDown={(event) => {
         if (event.key === "Escape") {
@@ -90,30 +118,92 @@ const NavItem = () => {
       }}
     >
       {isHome ? (
-        <div className="bg-[#005ab0] text-white">
-          <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-2 px-3 text-xs sm:px-4 sm:text-sm lg:h-16 relative">
-            <span className="max-w-[130px] font-semibold leading-4 sm:max-w-none z-10">
+        <div className="bg-[#005ab0] text-white" data-home-utility>
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-5 text-xs sm:px-8 lg:px-12">
+            <span className="whitespace-nowrap font-semibold leading-5">
               Now accepting new patients
             </span>
-            
-            <div className="absolute inset-0 hidden lg:flex items-center justify-center pointer-events-none">
-              <div className="pointer-events-auto">
-                <GoogleReviewBadge theme="dark" className="!bg-transparent !border-none !shadow-none !px-0" />
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-5 z-10">
-              <a
-                href="tel:+14432956600"
-                className="hidden min-h-11 items-center gap-2 font-semibold md:inline-flex"
+            <div className="flex flex-wrap gap-x-6 gap-y-3 leading-5">
+              <Link
+                to="/psychiatric-provider-herndon-va"
+                className="whitespace-nowrap hover:underline"
               >
-                <FaPhoneAlt aria-hidden="true" />
-                Call Us: 443-295-6600
-              </a>
-              <BookingLink className="!rounded-md !bg-white !px-3 !py-3 text-center !text-[#005ab0] hover:!bg-blue-50">
-                <span className="sm:hidden">Book Appointment</span>
-                <span className="hidden sm:inline">Book an Appointment</span>
-              </BookingLink>
+                <span className="block font-semibold">
+                  585 Grove St, Suite 145
+                </span>
+                <span className="block">Herndon, VA 20170</span>
+              </Link>
+              <Link
+                to="/dc-psychiatrist"
+                className="hidden whitespace-nowrap hover:underline md:block"
+              >
+                <span className="block font-semibold">
+                  4315 50th Street NW, Suite 100
+                </span>
+                <span className="block">Washington, DC 20016</span>
+              </Link>
+              <Link
+                to="/maryland-psychiatrist"
+                className="hidden whitespace-nowrap hover:underline md:block"
+              >
+                <span className="block font-semibold">
+                  5457 Twin Knolls Road, Suite 300
+                </span>
+                <span className="block">Columbia, MD 21045</span>
+              </Link>
+
+              <Link
+                to="/contact"
+                className="inline-flex min-h-11 items-center whitespace-nowrap underline md:hidden"
+              >
+                All three locations
+              </Link>
+            </div>
+            <a
+              href="tel:+14432956600"
+              className="inline-flex min-h-11 shrink-0 items-center gap-2 font-semibold"
+            >
+              <FaPhoneAlt aria-hidden="true" />
+              443-295-6600
+            </a>
+            <GoogleReviewBadge
+              theme="dark"
+              className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
+            />
+            <div
+              className="flex shrink-0 items-center gap-1 xl:ml-auto"
+              aria-label="Social media"
+            >
+              {[
+                [
+                  "Facebook",
+                  "https://www.facebook.com/tinkahealthservices",
+                  FaFacebookF,
+                ],
+                [
+                  "Instagram",
+                  "https://www.instagram.com/tinkahealthservices/",
+                  FaInstagram,
+                ],
+                ["X", "https://x.com/Tinkahealthserv", FaXTwitter],
+                [
+                  "YouTube",
+                  "https://www.youtube.com/@TinkaHealthServices",
+                  FaYoutube,
+                ],
+              ].map(([label, href, Icon]) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  title={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-md hover:bg-white/15 focus-visible:outline focus-visible:outline-2"
+                >
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -246,6 +336,14 @@ const NavItem = () => {
 
           <nav
             id="primary-navigation"
+            style={
+              isHome
+                ? {
+                    maxHeight:
+                      "calc(100dvh - var(--home-header-height, 240px))",
+                  }
+                : undefined
+            }
             className={`${
               showMenu
                 ? "absolute left-0 top-20 flex max-h-[calc(100dvh-128px)] w-full overflow-y-auto bg-white px-6 py-6 shadow-md"
@@ -360,7 +458,10 @@ const NavItem = () => {
               </NavItemLink>
               {isHome && (
                 <li className="w-full md:hidden">
-                  <a href="tel:+14432956600" className="flex min-h-11 items-center gap-2 font-semibold">
+                  <a
+                    href="tel:+14432956600"
+                    className="flex min-h-11 items-center gap-2 font-semibold"
+                  >
                     <FaPhoneAlt aria-hidden="true" /> Call Us: 443-295-6600
                   </a>
                 </li>

@@ -9,10 +9,10 @@ const Specialization = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl text-[#005ab0] font-bold mb-6 text-center">
-        Tinka Health Services Specialize in:
-      </h1>
-      <div className="sm:hidden grid grid-cols-2 gap-x-3 gap-y-3 mx-2 pb-4">
+      <h2 className="text-3xl md:text-4xl text-[#005ab0] font-bold mb-6 text-center">
+        Tinka Health Services Specializes In:
+      </h2>
+      <div className="sm:hidden grid grid-cols-1 min-[375px]:grid-cols-2 gap-3 pb-4">
         {/* Mobile grid layout, two columns */}
         {servicesToShow.map((service, index) => (
           <div
@@ -22,8 +22,8 @@ const Specialization = () => {
             }`}
           >
             <Link
-              to={`/services/${service.id}`}
-              className="flex items-center justify-center"
+              to={service.path || `/services/${service.id}`}
+              className="flex min-h-11 min-w-0 items-center justify-center px-3"
             >
               <span className="text-[#005ab0] hover:text-[#314499] font-medium text-center">
                 {service.name}
@@ -33,7 +33,7 @@ const Specialization = () => {
           </div>
         ))}
       </div>
-      <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3 mx-16">
+      <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mx-auto max-w-7xl">
         {/* Desktop and tablet grid */}
         {servicesToShow.map((service, index) => (
           <div
@@ -43,8 +43,8 @@ const Specialization = () => {
             }`}
           >
             <Link
-              to={`/services/${service.id}`}
-              className="flex items-center justify-center"
+              to={service.path || `/services/${service.id}`}
+              className="flex min-h-11 min-w-0 items-center justify-center px-3"
             >
               <span className="text-[#005ab0] hover:text-[#314499] font-medium text-center">
                 {service.name}
@@ -56,10 +56,11 @@ const Specialization = () => {
       </div>
       <div className="text-center mt-8 pb-16">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link to="/services">
-            <button className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 mt-0">
-              View more
-            </button>
+          <Link
+            to="/services"
+            className="inline-flex min-h-11 items-center bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800"
+          >
+            View more
           </Link>
         </div>
       </div>

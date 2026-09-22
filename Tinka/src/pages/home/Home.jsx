@@ -1,14 +1,16 @@
 import { memo } from "react";
 import { Helmet } from "react-helmet";
-import { FiArrowRight, FiCheckCircle, FiExternalLink } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import BookingLink from "../../components/BookingLink";
 import Hero from "./Hero";
-import Locations from "./Locations";
 import RealAccessResults from "./RealAccessResults";
 import SeoTreatmentCards from "./SeoTreatmentCards";
 import ChooseUs from "./ChooseUs";
 import EasyStart from "./EasyStart";
+import InsuranceLogo from "./InsuranceLogo";
+import Specialization from "./Specialization";
+import WhyChooseUs from "./WhyChooseUs";
 import GoogleReviewBadge from "../../components/GoogleReviewBadge";
 import "./home.css";
 
@@ -78,53 +80,43 @@ const Home = () => (
       </script>
     </Helmet>
     <Hero />
-    <Locations homepage />
+    <InsuranceLogo />
     <RealAccessResults />
     <SeoTreatmentCards />
+    <Specialization />
+    <ChooseUs />
     <section
       className="home-section bg-white"
-      aria-labelledby="home-conditions-heading"
+      aria-labelledby="restored-why-heading"
     >
-      <div className="home-container">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 id="home-conditions-heading" className="home-heading">
-            You don&apos;t have to figure it out alone.
-          </h2>
-          <p className="home-copy mx-auto">
-            Our providers support adults experiencing a wide range of mental and
-            emotional health challenges.
-          </p>
-        </div>
-        <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            "ADHD",
-            "Anxiety",
-            "Depression",
-            "Bipolar disorder",
-            "Mood changes",
-            "Trauma",
-            "Anger management",
-            "Sleep difficulties",
-            "Stress",
-          ].map((condition) => (
-            <li
-              key={condition}
-              className="flex items-center gap-3 text-lg text-slate-700"
-            >
-              <FiCheckCircle
-                aria-hidden="true"
-                className="shrink-0 text-[#005ab0]"
-              />
-              {condition}
-            </li>
-          ))}
-        </ul>
-        <Link to="/services" className="home-text-link mt-8">
-          Explore Our Services <FiArrowRight aria-hidden="true" />
-        </Link>
+      <h2 id="restored-why-heading" className="home-heading mb-10 text-center">
+        Why Choose Us?
+      </h2>
+      <div className="space-y-10">
+        <WhyChooseUs
+          img="/images/img_mental_health/why_choose_us/laugh/laugh.webp"
+          imgAlt="People sharing a happy moment"
+          title="Because you deserve more smiles every day."
+          subTitle="We bring joy to your journey by creating moments that uplift you, helping you experience genuine happiness in daily life."
+          showArrow={false}
+        />
+        <WhyChooseUs
+          img="/images/img_mental_health/why_choose_us/teen/teen.webp"
+          imgAlt="A young person outdoors"
+          title="Because growing up comes with its battles."
+          subTitle="Our services support young minds through the unique struggles of childhood and adolescence, providing tools to navigate challenges with resilience."
+          reverse
+          showArrow={false}
+        />
+        <WhyChooseUs
+          img="/images/img_mental_health/why_choose_us/sleep_better/sleep.webp"
+          imgAlt="A couple resting"
+          title="Because a quiet mind sleeps better."
+          subTitle="We help you achieve peace of mind, leading to restful sleep and improved well-being, so you wake up ready to take on the day."
+          showArrow={false}
+        />
       </div>
     </section>
-    <ChooseUs />
     <EasyStart />
     <section
       className="home-section bg-white"

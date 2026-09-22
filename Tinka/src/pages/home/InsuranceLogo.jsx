@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -52,8 +52,11 @@ const InsuranceLogo = () => {
   };
 
   return (
-    <div className="bg-gray-100 w-full mx-auto my-1 text-center">
-      <div className="container">
+    <section
+      className="bg-gray-100 w-full mx-auto py-8 px-4 text-center"
+      aria-labelledby="insurance-logos-heading"
+    >
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="flex flex-col items-center py-4">
           <img
             width={50}
@@ -63,7 +66,10 @@ const InsuranceLogo = () => {
             className="mb-2"
             loading="lazy" // Lazy load the image
           />
-          <h2 className="font-medium text-lg text-blue-700  min-h-[30px] ">
+          <h2
+            id="insurance-logos-heading"
+            className="font-bold text-2xl text-[#005ab0]"
+          >
             Insurance accepted
           </h2>
         </div>
@@ -83,8 +89,14 @@ const InsuranceLogo = () => {
             </div>
           ))}
         </Slider>
+        <Link
+          to="/insurance-we-accept"
+          className="mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-[#005ab0] px-6 py-3 text-center font-bold text-white shadow-sm transition hover:bg-[#00427f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#005ab0]"
+        >
+          View Accepted Insurance Plans
+        </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

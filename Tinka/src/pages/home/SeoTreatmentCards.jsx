@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { seoHeroImage, seoTreatmentPages } from "../seo/seoPagesData";
 
 const featuredServices = [
@@ -24,6 +24,26 @@ const featuredServices = [
     "Psychiatric Evaluation",
     "Discuss your symptoms, history and goals with a psychiatric provider.",
   ],
+  [
+    "depression-dc",
+    "Depression Medication Management",
+    "Find support for depression with medication monitoring when appropriate.",
+  ],
+  [
+    "medication-management-dc",
+    "Medication Management",
+    "Review treatment benefits, side effects and ongoing medication needs.",
+  ],
+  [
+    "hypomanic-episodes",
+    "Hypomanic Episodes",
+    "Understand mood changes and explore appropriate treatment options.",
+  ],
+  [
+    "online-psychiatrist-virginia",
+    "Online Psychiatry",
+    "Access psychiatric care through convenient telehealth appointments.",
+  ],
 ].map(([id, cardTitle, cardDescription]) => ({
   ...seoTreatmentPages.find((page) => page.id === id),
   cardTitle,
@@ -31,6 +51,35 @@ const featuredServices = [
 }));
 
 const SeoTreatmentCards = () => {
+  const trackRef = useRef(null);
+  const [edges, setEdges] = useState({ start: true, end: false });
+  useEffect(() => {
+    const track = trackRef.current;
+    const update = () =>
+      setEdges({
+        start: track.scrollLeft <= 1,
+        end: track.scrollLeft + track.clientWidth >= track.scrollWidth - 2,
+      });
+    update();
+    track.addEventListener("scroll", update, { passive: true });
+    const observer = new ResizeObserver(update);
+    observer.observe(track);
+    return () => {
+      track.removeEventListener("scroll", update);
+      observer.disconnect();
+    };
+  }, []);
+  const scrollCards = (direction) => {
+    const track = trackRef.current;
+    const card = track.querySelector("article");
+    const step = card.getBoundingClientRect().width + 20;
+    track.scrollBy({
+      left: direction * step,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
   return (
     <section
       aria-labelledby="seo-treatment-cards-heading"
@@ -47,11 +96,42 @@ const SeoTreatmentCards = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-6 flex justify-end gap-3">
+          <button
+            type="button"
+            aria-label="Previous services"
+            title="Previous services"
+            aria-controls="home-service-cards"
+            disabled={edges.start}
+            onClick={() => scrollCards(-1)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#005ab0] text-[#005ab0] hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-35"
+          >
+            <FiChevronLeft aria-hidden="true" className="h-6 w-6" />
+          </button>
+          <button
+            type="button"
+            aria-label="Next services"
+            title="Next services"
+            aria-controls="home-service-cards"
+            disabled={edges.end}
+            onClick={() => scrollCards(1)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#005ab0] text-[#005ab0] hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-35"
+          >
+            <FiChevronRight aria-hidden="true" className="h-6 w-6" />
+          </button>
+        </div>
+        <div
+          ref={trackRef}
+          id="home-service-cards"
+          role="region"
+          aria-label="Treatment services"
+          tabIndex={0}
+          className="mt-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-5 pt-2"
+        >
           {featuredServices.map((page) => (
             <article
               key={page.id}
-              className="group overflow-hidden rounded-lg border border-[#cfe3f6] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-35px_rgba(0,90,176,0.55)]"
+              className="group w-[88%] shrink-0 snap-start overflow-hidden rounded-lg border border-[#cfe3f6] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-35px_rgba(0,90,176,0.55)] sm:w-[calc((100%-20px)/2)] xl:w-[calc((100%-60px)/4)]"
             >
               <Link to={page.path} className="block">
                 <div className="aspect-[4/3] overflow-hidden bg-[#eaf5ff]">
