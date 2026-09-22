@@ -1,6 +1,4 @@
 import { lazy, Suspense, memo } from "react";
-import { Link } from "react-router-dom";
-import BookingLink from "./BookingLink";
 
 const YouTubeThumbnail = lazy(() => import("./YouTubeThumbnail"));
 
@@ -12,33 +10,41 @@ const LoadingFallback = () => (
 
 const CallVideoAction = () => {
   return (
-    <div className="bg-[#005ab0] text-white text-center py-8 px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="md:w-1/2 mb-4 md:mb-0">
-          <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-            Dedicated to Your Mental Wellness
+    <section className="bg-[#005ab0] px-4 py-10 text-white md:py-14">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-12">
+        <div className="md:w-1/2">
+          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+            Compassionate Mental Health Care, Centered Around You.
           </h2>
-          <p className="max-w-xl mx-auto mb-6">
-            Compassionate, evidence-based behavioral health care that is
-            accessible, personal, and culturally responsive.
-          </p>
-
-          {/* Action buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/telehealth-psychiatry-md-dc-va"
-              className="bg-white text-[#005ab0] px-6 py-3 rounded-lg font-semibold transition-colors  hover:scale-105 duration-300 shadow-lg min-w-[160px] text-center"
-            >
-              Telehealth
-            </Link>
-            <BookingLink
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#005ab0] transition-all duration-300 min-w-[160px] text-center"
-            >
-              Book Appointment
-            </BookingLink>
+          <div className="mt-6 space-y-4 text-base leading-7 text-blue-50 md:text-lg md:leading-8">
+            <p>
+              At Tinka Health Services, we understand that reaching out for
+              mental health support can be a difficult and deeply personal
+              decision. You may be feeling overwhelmed, anxious, depressed,
+              exhausted, or simply unsure of what to do next. Whatever brings
+              you to us, you deserve a space where you feel heard, respected,
+              and supported.
+            </p>
+            <p>
+              Our goal is to meet you where you are and work with you toward
+              where you want to be. We provide compassionate, personalized
+              mental health care for children, adolescents, and adults
+              experiencing a variety of emotional, behavioral, and psychiatric
+              concerns. Through comprehensive psychiatric evaluations,
+              medication management, ADHD assessment and treatment, substance
+              use treatment, and ongoing support, we create an individualized
+              treatment plan centered around your needs and goals.
+            </p>
+            <p>
+              At Tinka Health Services, we are here to listen, understand your
+              concerns, and help you take meaningful steps toward feeling better
+              and improving your quality of life. Your mental health matters,
+              and we are honored to be part of your journey toward greater
+              stability, confidence, and well-being.
+            </p>
           </div>
         </div>
-        <div className="md:w-1/2 w-full relative">
+        <div className="relative w-full md:w-1/2">
           {/* Video indicator overlay */}
           <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full text-sm font-medium z-10 flex items-center gap-2">
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -51,7 +57,7 @@ const CallVideoAction = () => {
           </Suspense>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

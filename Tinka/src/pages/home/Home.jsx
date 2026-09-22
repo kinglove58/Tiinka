@@ -113,8 +113,8 @@ const Home = () => (
         />
       </div>
     </section>
-    <InsuranceLogo />
     <SeoTreatmentCards />
+    <InsuranceLogo />
     <ChooseUs />
     <EasyStart />
     <section

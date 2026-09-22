@@ -63,7 +63,7 @@ const SeoTreatmentCards = () => {
             Tinka Health Services Specializes In:
           </h2>
           <p className="home-copy mx-auto">
-            Personalized care for your mental health, emotional well-being and weight management needs.
+           Compassionate, personalized care designed to support your mental health, emotional well-being, and weight management goals.
           </p>
         </div>
 
