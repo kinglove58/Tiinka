@@ -1,103 +1,27 @@
 import { memo } from "react";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { insuranceLogoData } from "./insuranceLogoData";
-import insuranceIcon from "/images/logo/insurance_logo/insuranceLogo.webp";
 
-const InsuranceLogo = () => {
-  const settings = {
-    arrows: false,
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000, // Increase autoplay speed to reduce frequent re-renders
-    pauseOnHover: true, // Pause on hover to improve user experience
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
-  return (
-    <section
-      className="bg-gray-100 w-full mx-auto py-8 px-4 text-center"
-      aria-labelledby="insurance-logos-heading"
-    >
-      <div className="mx-auto max-w-7xl min-w-0">
-        <div className="flex flex-col items-center py-4">
-          <img
-            width={50}
-            height={50}
-            src={insuranceIcon}
-            alt="insurance icon logo"
-            className="mb-2"
-            loading="lazy" // Lazy load the image
-          />
-          <h2
-            id="insurance-logos-heading"
-            className="font-bold text-2xl text-[#005ab0]"
-          >
-            Insurance accepted
-          </h2>
-        </div>
-        <Slider {...settings}>
-          {insuranceLogoData.map((img) => (
-            <div key={img.imgUrl}>
-              <div className="flex justify-center items-center">
-                <img
-                  src={img.imgUrl}
-                  width="300"
-                  height="200"
-                  alt="insurance logos"
-                  className="w-40 h-40 object-contain"
-                  loading="lazy" // Lazy load the images
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-        <Link
-          to="/insurance-we-accept"
-          className="mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-[#005ab0] px-6 py-3 text-center font-bold text-white shadow-sm transition hover:bg-[#00427f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#005ab0]"
-        >
+const InsuranceLogo = () => (
+  <section className="bg-gray-100 px-4 py-6 text-center" aria-labelledby="insurance-logos-heading">
+    <div className="mx-auto max-w-6xl">
+      <div className="mb-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        <h2 id="insurance-logos-heading" className="text-xl font-bold text-[#005ab0]">
+          Insurance accepted
+        </h2>
+        <Link to="/insurance-we-accept" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-[#005ab0] px-4 py-2 text-sm font-bold text-white hover:bg-[#00427f]">
           View Accepted Insurance Plans
         </Link>
       </div>
-    </section>
-  );
-};
-
+      <div className="grid grid-cols-4 items-center gap-x-3 gap-y-2 lg:grid-cols-8">
+        {insuranceLogoData.map((image, index) => (
+          <img key={image.imgUrl} src={image.imgUrl}
+            alt={["Aetna", "Blue Cross", "Johns Hopkins EHP", "Cigna", "CareFirst", "Kaiser Permanente", "Medicaid", "UnitedHealthcare"][index]}
+            width="140" height="64" loading="lazy"
+            className="mx-auto h-14 w-full max-w-32 object-contain sm:h-16" />
+        ))}
+      </div>
+    </div>
+  </section>
+);
 export default memo(InsuranceLogo);

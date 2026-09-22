@@ -384,7 +384,9 @@ const InsuranceAccepted = () => {
       <div id="accepted-insurance-plans" className="mx-auto max-w-6xl px-4">
         <div className="mb-6 rounded-2xl border border-blue-100 bg-white p-6 text-lg leading-8 text-slate-700 shadow-sm">
           We accept most major insurance plans and will verify your insurance
-          benefits prior to your appointment. 
+          benefits prior to your appointment. This allows you to be fully
+          informed of any out-of-pocket costs, copays, deductibles, or patient
+          responsibilities before your visit.
         </div>
 
         <div className="grid gap-6">
@@ -405,19 +407,9 @@ const InsuranceAccepted = () => {
           />
         </div>
 
-        <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-6 text-center text-slate-700 shadow-sm sm:p-8">
-          <h3 className="text-xl font-bold text-[#06192f]">
-            Don&apos;t see your insurance listed?
-          </h3>
-          <p className="mx-auto mt-3 max-w-2xl text-base leading-7 sm:text-lg">
-            We accept many other plans not listed here. Please check with our
-            team to confirm whether your specific insurance is accepted.
-          </p>
-          <div className="mt-6">
-            <BookingLink className="inline-flex min-h-12 w-full items-center justify-center bg-[#005ab0] text-base font-semibold text-white no-underline hover:bg-[#00427f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#005ab0] sm:w-auto">
-              Book an Appointment
-            </BookingLink>
-          </div>
+        <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-6 text-lg leading-8 text-slate-700 shadow-sm text-center">
+          <strong>Don&apos;t see your insurance listed?</strong> We accept many other plans not listed here. 
+          Please <BookingLink className="text-blue-600 underline font-semibold hover:text-blue-800">book an appointment</BookingLink> with us to confirm if your specific insurance is accepted.
         </div>
 
         <section

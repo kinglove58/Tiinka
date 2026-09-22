@@ -24,10 +24,6 @@ import TinkaLogo from "/images/logo/Tinka-HS-LOGO-22.webp";
 import BookingLink from "./BookingLink";
 import serviceData from "../pages/services/serviceData";
 import GoogleReviewBadge from "./GoogleReviewBadge";
-import {
-  getConditionHubPath,
-  getConditionHubs,
-} from "../pages/conditions/conditionHubData";
 
 const shortNames = {
   "Attention Deficit Hyperactivity Disorder": "ADHD",
@@ -59,15 +55,12 @@ const NavItem = () => {
     };
   }, []);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isConditionsOpen, setIsConditionsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const servicesToShow = useMemo(() => serviceData, []);
-  const conditionTopics = useMemo(() => getConditionHubs(), []);
 
   const closeMenus = useCallback(() => {
     setIsServicesOpen(false);
-    setIsConditionsOpen(false);
     if (window.innerWidth < 1024) {
       setShowMenu(false);
     }
@@ -83,20 +76,6 @@ const NavItem = () => {
 
   const handleServiceClick = useCallback(() => {
     setIsServicesOpen((value) => !value);
-    setIsConditionsOpen(false);
-  }, []);
-
-  const handleConditionMouseEnter = useCallback(() => {
-    if (window.innerWidth >= 1024) setIsConditionsOpen(true);
-  }, []);
-
-  const handleConditionMouseLeave = useCallback(() => {
-    if (window.innerWidth >= 1024) setIsConditionsOpen(false);
-  }, []);
-
-  const handleConditionClick = useCallback(() => {
-    setIsConditionsOpen((value) => !value);
-    setIsServicesOpen(false);
   }, []);
 
   const toggleMenu = useCallback(() => {
@@ -116,62 +95,53 @@ const NavItem = () => {
     >
 
         <div className="bg-[#005ab0] text-white" data-home-utility>
-          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-5 text-xs sm:px-8 lg:px-12">
-            <span className="whitespace-nowrap font-semibold leading-5">
-              Now accepting new patients
-            </span>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 leading-5">
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-5 gap-y-4 px-6 py-5 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
+            <div className="shrink-0 leading-5 max-sm:text-center">
+              <span className="block whitespace-nowrap font-semibold">Now accepting new patients</span>
+              <Link to="/insurance-we-accept" className="inline-flex min-h-8 items-center underline underline-offset-4 hover:text-blue-100 max-sm:min-h-0">Insurance We Accept</Link>
+            </div>
+            <div className="flex flex-1 flex-wrap justify-center gap-x-5 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
+              <div className="whitespace-nowrap">
               <Link
                 to="/psychiatric-provider-herndon-va"
-                className="whitespace-nowrap hover:underline"
+                className="block hover:underline"
               >
                 <span className="block font-semibold">
                   585 Grove St, Suite 145
                 </span>
                 <span className="block">Herndon, VA 20170</span>
               </Link>
+                <a href="tel:+15713498285" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />571-349-8285</a>
+              </div>
+              <div className="hidden md:block whitespace-nowrap">
               <Link
                 to="/dc-psychiatrist"
-                className="hidden whitespace-nowrap hover:underline md:block"
+                className="block hover:underline"
               >
                 <span className="block font-semibold">
                   4315 50th Street NW, Suite 100
                 </span>
                 <span className="block">Washington, DC 20016</span>
               </Link>
+                <a href="tel:+12029334300" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />202-933-4300</a>
+              </div>
+              <div className="hidden md:block whitespace-nowrap">
               <Link
                 to="/maryland-psychiatrist"
-                className="hidden whitespace-nowrap hover:underline md:block"
+                className="block hover:underline"
               >
                 <span className="block font-semibold">
                   5457 Twin Knolls Road, Suite 300
                 </span>
                 <span className="block">Columbia, MD 21045</span>
               </Link>
+                <a href="tel:+14432956600" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />443-295-6600</a>
+              </div>
 
-              <Link
-                to="/contact"
-                className="inline-flex min-h-11 items-center whitespace-nowrap underline md:hidden"
-              >
-                All three locations
-              </Link>
             </div>
-            <a
-              href="tel:+14432956600"
-              className="inline-flex min-h-11 shrink-0 items-center gap-2 font-semibold"
-            >
-              <FaPhoneAlt aria-hidden="true" />
-              443-295-6600
-            </a>
-            <GoogleReviewBadge
-              theme="dark"
-              className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
-            />
-            <div
-              className="flex shrink-0 items-center gap-1 xl:ml-auto"
-              aria-label="Social media"
-            >
-              {[
+            <div className="flex shrink-0 items-center gap-3 max-sm:justify-center">
+              <div className="flex items-center gap-1" aria-label="Social media">
+                {[
                 [
                   "Facebook",
                   "https://www.facebook.com/tinkahealthservices",
@@ -188,7 +158,7 @@ const NavItem = () => {
                   "https://www.youtube.com/@TinkaHealthServices",
                   FaYoutube,
                 ],
-              ].map(([label, href, Icon]) => (
+                ].map(([label, href, Icon]) => (
                 <a
                   key={label}
                   href={href}
@@ -200,8 +170,19 @@ const NavItem = () => {
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </a>
-              ))}
+                ))}
+              </div>
+              <GoogleReviewBadge
+                theme="dark"
+                className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
+              />
             </div>
+            <Link
+              to="/contact"
+              className="hidden min-h-8 items-center whitespace-nowrap underline underline-offset-4 hover:text-blue-100 max-sm:inline-flex max-sm:min-h-0"
+            >
+              View all locations
+            </Link>
           </div>
         </div>
       <div className="relative h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-8 xl:px-16">
@@ -294,51 +275,9 @@ const NavItem = () => {
                 )}
               </li>
 
-              <li
-                className="w-full cursor-pointer font-semibold text-gray-800 transition duration-300 hover:text-blue-800"
-                onMouseEnter={handleConditionMouseEnter}
-                onMouseLeave={handleConditionMouseLeave}
-              >
-                <button
-                  type="button"
-                  onClick={handleConditionClick}
-                  aria-expanded={isConditionsOpen}
-                  className="flex min-h-11 w-full items-center justify-between lg:h-20 lg:gap-1"
-                >
-                  Conditions{" "}
-                  {isConditionsOpen ? <FaAngleUp /> : <FaAngleDown />}
-                </button>
-                {isConditionsOpen && (
-                  <MegaMenu>
-                    {conditionTopics.map((condition) => (
-                      <MegaMenuLink
-                        key={condition.slug}
-                        to={getConditionHubPath(condition)}
-                        title={condition.title}
-                        onClick={closeMenus}
-                      >
-                        {shortenName(condition.title)}
-                      </MegaMenuLink>
-                    ))}
-                    <MegaMenuFooter>
-                      <Link
-                        to="/conditions"
-                        className="flex items-center font-bold text-blue-600 transition duration-300 hover:text-blue-800"
-                        onClick={closeMenus}
-                      >
-                        View All Conditions →
-                      </Link>
-                      <BookingLink
-                        onClick={closeMenus}
-                        className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition duration-300 hover:bg-blue-700"
-                      >
-                        <FaArrowRight className="text-sm" />
-                        Book Appointment
-                      </BookingLink>
-                    </MegaMenuFooter>
-                  </MegaMenu>
-                )}
-              </li>
+              <NavItemLink to="/meet-our-provider" onClick={closeMenus}>
+                Meet the Doctor
+              </NavItemLink>
 
               <NavItemLink to="/blogs" onClick={closeMenus}>
                 Blogs
@@ -347,14 +286,6 @@ const NavItem = () => {
                 Refer Patient
               </NavItemLink>
 
-                <li className="w-full md:hidden">
-                  <a
-                    href="tel:+14432956600"
-                    className="flex min-h-11 items-center gap-2 font-semibold"
-                  >
-                    <FaPhoneAlt aria-hidden="true" /> Call Us: 443-295-6600
-                  </a>
-                </li>
               <li>
                 <a
                   href="https://portal.kareo.com/pp-webapp/app/new/login"

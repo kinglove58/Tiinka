@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, memo } from "react";
+import { lazy, Suspense, memo } from "react";
 import { Link } from "react-router-dom";
 import BookingLink from "./BookingLink";
 
@@ -16,12 +16,11 @@ const CallVideoAction = () => {
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="md:w-1/2 mb-4 md:mb-0">
           <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-            You deserve to be happy
+            Dedicated to Your Mental Wellness
           </h2>
           <p className="max-w-xl mx-auto mb-6">
-            Your mental health care should be effective, easy, and fun. Whatever
-            life is bringing you, Tinka Health Services is here to help you
-            navigate it.
+            Compassionate, evidence-based behavioral health care that is
+            accessible, personal, and culturally responsive.
           </p>
 
           {/* Action buttons */}

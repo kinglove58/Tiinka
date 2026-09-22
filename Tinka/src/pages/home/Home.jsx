@@ -9,7 +9,7 @@ import SeoTreatmentCards from "./SeoTreatmentCards";
 import ChooseUs from "./ChooseUs";
 import EasyStart from "./EasyStart";
 import InsuranceLogo from "./InsuranceLogo";
-import Specialization from "./Specialization";
+import CallVideoAction from "../../components/CallVideoAction";
 import WhyChooseUs from "./WhyChooseUs";
 import GoogleReviewBadge from "../../components/GoogleReviewBadge";
 import "./home.css";
@@ -80,11 +80,7 @@ const Home = () => (
       </script>
     </Helmet>
     <Hero />
-    <InsuranceLogo />
-    <RealAccessResults />
-    <SeoTreatmentCards />
-    <Specialization />
-    <ChooseUs />
+    <CallVideoAction />
     <section
       className="home-section bg-white"
       aria-labelledby="restored-why-heading"
@@ -117,6 +113,9 @@ const Home = () => (
         />
       </div>
     </section>
+    <InsuranceLogo />
+    <SeoTreatmentCards />
+    <ChooseUs />
     <EasyStart />
     <section
       className="home-section bg-white"
@@ -138,6 +137,7 @@ const Home = () => (
         </div>
       </div>
     </section>
+    <RealAccessResults />
     <section
       className="home-section bg-[#005ab0] text-white"
       aria-labelledby="home-final-heading"

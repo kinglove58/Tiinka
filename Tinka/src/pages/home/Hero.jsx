@@ -26,16 +26,16 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-8 md:min-h-[480px] md:px-8 md:py-12 lg:px-12">
-        <div className="max-w-[760px]">
-          <h1 className="max-w-[720px] text-[34px] font-extrabold leading-[1.02] text-[#06192f] sm:text-[44px] md:text-[48px] lg:text-[60px]">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-6 md:min-h-[400px] md:px-8 md:py-8 lg:px-12">
+        <div className="max-w-[760px] text-center md:text-left">
+          <h1 className="mx-auto max-w-[720px] text-[32px] font-extrabold leading-[1.08] text-[#06192f] sm:text-[40px] md:mx-0 md:text-[44px] lg:text-[52px]">
             Life gets overwhelming.
             <span className="block text-[#005ab0]">
               Support should be simple.
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:mx-0 md:text-lg">
             Compassionate mental health care, psychiatric services and
             medication management for adults across Virginia, Maryland and
             Washington, DC.
@@ -53,17 +53,23 @@ const Hero = () => {
             </Link>
           </div>
 
-          <p className="mt-4 text-sm font-medium text-slate-700">
+          <div className="relative mx-auto mt-5 w-full max-w-xl overflow-hidden rounded-lg md:hidden">
+            <img
+              src={heroImage}
+              alt=""
+              aria-hidden="true"
+              className="block h-32 w-full object-cover object-right sm:h-44"
+              loading="eager"
+              decoding="async"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#eef6fd] to-transparent"
+            />
+          </div>
+          <p className="mt-3 text-center text-sm font-medium text-slate-700 md:mt-5 md:text-left">
             Virtual and in-person care available.
           </p>
-          <img
-            src={heroImage}
-            alt=""
-            aria-hidden="true"
-            className="mt-5 block h-32 w-full object-cover object-right sm:h-44 md:hidden"
-            loading="eager"
-            decoding="async"
-          />
         </div>
       </div>
     </section>

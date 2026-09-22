@@ -1,54 +1,26 @@
 import { memo, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { seoHeroImage, seoTreatmentPages } from "../seo/seoPagesData";
+import serviceData from "../services/serviceData";
 
 const featuredServices = [
-  [
-    "adhd-virginia",
-    "ADHD Treatment & Medication Management",
-    "Evaluation and personalized support for attention, focus and daily functioning.",
-  ],
-  [
-    "anxiety-md",
-    "Anxiety Psychiatry",
-    "Explore care for ongoing worry, panic and anxiety symptoms.",
-  ],
-  [
-    "bipolar-treatment",
-    "Bipolar Disorder Treatment",
-    "Personalized treatment and follow-up for mood stability.",
-  ],
-  [
-    "psychiatric-evaluation-md",
-    "Psychiatric Evaluation",
-    "Discuss your symptoms, history and goals with a psychiatric provider.",
-  ],
-  [
-    "depression-dc",
-    "Depression Medication Management",
-    "Find support for depression with medication monitoring when appropriate.",
-  ],
-  [
-    "medication-management-dc",
-    "Medication Management",
-    "Review treatment benefits, side effects and ongoing medication needs.",
-  ],
-  [
-    "hypomanic-episodes",
-    "Hypomanic Episodes",
-    "Understand mood changes and explore appropriate treatment options.",
-  ],
-  [
-    "online-psychiatrist-virginia",
-    "Online Psychiatry",
-    "Access psychiatric care through convenient telehealth appointments.",
-  ],
-].map(([id, cardTitle, cardDescription]) => ({
-  ...seoTreatmentPages.find((page) => page.id === id),
-  cardTitle,
-  cardDescription,
-}));
+  ["Addiction-Treatment", "Addiction Treatment", "Compassionate treatment and ongoing support for substance use and recovery."],
+  ["Weight-Loss-Management", "Weight Loss Management", "Personalized medical care and practical support for your weight management goals."],
+  ["Depression", "Depression", "Support for depression with treatment tailored to your symptoms and goals."],
+  ["Anxiety", "Anxiety", "Explore care for ongoing worry, panic and anxiety symptoms."],
+  ["Bipolar-Disorder", "Bipolar Disorder", "Personalized treatment and follow-up for mood stability."],
+  ["Attention-Deficit-Hyperactivity-Disorder", "ADHD", "Evaluation and personalized support for attention, focus and daily functioning."],
+  ["Schizophrenia", "Schizophrenia", "Individualized psychiatric care and ongoing support for daily life."],
+  ["Medication-Management", "Medication Management", "Review treatment benefits, side effects and ongoing medication needs."],
+].map(([id, cardTitle, cardDescription]) => {
+  const service = serviceData.find((item) => item.id === id);
+  return {
+    ...service,
+    path: service.path || `/services/${id}`,
+    cardTitle,
+    cardDescription,
+  };
+});
 
 const SeoTreatmentCards = () => {
   const trackRef = useRef(null);
@@ -88,11 +60,10 @@ const SeoTreatmentCards = () => {
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2 id="seo-treatment-cards-heading" className="home-heading">
-            Care for what you&apos;re going through
+            Tinka Health Services Specializes In:
           </h2>
           <p className="home-copy mx-auto">
-            Personalized psychiatric care for a wide range of mental and
-            emotional health needs.
+            Personalized care for your mental health, emotional well-being and weight management needs.
           </p>
         </div>
 
@@ -136,7 +107,7 @@ const SeoTreatmentCards = () => {
               <Link to={page.path} className="block">
                 <div className="aspect-[4/3] overflow-hidden bg-[#eaf5ff]">
                   <img
-                    src={page.image || seoHeroImage}
+                    src={page.image}
                     alt={
                       page.imageAlt ||
                       `${page.cardTitle} at Tinka Health Services`
@@ -164,6 +135,15 @@ const SeoTreatmentCards = () => {
               </Link>
             </article>
           ))}
+        </div>
+        <div className="mt-3 flex justify-center">
+          <Link
+            to="/services"
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-[#005ab0] px-5 py-2 font-bold text-[#005ab0] transition hover:bg-blue-50"
+          >
+            View More
+            <FiArrowRight aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
