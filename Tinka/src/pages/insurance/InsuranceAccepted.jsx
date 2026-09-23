@@ -407,10 +407,23 @@ const InsuranceAccepted = () => {
           />
         </div>
 
-        <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-6 text-lg leading-8 text-slate-700 shadow-sm text-center">
-          <strong>Don&apos;t see your insurance listed?</strong> We accept many other plans not listed here. 
-          Please <BookingLink className="!bg-transparent !p-0 !rounded-none !shadow-none text-blue-700 underline font-semibold hover:!bg-transparent hover:text-blue-900">book an appointment</BookingLink> with us to confirm if your specific insurance is accepted.
-        </div>
+        <aside className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 px-6 py-7 shadow-sm sm:px-8 sm:py-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+            <div className="max-w-2xl">
+              <h2 className="text-xl font-bold leading-snug text-slate-900 sm:text-2xl">
+                Don&apos;t see your insurance listed?
+              </h2>
+              <p className="mt-2 text-base leading-7 text-slate-700 sm:text-lg">
+                We may accept other plans. Book an appointment and we&apos;ll
+                confirm whether your specific insurance is accepted before your
+                visit.
+              </p>
+            </div>
+            <BookingLink className="inline-flex min-h-12 shrink-0 items-center justify-center self-start whitespace-nowrap rounded-lg bg-[#005ab0] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#00427f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#005ab0] sm:self-auto">
+              Book an appointment
+            </BookingLink>
+          </div>
+        </aside>
 
         <section
           id="understanding-mental-health-insurance-and-its-benefits"
