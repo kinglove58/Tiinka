@@ -7,12 +7,12 @@ const heroImage =
 
 const Hero = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-[#eef6fd]">
+    <section className="relative isolate overflow-hidden bg-[#eef6fd] md:min-h-[480px]">
       <img
         src={heroImage}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 z-0 hidden h-full w-full object-cover object-[center_right] md:block"
+        className="absolute inset-0 z-0 hidden h-full w-full object-cover object-[center_20%] md:block"
         loading="eager"
         fetchPriority="high"
         decoding="async"
@@ -26,7 +26,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-6 md:min-h-[400px] md:px-8 md:py-8 lg:px-12">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-6 md:min-h-[480px] md:px-8 md:py-8 lg:px-12">
         <div className="max-w-[760px] text-center md:text-left">
           <h1 className="mx-auto max-w-[720px] text-[32px] font-extrabold leading-[1.08] text-[#06192f] sm:text-[40px] md:mx-0 md:text-[44px] lg:text-[52px]">
             Life gets overwhelming.
@@ -58,7 +58,7 @@ const Hero = () => {
               src={heroImage}
               alt=""
               aria-hidden="true"
-              className="block h-32 w-full object-cover object-right sm:h-44"
+              className="block h-52 w-full object-cover object-[75%_20%] sm:h-64"
               loading="eager"
               decoding="async"
             />

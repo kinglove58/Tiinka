@@ -95,45 +95,36 @@ const NavItem = () => {
     >
 
         <div className="bg-[#005ab0] text-white" data-home-utility>
-          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-5 gap-y-4 px-6 py-5 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-3 gap-y-3 px-4 py-3 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
             <div className="shrink-0 leading-5 max-sm:text-center">
               <span className="block whitespace-nowrap font-semibold">Now accepting new patients</span>
               <Link to="/insurance-we-accept" className="inline-flex min-h-8 items-center underline underline-offset-4 hover:text-blue-100 max-sm:min-h-0">Insurance We Accept</Link>
             </div>
-            <div className="flex flex-1 flex-wrap justify-center gap-x-5 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
-              <div className="whitespace-nowrap">
+            <div className="flex flex-1 flex-wrap justify-center gap-x-3 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
+              <div className="min-w-0 max-sm:text-center">
               <Link
                 to="/psychiatric-provider-herndon-va"
-                className="block hover:underline"
+                className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">
-                  585 Grove St, Suite 145
-                </span>
-                <span className="block">Herndon, VA 20170</span>
+                <span className="block font-semibold">585 Grove St, Suite 145, Herndon, VA 20170</span>
               </Link>
                 <a href="tel:+15713498285" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />571-349-8285</a>
               </div>
-              <div className="hidden md:block whitespace-nowrap">
+              <div className="hidden min-w-0 md:block">
               <Link
                 to="/dc-psychiatrist"
-                className="block hover:underline"
+                className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">
-                  4315 50th Street NW, Suite 100
-                </span>
-                <span className="block">Washington, DC 20016</span>
+                <span className="block font-semibold">4315 50th Street NW, Suite 100, Washington, DC 20016</span>
               </Link>
                 <a href="tel:+12029334300" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />202-933-4300</a>
               </div>
-              <div className="hidden md:block whitespace-nowrap">
+              <div className="hidden min-w-0 md:block">
               <Link
                 to="/maryland-psychiatrist"
-                className="block hover:underline"
+                className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">
-                  5457 Twin Knolls Road, Suite 300
-                </span>
-                <span className="block">Columbia, MD 21045</span>
+                <span className="block font-semibold">5457 Twin Knolls Road, Suite 300, Columbia, MD 21045</span>
               </Link>
                 <a href="tel:+14432956600" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />443-295-6600</a>
               </div>
