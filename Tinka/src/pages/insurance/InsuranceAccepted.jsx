@@ -409,7 +409,7 @@ const InsuranceAccepted = () => {
 
         <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-6 text-lg leading-8 text-slate-700 shadow-sm text-center">
           <strong>Don&apos;t see your insurance listed?</strong> We accept many other plans not listed here. 
-          Please <BookingLink className="text-blue-600 underline font-semibold hover:text-blue-800">book an appointment</BookingLink> with us to confirm if your specific insurance is accepted.
+          Please <BookingLink className="!bg-transparent !p-0 !rounded-none !shadow-none text-blue-700 underline font-semibold hover:!bg-transparent hover:text-blue-900">book an appointment</BookingLink> with us to confirm if your specific insurance is accepted.
         </div>
 
         <section
