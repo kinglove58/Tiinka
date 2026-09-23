@@ -18,7 +18,7 @@ import BookingLink from "../../components/BookingLink";
 import CanonicalLink from "../../components/CanonicalLink";
 import insuranceConsultationPhoto from "./photo1.png";
 
-const insuranceHeroImage = "/images/insurance/insurance-hero-consultation.png";
+const insuranceHeroImage = "/images/insurance/insurance-hero-consultation.jpg";
 
 const marylandInsurance = [
   "Aetna",
@@ -241,7 +241,7 @@ const InsuranceAccepted = () => {
     description:
       "Tinka Health Services accepts major insurance plans for psychiatric care, medication management, and telehealth appointments across Maryland, Washington DC, and Virginia.",
     image:
-      "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.png",
+      "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg",
     provider: {
       "@type": "MedicalOrganization",
       name: "Tinka Health Services",

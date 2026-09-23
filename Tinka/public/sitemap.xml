@@ -75,7 +75,12 @@
   </url>
   <url>
     <loc>https://tinkahealthservices.com/insurance-we-accept</loc>
-    <lastmod>2026-09-19</lastmod>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg</image:loc>
+      <image:title>Insurance We Accept</image:title>
+      <image:caption>Accepted insurance plans for psychiatric care, medication management, and telehealth in Maryland, Washington DC, and Virginia.</image:caption>
+    </image:image>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
