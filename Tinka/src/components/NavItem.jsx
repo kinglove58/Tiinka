@@ -37,7 +37,6 @@ const shortNames = {
 const shortenName = (name) => shortNames[name] || name;
 
 const NavItem = () => {
-
   const headerRef = useRef(null);
   useLayoutEffect(() => {
     if (!headerRef.current) return;
@@ -93,46 +92,69 @@ const NavItem = () => {
         }
       }}
     >
-
-        <div className="bg-[#005ab0] text-white" data-home-utility>
-          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-3 gap-y-3 px-4 py-3 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
-            <div className="shrink-0 leading-5 max-sm:text-center">
-              <span className="block whitespace-nowrap font-semibold">Now accepting new patients</span>
-              <Link to="/insurance-we-accept" className="inline-flex min-h-8 items-center underline underline-offset-4 hover:text-blue-100 max-sm:min-h-0">Insurance We Accept</Link>
-            </div>
-            <div className="flex flex-1 flex-wrap justify-center gap-x-3 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
-              <div className="min-w-0 max-sm:text-center">
+      <div className="bg-[#005ab0] text-white" data-home-utility>
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-3 gap-y-3 px-4 py-3 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
+          <div className="shrink-0 leading-5 max-sm:text-center">
+            <span className="block whitespace-nowrap font-semibold">
+              Now accepting new patients
+            </span>
+          </div>
+          <div className="flex flex-1 flex-wrap justify-center gap-x-3 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
+            <div className="min-w-0 max-sm:text-center">
               <Link
                 to="/psychiatric-provider-herndon-va"
                 className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">585 Grove St, Suite 145, Herndon, VA 20170</span>
+                <span className="block font-semibold">
+                  585 Grove St, Suite 145, Herndon, VA 20170
+                </span>
               </Link>
-                <a href="tel:+15713498285" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />571-349-8285</a>
-              </div>
-              <div className="hidden min-w-0 md:block">
+              <a
+                href="tel:+15713498285"
+                className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"
+              >
+                <FaPhoneAlt aria-hidden="true" />
+                571-349-8285
+              </a>
+            </div>
+            <div className="hidden min-w-0 md:block">
               <Link
                 to="/dc-psychiatrist"
                 className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">4315 50th Street NW, Suite 100, Washington, DC 20016</span>
+                <span className="block font-semibold">
+                  4315 50th Street NW, Suite 100, Washington, DC 20016
+                </span>
               </Link>
-                <a href="tel:+12029334300" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />202-933-4300</a>
-              </div>
-              <div className="hidden min-w-0 md:block">
+              <a
+                href="tel:+12029334300"
+                className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"
+              >
+                <FaPhoneAlt aria-hidden="true" />
+                202-933-4300
+              </a>
+            </div>
+            <div className="hidden min-w-0 md:block">
               <Link
                 to="/maryland-psychiatrist"
                 className="block whitespace-nowrap hover:underline"
               >
-                <span className="block font-semibold">5457 Twin Knolls Road, Suite 300, Columbia, MD 21045</span>
+                <span className="block font-semibold">
+                  5457 Twin Knolls Road, Suite 300, Columbia, MD 21045
+                </span>
               </Link>
-                <a href="tel:+14432956600" className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"><FaPhoneAlt aria-hidden="true" />443-295-6600</a>
-              </div>
-
+              <a
+                href="tel:+14432956600"
+                className="inline-flex min-h-8 items-center gap-2 font-semibold hover:underline max-sm:min-h-0"
+              >
+                <FaPhoneAlt aria-hidden="true" />
+                443-295-6600
+              </a>
             </div>
-            <div className="flex shrink-0 items-center gap-3 max-sm:justify-center">
-              <div className="flex items-center gap-1" aria-label="Social media">
-                {[
+          </div>
+          <div className="flex shrink-0 items-center gap-3 max-sm:justify-center">
+            <div className="flex items-center gap-1" aria-label="Social media">
+              {[
                 [
                   "Facebook",
                   "https://www.facebook.com/tinkahealthservices",
@@ -149,7 +171,7 @@ const NavItem = () => {
                   "https://www.youtube.com/@TinkaHealthServices",
                   FaYoutube,
                 ],
-                ].map(([label, href, Icon]) => (
+              ].map(([label, href, Icon]) => (
                 <a
                   key={label}
                   href={href}
@@ -161,21 +183,21 @@ const NavItem = () => {
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </a>
-                ))}
-              </div>
-              <GoogleReviewBadge
-                theme="dark"
-                className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
-              />
+              ))}
             </div>
-            <Link
-              to="/contact"
-              className="hidden min-h-8 items-center whitespace-nowrap underline underline-offset-4 hover:text-blue-100 max-sm:inline-flex max-sm:min-h-0"
-            >
-              View all locations
-            </Link>
+            <GoogleReviewBadge
+              theme="dark"
+              className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
+            />
           </div>
+          <Link
+            to="/contact"
+            className="hidden min-h-8 items-center whitespace-nowrap underline underline-offset-4 hover:text-blue-100 max-sm:inline-flex max-sm:min-h-0"
+          >
+            View all locations
+          </Link>
         </div>
+      </div>
       <div className="relative h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-8 xl:px-16">
         <div className="flex h-full items-center justify-between">
           <Link to="/" onClick={closeMenus}>
@@ -205,7 +227,9 @@ const NavItem = () => {
 
           <nav
             id="primary-navigation"
-            style={{ maxHeight: "calc(100dvh - var(--site-header-height, 240px))" }}
+            style={{
+              maxHeight: "calc(100dvh - var(--site-header-height, 240px))",
+            }}
             className={`${
               showMenu
                 ? "absolute left-0 top-20 flex max-h-[calc(100dvh-128px)] w-full overflow-y-auto bg-white px-6 py-6 shadow-md"
