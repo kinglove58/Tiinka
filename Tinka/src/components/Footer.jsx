@@ -53,6 +53,7 @@ const careLinks = [
   { value: "All Services", link: "/services" },
   { value: "Weight Loss Management", link: "/weight-loss-management" },
   { value: "Primary & Preventive Care", link: "/primary-preventive-care" },
+  { value: "Insurance We Accept", link: "/insurance-we-accept" },
   { value: "Telehealth Psychiatry", link: "/telehealth-psychiatry-md-dc-va" },
 ];
 

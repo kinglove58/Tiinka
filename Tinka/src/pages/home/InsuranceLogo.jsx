@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 import { insuranceLogoData } from "./insuranceLogoData";
 
 const InsuranceLogo = () => (
@@ -10,6 +11,12 @@ const InsuranceLogo = () => (
       <h2 id="insurance-logos-heading" className="mb-4 text-lg font-bold text-[#0b2d4f]">
         Insurance plans we accept
       </h2>
+      <Link
+        to="/insurance-we-accept"
+        className="mb-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#005ab0] px-4 py-2 text-sm font-bold text-white hover:bg-[#00427f]"
+      >
+        View Accepted Insurance Plans
+      </Link>
       <div className="grid grid-cols-4 items-center gap-x-3 gap-y-2 lg:grid-cols-8">
         {insuranceLogoData.map((image, index) => (
           <img

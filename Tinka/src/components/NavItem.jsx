@@ -98,7 +98,7 @@ const NavItem = () => {
           <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-x-3 gap-y-3 px-4 py-3 text-xs max-sm:flex-col max-sm:justify-center max-sm:gap-y-2 max-sm:px-4 max-sm:py-3 max-sm:text-center sm:px-8 lg:px-12">
             <div className="shrink-0 leading-5 max-sm:text-center">
               <span className="block whitespace-nowrap font-semibold">Now accepting new patients</span>
-              <span className="block">Insurance accepted</span>
+              <Link to="/insurance-we-accept" className="inline-flex min-h-8 items-center underline underline-offset-4 hover:text-blue-100 max-sm:min-h-0">Insurance We Accept</Link>
             </div>
             <div className="flex flex-1 flex-wrap justify-center gap-x-3 gap-y-3 leading-5 max-sm:w-full max-sm:flex-none">
               <div className="min-w-0 max-sm:text-center">
