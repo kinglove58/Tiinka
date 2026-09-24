@@ -1,4 +1,3 @@
-import { isMedicationFocusedBlog } from "./content-policy.js";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -86,9 +85,9 @@ const getSitemapBlogRoutes = () => {
           path: decodeURI(url.pathname),
           title: buildBlogSeoTitle(title),
           description:
-            "Read this mental health article from Tinka Health Services about psychiatry, ongoing care, telehealth care, and behavioral health support.",
+            "Read this mental health article from Tinka Health Services about psychiatry, medication management, telehealth care, and behavioral health support.",
           keywords:
-            "mental health blog, psychiatry, ongoing care, telehealth psychiatry, maryland, washington dc, virginia",
+            "mental health blog, psychiatry, medication management, telehealth psychiatry, maryland, washington dc, virginia",
           h1: title,
           image: DEFAULT_IMAGE,
           ogType: "article",
@@ -385,11 +384,10 @@ const getBlogRoutes = async () => {
         `Generated fallback SEO HTML for ${fallbackBlogRoutes.length} blog URLs from sitemap.`,
       );
     }
-    return fallbackBlogRoutes.filter((route) => !isMedicationFocusedBlog({ slug: route.path }));
+    return fallbackBlogRoutes;
   }
 
   return blogs
-    .filter((blog) => !isMedicationFocusedBlog(blog))
     .map((blog) => ({
       ...blog,
       slug: blog?.slug || createBlogSlug(blog?.title),
@@ -408,7 +406,7 @@ const getBlogRoutes = async () => {
         keywords: Array.isArray(blog.keywords)
           ? blog.keywords.join(", ")
           : blog.keywords ||
-            "mental health blog, psychiatry, ongoing care, telehealth psychiatry, maryland, washington dc, virginia",
+            "mental health blog, psychiatry, medication management, telehealth psychiatry, maryland, washington dc, virginia",
         h1: blog.title || "Mental Health Article",
         image,
         ogType: "article",

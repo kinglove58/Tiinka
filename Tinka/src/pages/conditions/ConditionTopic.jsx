@@ -87,7 +87,7 @@ const ConditionTopic = () => {
   const keywords = Array.isArray(topic.keywords)
     ? topic.keywords.join(", ")
     : topic.keywords ||
-      `${topic.title}, ${condition.title}, psychiatric evaluation, ongoing care, telehealth psychiatry`;
+      `${topic.title}, ${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry`;
   const image = getAbsoluteImage(topic.image || condition.image);
   const articleToc = [
     { id: "article-title", level: 1, text: topic.title },

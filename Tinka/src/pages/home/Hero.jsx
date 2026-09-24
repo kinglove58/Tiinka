@@ -37,7 +37,7 @@ const Hero = () => {
 
           <p className="mx-auto mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:mx-0 md:text-lg">
             Compassionate mental health care, psychiatric evaluation and
-            ongoing psychiatric care for adults across Virginia, Maryland and
+            medication management for adults across Virginia, Maryland and
             Washington, DC.
           </p>
 

@@ -50,11 +50,11 @@ const PrimaryPreventiveCare = () => {
         </title>
         <meta
           name="description"
-          content="Primary and preventive support with ongoing psychiatric care, telehealth access, and insurance-friendly appointments in MD, DC, and VA."
+          content="Primary and preventive care support with medication management, telehealth access, and insurance-friendly appointments in MD, DC, and VA."
         />
         <meta
           name="keywords"
-          content="primary care maryland, preventive care dc, preventive care virginia, ongoing psychiatric care services, telehealth psychiatry appointments, accepting new patients"
+          content="primary care maryland, preventive care dc, preventive care virginia, medication management services, telehealth psychiatry appointments, accepting new patients"
         />
         <link
           rel="canonical"
@@ -250,7 +250,7 @@ const PrimaryPreventiveCare = () => {
             <div className="animate-delay-200">
               <ServiceItem
                 title="Telehealth & Online Rx"
-                desc="Convenient virtual visits and care coordination when appropriate."
+                desc="Convenient virtual visits and e-prescriptions when appropriate."
               />
             </div>
           </div>
@@ -328,7 +328,7 @@ const PrimaryPreventiveCare = () => {
                 <FaLaptopMedical className="text-4xl text-green-600" />
                 <h5 className="font-semibold text-gray-900">Telehealth</h5>
                 <p className="text-sm text-gray-600">
-                  Secure virtual visits for follow-ups, care plans, and
+                  Secure virtual visits for follow-ups, prescriptions, and
                   triage — from home or work.
                 </p>
               </motion.div>

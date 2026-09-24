@@ -7,7 +7,7 @@ const TelehealthPsychiatry = () => {
   const metaTitle =
     "Telehealth Psychiatry in MD, DC & VA | Tinka Health";
   const metaDescription =
-    "Get online psychiatric evaluations, follow-up care, and treatment planning from home in Maryland, DC, and Virginia.";
+    "Get online psychiatric evaluations, medication management, and follow-up care from home in Maryland, DC, and Virginia.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -33,7 +33,7 @@ const TelehealthPsychiatry = () => {
     "@type": "Service",
     "@id": `${canonicalUrl}#service`,
     name: "Telehealth Psychiatry",
-    serviceType: "Online Psychiatric Care and Ongoing Psychiatric Care",
+    serviceType: "Online Psychiatric Care and Medication Management",
     url: canonicalUrl,
     description: metaDescription,
     image: "https://tinkahealthservices.com/images/services/Mental_Health.jpg",
@@ -84,15 +84,15 @@ const TelehealthPsychiatry = () => {
         "telehealth psychiatry dc medicaid",
         "telehealth psychiatry virginia",
         "online psychiatric provider",
-        "virtual ongoing psychiatric care",
+        "virtual medication management",
         "telehealth psychiatry covered by insurance",
       ]}
       heroTitle="Telehealth Psychiatry in MD, DC and VA"
-      heroSubtitle="Online psychiatric care and ongoing psychiatric care from home"
+      heroSubtitle="Online psychiatric care and medication management from home"
       intro={{
         title: "Virtual psychiatry with the same clinical focus as in-person care",
         description: [
-          "Tinka Health Services offers telehealth psychiatry appointments for adults in Maryland, Washington DC, and Virginia, including psychiatric evaluations, follow-up care, and ongoing follow-up care.",
+          "Tinka Health Services offers telehealth psychiatry appointments for adults in Maryland, Washington DC, and Virginia, including psychiatric evaluations, medication management, and ongoing follow-up care.",
           "Our virtual care model makes it easier to start treatment from home while using accepted insurance plans, including Medicaid, Medicare, and major commercial coverage when eligible.",
         ],
       }}
@@ -106,7 +106,7 @@ const TelehealthPsychiatry = () => {
         items: [
           "Appointments from home that reduce commute time and transportation barriers",
           "More flexibility for work schedules, caregiving demands, and school routines",
-          "Ongoing ongoing psychiatric care without needing to travel to an office",
+          "Ongoing medication management without needing to travel to an office",
           "Privacy and convenience for patients who feel more comfortable meeting virtually",
           "Consistent access to psychiatric follow-up across Maryland, DC, and Virginia",
           "A practical option for starting care sooner when timely treatment matters",
@@ -118,7 +118,7 @@ const TelehealthPsychiatry = () => {
           "Our telehealth psychiatry services are structured to keep care clear, clinically focused, and easy to continue over time as your needs change.",
         items: [
           "Comprehensive virtual psychiatric evaluations for diagnosis and treatment planning",
-          "Ongoing psychiatric care appointments tailored to symptoms, response, and side effects",
+          "Medication management appointments tailored to symptoms, response, and side effects",
           "Follow-up care that supports treatment adjustments and ongoing symptom review",
           "Insurance-friendly scheduling with accepted plans across Maryland, Washington DC, and Virginia",
           "A secure virtual visit model that keeps psychiatric care accessible from home",

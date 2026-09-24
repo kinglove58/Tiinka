@@ -36,10 +36,10 @@ export const staticRoutes = [
     title:
       "Psychiatric Provider MD, DC & VA | Tinka Health Services",
     description:
-      "Ongoing psychiatric care and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access.",
+      "Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access.",
     keywords:
-      "psychiatric provider maryland, psychiatric nurse practitioner maryland, pmhnp near me, mental health provider dc, psychiatric services virginia, ongoing psychiatric care near me, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia",
-    h1: "Psychiatric care and ongoing psychiatric care in MD, DC and VA",
+      "psychiatric provider maryland, psychiatric nurse practitioner maryland, pmhnp near me, mental health provider dc, psychiatric services virginia, medication management near me, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia",
+    h1: "Psychiatric care and medication management in MD, DC and VA",
   },
   {
     path: "/about",
@@ -47,9 +47,9 @@ export const staticRoutes = [
     priority: "0.8",
     title: "About Tinka Health Services | Psychiatric Provider in MD, DC and VA",
     description:
-      "Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and ongoing psychiatric care.",
+      "Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and medication management.",
     keywords:
-      "psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, ongoing psychiatric care services, telehealth psychiatry appointments, accepting new patients",
+      "psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management services, telehealth psychiatry appointments, accepting new patients",
     h1: "About Tinka Health Services",
   },
   {
@@ -80,9 +80,9 @@ export const staticRoutes = [
     priority: "0.8",
     title: "Mental Health Blog | Tinka Health Services",
     description:
-      "Read mental health articles from Tinka Health Services about psychiatry, follow-up care, telehealth care, and behavioral health support.",
+      "Read mental health articles from Tinka Health Services about psychiatry, medication management, telehealth care, and behavioral health support.",
     keywords:
-      "mental health blog, psychiatry blog, ongoing psychiatric care, telehealth psychiatry",
+      "mental health blog, psychiatry blog, medication management, telehealth psychiatry",
     h1: "Mental Health Blog",
   },
   {
@@ -102,9 +102,9 @@ export const staticRoutes = [
     title:
       "Contact Psychiatric Provider in MD, DC and VA | Tinka Health Services",
     description:
-      "Contact Tinka Health Services to book telehealth psychiatry and ongoing psychiatric care in Maryland, DC, and Virginia.",
+      "Contact Tinka Health Services to book telehealth psychiatry and medication management in Maryland, DC, and Virginia.",
     keywords:
-      "contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, ongoing psychiatric care services, accepting new patients",
+      "contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, medication management services, accepting new patients",
     h1: "Contact Tinka Health Services",
   },
   {
@@ -113,9 +113,9 @@ export const staticRoutes = [
     priority: "0.85",
     title: "Refer a Patient | Tinka Health Services",
     description:
-      "Refer a patient to Tinka Health Services for psychiatric evaluation, ongoing psychiatric care, therapy support, and telehealth care in MD, DC, and VA.",
+      "Refer a patient to Tinka Health Services for psychiatric evaluation, medication management, therapy support, and telehealth care in MD, DC, and VA.",
     keywords:
-      "refer a patient, psychiatry referral, mental health referral, ongoing psychiatric care referral, psychiatric evaluation referral",
+      "refer a patient, psychiatry referral, mental health referral, medication management referral, psychiatric evaluation referral",
     h1: "Refer a Patient",
   },
   {
@@ -135,9 +135,9 @@ export const staticRoutes = [
     priority: "0.86",
     title: "Conditions We Support | Tinka Health Services",
     description:
-      "Explore mental health condition guides with symptoms, treatment options, ongoing psychiatric care, telehealth care, and insurance-friendly access.",
+      "Explore mental health condition guides with symptoms, treatment options, medication management, telehealth care, and insurance-friendly access.",
     keywords:
-      "mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, ongoing psychiatric care",
+      "mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, medication management",
     h1: "Find care by condition",
   },
   {
@@ -146,9 +146,9 @@ export const staticRoutes = [
     priority: "0.9",
     title: "Book an Appointment | Tinka Health Services",
     description:
-      "Book a psychiatry appointment for ongoing psychiatric care, psychiatric evaluation, and telehealth care in MD, DC, and VA.",
+      "Book a psychiatry appointment for medication management, psychiatric evaluation, and telehealth care in MD, DC, and VA.",
     keywords:
-      "book psychiatry appointment, ongoing psychiatric care appointment, telehealth psychiatry appointment, Klarity psychiatry, Grow Therapy psychiatry, SonderMind psychiatry, Rula psychiatry, Zocdoc psychiatry",
+      "book psychiatry appointment, medication management appointment, telehealth psychiatry appointment, Klarity psychiatry, Grow Therapy psychiatry, SonderMind psychiatry, Rula psychiatry, Zocdoc psychiatry",
     h1: "Book an Appointment",
   },
   {
@@ -157,9 +157,9 @@ export const staticRoutes = [
     priority: "0.9",
     title: "Mental Health Services in MD, DC and VA | Tinka Health Services",
     description:
-      "Explore ongoing psychiatric care, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more.",
+      "Explore medication management, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more.",
     keywords:
-      "mental health services maryland, mental health services washington dc, mental health services virginia, ongoing psychiatric care services, telehealth psychiatry appointments, psychiatric provider near me",
+      "mental health services maryland, mental health services washington dc, mental health services virginia, medication management services, telehealth psychiatry appointments, psychiatric provider near me",
     h1: "Mental Health Services",
   },
   {
@@ -169,7 +169,7 @@ export const staticRoutes = [
     title:
       "Psychiatrist Accepting Insurance in MD, DC & VA | Tinka Health",
     description:
-      "See accepted insurance plans for mental health care, psychiatry, follow-up care, and telehealth in Maryland, DC, and Virginia.",
+      "See accepted insurance plans for mental health care, psychiatry, medication management, and telehealth in Maryland, DC, and Virginia.",
     image:
       "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg",
     keywords:
@@ -178,7 +178,7 @@ export const staticRoutes = [
     seoContent: [
       {
         type: "p",
-        text: "Tinka Health Services accepts major insurance plans for psychiatric evaluations, follow-up care, therapy support, and eligible telehealth appointments in Maryland, Washington DC, and Virginia. Coverage and out-of-pocket costs vary by plan, so our team verifies benefits before your visit.",
+        text: "Tinka Health Services accepts major insurance plans for psychiatric evaluations, medication management, therapy support, and eligible telehealth appointments in Maryland, Washington DC, and Virginia. Coverage and out-of-pocket costs vary by plan, so our team verifies benefits before your visit.",
       },
       { type: "h2", text: "Virginia Insurance Accepted" },
       { type: "li", text: "Aetna" },
@@ -221,7 +221,7 @@ export const staticRoutes = [
           name: "Insurance Accepted for Mental Health Care",
           url: "https://tinkahealthservices.com/insurance-we-accept",
           description:
-            "Accepted insurance plans for psychiatric evaluations, follow-up care, and telehealth in Maryland, Washington DC, and Virginia.",
+            "Accepted insurance plans for psychiatric care, medication management, and telehealth in Maryland, Washington DC, and Virginia.",
           primaryImageOfPage:
             "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg",
           isPartOf: {
@@ -261,9 +261,9 @@ export const staticRoutes = [
     title:
       "Psychiatric Provider in Maryland | Tinka Health Services",
     description:
-      "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and ongoing psychiatric care with telehealth access.",
+      "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management with telehealth access.",
     keywords:
-      "psychiatric provider in maryland, maryland psychiatrist accepting medicaid, telehealth psychiatry maryland, ongoing psychiatric care maryland, maryland psychiatric nurse practitioner, psychiatrist accepting medicare maryland",
+      "psychiatric provider in maryland, maryland psychiatrist accepting medicaid, telehealth psychiatry maryland, medication management maryland, maryland psychiatric nurse practitioner, psychiatrist accepting medicare maryland",
     h1: "Psychiatric Provider in Maryland",
   },
   {
@@ -273,9 +273,9 @@ export const staticRoutes = [
     title:
       "Psychiatric Provider in Washington DC | Tinka Health",
     description:
-      "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and ongoing psychiatric care with telehealth and insurance access.",
+      "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and medication management with telehealth and insurance access.",
     keywords:
-      "psychiatric provider in washington dc, dc medicaid psychiatrist, kaiser psychiatrist dc, telehealth psychiatry dc, amerihealth caritas dc mental health provider, ongoing psychiatric care washington dc",
+      "psychiatric provider in washington dc, dc medicaid psychiatrist, kaiser psychiatrist dc, telehealth psychiatry dc, amerihealth caritas dc mental health provider, medication management washington dc",
     h1: "Psychiatric Provider in Washington DC",
   },
   {
@@ -285,9 +285,9 @@ export const staticRoutes = [
     title:
       "Psychiatric Provider in Virginia | Tinka Health Services",
     description:
-      "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and ongoing psychiatric care with telehealth access.",
+      "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and medication management with telehealth access.",
     keywords:
-      "psychiatric provider in virginia, telehealth psychiatry virginia, virginia medicaid psychiatrist, psychiatrist accepting medicare virginia, ongoing psychiatric care virginia, mental health provider virginia",
+      "psychiatric provider in virginia, telehealth psychiatry virginia, virginia medicaid psychiatrist, psychiatrist accepting medicare virginia, medication management virginia, mental health provider virginia",
     h1: "Psychiatric Provider in Virginia",
   },
   {
@@ -297,9 +297,9 @@ export const staticRoutes = [
     title:
       "Psychiatric Provider in Herndon, VA | Tinka Health",
     description:
-      "Book psychiatric evaluations and ongoing psychiatric care in Herndon, VA with telehealth psychiatry and accepted insurance plans.",
+      "Book psychiatric evaluations and medication management in Herndon, VA with telehealth psychiatry and accepted insurance plans.",
     keywords:
-      "psychiatric provider Herndon VA, psychiatrist Herndon VA Medicaid, ongoing psychiatric care Herndon VA, telehealth psychiatry Virginia, Virginia Medicaid psychiatrist, ADHD evaluation and follow-up Herndon, anxiety treatment Herndon VA, depression treatment Herndon VA",
+      "psychiatric provider Herndon VA, psychiatrist Herndon VA Medicaid, medication management Herndon VA, telehealth psychiatry Virginia, Virginia Medicaid psychiatrist, ADHD medication management Herndon, anxiety treatment Herndon VA, depression treatment Herndon VA",
     h1: "Psychiatric Provider in Herndon, VA",
     image:
       "https://tinkahealthservices.com/images/img_mental_health/hero/teletherapyimg.webp",
@@ -312,7 +312,7 @@ export const staticRoutes = [
             "Psychiatric Provider in Herndon, VA | Medicaid & Telehealth | Tinka Health",
           url: "https://tinkahealthservices.com/psychiatric-provider-herndon-va",
           description:
-            "Book psychiatric evaluations and ongoing psychiatric care in Herndon, VA. Tinka Health offers telehealth psychiatry across Virginia and accepts Medicaid, Medicare, and major insurance.",
+            "Book psychiatric evaluations and medication management in Herndon, VA. Tinka Health offers telehealth psychiatry across Virginia and accepts Medicaid, Medicare, and major insurance.",
           isPartOf: {
             "@type": "WebSite",
             name: "Tinka Health Services",
@@ -355,9 +355,9 @@ export const staticRoutes = [
           ],
           availableService: [
             { "@type": "MedicalService", name: "Psychiatric Evaluation" },
-            { "@type": "MedicalService", name: "Ongoing Psychiatric Care" },
+            { "@type": "MedicalService", name: "Medication Management" },
             { "@type": "MedicalService", name: "Telehealth Psychiatry" },
-            { "@type": "MedicalService", name: "ADHD Ongoing Psychiatric Care" },
+            { "@type": "MedicalService", name: "ADHD Medication Management" },
             { "@type": "MedicalService", name: "Anxiety Treatment" },
             { "@type": "MedicalService", name: "Depression Treatment" },
           ],
@@ -371,7 +371,7 @@ export const staticRoutes = [
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Yes. Tinka Health Services is accepting new patients for psychiatric evaluations, follow-up care, and eligible telehealth psychiatry visits in Virginia. Appointment availability can change, so booking early is recommended.",
+                  "Yes. Tinka Health Services is accepting new patients for psychiatric evaluations, medication management, and eligible telehealth psychiatry visits in Virginia. Appointment availability can change, so booking early is recommended.",
               },
             },
             {
@@ -394,11 +394,11 @@ export const staticRoutes = [
             },
             {
               "@type": "Question",
-              name: "Do you provide ADHD evaluation and follow-up in Herndon?",
+              name: "Do you provide ADHD medication management in Herndon?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Tinka Health Services provides psychiatric evaluation and ongoing psychiatric care for ADHD and related attention concerns when clinically appropriate.",
+                  "Tinka Health Services provides psychiatric evaluation and medication management for ADHD and related attention concerns when clinically appropriate.",
               },
             },
             {
@@ -422,9 +422,9 @@ export const staticRoutes = [
     title:
       "Telehealth Psychiatry in MD, DC & VA | Tinka Health",
     description:
-      "Get online psychiatric evaluations, follow-up care, and treatment planning from home in Maryland, DC, and Virginia.",
+      "Get online psychiatric evaluations, medication management, and follow-up care from home in Maryland, DC, and Virginia.",
     keywords:
-      "telehealth psychiatry maryland, telehealth psychiatry dc medicaid, telehealth psychiatry virginia, online psychiatric provider, virtual ongoing psychiatric care, telehealth psychiatry covered by insurance",
+      "telehealth psychiatry maryland, telehealth psychiatry dc medicaid, telehealth psychiatry virginia, online psychiatric provider, virtual medication management, telehealth psychiatry covered by insurance",
     h1: "Telehealth Psychiatry in MD, DC and VA",
   },
   ...seoTreatmentRoutes,
@@ -511,7 +511,7 @@ export const getServiceRoutes = () =>
       keywords: Array.isArray(service.keywords)
         ? service.keywords.join(", ")
         : service.keywords ||
-          `${service.name}, ongoing psychiatric care services, telehealth psychiatry appointments, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia`,
+          `${service.name}, medication management services, telehealth psychiatry appointments, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia`,
       h1: service.name,
       image: service.image?.startsWith("http")
         ? service.image
@@ -545,12 +545,12 @@ export const getConditionRoutes = () =>
       description:
         normalizeMetaDescription(
           condition.metaDescription || condition.summary,
-          `${condition.title} care guide with symptoms, treatment options, ongoing psychiatric care, telehealth access, and insurance-friendly care.`,
+          `${condition.title} care guide with symptoms, treatment options, medication management, telehealth access, and insurance-friendly care.`,
         ),
       keywords: Array.isArray(condition.keywords)
         ? condition.keywords.join(", ")
         : condition.keywords ||
-          `${condition.title}, psychiatric evaluation, ongoing psychiatric care, telehealth psychiatry, Maryland, Washington DC, Virginia`,
+          `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`,
       h1: condition.title,
       image: condition.image?.startsWith("http")
         ? condition.image
@@ -571,7 +571,7 @@ export const getConditionTopicSeoRoutes = () =>
     keywords: Array.isArray(topic.keywords)
       ? topic.keywords.join(", ")
       : topic.keywords ||
-        `${topic.title}, ${condition.title}, psychiatric evaluation, ongoing psychiatric care, telehealth psychiatry`,
+        `${topic.title}, ${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry`,
     h1: topic.title,
     image: topic.image?.startsWith("http")
       ? topic.image

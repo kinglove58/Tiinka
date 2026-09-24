@@ -53,8 +53,8 @@ const BookingStructuredData = () => {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Ongoing Psychiatric Care Appointment",
-              description: "Psychiatric psychiatric evaluation and follow-up",
+              name: "Medication Management Appointment",
+              description: "Psychiatric medication evaluation and management",
             },
             availability: "https://schema.org/InStock",
           },

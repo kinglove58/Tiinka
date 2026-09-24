@@ -57,7 +57,7 @@ const insuranceBenefits = [
   {
     title: "Cost reduction",
     description:
-      "Insurance can reduce out-of-pocket costs for psychiatric evaluations, therapy support, and follow-up care.",
+      "Insurance can reduce out-of-pocket costs for psychiatric evaluations, medication management, therapy, and follow-up care.",
   },
   {
     title: "Better access",
@@ -67,7 +67,7 @@ const insuranceBenefits = [
   {
     title: "Consistent treatment",
     description:
-      "Ongoing covered visits can support progress monitoring, treatment adjustments, and a steadier path toward symptom improvement.",
+      "Ongoing covered visits can support medication monitoring, treatment adjustments, and a steadier path toward symptom improvement.",
   },
   {
     title: "Preventive support",
@@ -92,7 +92,7 @@ const coverageSteps = [
   {
     title: "Gather questions",
     description:
-      "Write down anything you want to confirm about psychiatry visits, ongoing psychiatric care, therapy coverage, or billing.",
+      "Write down anything you want to confirm about psychiatry visits, medication management, therapy coverage, or billing.",
     icon: FiHelpCircle,
   },
   {
@@ -143,7 +143,7 @@ const insuranceTerms = [
   {
     title: "Prior authorization",
     description:
-      "Approval some insurance plans require before they cover certain treatments, services, or higher-cost forms of treatment.",
+      "Approval some insurance plans require before they cover certain medications, services, or higher-cost forms of treatment.",
     icon: FiFileText,
   },
   {
@@ -239,7 +239,7 @@ const InsuranceAccepted = () => {
     serviceType: "Mental Health Insurance Coverage",
     url: "https://tinkahealthservices.com/insurance-we-accept",
     description:
-      "Tinka Health Services accepts major insurance plans for psychiatric evaluations, follow-up care, and telehealth appointments across Maryland, Washington DC, and Virginia.",
+      "Tinka Health Services accepts major insurance plans for psychiatric care, medication management, and telehealth appointments across Maryland, Washington DC, and Virginia.",
     image:
       "https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg",
     provider: {
@@ -295,7 +295,7 @@ const InsuranceAccepted = () => {
         </title>
         <meta
           name="description"
-          content="See accepted insurance plans for mental health care, psychiatry, follow-up care, and telehealth in Maryland, DC, and Virginia."
+          content="See accepted insurance plans for mental health care, psychiatry, medication management, and telehealth in Maryland, DC, and Virginia."
         />
         <meta
           name="keywords"
@@ -368,8 +368,8 @@ const InsuranceAccepted = () => {
               Insurance Accepted for Mental Health Care
             </h1>
             <p className="max-w-xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-              Use your insurance for psychiatric evaluations, follow-up
-              care, therapy support, and eligible telehealth psychiatry
+              Use your insurance for psychiatric evaluations, medication
+              management, therapy support, and eligible telehealth psychiatry
               appointments across Maryland, Washington DC, and Virginia.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -440,7 +440,7 @@ const InsuranceAccepted = () => {
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white">
                 Mental health insurance helps cover the cost of psychiatric
-                evaluations, therapy support, and other behavioral
+                care, medication management, therapy, and other behavioral
                 health services. At Tinka Health Services, many patients use
                 their insurance benefits to make mental health treatment more
                 affordable and more accessible across Maryland, Washington DC,
@@ -550,7 +550,7 @@ const InsuranceAccepted = () => {
                 <div className="rounded-2xl border border-white bg-white p-5">
                   <h3 className="text-xl font-semibold">Ongoing support</h3>
                   <p className="mt-2 text-base leading-7 text-[#3567f1] ">
-                    Consistent access to psychiatric care can support regular
+                    Consistent access to psychiatric care can support medication
                     follow-up, treatment planning, and long-term wellness.
                   </p>
                 </div>

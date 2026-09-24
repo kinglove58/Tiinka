@@ -19,6 +19,10 @@ export const conditionImages = {
     src: "/images/conditions/library/anger-management-hero-v2.webp",
     alt: "Adult practicing emotional regulation skills with a counselor",
   },
+  Antidepressants: {
+    src: "/images/conditions/library/antidepressants-hero-v2.webp",
+    alt: "Patient and clinician reviewing an antidepressant treatment plan together",
+  },
   Anxiety: {
     src: "/images/conditions/library/anxiety-hero-v2.webp",
     alt: "Adult practicing a grounding exercise during an anxiety care appointment",
@@ -51,9 +55,17 @@ export const conditionImages = {
     src: "/images/conditions/library/mental-health-hero-v2.webp",
     alt: "Adult having a collaborative mental health consultation with a clinician",
   },
+  "Medication Management": {
+    src: "/images/conditions/library/medication-management-hero-v2.webp",
+    alt: "Patient and psychiatric clinician reviewing a medication follow-up plan",
+  },
   "Obsessive Compulsive Disorder": {
     src: "/images/conditions/library/ocd-hero-v2.webp",
     alt: "Adult and therapist preparing a gradual OCD treatment plan",
+  },
+  "Opioid Medication Assistant Treatment": {
+    src: "/images/conditions/library/opioid-mat-hero-v2.webp",
+    alt: "Adult discussing coordinated opioid recovery treatment with a medical clinician",
   },
   "Panic Disorder": {
     src: "/images/conditions/library/panic-disorder-hero-v2.webp",
@@ -74,6 +86,10 @@ export const conditionImages = {
   "Substance Abuse": {
     src: "/images/conditions/library/substance-abuse-hero-v2.webp",
     alt: "Adults participating in a respectful substance use recovery support group",
+  },
+  "Suboxone Treatment": {
+    src: "/images/conditions/library/suboxone-treatment-hero-v2.webp",
+    alt: "Adult attending a medication treatment follow-up for opioid recovery",
   },
   "Grief and Loss": {
     src: "/images/conditions/library/grief-and-loss-hero-v2.webp",

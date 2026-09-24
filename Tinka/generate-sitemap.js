@@ -1,4 +1,3 @@
-import { isMedicationFocusedBlog } from "./content-policy.js";
 import fs from "fs";
 import axios from "axios";
 import path from "path";
@@ -65,7 +64,7 @@ const readExistingBlogRoutes = () => {
         return null;
       }
     })
-    .filter((route) => route && !isMedicationFocusedBlog({ slug: route.path }));
+    .filter(Boolean);
 };
 
 const escapeXml = (value) =>
@@ -330,7 +329,6 @@ async function generateSitemap() {
     });
 
     blogs
-      .filter((blog) => !isMedicationFocusedBlog(blog))
       .map((blog) => ({
         ...blog,
         slug: blog?.slug || createBlogSlug(blog?.title),

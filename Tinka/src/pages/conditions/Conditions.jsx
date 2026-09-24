@@ -15,11 +15,11 @@ const Conditions = () => (
       <title>Conditions We Support | Tinka Health Services</title>
       <meta
         name="description"
-        content="Explore mental health condition guides from Tinka Health Services, including symptoms, psychiatric evaluation, ongoing care, telehealth care, and insurance-friendly access."
+        content="Explore mental health condition guides from Tinka Health Services, including symptoms, psychiatric evaluation, medication management, telehealth care, and insurance-friendly access."
       />
       <meta
         name="keywords"
-        content="mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, bipolar care, ongoing care"
+        content="mental health conditions, psychiatric conditions, anxiety care, depression care, ADHD care, bipolar care, medication management"
       />
       <meta property="og:type" content="website" />
       <meta
@@ -42,7 +42,7 @@ const Conditions = () => (
       </h1>
       <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700 md:text-lg">
         Review condition-specific care guides for symptoms, daily impact,
-        psychiatric evaluation, ongoing care, therapy support,
+        psychiatric evaluation, medication management, therapy support,
         telehealth access, and insurance guidance.
       </p>
 

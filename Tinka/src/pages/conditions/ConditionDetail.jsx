@@ -70,7 +70,7 @@ const ConditionDetail = () => {
     `${condition.title} care information from Tinka Health Services.`;
   const description = normalizeMetaDescription(
     condition.metaDescription || fallbackDescription,
-    `${condition.title} care guide with symptoms, treatment options, ongoing care, telehealth access, and insurance-friendly care.`,
+    `${condition.title} care guide with symptoms, treatment options, medication management, telehealth access, and insurance-friendly care.`,
   );
   const title = buildBrandedSeoTitle(
     condition.seoTitle || `${condition.title} Care Guide`,
@@ -78,7 +78,7 @@ const ConditionDetail = () => {
   const keywords = Array.isArray(condition.keywords)
     ? condition.keywords.join(", ")
     : condition.keywords ||
-      `${condition.title}, psychiatric evaluation, ongoing care, telehealth psychiatry, Maryland, Washington DC, Virginia`;
+      `${condition.title}, psychiatric evaluation, medication management, telehealth psychiatry, Maryland, Washington DC, Virginia`;
   const ogImage = getAbsoluteImage(condition.image);
   const visibleSections = condition.sections.filter(
     (section) => (section.topics || []).length > 0,

@@ -3,73 +3,73 @@
 
   <url>
     <loc>https://tinkahealthservices.com</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/about</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/primary-preventive-care</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/meet-our-provider</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/policy</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/contact</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/referral</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/search</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/conditions</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/booking</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/services</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -78,27 +78,27 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/insurance/insurance-hero-consultation.jpg</image:loc>
       <image:title>Insurance We Accept</image:title>
-      <image:caption>See accepted insurance plans for mental health care, psychiatry, follow-up care, and telehealth in Maryland, DC, and Virginia.</image:caption>
+      <image:caption>Accepted insurance plans for psychiatric care, medication management, and telehealth in Maryland, Washington DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/maryland-psychiatrist</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/dc-psychiatrist</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/virginia-psychiatrist</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -107,26 +107,48 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/img_mental_health/hero/teletherapyimg.webp</image:loc>
       <image:title>Psychiatric Provider in Herndon, VA</image:title>
-      <image:caption>Book psychiatric evaluations and ongoing psychiatric care in Herndon, VA with telehealth psychiatry and accepted insurance plans.</image:caption>
+      <image:caption>Book psychiatric evaluations and medication management in Herndon, VA with telehealth psychiatry and accepted insurance plans.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/telehealth-psychiatry-md-dc-va</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/adhd-treatment-medication-management-virginia</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/seo/adhd-virginia.webp</image:loc>
+      <image:title>ADHD Treatment &amp; Medication Management in Virginia</image:title>
+      <image:caption>ADHD treatment and medication management in Virginia with online evaluation, medication review, follow-up care, and insurance-friendly access.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/anxiety-psychiatrist-md</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/seo/anxiety-md.webp</image:loc>
       <image:title>Anxiety Psychiatrist in Maryland</image:title>
-      <image:caption>Anxiety psychiatrist in MD offering psychiatric evaluation, anxiety follow-up care, telehealth visits, and insurance-friendly care.</image:caption>
+      <image:caption>Anxiety psychiatrist in MD offering psychiatric evaluation, anxiety medication management, telehealth visits, and insurance-friendly care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/depression-medication-management-dc</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/seo/depression-dc.webp</image:loc>
+      <image:title>Depression Treatment and Medication Management in DC</image:title>
+      <image:caption>Depression treatment and medication management in Washington DC with psychiatric evaluation, antidepressant review, and telehealth follow-up.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -135,9 +157,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/seo/online-psychiatrist-virginia.webp</image:loc>
       <image:title>Online Psychiatrist in Virginia</image:title>
-      <image:caption>Book an online psychiatrist in Virginia for secure telepsychiatry, psychiatric evaluation and follow-up care.</image:caption>
+      <image:caption>Book an online psychiatrist in Virginia for secure telepsychiatry, psychiatric evaluation, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -146,9 +168,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/seo/psychiatric-evaluation-md.webp</image:loc>
       <image:title>Psychiatric Evaluation in Maryland</image:title>
-      <image:caption>Schedule a psychiatric evaluation in Maryland for diagnostic clarity, clinical review, treatment recommendations, and telehealth options.</image:caption>
+      <image:caption>Schedule a psychiatric evaluation in Maryland for diagnostic clarity, medication review, treatment recommendations, and telehealth options.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management-psychiatrist-dc</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/seo/medication-management-dc.webp</image:loc>
+      <image:title>Medication Management Psychiatrist in DC</image:title>
+      <image:caption>Medication management psychiatry in Washington DC with medication review, follow-up care, telehealth appointments, and side-effect monitoring.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -157,9 +190,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/seo/hypomanic-episodes.webp</image:loc>
       <image:title>Hypomanic Episodes: Psychiatric Evaluation and Support</image:title>
-      <image:caption>Hypomanic episodes treatment with psychiatric evaluation for elevated mood, decreased sleep, impulsivity, clinical review, and follow-up care.</image:caption>
+      <image:caption>Hypomanic episodes treatment with psychiatric evaluation for elevated mood, decreased sleep, impulsivity, medication review, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -167,10 +200,10 @@
     <loc>https://tinkahealthservices.com/bipolar-treatment</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/seo/bipolar-treatment.webp</image:loc>
-      <image:title>Bipolar Evaluation and Follow-up</image:title>
-      <image:caption>Bipolar care with psychiatric evaluation and follow-up for mood swings, depression, and hypomania.</image:caption>
+      <image:title>Bipolar Treatment and Medication Management</image:title>
+      <image:caption>Bipolar treatment and medication management with psychiatric evaluation for mood swings, depression, hypomania, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -181,7 +214,7 @@
       <image:title>Professional addiction treatment therapy session with counselor and patient</image:title>
       <image:caption>Addiction is a complex disease that affects your brain, behavior, and relationships. Whether you&apos;re struggling with substance use, behavioral addictions, or.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -192,7 +225,7 @@
       <image:title>Adult psychiatry consultation with mental health professional</image:title>
       <image:caption>Adult psychiatry focuses on the diagnosis, treatment, and prevention of mental health disorders in adults. At Tinka Health, our psychiatric services combine.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -203,7 +236,7 @@
       <image:title>Telehealth weight loss management visit with clinician support</image:title>
       <image:caption>Weight loss management with telehealth visits, lifestyle planning, clinical guidance, and follow-up care in Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -214,7 +247,7 @@
       <image:title>Peaceful outdoor scene representing overcoming agoraphobia through therapy</image:title>
       <image:caption>Agoraphobia is more than just fear of open spaces - it&apos;s an anxiety disorder that can make you feel trapped in your own life. You might avoid places or.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -225,7 +258,7 @@
       <image:title>Elderly care and support for Alzheimer&apos;s disease patients and families</image:title>
       <image:caption>Alzheimer&apos;s disease affects not just the individual diagnosed, but their entire family and support network. At Tinka Health, we provide compassionate care and.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -236,7 +269,18 @@
       <image:title>Calm anger management therapy session with professional counselor</image:title>
       <image:caption>Anger is a natural emotion, but when it becomes overwhelming or destructive, it can damage relationships and negatively impact your life. Tinka Health&apos;s anger.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/services/Antidepressants</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/services/Antidepressants.jpg</image:loc>
+      <image:title>Medication management for depression treatment with healthcare professional</image:title>
+      <image:caption>Finding the right antidepressant medication can be a crucial part of your mental health treatment. At Tinka Health, our psychiatric professionals provide.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -247,7 +291,7 @@
       <image:title>Anxiety therapy session helping patient overcome worry and stress</image:title>
       <image:caption>Anxiety is one of the most common mental health challenges, affecting millions of people. Whether you&apos;re dealing with general worry, specific fears, or.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -258,7 +302,7 @@
       <image:title>ADHD treatment and therapy for focus and attention improvement</image:title>
       <image:caption>ADHD affects millions of children and adults, impacting focus, impulse control, and daily functioning. At Tinka Health, we provide comprehensive ADHD.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -269,7 +313,7 @@
       <image:title>Autism spectrum disorder therapy and behavioral support services</image:title>
       <image:caption>Autism Spectrum Disorder (ASD) affects individuals differently, but all deserve understanding, support, and the opportunity to reach their full potential. At.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -280,7 +324,7 @@
       <image:title>Grief counseling and bereavement therapy support services</image:title>
       <image:caption>Losing someone important to you is one of life&apos;s most difficult experiences. Grief is a natural response to loss, but it can feel overwhelming and isolating..</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -291,7 +335,7 @@
       <image:title>Supportive psychiatric care for bipolar disorder and mood stability</image:title>
       <image:caption>If you are living with bipolar disorder, you might feel like a slave to your moods and emotions. At some points, you feel depressed, unmotivated, and withdrawn.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -302,7 +346,7 @@
       <image:title>Depression therapy and treatment with mental health professional</image:title>
       <image:caption>Depression is more than just feeling sad or going through a rough patch. It&apos;s a serious mental health condition that affects how you think, feel, and handle.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -313,7 +357,7 @@
       <image:title>Eating disorder treatment and nutritional therapy support</image:title>
       <image:caption>Eating disorders are serious mental health conditions that affect your relationship with food, body image, and overall well-being. They can impact anyone.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -324,7 +368,18 @@
       <image:title>Comprehensive mental health therapy and wellness services</image:title>
       <image:caption>Mental health is essential to your overall well-being, affecting how you think, feel, and act in daily life. Whether you&apos;re facing specific challenges or.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/services/Medication-Management</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/services/Medication_management.jpg</image:loc>
+      <image:title>Psychiatric medication management and monitoring services</image:title>
+      <image:caption>Proper medication management is crucial for mental health treatment success. At Tinka Health, our psychiatric professionals provide comprehensive medication.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -335,7 +390,18 @@
       <image:title>OCD therapy and treatment for obsessive compulsive behaviors</image:title>
       <image:caption>Obsessive-Compulsive Disorder (OCD) involves unwanted, intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) that you feel.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/services/Opioid-Medication-Assistant-Treatment</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/services/Opioid_medication_assistant_treatment.jpg</image:loc>
+      <image:title>Opioid medication assisted treatment and recovery services</image:title>
+      <image:caption>Opioid addiction is a serious medical condition that requires professional treatment. At Tinka Health, we provide medication-assisted treatment (MAT) that.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -346,7 +412,7 @@
       <image:title>Panic disorder treatment and anxiety management therapy</image:title>
       <image:caption>Panic disorder involves recurrent, unexpected panic attacks and persistent worry about having more attacks. These intense episodes of fear can make you feel.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -357,7 +423,7 @@
       <image:title>PTSD therapy and trauma recovery treatment services</image:title>
       <image:caption>Post-Traumatic Stress Disorder (PTSD) can develop after experiencing or witnessing a traumatic event. It affects your ability to feel safe and can.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -368,7 +434,7 @@
       <image:title>Schizophrenia treatment and psychiatric care services</image:title>
       <image:caption>Schizophrenia is a complex mental health condition that affects thinking, perception, emotions, and behavior. With proper treatment and support, people with.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -379,7 +445,7 @@
       <image:title>Stress management therapy and coping strategies training</image:title>
       <image:caption>Stress is a normal part of life, but chronic stress can take a serious toll on your mental and physical health. At Tinka Health, we help you develop effective.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -390,7 +456,18 @@
       <image:title>Substance abuse treatment and addiction recovery services</image:title>
       <image:caption>Substance abuse affects millions of people and their families, but recovery is always possible. At Tinka Health, we provide comprehensive substance abuse.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/services/Suboxone-Treatment</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/services/Suboxone_treatment.jpg</image:loc>
+      <image:title>Suboxone treatment for opioid addiction recovery</image:title>
+      <image:caption>Suboxone is a highly effective medication-assisted treatment for opioid addiction that helps reduce withdrawal symptoms and cravings. At Tinka Health, our.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -401,7 +478,7 @@
       <image:title>Grief and loss counseling therapy support services</image:title>
       <image:caption>Losing someone or something important to you is one of life&apos;s most challenging experiences. Grief is a natural response to loss, but it can feel overwhelming.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -412,7 +489,7 @@
       <image:title>Insomnia treatment and sleep therapy services</image:title>
       <image:caption>Insomnia and sleep disorders can significantly impact your physical health, mental well-being, and daily functioning. At Tinka Health, we provide comprehensive.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -421,9 +498,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/addiction-treatment-hero-v2.webp</image:loc>
       <image:title>Adult participating in a supportive addiction recovery counseling session</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Addiction Treatment Care care guide with symptoms, treatment options.</image:caption>
+      <image:caption>Learn about Addiction Treatment symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -432,9 +509,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
       <image:title>Adult patient discussing a personalized care plan with a psychiatric clinician</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Adult Psychiatry Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Adult Psychiatry symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -445,7 +522,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Agoraphobia is more than just fear of open spaces - it&apos;s an anxiety disorder that can make you feel trapped in your own life. You might avoid places or...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -456,7 +533,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Alzheimer&apos;s disease affects not just the individual diagnosed, but their entire family and support network. At Tinka Health, we provide compassionate ca...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -467,7 +544,18 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Anger is a natural emotion, but when it becomes overwhelming or destructive, it can damage relationships and negatively impact your life. Tinka Health&apos;s...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/default.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Finding the right antidepressant medication can be a crucial part of your mental health treatment. At Tinka Health, our psychiatric professionals provid...</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -476,9 +564,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
       <image:title>Adult practicing a grounding exercise during an anxiety care appointment</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Anxiety Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Anxiety symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -487,9 +575,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
       <image:title>Adult patient using telehealth for ADHD evaluation and care</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. ADHD Care care guide with symptoms, treatment options, ongoing psychiatric.</image:caption>
+      <image:caption>Get calm ADHD evaluation, therapy support, and medication management through telehealth care for patients in Maryland, Washington DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -500,7 +588,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Autism Spectrum Disorder (ASD) affects individuals differently, but all deserve understanding, support, and the opportunity to reach their full potentia...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -511,7 +599,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Losing someone important to you is one of life&apos;s most difficult experiences. Grief is a natural response to loss, but it can feel overwhelming and isola...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -520,9 +608,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
       <image:title>Adult participating in a calm telehealth appointment for bipolar disorder care</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Bipolar Disorder Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Bipolar Disorder symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -531,9 +619,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
       <image:title>Adult and psychiatric clinician creating a depression care plan together</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Depression Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Depression symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -542,9 +630,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
       <image:title>Adult discussing eating disorder recovery goals with a behavioral health clinician</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Eating Disorders Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Eating Disorders symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -555,7 +643,18 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Mental health is essential to your overall well-being, affecting how you think, feel, and act in daily life. Whether you&apos;re facing specific challenges o...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/default.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Proper medication management is crucial for mental health treatment success. At Tinka Health, our psychiatric professionals provide comprehensive medica...</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -566,7 +665,18 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Obsessive-Compulsive Disorder (OCD) involves unwanted, intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) that you fe...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/default.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Opioid addiction is a serious medical condition that requires professional treatment. At Tinka Health, we provide medication-assisted treatment (MAT) th...</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -575,9 +685,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/panic-disorder-hero-v2.webp</image:loc>
       <image:title>Adult practicing a grounding technique during panic disorder treatment</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Panic Disorder Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Panic Disorder symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -588,7 +698,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Post-Traumatic Stress Disorder (PTSD) can develop after experiencing or witnessing a traumatic event. It affects your ability to feel safe and can signi...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -599,7 +709,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Schizophrenia is a complex mental health condition that affects thinking, perception, emotions, and behavior. With proper treatment and support, people...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -610,7 +720,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Stress is a normal part of life, but chronic stress can take a serious toll on your mental and physical health. At Tinka Health, we help you develop eff...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -621,7 +731,18 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Substance abuse affects millions of people and their families, but recovery is always possible. At Tinka Health, we provide comprehensive substance abus...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/default.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Suboxone is a highly effective medication-assisted treatment for opioid addiction that helps reduce withdrawal symptoms and cravings. At Tinka Health, o...</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -630,9 +751,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/grief-and-loss-hero-v2.webp</image:loc>
       <image:title>Adult walking with a grief counselor during a supportive conversation</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Grief and Loss Care care guide with symptoms, treatment options, ongoing.</image:caption>
+      <image:caption>Learn about Grief and Loss symptoms, evaluation, treatment, medication management, and telehealth care from Tinka Health Services in Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -643,7 +764,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Insomnia and sleep disorders can significantly impact your physical health, mental well-being, and daily functioning. At Tinka Health, we provide compre...</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -654,7 +775,7 @@
       <image:title>What Is Adult Psychiatry? - Adult Psychiatry care information</image:title>
       <image:caption>Learn the basics of Adult Psychiatry, how it may present, and why a professional evaluation can be useful. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -665,7 +786,7 @@
       <image:title>Common Signs and Symptoms of Adult Psychiatry - Adult Psychiatry care information</image:title>
       <image:caption>Review commonly discussed signs of Adult Psychiatry and why symptoms should be considered in context. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -676,7 +797,7 @@
       <image:title>How Adult Psychiatry Can Affect Daily Functioning - Adult Psychiatry care information</image:title>
       <image:caption>Learn how symptoms may influence concentration, mood, behavior, sleep, relationships, or responsibilities. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -687,7 +808,7 @@
       <image:title>Adult Psychiatry Warning Signs - Adult Psychiatry care information</image:title>
       <image:caption>Learn which changes may call for timely professional support and when urgent help may be appropriate. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -698,7 +819,7 @@
       <image:title>How Adult Psychiatry Is Evaluated - Adult Psychiatry care information</image:title>
       <image:caption>See what a careful evaluation may include, from symptoms and history to daily impact and possible overlapping conditions. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -707,9 +828,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
       <image:title>Preparing for a Adult Psychiatry Evaluation - Adult Psychiatry care information</image:title>
-      <image:caption>Get clear information from Tinka Health Services for. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Prepare useful information about symptoms, medications, health history, sleep, stress, and treatment goals. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -720,7 +841,7 @@
       <image:title>Questions to Ask About Adult Psychiatry - Adult Psychiatry care information</image:title>
       <image:caption>Use practical questions to understand evaluation findings, care options, follow-up, and safety considerations. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -729,9 +850,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
       <image:title>Adult Psychiatry Treatment Options - Adult Psychiatry care information</image:title>
-      <image:caption>Get clear information from Tinka. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Learn how a care plan may combine education, therapy support, lifestyle strategies, medication, and follow-up when appropriate. Get clear information from.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -742,7 +863,7 @@
       <image:title>Therapy and Practical Support for Adult Psychiatry - Adult Psychiatry care information</image:title>
       <image:caption>Explore skills and supports that may help patients manage symptoms and improve daily functioning. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -753,7 +874,40 @@
       <image:title>Creating a Care Plan for Adult Psychiatry - Adult Psychiatry care information</image:title>
       <image:caption>Understand how goals, preferences, symptoms, health history, and follow-up can shape an individualized care plan. Get clear information from Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/adult-psychiatry/psychiatric-medication-management-for-adults.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
+      <image:title>Medication Management for Adult Psychiatry - Adult Psychiatry care information</image:title>
+      <image:caption>Learn what medication management may involve and why prescribing decisions require an individualized clinical assessment. Get clear information from Tinka.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/adult-psychiatry/adult-psychiatry-medication-follow-up.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
+      <image:title>What to Expect During Medication Follow-Up - Adult Psychiatry care information</image:title>
+      <image:caption>Review the symptoms, benefits, side effects, adherence, and safety questions commonly discussed during follow-up. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/adult-psychiatry/adult-psychiatry-medication-safety-and-monitoring.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/adult-psychiatry-hero-v2.webp</image:loc>
+      <image:title>Medication Safety and Monitoring - Adult Psychiatry care information</image:title>
+      <image:caption>Understand why medication lists, health changes, side effects, and regular communication matter during treatment. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -764,7 +918,7 @@
       <image:title>Telehealth Care for Adult Psychiatry in Maryland, DC, and Virginia - Adult Psychiatry care information</image:title>
       <image:caption>Learn how eligible patients may receive psychiatric evaluation and follow-up care through convenient telehealth appointments. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -773,9 +927,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/agoraphobia-hero-v2.webp</image:loc>
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
-      <image:caption>Learn what Agoraphobia is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Agoraphobia is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -786,7 +940,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Review common Agoraphobia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -797,7 +951,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Know when to seek help for Agoraphobia, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -808,7 +962,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Review common Agoraphobia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -819,7 +973,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Understand how Agoraphobia can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -830,7 +984,7 @@
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
       <image:caption>Learn warning signs of Agoraphobia, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -839,20 +993,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/agoraphobia-hero-v2.webp</image:loc>
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
-      <image:caption>Explore Agoraphobia treatment options, including evaluation, therapy support, and follow-up care. Our approach to treating agoraphobia combines evidence-based.</image:caption>
+      <image:caption>Explore Agoraphobia treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/agoraphobia/agoraphobia-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/agoraphobia/agoraphobia-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/agoraphobia-hero-v2.webp</image:loc>
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
-      <image:caption>Learn about agoraphobia follow-up care for Agoraphobia, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Agoraphobia may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -861,9 +1015,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/agoraphobia-hero-v2.webp</image:loc>
       <image:title>Adult practicing a supported step outdoors with a mental health clinician</image:title>
-      <image:caption>Learn how telehealth care for Agoraphobia can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Agoraphobia can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -872,9 +1026,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/alzheimers-disease-hero-v2.webp</image:loc>
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
-      <image:caption>Learn what Alzheimer&apos;s Disease is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Alzheimer&apos;s Disease is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -885,7 +1039,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Review common Alzheimer&apos;s Disease signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -896,7 +1050,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Know when to seek help for Alzheimer&apos;s Disease, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -907,7 +1061,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Review common Alzheimer&apos;s Disease signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -918,7 +1072,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Understand how Alzheimer&apos;s Disease can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -929,7 +1083,7 @@
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
       <image:caption>Learn warning signs of Alzheimer&apos;s Disease, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -938,20 +1092,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/alzheimers-disease-hero-v2.webp</image:loc>
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
-      <image:caption>Explore Alzheimer&apos;s Disease treatment options, including evaluation, therapy support, and follow-up care. We provide comprehensive support that addresses the.</image:caption>
+      <image:caption>Explore Alzheimer&apos;s Disease treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/alzheimer-s-disease/alzheimer-s-disease-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/alzheimer-s-disease/alzheimer-s-disease-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/alzheimers-disease-hero-v2.webp</image:loc>
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
-      <image:caption>Learn about alzheimer&apos;s Disease follow-up care for Alzheimer&apos;s Disease, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Alzheimer&apos;s Disease may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -960,9 +1114,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/alzheimers-disease-hero-v2.webp</image:loc>
       <image:title>Older adult and family member participating in a memory care consultation</image:title>
-      <image:caption>Learn how telehealth care for Alzheimer&apos;s Disease can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Alzheimer&apos;s Disease can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -971,9 +1125,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anger-management-hero-v2.webp</image:loc>
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
-      <image:caption>Learn what Anger Management is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Anger Management is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -984,7 +1138,7 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Review common Anger Management signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -995,7 +1149,7 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Know when to seek help for Anger Management, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1006,7 +1160,7 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Review common Anger Management signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1017,7 +1171,7 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Understand how Anger Management can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1028,7 +1182,7 @@
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
       <image:caption>Learn warning signs of Anger Management, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1037,20 +1191,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anger-management-hero-v2.webp</image:loc>
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
-      <image:caption>Explore Anger Management treatment options, including evaluation, therapy support, and follow-up care. Our anger management program is designed to help you.</image:caption>
+      <image:caption>Explore Anger Management treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/anger-management/anger-management-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/anger-management/anger-management-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anger-management-hero-v2.webp</image:loc>
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
-      <image:caption>Learn about anger Management follow-up care for Anger Management, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Anger Management may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1059,9 +1213,108 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anger-management-hero-v2.webp</image:loc>
       <image:title>Adult practicing emotional regulation skills with a counselor</image:title>
-      <image:caption>Learn how telehealth care for Anger Management can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Anger Management can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/what-is-antidepressants.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Learn what Antidepressants is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-signs-and-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Review common Antidepressants signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/when-to-seek-help-for-antidepressants.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Know when to seek help for Antidepressants, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Review common Antidepressants signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-in-daily-life.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Understand how Antidepressants can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-warning-signs.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Learn warning signs of Antidepressants, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-treatment-options.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Explore Antidepressants treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/antidepressants-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Learn how medication management for Antidepressants may work, including review, monitoring, side effects, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/antidepressants/telehealth-care-for-antidepressants.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/antidepressants-hero-v2.webp</image:loc>
+      <image:title>Patient and clinician reviewing an antidepressant treatment plan together</image:title>
+      <image:caption>Learn how telehealth care for Antidepressants can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1072,7 +1325,7 @@
       <image:title>What Is Anxiety? - Anxiety care information</image:title>
       <image:caption>Learn the basics of Anxiety, how it may present, and why a professional evaluation can be useful. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1083,7 +1336,7 @@
       <image:title>Anxiety and Daily Life - Anxiety care information</image:title>
       <image:caption>Explore how Anxiety may affect routines, relationships, work, school, sleep, and overall well-being. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1094,7 +1347,7 @@
       <image:title>When to Seek Help for Anxiety - Anxiety care information</image:title>
       <image:caption>Understand when symptoms or changes in daily functioning may be a reason to contact a qualified healthcare professional. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1105,7 +1358,7 @@
       <image:title>Common Signs and Symptoms of Anxiety - Anxiety care information</image:title>
       <image:caption>Review commonly discussed signs of Anxiety and why symptoms should be considered in context. Get clear information from Tinka Health Services for patients in.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1116,7 +1369,7 @@
       <image:title>How Anxiety Can Affect Daily Functioning - Anxiety care information</image:title>
       <image:caption>Learn how symptoms may influence concentration, mood, behavior, sleep, relationships, or responsibilities. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1127,7 +1380,7 @@
       <image:title>Anxiety Warning Signs - Anxiety care information</image:title>
       <image:caption>Learn which changes may call for timely professional support and when urgent help may be appropriate. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1138,7 +1391,7 @@
       <image:title>How Anxiety Is Evaluated - Anxiety care information</image:title>
       <image:caption>See what a careful evaluation may include, from symptoms and history to daily impact and possible overlapping conditions. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1147,9 +1400,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
       <image:title>Preparing for a Anxiety Evaluation - Anxiety care information</image:title>
-      <image:caption>Get clear information from Tinka Health Services for. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Prepare useful information about symptoms, medications, health history, sleep, stress, and treatment goals. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1160,7 +1413,7 @@
       <image:title>Questions to Ask About Anxiety - Anxiety care information</image:title>
       <image:caption>Use practical questions to understand evaluation findings, care options, follow-up, and safety considerations. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1169,9 +1422,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
       <image:title>Anxiety Treatment Options - Anxiety care information</image:title>
-      <image:caption>Get clear information from Tinka. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Learn how a care plan may combine education, therapy support, lifestyle strategies, medication, and follow-up when appropriate. Get clear information from.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1182,7 +1435,7 @@
       <image:title>Therapy and Practical Support for Anxiety - Anxiety care information</image:title>
       <image:caption>Explore skills and supports that may help patients manage symptoms and improve daily functioning. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1193,7 +1446,40 @@
       <image:title>Creating a Care Plan for Anxiety - Anxiety care information</image:title>
       <image:caption>Understand how goals, preferences, symptoms, health history, and follow-up can shape an individualized care plan. Get clear information from Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/anxiety/medication-management-for-anxiety.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
+      <image:title>Medication Management for Anxiety - Anxiety care information</image:title>
+      <image:caption>Learn what medication management may involve and why prescribing decisions require an individualized clinical assessment. Get clear information from Tinka.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/anxiety/what-to-expect-during-anxiety-medication-follow-up.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
+      <image:title>What to Expect During Medication Follow-Up - Anxiety care information</image:title>
+      <image:caption>Review the symptoms, benefits, side effects, adherence, and safety questions commonly discussed during follow-up. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/anxiety/anxiety-medication-safety-and-monitoring.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/anxiety-hero-v2.webp</image:loc>
+      <image:title>Medication Safety and Monitoring - Anxiety care information</image:title>
+      <image:caption>Understand why medication lists, health changes, side effects, and regular communication matter during treatment. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1204,7 +1490,7 @@
       <image:title>Telehealth Care for Anxiety in Maryland, DC, and Virginia - Anxiety care information</image:title>
       <image:caption>Learn how eligible patients may receive psychiatric evaluation and follow-up care through convenient telehealth appointments. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1215,7 +1501,7 @@
       <image:title>Adult and child sitting calmly while learning about ADHD care</image:title>
       <image:caption>Understand ADHD in adults and children, when to seek evaluation, and how Tinka Health Services supports patients across Maryland, DC, and Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1226,7 +1512,7 @@
       <image:title>Family reviewing a weekly routine chart for ADHD support</image:title>
       <image:caption>See how ADHD may affect work, school, parenting, and home life, and learn when to consider professional support in Maryland, DC, or Virginia.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1237,7 +1523,7 @@
       <image:title>Person sitting peacefully with a notebook during a mental health evaluation</image:title>
       <image:caption>Learn why ADHD symptoms can overlap with anxiety, stress, depression, and sleep issues, and how careful evaluation can guide safer next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1248,7 +1534,7 @@
       <image:title>Desk with planner and notes showing attention and organization support</image:title>
       <image:caption>Explore common signs of inattention in ADHD, how they may affect daily life, and when to seek professional evaluation, support, and planning.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1259,7 +1545,7 @@
       <image:title>Teen and caregiver discussing restlessness and impulse control with a provider</image:title>
       <image:caption>Understand hyperactivity and impulsivity in ADHD across ages, including restlessness, quick reactions, and when evaluation may help families.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1270,7 +1556,7 @@
       <image:title>Family having a calm conversation about emotions and ADHD support</image:title>
       <image:caption>Learn how ADHD may affect emotional regulation, frustration, and family stress, and how professional care can support calmer daily routines.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1281,7 +1567,7 @@
       <image:title>Clinician and patient reviewing ADHD evaluation questions together</image:title>
       <image:caption>Learn what happens during an ADHD evaluation, what information may be reviewed, and how Tinka Health Services supports careful treatment planning.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1292,7 +1578,7 @@
       <image:title>Adult joining an ADHD telehealth screening appointment from home</image:title>
       <image:caption>Get adult ADHD screening and evaluation support through telehealth with Tinka Health Services across Maryland, Washington DC, and Virginia today.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1303,7 +1589,18 @@
       <image:title>Parent preparing notes for a child&apos;s ADHD evaluation appointment</image:title>
       <image:caption>Prepare for a child or teen ADHD evaluation with practical guidance for parents and caregivers seeking clear mental health support and next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/add-adhd/adhd-treatment-options-therapy-skills-medication.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
+      <image:title>Patient and provider discussing a personalized ADHD treatment plan</image:title>
+      <image:caption>Review ADHD treatment options, including therapy support, routines, lifestyle strategies, and careful medication management when appropriate.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1314,7 +1611,7 @@
       <image:title>Notebook with routine plan used for ADHD therapy support</image:title>
       <image:caption>Learn how therapy support can help ADHD patients build routines, coping skills, emotional regulation, and practical systems for daily life at home.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1325,7 +1622,40 @@
       <image:title>Caregiver and teen reviewing homework and routine supports together</image:title>
       <image:caption>Find supportive ways to help a child or teen with ADHD at home and school, including routines, communication, structure, and professional care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/add-adhd/adhd-medication-management-provider-review.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
+      <image:title>Psychiatric provider reviewing ADHD medication management notes</image:title>
+      <image:caption>Learn what an ADHD medication management visit may include, from health history and safety review to side effect monitoring and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/add-adhd/stimulant-nonstimulant-adhd-medications-overview.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
+      <image:title>Medication information sheet used during an ADHD treatment discussion</image:title>
+      <image:caption>Understand stimulant and nonstimulant ADHD medication options, why evaluation matters, and how careful monitoring supports safer ongoing care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/add-adhd/adhd-medication-follow-up-monitoring.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
+      <image:title>Calendar reminder for ADHD medication follow-up appointment</image:title>
+      <image:caption>Learn why ADHD medication follow-up visits matter for monitoring benefits, side effects, safety, functioning, and treatment goals over time.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1334,9 +1664,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
       <image:title>Patient using a laptop for a secure ADHD telehealth appointment</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Telehealth can make ADHD evaluation and follow-up more accessible for.</image:caption>
+      <image:caption>Access telehealth ADHD evaluation, therapy support, and medication management with Tinka Health Services across Maryland, DC, and Virginia today.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1347,7 +1677,7 @@
       <image:title>Patient reviewing insurance card before an ADHD telehealth appointment</image:title>
       <image:caption>Learn what insurance-friendly ADHD care may involve, including coverage questions, documentation, and appointment planning without coverage guarantees.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1356,9 +1686,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/adhd/hero.webp</image:loc>
       <image:title>Patient preparing notes before a first ADHD appointment</image:title>
-      <image:caption>Explore evaluation, treatment options, and ongoing care with Tinka Health Services. Preparing for an ADHD appointment can help you share concerns clearly and.</image:caption>
+      <image:caption>Know what to bring to your first ADHD appointment, including symptoms, history, medication lists, school or work concerns, and questions to ask.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1367,9 +1697,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/autism-hero-v2.webp</image:loc>
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
-      <image:caption>Learn what autism is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what autism is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1380,7 +1710,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Review common autism signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1391,7 +1721,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Know when to seek help for autism, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1402,7 +1732,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Review common autism signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1413,7 +1743,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Understand how autism can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1424,7 +1754,7 @@
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
       <image:caption>Learn warning signs of autism, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1433,20 +1763,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/autism-hero-v2.webp</image:loc>
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
-      <image:caption>Explore Autism treatment options, including evaluation, therapy support, and follow-up care. Our autism support services are designed to meet the unique needs.</image:caption>
+      <image:caption>Explore Autism treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/autism/autism-spectrum-disorder-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/autism/autism-spectrum-disorder-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/autism-hero-v2.webp</image:loc>
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
-      <image:caption>Learn about autism Spectrum Disorder follow-up care for autism, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for autism may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1455,9 +1785,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/autism-hero-v2.webp</image:loc>
       <image:title>Autistic adult participating in a sensory-friendly healthcare consultation</image:title>
-      <image:caption>Learn how telehealth care for autism can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for autism can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1466,9 +1796,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bereavement-hero-v2.webp</image:loc>
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
-      <image:caption>Learn what Bereavement is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Bereavement is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1479,7 +1809,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Review common Bereavement signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1490,7 +1820,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Know when to seek help for Bereavement, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1501,7 +1831,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Review common Bereavement signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1512,7 +1842,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Understand how Bereavement can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1523,7 +1853,7 @@
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
       <image:caption>Learn warning signs of Bereavement, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1532,20 +1862,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bereavement-hero-v2.webp</image:loc>
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
-      <image:caption>Explore Bereavement treatment options, including evaluation, therapy support, and follow-up care. Our bereavement counseling provides a safe space to process.</image:caption>
+      <image:caption>Explore Bereavement treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/bereavement/bereavement-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/bereavement/bereavement-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bereavement-hero-v2.webp</image:loc>
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
-      <image:caption>Learn about bereavement follow-up care for Bereavement, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Bereavement may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1554,9 +1884,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bereavement-hero-v2.webp</image:loc>
       <image:title>Adult sharing meaningful memories during a bereavement counseling session</image:title>
-      <image:caption>Learn how telehealth care for Bereavement can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Bereavement can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1567,7 +1897,7 @@
       <image:title>What Is Bipolar Disorder? - Bipolar Disorder care information</image:title>
       <image:caption>Learn the basics of Bipolar Disorder, how it may present, and why a professional evaluation can be useful. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1578,7 +1908,7 @@
       <image:title>Bipolar Disorder and Daily Life - Bipolar Disorder care information</image:title>
       <image:caption>Explore how Bipolar Disorder may affect routines, relationships, work, school, sleep, and overall well-being. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1589,7 +1919,7 @@
       <image:title>When to Seek Help for Bipolar Disorder - Bipolar Disorder care information</image:title>
       <image:caption>Understand when symptoms or changes in daily functioning may be a reason to contact a qualified healthcare professional. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1600,7 +1930,7 @@
       <image:title>Common Signs and Symptoms of Bipolar Disorder - Bipolar Disorder care information</image:title>
       <image:caption>Review commonly discussed signs of Bipolar Disorder and why symptoms should be considered in context. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1611,7 +1941,7 @@
       <image:title>How Bipolar Disorder Can Affect Daily Functioning - Bipolar Disorder care information</image:title>
       <image:caption>Learn how symptoms may influence concentration, mood, behavior, sleep, relationships, or responsibilities. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1622,7 +1952,7 @@
       <image:title>Bipolar Disorder Warning Signs - Bipolar Disorder care information</image:title>
       <image:caption>Learn which changes may call for timely professional support and when urgent help may be appropriate. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1633,7 +1963,7 @@
       <image:title>How Bipolar Disorder Is Evaluated - Bipolar Disorder care information</image:title>
       <image:caption>See what a careful evaluation may include, from symptoms and history to daily impact and possible overlapping conditions. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1642,9 +1972,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
       <image:title>Preparing for a Bipolar Disorder Evaluation - Bipolar Disorder care information</image:title>
-      <image:caption>Get clear information from Tinka Health Services for. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Prepare useful information about symptoms, medications, health history, sleep, stress, and treatment goals. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1655,7 +1985,7 @@
       <image:title>Questions to Ask About Bipolar Disorder - Bipolar Disorder care information</image:title>
       <image:caption>Use practical questions to understand evaluation findings, care options, follow-up, and safety considerations. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1664,9 +1994,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
       <image:title>Bipolar Disorder Treatment Options - Bipolar Disorder care information</image:title>
-      <image:caption>Get clear information from Tinka. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Learn how a care plan may combine education, therapy support, lifestyle strategies, medication, and follow-up when appropriate. Get clear information from.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1677,7 +2007,7 @@
       <image:title>Therapy and Practical Support for Bipolar Disorder - Bipolar Disorder care information</image:title>
       <image:caption>Explore skills and supports that may help patients manage symptoms and improve daily functioning. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1688,7 +2018,40 @@
       <image:title>Creating a Care Plan for Bipolar Disorder - Bipolar Disorder care information</image:title>
       <image:caption>Understand how goals, preferences, symptoms, health history, and follow-up can shape an individualized care plan. Get clear information from Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/bipolar-disorder/medication-management-for-bipolar-disorder.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
+      <image:title>Medication Management for Bipolar Disorder - Bipolar Disorder care information</image:title>
+      <image:caption>Learn what medication management may involve and why prescribing decisions require an individualized clinical assessment. Get clear information from Tinka.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/bipolar-disorder/what-to-expect-during-medication-follow-up-bipolar.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
+      <image:title>What to Expect During Medication Follow-Up - Bipolar Disorder care information</image:title>
+      <image:caption>Review the symptoms, benefits, side effects, adherence, and safety questions commonly discussed during follow-up. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/bipolar-disorder/medication-safety-and-monitoring-bipolar.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/bipolar-disorder-hero-v2.webp</image:loc>
+      <image:title>Medication Safety and Monitoring - Bipolar Disorder care information</image:title>
+      <image:caption>Understand why medication lists, health changes, side effects, and regular communication matter during treatment. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1699,7 +2062,7 @@
       <image:title>Telehealth Care for Bipolar Disorder in Maryland, DC, and Virginia - Bipolar Disorder care information</image:title>
       <image:caption>Learn how eligible patients may receive psychiatric evaluation and follow-up care through convenient telehealth appointments. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1710,7 +2073,7 @@
       <image:title>What Is Depression? - Depression care information</image:title>
       <image:caption>Learn the basics of Depression, how it may present, and why a professional evaluation can be useful. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1721,7 +2084,7 @@
       <image:title>Depression and Daily Life - Depression care information</image:title>
       <image:caption>Explore how Depression may affect routines, relationships, work, school, sleep, and overall well-being. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1732,7 +2095,7 @@
       <image:title>When to Seek Help for Depression - Depression care information</image:title>
       <image:caption>Understand when symptoms or changes in daily functioning may be a reason to contact a qualified healthcare professional. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1743,7 +2106,7 @@
       <image:title>Common Signs and Symptoms of Depression - Depression care information</image:title>
       <image:caption>Review commonly discussed signs of Depression and why symptoms should be considered in context. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1754,7 +2117,7 @@
       <image:title>How Depression Can Affect Daily Functioning - Depression care information</image:title>
       <image:caption>Learn how symptoms may influence concentration, mood, behavior, sleep, relationships, or responsibilities. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1765,7 +2128,7 @@
       <image:title>Depression Warning Signs - Depression care information</image:title>
       <image:caption>Learn which changes may call for timely professional support and when urgent help may be appropriate. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1776,7 +2139,7 @@
       <image:title>How Depression Is Evaluated - Depression care information</image:title>
       <image:caption>See what a careful evaluation may include, from symptoms and history to daily impact and possible overlapping conditions. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1785,9 +2148,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
       <image:title>Preparing for a Depression Evaluation - Depression care information</image:title>
-      <image:caption>Get clear information from Tinka Health Services for. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Prepare useful information about symptoms, medications, health history, sleep, stress, and treatment goals. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1798,7 +2161,7 @@
       <image:title>Questions to Ask About Depression - Depression care information</image:title>
       <image:caption>Use practical questions to understand evaluation findings, care options, follow-up, and safety considerations. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1807,9 +2170,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
       <image:title>Depression Treatment Options - Depression care information</image:title>
-      <image:caption>Get clear information from Tinka. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Learn how a care plan may combine education, therapy support, lifestyle strategies, medication, and follow-up when appropriate. Get clear information from.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1820,7 +2183,7 @@
       <image:title>Therapy and Practical Support for Depression - Depression care information</image:title>
       <image:caption>Explore skills and supports that may help patients manage symptoms and improve daily functioning. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1831,7 +2194,40 @@
       <image:title>Creating a Care Plan for Depression - Depression care information</image:title>
       <image:caption>Understand how goals, preferences, symptoms, health history, and follow-up can shape an individualized care plan. Get clear information from Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/depression/medication-management-for-depression.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
+      <image:title>Medication Management for Depression - Depression care information</image:title>
+      <image:caption>Learn what medication management may involve and why prescribing decisions require an individualized clinical assessment. Get clear information from Tinka.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/depression/what-to-expect-during-depression-medication-follow-up.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
+      <image:title>What to Expect During Medication Follow-Up - Depression care information</image:title>
+      <image:caption>Review the symptoms, benefits, side effects, adherence, and safety questions commonly discussed during follow-up. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/depression/depression-medication-safety-and-monitoring.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/depression-hero-v2.webp</image:loc>
+      <image:title>Medication Safety and Monitoring - Depression care information</image:title>
+      <image:caption>Understand why medication lists, health changes, side effects, and regular communication matter during treatment. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1842,7 +2238,7 @@
       <image:title>Telehealth Care for Depression in Maryland, DC, and Virginia - Depression care information</image:title>
       <image:caption>Learn how eligible patients may receive psychiatric evaluation and follow-up care through convenient telehealth appointments. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1853,7 +2249,7 @@
       <image:title>What Is Eating Disorders? - Eating Disorders care information</image:title>
       <image:caption>Learn the basics of Eating Disorders, how it may present, and why a professional evaluation can be useful. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1864,7 +2260,7 @@
       <image:title>Eating Disorders and Daily Life - Eating Disorders care information</image:title>
       <image:caption>Explore how Eating Disorders may affect routines, relationships, work, school, sleep, and overall well-being. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1875,7 +2271,7 @@
       <image:title>When to Seek Help for Eating Disorders - Eating Disorders care information</image:title>
       <image:caption>Understand when symptoms or changes in daily functioning may be a reason to contact a qualified healthcare professional. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1886,7 +2282,7 @@
       <image:title>Common Signs and Symptoms of Eating Disorders - Eating Disorders care information</image:title>
       <image:caption>Review commonly discussed signs of Eating Disorders and why symptoms should be considered in context. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1897,7 +2293,7 @@
       <image:title>How Eating Disorders Can Affect Daily Functioning - Eating Disorders care information</image:title>
       <image:caption>Learn how symptoms may influence concentration, mood, behavior, sleep, relationships, or responsibilities. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1908,7 +2304,7 @@
       <image:title>Eating Disorders Warning Signs - Eating Disorders care information</image:title>
       <image:caption>Learn which changes may call for timely professional support and when urgent help may be appropriate. Get clear information from Tinka Health Services for.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1919,7 +2315,7 @@
       <image:title>How Eating Disorders Is Evaluated - Eating Disorders care information</image:title>
       <image:caption>See what a careful evaluation may include, from symptoms and history to daily impact and possible overlapping conditions. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1928,9 +2324,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
       <image:title>Preparing for a Eating Disorders Evaluation - Eating Disorders care information</image:title>
-      <image:caption>Get clear information from Tinka Health Services for. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Prepare useful information about symptoms, medications, health history, sleep, stress, and treatment goals. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1941,7 +2337,7 @@
       <image:title>Questions to Ask About Eating Disorders - Eating Disorders care information</image:title>
       <image:caption>Use practical questions to understand evaluation findings, care options, follow-up, and safety considerations. Get clear information from Tinka Health Services.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1950,9 +2346,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
       <image:title>Eating Disorders Treatment Options - Eating Disorders care information</image:title>
-      <image:caption>Get clear information from Tinka. Explore evaluation, treatment options, and ongoing care with Tinka Health Services.</image:caption>
+      <image:caption>Learn how a care plan may combine education, therapy support, lifestyle strategies, medication, and follow-up when appropriate. Get clear information from.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1963,7 +2359,7 @@
       <image:title>Therapy and Practical Support for Eating Disorders - Eating Disorders care information</image:title>
       <image:caption>Explore skills and supports that may help patients manage symptoms and improve daily functioning. Get clear information from Tinka Health Services for patients.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1974,7 +2370,40 @@
       <image:title>Creating a Care Plan for Eating Disorders - Eating Disorders care information</image:title>
       <image:caption>Understand how goals, preferences, symptoms, health history, and follow-up can shape an individualized care plan. Get clear information from Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/eating-disorders/medication-management-for-eating-disorders.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
+      <image:title>Medication Management for Eating Disorders - Eating Disorders care information</image:title>
+      <image:caption>Learn what medication management may involve and why prescribing decisions require an individualized clinical assessment. Get clear information from Tinka.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/eating-disorders/eating-disorder-medication-follow-up.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
+      <image:title>What to Expect During Medication Follow-Up - Eating Disorders care information</image:title>
+      <image:caption>Review the symptoms, benefits, side effects, adherence, and safety questions commonly discussed during follow-up. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/eating-disorders/eating-disorder-medication-safety-and-monitoring.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/eating-disorders-hero-v2.webp</image:loc>
+      <image:title>Medication Safety and Monitoring - Eating Disorders care information</image:title>
+      <image:caption>Understand why medication lists, health changes, side effects, and regular communication matter during treatment. Get clear information from Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1985,7 +2414,7 @@
       <image:title>Telehealth Care for Eating Disorders in Maryland, DC, and Virginia - Eating Disorders care information</image:title>
       <image:caption>Learn how eligible patients may receive psychiatric evaluation and follow-up care through convenient telehealth appointments. Get clear information from Tinka.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -1994,9 +2423,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/mental-health-hero-v2.webp</image:loc>
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
-      <image:caption>Learn what Mental Health is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Mental Health is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2007,7 +2436,7 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Review common Mental Health signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2018,7 +2447,7 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Know when to seek help for Mental Health, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2029,7 +2458,7 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Review common Mental Health signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2040,7 +2469,7 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Understand how Mental Health can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2051,7 +2480,7 @@
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
       <image:caption>Learn warning signs of Mental Health, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2060,20 +2489,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/mental-health-hero-v2.webp</image:loc>
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
-      <image:caption>Explore Mental Health treatment options, including evaluation, therapy support, and follow-up care. Our mental health services address a wide range of concerns.</image:caption>
+      <image:caption>Explore Mental Health treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/mental-health/mental-health-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/mental-health/mental-health-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/mental-health-hero-v2.webp</image:loc>
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
-      <image:caption>Learn about mental Health follow-up care for Mental Health, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Mental Health may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2082,9 +2511,108 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/mental-health-hero-v2.webp</image:loc>
       <image:title>Adult having a collaborative mental health consultation with a clinician</image:title>
-      <image:caption>Learn how telehealth care for Mental Health can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Mental Health can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/what-is-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn what psychiatric medication management includes, from medication review and monitoring to side-effect checks and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-signs-and-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Review signs you may need psychiatric medication management, including side effects, limited benefit, safety concerns, and follow-up needs.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/when-to-seek-help-for-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn how psychiatric medication management supports medication review, monitoring, side-effect checks, and ongoing follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Review signs you may need psychiatric medication management, including side effects, limited benefit, safety concerns, and follow-up needs.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-in-daily-life.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn how psychiatric medication management supports medication review, monitoring, side-effect checks, and ongoing follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-warning-signs.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Review signs you may need psychiatric medication management, including side effects, limited benefit, safety concerns, and follow-up needs.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-treatment-options.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn how psychiatric medication management supports medication review, monitoring, side-effect checks, and ongoing follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/medication-management-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn how psychiatric medication management supports medication review, monitoring, side-effect checks, and ongoing follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/medication-management/telehealth-care-for-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/medication-management-hero-v2.webp</image:loc>
+      <image:title>Patient and psychiatric clinician reviewing a medication follow-up plan</image:title>
+      <image:caption>Learn how telehealth medication management can support psychiatric medication review, monitoring, side-effect checks, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2093,9 +2621,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ocd-hero-v2.webp</image:loc>
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
-      <image:caption>Learn what OCD is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what OCD is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2106,7 +2634,7 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Review common OCD signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2117,7 +2645,7 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Know when to seek help for OCD, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2128,7 +2656,7 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Review common OCD signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2139,7 +2667,7 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Understand how OCD can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2150,7 +2678,7 @@
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
       <image:caption>Learn warning signs of OCD, when symptoms may need attention, and how Tinka Health can help with next steps. Warning signs can help patients and families know.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2159,20 +2687,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ocd-hero-v2.webp</image:loc>
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
-      <image:caption>Explore OCD treatment options, including evaluation, therapy support, and follow-up care. Our evidence-based approach to OCD treatment helps you regain control.</image:caption>
+      <image:caption>Explore OCD treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/ocd/obsessive-compulsive-disorder-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/ocd/obsessive-compulsive-disorder-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ocd-hero-v2.webp</image:loc>
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
-      <image:caption>Learn about obsessive Compulsive Disorder follow-up care for OCD, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for OCD may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2181,9 +2709,108 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ocd-hero-v2.webp</image:loc>
       <image:title>Adult and therapist preparing a gradual OCD treatment plan</image:title>
-      <image:caption>Learn how telehealth care for OCD can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for OCD can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/what-is-opioid-medication-assistant-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Learn what opioid MAT is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-signs-and-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Review common opioid MAT signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/when-to-seek-help-for-opioid-medication-assistant-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Know when to seek help for opioid MAT, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Review common opioid MAT signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-in-daily-life.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Understand how opioid MAT can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-warning-signs.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Learn warning signs of opioid MAT, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-treatment-options.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Explore Opioid MAT treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/opioid-medication-assistant-treatment-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Learn how medication management for opioid MAT may work, including review, monitoring, side effects, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/opioid-medication-assistant-treatment/telehealth-care-for-opioid-medication-assistant-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/opioid-mat-hero-v2.webp</image:loc>
+      <image:title>Adult discussing coordinated opioid recovery treatment with a medical clinician</image:title>
+      <image:caption>Learn how telehealth care for opioid MAT can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2192,9 +2819,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ptsd-hero-v2.webp</image:loc>
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
-      <image:caption>Learn what PTSD is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what PTSD is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2205,7 +2832,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Review common PTSD signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2216,7 +2843,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Know when to seek help for PTSD, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2227,7 +2854,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Review common PTSD signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2238,7 +2865,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Understand how PTSD can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2249,7 +2876,7 @@
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
       <image:caption>Learn warning signs of PTSD, when symptoms may need attention, and how Tinka Health can help with next steps. Warning signs can help patients and families know.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2258,20 +2885,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ptsd-hero-v2.webp</image:loc>
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
-      <image:caption>Explore PTSD treatment options, including evaluation, therapy support, and follow-up care. Our trauma-informed treatment helps you process traumatic.</image:caption>
+      <image:caption>Explore PTSD treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/ptsd/post-traumatic-stress-disorder-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/ptsd/post-traumatic-stress-disorder-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ptsd-hero-v2.webp</image:loc>
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
-      <image:caption>Learn about post Traumatic Stress Disorder follow-up care for PTSD, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for PTSD may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2280,9 +2907,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/ptsd-hero-v2.webp</image:loc>
       <image:title>Adult creating a trauma-informed grounding plan with a mental health clinician</image:title>
-      <image:caption>Learn how telehealth care for PTSD can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for PTSD can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2291,9 +2918,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/schizophrenia-hero-v2.webp</image:loc>
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
-      <image:caption>Learn what Schizophrenia is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Schizophrenia is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2304,7 +2931,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Review common Schizophrenia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2315,7 +2942,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Know when to seek help for Schizophrenia, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2326,7 +2953,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Review common Schizophrenia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2337,7 +2964,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Understand how Schizophrenia can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2348,7 +2975,7 @@
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
       <image:caption>Learn warning signs of Schizophrenia, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2357,20 +2984,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/schizophrenia-hero-v2.webp</image:loc>
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
-      <image:caption>Explore Schizophrenia treatment options, including evaluation, therapy support, and follow-up care. Our comprehensive treatment addresses all aspects of.</image:caption>
+      <image:caption>Explore Schizophrenia treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/schizophrenia/schizophrenia-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/schizophrenia/schizophrenia-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/schizophrenia-hero-v2.webp</image:loc>
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
-      <image:caption>Learn about schizophrenia follow-up care for Schizophrenia, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Schizophrenia may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2379,9 +3006,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/schizophrenia-hero-v2.webp</image:loc>
       <image:title>Adult participating in collaborative schizophrenia care with a clinician and family member</image:title>
-      <image:caption>Learn how telehealth care for Schizophrenia can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Schizophrenia can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2390,9 +3017,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/stress-management-hero-v2.webp</image:loc>
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
-      <image:caption>Learn what Stress Management is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Stress Management is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2403,7 +3030,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Review common Stress Management signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2414,7 +3041,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Know when to seek help for Stress Management, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2425,7 +3052,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Review common Stress Management signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2436,7 +3063,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Understand how Stress Management can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2447,7 +3074,7 @@
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
       <image:caption>Learn warning signs of Stress Management, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2456,20 +3083,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/stress-management-hero-v2.webp</image:loc>
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
-      <image:caption>Explore Stress Management treatment options, including evaluation, therapy support, and follow-up care. Our comprehensive stress management program teaches you.</image:caption>
+      <image:caption>Explore Stress Management treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/stress-management/stress-management-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/stress-management/stress-management-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/stress-management-hero-v2.webp</image:loc>
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
-      <image:caption>Learn about stress Management follow-up care for Stress Management, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Stress Management may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2478,9 +3105,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/stress-management-hero-v2.webp</image:loc>
       <image:title>Adult creating a practical stress management plan with a therapist</image:title>
-      <image:caption>Learn how telehealth care for Stress Management can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Stress Management can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2489,9 +3116,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/substance-abuse-hero-v2.webp</image:loc>
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
-      <image:caption>Learn what Substance Abuse is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Substance Abuse is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2502,7 +3129,7 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Review common Substance Abuse signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2513,7 +3140,7 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Know when to seek help for Substance Abuse, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2524,7 +3151,7 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Review common Substance Abuse signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2535,7 +3162,7 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Understand how Substance Abuse can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2546,7 +3173,7 @@
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
       <image:caption>Learn warning signs of Substance Abuse, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2555,20 +3182,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/substance-abuse-hero-v2.webp</image:loc>
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
-      <image:caption>Explore Substance Abuse treatment options, including evaluation, therapy support, and follow-up care. Our evidence-based treatment program addresses all.</image:caption>
+      <image:caption>Explore Substance Abuse treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/substance-abuse/substance-abuse-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/substance-abuse/substance-abuse-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/substance-abuse-hero-v2.webp</image:loc>
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
-      <image:caption>Learn about substance Abuse follow-up care for Substance Abuse, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Substance Abuse may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2577,9 +3204,108 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/substance-abuse-hero-v2.webp</image:loc>
       <image:title>Adults participating in a respectful substance use recovery support group</image:title>
-      <image:caption>Learn how telehealth care for Substance Abuse can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Substance Abuse can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/what-is-suboxone-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Learn what Suboxone Treatment is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-signs-and-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Review common Suboxone Treatment signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/when-to-seek-help-for-suboxone-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Know when to seek help for Suboxone Treatment, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-symptoms.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Review common Suboxone Treatment signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-in-daily-life.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Understand how Suboxone Treatment can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-warning-signs.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Learn warning signs of Suboxone Treatment, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-treatment-options.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Explore Suboxone Treatment treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/suboxone-treatment-medication-management.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Learn how medication management for Suboxone Treatment may work, including review, monitoring, side effects, and follow-up care.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/suboxone-treatment/telehealth-care-for-suboxone-treatment.htm</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/images/conditions/library/suboxone-treatment-hero-v2.webp</image:loc>
+      <image:title>Adult attending a medication treatment follow-up for opioid recovery</image:title>
+      <image:caption>Learn how telehealth care for Suboxone Treatment can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
+    </image:image>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2588,9 +3314,9 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/insomnia-hero-v2.webp</image:loc>
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
-      <image:caption>Learn what Insomnia is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.</image:caption>
+      <image:caption>Learn what Insomnia is, common symptoms, treatment options, and when psychiatric support or medication management may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2601,7 +3327,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Review common Insomnia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2612,7 +3338,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Know when to seek help for Insomnia, what symptoms to watch for, and how to start mental health care with Tinka Health.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2623,7 +3349,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Review common Insomnia signs and symptoms, how they can affect daily life, and when professional mental health support may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2634,7 +3360,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Understand how Insomnia can affect work, school, relationships, sleep, and daily routines, plus when care may help.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2645,7 +3371,7 @@
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
       <image:caption>Learn warning signs of Insomnia, when symptoms may need attention, and how Tinka Health can help with next steps.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2654,20 +3380,20 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/insomnia-hero-v2.webp</image:loc>
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
-      <image:caption>Explore Insomnia treatment options, including evaluation, therapy support, and follow-up care. Our comprehensive approach addresses both the symptoms and.</image:caption>
+      <image:caption>Explore Insomnia treatment options, including evaluation, therapy support, medication management, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://tinkahealthservices.com/insomnia/insomnia-follow-up-care.htm</loc>
+    <loc>https://tinkahealthservices.com/insomnia/insomnia-medication-management.htm</loc>
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/insomnia-hero-v2.webp</image:loc>
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
-      <image:caption>Learn about insomnia follow-up care for Insomnia, including symptoms, treatment options, and care access with Tinka Health.</image:caption>
+      <image:caption>Learn how medication management for Insomnia may work, including review, monitoring, side effects, and follow-up care.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -2676,140 +3402,258 @@
     <image:image>
       <image:loc>https://tinkahealthservices.com/images/conditions/library/insomnia-hero-v2.webp</image:loc>
       <image:title>Adult reviewing a sleep diary and insomnia care plan with a clinician</image:title>
-      <image:caption>Learn how telehealth care for Insomnia can support evaluation, follow-up care, and follow-up visits when appropriate.</image:caption>
+      <image:caption>Learn how telehealth care for Insomnia can support evaluation, medication management, and follow-up visits when appropriate.</image:caption>
     </image:image>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
+    <loc>https://tinkahealthservices.com/blogs/adhd-medication-shortages-in-virginia-what-to-do-when-your-pharmacy-cant-fill-your-prescription</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/117370735.png</image:loc>
+      <image:title>ADHD Medication Shortages in Virginia: What to Do When Your Pharmacy Can&apos;t Fill Your Prescription</image:title>
+    </image:image>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tinkahealthservices.com/blogs/the-anxiety-epidemic-in-virginia-why-youre-not-alone-and-how-to-find-help-fast</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1932495983.png</image:loc>
+      <image:title>The Anxiety Epidemic in Virginia: Why You&apos;re Not Alone and How to Find Help Fast</image:title>
+    </image:image>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tinkahealthservices.com/blogs/antidepressant-side-effects-a-complete-guide-to-managing-medication-side-effects</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/953898669.png</image:loc>
+      <image:title>Antidepressant Side Effects: A Complete Guide to Managing Medication Side Effects</image:title>
+    </image:image>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinkahealthservices.com/blogs/psychiatric-medication-management-your-complete-guide-to-finding-the-right-provider-and-treatment-options</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/670081899.png</image:loc>
+      <image:title>Psychiatric Medication Management: Your Complete Guide to Finding the Right Provider and Treatment Options</image:title>
+    </image:image>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tinkahealthservices.com/blogs/social-media-anxiety-how-constant-scrolling-is-affecting-your-mental-health</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/537264172.png</image:loc>
+      <image:title>Social Media Anxiety: How Constant Scrolling Is Affecting Your Mental Health</image:title>
+    </image:image>
     <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/high-functioning-anxiety-signs-you-shouldnt-ignore-and-how-to-cope</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/339550786.png</image:loc>
+      <image:title>High-Functioning Anxiety: Signs You Shouldn’t Ignore (And How to Cope)</image:title>
+    </image:image>
     <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/burnout-in-young-adults-signs-causes-and-how-to-recover</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/220216069.png</image:loc>
+      <image:title>Burnout in Young Adults: Signs, Causes, and How to Recover</image:title>
+    </image:image>
     <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/what-are-hypomanic-episodes-and-how-to-cope</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/489508355.jpg</image:loc>
+      <image:title>WHAT ARE HYPOMANIC EPISODES AND HOW TO COPE?</image:title>
+    </image:image>
     <lastmod>2025-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/im-struggling-is-it-addiction-or-a-mental-health-disorder</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1800770867.jpg</image:loc>
+      <image:title>I’m Struggling. Is It Addiction or a Mental Health Disorder?</image:title>
+    </image:image>
     <lastmod>2025-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/feeling-hopeless-every-morning-heres-what-it-really-means-and-how-to-cope</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1730684121.png</image:loc>
+      <image:title>Feeling Hopeless Every Morning? Here&apos;s What It Really Means (And How to Cope)</image:title>
+    </image:image>
     <lastmod>2025-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/understanding-the-difference-between-bipolar-1-and-bipolar-2-disorders</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1918829861.jpg</image:loc>
+      <image:title>Understanding the Difference Between Bipolar 1 and Bipolar 2 Disorders</image:title>
+    </image:image>
     <lastmod>2025-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/internet-addiction-disorder-causes-and-solutions</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1044123440.jpg</image:loc>
+      <image:title>Internet Addiction Disorder: Causes and Solutions</image:title>
+    </image:image>
     <lastmod>2025-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/what-is-addiction</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/724092783.jpg</image:loc>
+      <image:title>What Is Addiction?</image:title>
+    </image:image>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/bipolar-ii-disorder-manic-depression-symptoms-treatments-and-more</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/550152114.jpg</image:loc>
+      <image:title>Bipolar II disorder (Manic Depression): Symptoms, treatments, and more</image:title>
+    </image:image>
     <lastmod>2025-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/5-useful-cbt-techniques-for-dealing-with-anxiety-that-you-can-try-at-home</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1936637473.jpg</image:loc>
+      <image:title>5 Useful CBT Techniques for Dealing with Anxiety (That You Can Try at Home)</image:title>
+    </image:image>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/what-are-hypomania-and-mania-in-bipolar-disorder</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1718046990.jpg</image:loc>
+      <image:title>What Are Hypomania and Mania in Bipolar Disorder?</image:title>
+    </image:image>
     <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/early-warning-signs-of-bipolar-disorder-in-young-adults</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/219706277.jpg</image:loc>
+      <image:title>Early Warning Signs of Bipolar Disorder in Young Adults</image:title>
+    </image:image>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/early-signs-of-bipolar-disorder-in-young-adults-what-to-look-out-for-and-when-to-seek-help</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/590598464.jpg</image:loc>
+      <image:title>Early Signs of Bipolar Disorder in Young Adults: What to Look Out For and When to Seek Help</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/bipolar-disorder-supportive-therapy-how-it-helpyou-stay-strong-through-the-highs-and-lows</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/1229916565.jpg</image:loc>
+      <image:title>Bipolar Disorder Supportive Therapy: How It HelpYou Stay Strong Through the Highs and Lows</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/depression-in-women-explained-why-it-happens-and-how-to-overcome-it</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/5404548.jpg</image:loc>
+      <image:title>Depression in Women Explained: Why It Happens and How to Overcome It</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/differences-between-bipolar-1-vs-bipolar-2-disorder</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/377545953.jpg</image:loc>
+      <image:title>Differences Between Bipolar 1 vs. Bipolar 2 Disorder</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/15-things-to-do-if-youre-feeling-lonely</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/852944860.jpg</image:loc>
+      <image:title>15 Things to Do If You’re Feeling Lonely</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/why-am-i-feeling-sad-for-no-reason</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/181682366.jpg</image:loc>
+      <image:title>Why Am I Feeling Sad for No Reason?</image:title>
+    </image:image>
     <lastmod>2025-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/reasons-why-you-cant-sleep-at-night-and-possible-solutions</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/364421086.jpg</image:loc>
+      <image:title>Reasons Why You Can’t Sleep At Night and Possible Solutions</image:title>
+    </image:image>
     <lastmod>2024-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tinkahealthservices.com/blogs/reducing-anxiety-through-breath-focus-techniques</loc>
+    <image:image>
+      <image:loc>https://tinkahealthservices.com/picture_servic/2138367028.jpg</image:loc>
+      <image:title>Reducing Anxiety Through Breath Focus Techniques</image:title>
+    </image:image>
     <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

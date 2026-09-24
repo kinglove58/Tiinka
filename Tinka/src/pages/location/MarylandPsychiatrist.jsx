@@ -6,7 +6,7 @@ const MarylandPsychiatrist = () => {
   const metaTitle =
     "Psychiatric Provider in Maryland | Tinka Health Services";
   const metaDescription =
-    "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and ongoing psychiatric care with telehealth access.";
+    "Find Maryland psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and medication management with telehealth access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const MarylandPsychiatrist = () => {
       },
       {
         "@type": "MedicalService",
-        name: "Ongoing Psychiatric Care",
+        name: "Medication Management",
       },
       {
         "@type": "MedicalService",
@@ -90,7 +90,7 @@ const MarylandPsychiatrist = () => {
         "psychiatric provider in maryland",
         "maryland psychiatrist accepting medicaid",
         "telehealth psychiatry maryland",
-        "ongoing psychiatric care maryland",
+        "medication management maryland",
         "maryland psychiatric nurse practitioner",
         "psychiatrist accepting medicare maryland",
       ]}
@@ -99,7 +99,7 @@ const MarylandPsychiatrist = () => {
       intro={{
         title: "Psychiatric care in Maryland designed for access and continuity",
         description: [
-          "Tinka Health Services provides psychiatric evaluations, follow-up care, and treatment planning for adults across Maryland through secure telehealth psychiatry appointments.",
+          "Tinka Health Services provides psychiatric evaluations, medication management, and follow-up care for adults across Maryland through secure telehealth psychiatry appointments.",
           "We help patients manage anxiety, depression, ADHD, bipolar disorder, PTSD, insomnia, and related concerns while accepting Medicaid, Medicare, and major insurance plans used by Maryland residents.",
         ],
       }}
@@ -116,7 +116,7 @@ const MarylandPsychiatrist = () => {
           "Difficulty focusing, staying organized, or managing ADHD symptoms",
           "Mood swings, irritability, or symptoms that may point to bipolar disorder",
           "Trauma-related symptoms, sleep disruption, or ongoing hypervigilance",
-          "Care concerns or the need for a psychiatric evaluation and treatment plan",
+          "Medication concerns or the need for a psychiatric evaluation and treatment plan",
         ],
       }}
       sectionTwo={{
@@ -125,7 +125,7 @@ const MarylandPsychiatrist = () => {
           "Our Maryland psychiatry services are built around timely access, individualized care, and clear follow-up planning so patients can stay engaged with treatment.",
         items: [
           "Comprehensive psychiatric evaluations to clarify symptoms, diagnoses, and next steps",
-          "Ongoing psychiatric care visits with ongoing monitoring and treatment adjustments",
+          "Medication management visits with ongoing monitoring and treatment adjustments",
           "Telehealth appointments that make care easier to access from anywhere in Maryland",
           "Insurance-friendly scheduling with Medicaid, Medicare, and major plans accepted",
           "Personalized treatment plans based on symptoms, health history, and treatment goals",

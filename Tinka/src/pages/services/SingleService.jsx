@@ -23,7 +23,7 @@ function SingleService() {
   const keywordContent = Array.isArray(service?.keywords)
     ? service.keywords.join(", ")
     : service?.keywords ||
-      `${service?.name || "mental health service"}, ongoing psychiatric care services, telehealth psychiatry appointments, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia`;
+      `${service?.name || "mental health service"}, medication management services, telehealth psychiatry appointments, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia`;
 
   const hrRef = useRef(null);
   const secondDivRef = useRef(null);

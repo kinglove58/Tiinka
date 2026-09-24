@@ -1,7 +1,6 @@
 /* global process */
 
 import fs from "fs";
-import { isMedicationFocused, sanitizeConditionContent } from "./content-policy.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -210,10 +209,7 @@ const buildGroupedConditions = ({ conditions = [], sections = [], articles = [] 
     };
   });
 
-const writeConditions = (rawConditions, rawSections = [], rawArticles = []) => {
-  const conditions = sanitizeConditionContent(rawConditions.filter((item) => !isMedicationFocused(item)));
-  const sections = sanitizeConditionContent(rawSections.filter((item) => !isMedicationFocused(item)));
-  const articles = sanitizeConditionContent(rawArticles.filter((item) => !isMedicationFocused(item)));
+const writeConditions = (conditions, sections = [], articles = []) => {
   fs.mkdirSync(GENERATED_DIR, { recursive: true });
   const PUBLIC_DATA_DIR = path.join(__dirname, "public", "data", "conditions");
   fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
@@ -244,14 +240,35 @@ const writeConditions = (rawConditions, rawSections = [], rawArticles = []) => {
     );
   });
 
+  const serializedConditions = JSON.stringify(conditions).replace(
+    /</g,
+    "\\u003c",
+  );
+  const serializedSections = JSON.stringify(sections).replace(
+    /</g,
+    "\\u003c",
+  );
+  const serializedArticles = JSON.stringify(articles).replace(
+    /</g,
+    "\\u003c",
+  );
+
   fs.writeFileSync(
     path.join(GENERATED_DIR, "sanityConditionsList.js"),
     `export const sanityConditionsList = ${serializedConditionsList};\n`,
     "utf8"
   );
 
-  // Full article bodies are served through the sanitized per-condition JSON.
-  if (fs.existsSync(CONDITIONS_PATH)) fs.unlinkSync(CONDITIONS_PATH);
+  fs.writeFileSync(
+    CONDITIONS_PATH,
+    [
+      `export const sanityConditions = ${serializedConditions};`,
+      `export const sanityConditionSections = ${serializedSections};`,
+      `export const sanityConditionArticles = ${serializedArticles};`,
+      "",
+    ].join("\n"),
+    "utf8",
+  );
 };
 
 const fetchContent = async () => {

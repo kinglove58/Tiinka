@@ -21,10 +21,10 @@ const HERO_IMAGE = "/images/services/weight-loss-management-hero.png";
 const HERO_IMAGE_URL = `${BASE_URL}${HERO_IMAGE}`;
 
 const supportItems = [
-  "Medical and lifestyle review focused on your weight, health history, sleep, stress, and daily routines",
+  "Medical and lifestyle review focused on your weight, health history, medications, sleep, stress, and daily routines",
   "Personalized nutrition, activity, and habit goals that fit real life",
   "Ongoing follow-up visits to review progress, barriers, and next steps",
-  "Lifestyle planning and follow-up support tailored to your goals",
+  "Medication discussion and monitoring when clinically appropriate, without medication delivery or shipping",
   "Telehealth access for eligible patients in Maryland, Washington DC, and Virginia",
   "Insurance-friendly care with benefits verified before treatment whenever possible",
 ];
@@ -32,7 +32,7 @@ const supportItems = [
 const steps = [
   {
     title: "Book your first visit",
-    text: "Choose an appointment time and share your goals, medical history, weight-related concerns and daily routines.",
+    text: "Choose an appointment time and share your goals, medical history, current medications, and weight-related concerns.",
   },
   {
     title: "Meet with a provider",
@@ -40,7 +40,7 @@ const steps = [
   },
   {
     title: "Start a realistic plan",
-    text: "You leave with a care plan that may include nutrition goals, activity changes, behavior support, follow-up timing, and ways to track progress.",
+    text: "You leave with a care plan that may include nutrition goals, activity changes, behavior support, follow-up timing, and medication options if appropriate.",
   },
 ];
 
@@ -57,8 +57,8 @@ const programAreas = [
   },
   {
     icon: FiClipboard,
-    title: "Care plan guidance",
-    text: "Your provider reviews practical strategies, progress measures, and when another specialist may be helpful.",
+    title: "Medication guidance when appropriate",
+    text: "If medication may be part of your care, your provider explains benefits, risks, monitoring, and alternatives. Tinka Health Services does not ship weight-loss medication.",
   },
   {
     icon: FiVideo,
@@ -74,14 +74,14 @@ const faqItems = [
       "Yes. Tinka Health Services offers weight loss management visits by telehealth for eligible patients in Maryland, Washington DC, and Virginia. Availability depends on your location, medical needs, and insurance coverage.",
   },
   {
-    question: "What does the weight management service include?",
+    question: "Do you deliver weight-loss medication?",
     answer:
-      "Visits focus on clinical review, practical lifestyle goals, and follow-up support tailored to your health history and needs.",
+      "No. Tinka Health Services does not deliver or ship weight-loss medication. If medication is clinically appropriate, your provider will discuss options, safety, monitoring, and how prescriptions are handled.",
   },
   {
-    question: "Is the program focused only on diet?",
+    question: "Is this only for people who want medication?",
     answer:
-      "No. The program also considers sleep, stress, activity, emotional eating, daily routines, and accountability.",
+      "No. Many patients need help with structure, nutrition habits, emotional eating, stress, sleep, activity, and accountability. Medication may be discussed when appropriate, but it is not the only focus of care.",
   },
   {
     question: "Can insurance cover weight loss management?",
@@ -91,7 +91,7 @@ const faqItems = [
   {
     question: "Who is a good fit for this service?",
     answer:
-      "This service may fit adults who want clinical support for weight loss, weight-related health concerns, emotional eating, or help building a sustainable plan with follow-up care.",
+      "This service may fit adults who want clinical support for weight loss, weight-related health concerns, emotional eating, medication questions, or help building a sustainable plan with follow-up care.",
   },
 ];
 
@@ -227,7 +227,8 @@ const WeightLossManagement = () => (
             </Link>
           </div>
           <p className="mt-5 max-w-2xl text-sm leading-6 text-slate-600">
-            Care recommendations are based on a clinical review of your health and goals.
+            Tinka Health Services does not ship weight-loss medication. Any
+            medication discussion depends on clinical evaluation and safety.
           </p>
         </div>
 
@@ -271,13 +272,13 @@ const WeightLossManagement = () => (
         <div className="space-y-5 text-lg leading-8 text-slate-700">
           <p>
             Weight loss is not only about willpower. Sleep, stress, mood,
-            appetite, medical history, routines, and support all
+            appetite, medications, medical history, routines, and support all
             affect progress. Tinka Health Services helps you review those
             factors and create a plan you can keep using after the first week.
           </p>
           <p>
             Care may include nutrition goals, activity planning, behavior
-            strategies, habit coaching, and structured
+            strategies, medication education when appropriate, and structured
             follow-up. The goal is steady, safe progress with a provider who can
             adjust the plan as your needs change.
           </p>
@@ -402,8 +403,8 @@ const WeightLossManagement = () => (
               "Need a structured plan after repeated diet attempts",
               "Want telehealth support with follow-up accountability",
               "Have stress, sleep, mood, or appetite patterns affecting weight",
-              "Want practical answers about healthy weight goals",
-              "Want ongoing support for sustainable habits",
+              "Need medication questions answered safely",
+              "Want support without medication delivery programs",
               "Live in Maryland, Washington DC, or Virginia",
             ].map((item) => (
               <li key={item} className="flex gap-3">

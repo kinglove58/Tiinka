@@ -22,7 +22,7 @@ const StructuredData = () => {
           url: "https://tinkahealthservices.com/images/logo/Tinka_health_logo.png",
         },
         description:
-          "Tinka Health Services provides comprehensive mental health care including therapy, psychiatric consultations, follow-up care, and wellness support in Maryland, Washington DC, and Virginia.",
+          "Tinka Health Services provides comprehensive mental health care including therapy, psychiatric consultations, medication management, and wellness support in Maryland, Washington DC, and Virginia.",
         foundingDate: "2020",
         email: "info@tinkahealthservices.com",
         telephone: "+1 443-295-6600",
@@ -162,9 +162,9 @@ const StructuredData = () => {
               "@type": "Offer",
               itemOffered: {
                 "@type": "MedicalService",
-                name: "Ongoing Psychiatric Care",
+                name: "Medication Management",
                 description:
-                  "Professional psychiatric evaluation and follow-up support",
+                  "Professional psychiatric medication management and monitoring",
               },
             },
             {
@@ -207,10 +207,10 @@ const StructuredData = () => {
         mainEntity: [
           {
             "@type": "Question",
-            name: "What is included in ongoing psychiatric care?",
+            name: "What is included in medication management?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Our practice offers ongoing psychiatric care services to support your mental health journey, including care plan monitoring, care plan updates, and regular consultations with our psychiatric professionals.",
+              text: "Our practice offers medication management services to support your mental health journey, including prescription monitoring, dosage adjustments, and regular consultations with our psychiatric professionals.",
             },
           },
           {
@@ -379,9 +379,9 @@ const StructuredData = () => {
             },
             {
               "@type": "Service",
-              name: "Ongoing Psychiatric Care",
+              name: "Medication Management",
               description:
-                "Expert management and monitoring of psychiatric treatments",
+                "Expert management and monitoring of psychiatric medications",
             },
             {
               "@type": "Service",

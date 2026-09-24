@@ -23,7 +23,7 @@ const BlogStructuredData = ({ blog, slug }) => {
     ...keywordList,
     "mental health",
     "psychiatry",
-    "ongoing psychiatric care",
+    "medication management",
     "telehealth psychiatry",
     "Maryland",
     "Washington DC",

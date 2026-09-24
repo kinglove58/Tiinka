@@ -90,7 +90,7 @@ export const mentalDetailContent = [
   {
     title: "We’re Here. You’re Not Alone.",
     text: [
-      "At Tinka Health Services, we provide therapy sessions, psychiatric consultations, ongoing care, and wellness support.",
+      "At Tinka Health Services, we provide therapy sessions, psychiatric consultations, medication management, and wellness support.",
     ],
     actions: [{ label: "Schedule Your First Session", type: "primary" }],
     image: "/images/img_mental_content/eight.jpg", // Correct public path
