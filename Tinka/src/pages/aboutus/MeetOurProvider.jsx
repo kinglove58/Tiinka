@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import {
   FaAward,
-  FaBiking,
   FaBookReader,
   FaCheckCircle,
   FaHeartbeat,
@@ -14,14 +13,13 @@ import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import providerImage from "/images/img_mental_health/contact_us/Pro_Head_shot.jpg";
 
 const expertiseList = [
-  "Psychiatric evaluations & ongoing psychiatric care",
-  "Mood disorders: depression, bipolar disorder, dysthymia, postpartum depression",
-  "Anxiety-related disorders: generalized anxiety, panic disorder, OCD, PTSD",
-  "Psychotic disorders: schizophrenia, schizoaffective disorder",
-  "Neurodevelopmental conditions: ADHD and related behavioral concerns in children and adults",
-  "Substance use disorders: alcohol, opioids, stimulants, nicotine dependence, and related concerns",
-  "Sleep disorders & stress-related conditions",
-  "Integrated care for clients with both physical and behavioral health needs",
+  "Comprehensive psychiatric evaluations",
+  "Individualized treatment planning and follow-up care",
+  "Anxiety and depression",
+  "ADHD and difficulty concentrating",
+  "Bipolar and other mood disorders",
+  "Trauma-related conditions and other psychiatric concerns",
+  "Whole-person care that considers emotional and physical health",
 ];
 
 const MeetOurProvider = () => {
@@ -41,7 +39,6 @@ const MeetOurProvider = () => {
         name: "Tinka Health Services",
         url: "https://tinkahealthservices.com",
       },
-      alumniOf: "Brandman University",
       hasCredential: ["DNP", "FNP-C", "PMHNP-BC"],
       knowsAbout: expertiseList,
       worksFor: {
@@ -78,11 +75,11 @@ const MeetOurProvider = () => {
         </title>
         <meta
           name="description"
-          content="Meet Dr. Seliat Dosunmu, psychiatric provider for ongoing psychiatric care, anxiety, depression, ADHD, PTSD, and care in MD, DC, and VA."
+          content="Meet Dr. Seliat Dosunmu, dual board-certified psychiatric and family nurse practitioner providing compassionate evaluations and individualized mental health care."
         />
         <meta
           name="keywords"
-          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, ongoing psychiatric care specialist, PMHNP provider"
+          content="Seliat Dosunmu DNP, psychiatric evaluation, family nurse practitioner, PMHNP-BC, mental health care"
         />
         <link
           rel="canonical"
@@ -124,14 +121,14 @@ const MeetOurProvider = () => {
               <p className="text-lg font-semibold text-[#005ab0]">
                 Founder &amp; Medical Director, Tinka Health Services
               </p>
+              <p className="text-lg font-medium text-[#0b3065]">
+                Compassionate Care. Meaningful Connections. A Healthier You.
+              </p>
               <p className="text-base leading-7 text-gray-700 md:text-lg">
-                Dr. Seliat Dosunmu is a highly skilled and compassionate
-                healthcare provider with dual board certifications as a Family
-                Nurse Practitioner (FNP-C) and a Psychiatric Mental Health Nurse
-                Practitioner (PMHNP-BC). With over a decade of experience in
-                nursing and advanced practice, she blends medical expertise with
-                empathy to create individualized, client-centered care
-                experiences.
+                Dr. Seliat Dosunmu is a dual board-certified Psychiatric Mental
+                Health Nurse Practitioner (PMHNP-BC) and Family Nurse
+                Practitioner (FNP-C) who is passionate about helping people
+                feel heard, understood, and empowered throughout their care.
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#005ab0] shadow">
@@ -140,11 +137,11 @@ const MeetOurProvider = () => {
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#005ab0] shadow">
                   <FaLightbulb className="text-base" />
-                  10+ Years of Experience
+                  Board-Certified Family Nurse Practitioner
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#005ab0] shadow">
                   <FaHeartbeat className="text-base" />
-                  Integrative Mental Health
+                  Board-Certified Psychiatric Mental Health Nurse Practitioner
                 </span>
               </div>
               <div className="pt-4">
@@ -175,21 +172,26 @@ const MeetOurProvider = () => {
           <div className="mx-auto flex max-w-5xl flex-col gap-12 px-5">
             <article className="rounded-3xl bg-blue-50/60 p-8 shadow-lg">
               <h2 className="text-2xl font-semibold text-[#0b3065] md:text-3xl">
-                Professional Background
+                A Whole-Person Approach
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-700">
-                Dr. Dosunmu earned her Doctor of Nursing Practice (DNP) from
-                Brandman University and has built her career on the belief that
-                mental health care should be accessible, individualized, and
-                stigma-free. Before founding Tinka Health Services, she served
-                in family medicine, preventive health, and psychiatry, working
-                with clients across the lifespan and from diverse cultural
-                backgrounds.
+                With advanced training in both mental and physical health, Dr.
+                Dosunmu believes effective care begins by treating the whole
+                person, not simply a diagnosis or a list of symptoms. Mental
+                health can affect relationships, work, physical health,
+                confidence, and overall quality of life.
               </p>
               <p className="mt-4 text-lg leading-8 text-gray-700">
-                Her interdisciplinary journey equips her to understand the full
-                spectrum of physical and behavioral health needs, ensuring that
-                every client receives thoughtful, personalized guidance.
+                She creates a welcoming, supportive environment where patients
+                can discuss their concerns without fear of judgment. Her
+                perspective as both a psychiatric and family nurse practitioner
+                helps her consider the broader factors that influence wellness.
+              </p>
+              <p className="mt-4 text-lg leading-8 text-gray-700">
+                Dr. Dosunmu provides psychiatric evaluations and individualized
+                treatment planning for adolescents and adults experiencing
+                anxiety, depression, ADHD, bipolar disorder, mood changes,
+                trauma-related conditions, and other psychiatric concerns.
               </p>
             </article>
 
@@ -199,8 +201,8 @@ const MeetOurProvider = () => {
                   Clinical Expertise
                 </h2>
                 <p className="text-base text-gray-600 font-semibold md:max-w-sm">
-                  Comprehensive care that addresses complex mental, emotional,
-                  and behavioral health concerns.
+                  Evaluations and care plans tailored to each person’s symptoms,
+                  goals, and circumstances.
                 </p>
               </div>
               <ul className="mt-6 grid gap-4 md:grid-cols-2">
@@ -222,16 +224,15 @@ const MeetOurProvider = () => {
                   Care Philosophy
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-gray-700">
-                  Dr. Dosunmu is passionate about empowering clients to take an
-                  active role in their wellness. She believes healing begins
-                  with understanding and takes time to listen, educate, and
-                  collaborate.
+                  Dr. Dosunmu takes time to listen to each patient’s story,
+                  understand their symptoms and goals, discuss care options,
+                  and develop a plan that fits their needs and circumstances.
                 </p>
                 <p className="mt-4 text-lg leading-8 text-gray-700">
-                  Her approach combines evidence-based ongoing psychiatric care
-                  with lifestyle strategies, coping skills, and therapy
-                  referrals—ensuring clients receive comprehensive,
-                  compassionate support.
+                  Her approach is collaborative and personal. She considers the
+                  connection between emotional well-being and physical health
+                  while building a genuine partnership with each person she
+                  serves.
                 </p>
               </div>
               <div className="rounded-3xl bg-blue-50/80 p-8 shadow-lg">
@@ -242,21 +243,20 @@ const MeetOurProvider = () => {
                   <li className="flex items-start gap-3">
                     <FaHeartbeat className="mt-1 text-xl text-[#005ab0]" />
                     <span>
-                      Safe, respectful spaces to explore challenges and goals.
+                      A welcoming space to discuss concerns without judgment.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <FaBookReader className="mt-1 text-xl text-[#005ab0]" />
                     <span>
-                      Personalized education and resources for clients and
-                      families.
+                      Time to explore symptoms, goals, and care options together.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <FaLightbulb className="mt-1 text-xl text-[#005ab0]" />
                     <span>
-                      Collaborative plans that nurture resilience and lasting
-                      change.
+                      Individualized plans informed by both mental and physical
+                      health.
                     </span>
                   </li>
                 </ul>
@@ -265,18 +265,18 @@ const MeetOurProvider = () => {
 
             <article className="rounded-3xl bg-white p-8 shadow-lg">
               <h2 className="text-2xl font-semibold text-[#0b3065] md:text-3xl">
-                Beyond the Clinic
+                Every Patient Deserves to Be Heard
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-700">
-                Outside of her professional life, Dr. Dosunmu enjoys spending
-                time with her family, traveling, and biking. She values
-                community engagement and is committed to reducing stigma around
-                mental health through education and advocacy.
+                Seeking help is a meaningful step toward feeling better.
+                Whether you are facing persistent anxiety, depression,
+                difficulty concentrating, mood changes, or a sense that
+                something is not right, you deserve a healthcare provider who
+                will listen. At Tinka Health Services, Dr. Dosunmu is committed
+                to compassionate, respectful, evidence-informed mental health
+                care. Every patient deserves to be heard, respected, and
+                treated as a whole person.
               </p>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#005ab0]">
-                <FaBiking className="text-lg" />
-                Wellness Advocate
-              </div>
             </article>
 
             <div className="rounded-3xl bg-[#005ab0] px-8 py-10 text-center text-white shadow-xl">
