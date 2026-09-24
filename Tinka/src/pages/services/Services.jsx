@@ -154,11 +154,11 @@ function Services() {
         </title>
         <meta
           name="description"
-          content="Explore medication management, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more."
+          content="Explore ongoing psychiatric care, therapy support, telehealth psychiatry, and care for anxiety, depression, ADHD, PTSD, and more."
         />
         <meta
           name="keywords"
-          content="mental health services maryland, mental health services washington dc, mental health services virginia, medication management services, telehealth psychiatry appointments, psychiatric provider near me"
+          content="mental health services maryland, mental health services washington dc, mental health services virginia, ongoing psychiatric care services, telehealth psychiatry appointments, psychiatric provider near me"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/services" />
         <meta

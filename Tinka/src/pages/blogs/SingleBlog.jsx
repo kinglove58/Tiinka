@@ -34,7 +34,7 @@ function SingleBlog() {
   const keywordContent = Array.isArray(blogItem?.keywords)
     ? blogItem.keywords.join(", ")
     : blogItem?.keywords ||
-      "mental health blog, psychiatry, medication management, telehealth psychiatry, maryland, washington dc, virginia";
+      "mental health blog, psychiatry, follow-up care, telehealth psychiatry, maryland, washington dc, virginia";
 
   useEffect(() => {
     if (blogItem) {

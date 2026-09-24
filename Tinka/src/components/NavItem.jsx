@@ -29,9 +29,7 @@ const shortNames = {
   "Attention Deficit Hyperactivity Disorder": "ADHD",
   "Obsessive Compulsive Disorder": "OCD",
   "Post Traumatic Stress Disorder": "PTSD",
-  "Opioid Medication Assistant Treatment": "Opioid MAT",
   "Autism Spectrum Disorder": "Autism Support",
-  "Medication Management": "Med Management",
 };
 
 const shortenName = (name) => shortNames[name] || name;

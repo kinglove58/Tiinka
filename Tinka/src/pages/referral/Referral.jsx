@@ -126,11 +126,11 @@ const Referral = () => {
         <title>Refer a Patient | Tinka Health Services</title>
         <meta
           name="description"
-          content="Refer a patient to Tinka Health Services for psychiatric evaluation, medication management, therapy support, and telehealth care in MD, DC, and VA."
+          content="Refer a patient to Tinka Health Services for psychiatric evaluation, ongoing psychiatric care, therapy support, and telehealth care in MD, DC, and VA."
         />
         <meta
           name="keywords"
-          content="refer a patient, psychiatry referral, mental health referral, medication management referral, psychiatric evaluation referral"
+          content="refer a patient, psychiatry referral, mental health referral, ongoing psychiatric care referral, psychiatric evaluation referral"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Refer a Patient | Tinka Health Services" />
@@ -191,7 +191,7 @@ const Referral = () => {
                 department. For mental health crisis support, call or text 988.
               </p>
               <p>
-                Please do not submit diagnoses, medication lists, insurance
+                Please do not submit diagnoses, sensitive health information, insurance
                 member IDs, policy numbers, medical records, or other sensitive
                 health details through this form. We will request what is needed
                 during follow-up.
@@ -267,7 +267,7 @@ const Referral = () => {
             <SelectField label="Main service requested" name="requested_service">
               <option value="">Select service</option>
               <option>Psychiatric evaluation</option>
-              <option>Medication management</option>
+              <option>Ongoing psychiatric care</option>
               <option>Therapy support</option>
               <option>Telehealth psychiatry</option>
               <option>Primary and preventive care</option>
@@ -285,7 +285,7 @@ const Referral = () => {
                 label="Short non-sensitive note"
                 name="non_sensitive_referral_note"
                 required={false}
-                placeholder="Optional. Example: Please call the patient to discuss an appointment. Do not include diagnosis, medication, insurance ID, or medical record details."
+                placeholder="Optional. Example: Please call the patient to discuss an appointment. Do not include diagnosis, sensitive health details, insurance ID, or medical record details."
                 rows={4}
               />
             </div>
@@ -379,7 +379,7 @@ const Referral = () => {
                 or legally authorized person has given permission, when required,
                 for Tinka Health Services to receive these contact details and
                 contact the patient or referring person. I understand that
-                medical records, diagnoses, medication lists, and insurance
+                medical records, diagnoses, sensitive health information, and insurance
                 numbers should not be submitted through this form.
               </span>
             </label>

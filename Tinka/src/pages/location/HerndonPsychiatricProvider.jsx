@@ -55,12 +55,12 @@ const serviceCards = [
   {
     title: "Psychiatric evaluations",
     description:
-      "Start with a careful review of symptoms, health history, medications, sleep, stress, and treatment goals so your care plan is based on the full picture.",
+      "Start with a careful review of symptoms, health history, treatments, sleep, stress, and treatment goals so your care plan is based on the full picture.",
   },
   {
-    title: "Medication management",
+    title: "Ongoing psychiatric care",
     description:
-      "Get ongoing psychiatric medication support for effectiveness, side effects, refills, dosage changes, and treatment adjustments when clinically appropriate.",
+      "Get ongoing psychiatric support for effectiveness, side effects, follow-up needs, care plan changes, and treatment adjustments when clinically appropriate.",
   },
   {
     title: "Telehealth psychiatry in Virginia",
@@ -81,14 +81,14 @@ const conditionCards = [
       "Care for low motivation, sadness, irritability, hopelessness, emotional numbness, fatigue, and mood changes that continue over time.",
   },
   {
-    title: "ADHD medication management",
+    title: "ADHD evaluation and follow-up",
     description:
-      "Evaluation and medication support for focus, organization, impulsivity, follow-through, school, work, and daily responsibilities.",
+      "Evaluation and support for focus, organization, impulsivity, follow-through, school, work, and daily responsibilities.",
   },
   {
     title: "Bipolar disorder",
     description:
-      "Psychiatric care for mood swings, hypomanic or manic symptoms, depression cycles, sleep changes, and medication monitoring.",
+      "Psychiatric care for mood swings, hypomanic or manic symptoms, depression cycles, sleep changes, and progress monitoring.",
   },
   {
     title: "PTSD and trauma symptoms",
@@ -118,13 +118,13 @@ const appointmentSteps = [
   {
     title: "Complete your evaluation",
     description:
-      "Meet with a psychiatric provider to discuss symptoms, history, current medications, goals, and a practical treatment plan.",
+      "Meet with a psychiatric provider to discuss symptoms, history, health history, goals, and a practical treatment plan.",
     icon: FiUserCheck,
   },
   {
     title: "Continue care",
     description:
-      "Follow-up visits help monitor progress, manage prescriptions, adjust medication, and keep treatment moving in the right direction.",
+      "Follow-up visits help monitor progress, manage care plans, update the care plan, and keep treatment moving in the right direction.",
     icon: FiClipboard,
   },
 ];
@@ -133,7 +133,7 @@ const faqs = [
   {
     question: "Are you accepting new psychiatry patients in Herndon, VA?",
     answer:
-      "Yes. Tinka Health Services is accepting new patients for psychiatric evaluations, medication management, and eligible telehealth psychiatry visits in Virginia. Appointment availability can change, so booking early is recommended.",
+      "Yes. Tinka Health Services is accepting new patients for psychiatric evaluations, follow-up care, and eligible telehealth psychiatry visits in Virginia. Appointment availability can change, so booking early is recommended.",
   },
   {
     question: "Do you accept Virginia Medicaid, Medicare, and insurance?",
@@ -146,9 +146,9 @@ const faqs = [
       "Yes. Secure telehealth psychiatry may be available if you are located in Virginia at the time of your appointment and your plan allows virtual behavioral health care.",
   },
   {
-    question: "Do you provide ADHD medication management in Herndon?",
+    question: "Do you provide ADHD evaluation and follow-up in Herndon?",
     answer:
-      "Tinka Health Services provides psychiatric evaluation and medication management for ADHD and related attention concerns when clinically appropriate.",
+      "Tinka Health Services provides psychiatric evaluation and ongoing psychiatric care for ADHD and related attention concerns when clinically appropriate.",
   },
   {
     question: "What mental health conditions do you treat?",
@@ -165,7 +165,7 @@ const faqs = [
 const metaTitle =
   "Psychiatric Provider in Herndon, VA | Tinka Health";
 const metaDescription =
-  "Book psychiatric evaluations and medication management in Herndon, VA with telehealth psychiatry and accepted insurance plans.";
+  "Book psychiatric evaluations and ongoing psychiatric care in Herndon, VA with telehealth psychiatry and accepted insurance plans.";
 
 const structuredData = [
   {
@@ -233,9 +233,9 @@ const structuredData = [
     ],
     availableService: [
       { "@type": "MedicalService", name: "Psychiatric Evaluation" },
-      { "@type": "MedicalService", name: "Medication Management" },
+      { "@type": "MedicalService", name: "Ongoing Psychiatric Care" },
       { "@type": "MedicalService", name: "Telehealth Psychiatry" },
-      { "@type": "MedicalService", name: "ADHD Medication Management" },
+      { "@type": "MedicalService", name: "ADHD Ongoing Psychiatric Care" },
       { "@type": "MedicalService", name: "Anxiety Treatment" },
       { "@type": "MedicalService", name: "Depression Treatment" },
     ],
@@ -296,7 +296,7 @@ const HerndonPsychiatricProvider = () => {
         <meta name="description" content={metaDescription} />
         <meta
           name="keywords"
-          content="psychiatric provider Herndon VA, psychiatrist Herndon VA Medicaid, medication management Herndon VA, telehealth psychiatry Virginia, Virginia Medicaid psychiatrist, ADHD medication management Herndon, anxiety treatment Herndon VA, depression treatment Herndon VA"
+          content="psychiatric provider Herndon VA, psychiatrist Herndon VA Medicaid, ongoing psychiatric care Herndon VA, telehealth psychiatry Virginia, Virginia Medicaid psychiatrist, ADHD evaluation and follow-up Herndon, anxiety treatment Herndon VA, depression treatment Herndon VA"
         />
         <meta name="robots" content="index,follow" />
         <meta property="og:type" content="website" />
@@ -333,7 +333,7 @@ const HerndonPsychiatricProvider = () => {
               Psychiatric Provider in Herndon, VA
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-blue-50 md:text-xl">
-              Get compassionate psychiatric evaluations, medication management,
+              Get compassionate psychiatric evaluations, follow-up care,
               and secure telehealth psychiatry for anxiety, depression, ADHD,
               bipolar disorder, PTSD, insomnia, stress, and mood concerns.
             </p>
@@ -420,13 +420,13 @@ const HerndonPsychiatricProvider = () => {
                 relationships, work, school, or daily responsibilities, it may
                 be time to speak with a psychiatric provider. Tinka Health
                 Services offers psychiatric care in Herndon, VA for patients
-                who need a thoughtful evaluation, medication guidance, and a
+                who need a thoughtful evaluation, care guidance, and a
                 plan they can follow.
               </p>
               <p>
                 Our care is built for real life. You can request an appointment
                 at the Herndon office, use secure telehealth psychiatry when
-                eligible, and receive medication management follow-up designed
+                eligible, and receive ongoing psychiatric care follow-up designed
                 to support stability, function, and long-term progress.
               </p>
             </div>
@@ -503,7 +503,7 @@ const HerndonPsychiatricProvider = () => {
             eyebrow: "Services",
             title: "Psychiatric care in Herndon that is clear and practical",
             description:
-              "Tinka Health Services focuses on diagnosis, medication support, follow-up care, and education so patients understand what is happening and what to do next.",
+              "Tinka Health Services focuses on diagnosis, support, follow-up care, and education so patients understand what is happening and what to do next.",
           })}
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -562,7 +562,7 @@ const HerndonPsychiatricProvider = () => {
             eyebrow: "Insurance",
             title: "Psychiatric provider accepting insurance in Virginia",
             description:
-              "Insurance should not be a mystery before you book. Tinka Health Services accepts many Virginia plans for psychiatric care, medication management, and eligible telehealth visits.",
+              "Insurance should not be a mystery before you book. Tinka Health Services accepts many Virginia plans for psychiatric evaluations, follow-up care, and eligible telehealth visits.",
           })}
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {insurancePlans.map((plan) => (
@@ -583,7 +583,7 @@ const HerndonPsychiatricProvider = () => {
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-slate-600">
             Insurance participation and benefits can vary by plan. Please
-            verify coverage, copays, deductibles, referrals, medication rules,
+            verify coverage, copays, deductibles, referrals, coverage details,
             and telehealth eligibility before the appointment.
           </p>
         </div>
@@ -597,7 +597,7 @@ const HerndonPsychiatricProvider = () => {
                 New patient flow
               </p>
               <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">
-                From first appointment to ongoing medication management
+                From first appointment to ongoing psychiatric care
               </h2>
               <p className="mt-5 text-lg leading-8 text-blue-50">
                 Starting psychiatric care should feel organized. Our process

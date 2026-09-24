@@ -1,6 +1,6 @@
 export const SEO_BRAND = "Tinka Health";
 export const DEFAULT_META_FALLBACK =
-  "Learn about symptoms, treatment options, medication management, telehealth access, and insurance-friendly care with Tinka Health.";
+  "Learn about symptoms, treatment options, follow-up care, telehealth access, and insurance-friendly care with Tinka Health.";
 
 const TITLE_MAX_LENGTH = 60;
 const META_MIN_LENGTH = 110;
@@ -10,8 +10,7 @@ const termReplacements = [
   [/Attention Deficit Hyperactivity Disorder/gi, "ADHD"],
   [/Obsessive[-\s]+Compulsive Disorder/gi, "OCD"],
   [/Post[-\s]+Traumatic Stress Disorder/gi, "PTSD"],
-  [/Opioid Medication Assistant Treatment/gi, "Opioid MAT"],
-  [/Opioid Medication Assisted Treatment/gi, "Opioid MAT"],
+  [/Addiction Treatment/gi, "Recovery Support"],
 ];
 
 export const normalizeWhitespace = (value = "") =>
@@ -94,7 +93,7 @@ export const normalizeMetaDescription = (
   }
 
   if (description.length < minLength) {
-    description = `${description} Tinka Health supports evaluation, treatment planning, medication management, and telehealth care when appropriate.`;
+    description = `${description} Tinka Health supports evaluation, treatment planning, follow-up care, and telehealth care when appropriate.`;
   }
 
   return endAsSentence(description, maxLength);
@@ -122,15 +121,13 @@ const conditionNameOverrides = {
   "obsessive-compulsive-disorder": "OCD",
   ptsd: "PTSD",
   "post-traumatic-stress-disorder": "PTSD",
-  "opioid-medication-assistant-treatment": "opioid MAT",
-  "autism-spectrum-disorder": "autism",
+    "autism-spectrum-disorder": "autism",
   autism: "autism",
 };
 
 const titleConditionOverrides = {
   ...conditionNameOverrides,
-  "opioid-medication-assistant-treatment": "Opioid MAT",
-  autism: "Autism",
+    autism: "Autism",
   "autism-spectrum-disorder": "Autism",
 };
 
@@ -175,22 +172,8 @@ export const buildConditionTopicMetaDescription = (topic = {}, condition = {}) =
 
   let description = "";
 
-  if (getConditionKey(condition) === "medication-management") {
-    if (/signs|symptoms|warning/.test(key)) {
-      description =
-        "Review signs you may need psychiatric medication management, including side effects, limited benefit, safety concerns, and follow-up needs.";
-    } else if (/what-is/.test(key)) {
-      description =
-        "Learn what psychiatric medication management includes, from medication review and monitoring to side-effect checks and follow-up care.";
-    } else if (/telehealth/.test(key)) {
-      description =
-        "Learn how telehealth medication management can support psychiatric medication review, monitoring, side-effect checks, and follow-up care.";
-    } else {
-      description =
-        "Learn how psychiatric medication management supports medication review, monitoring, side-effect checks, and ongoing follow-up care.";
-    }
-  } else if (/what-is/.test(key) || lowerTitle.startsWith("what is")) {
-    description = `Learn what ${conditionName} is, common symptoms, treatment options, and when psychiatric support or medication management may help.`;
+  if (/what-is/.test(key) || lowerTitle.startsWith("what is")) {
+    description = `Learn what ${conditionName} is, common symptoms, treatment options, and when psychiatric support or follow-up care may help.`;
   } else if (/signs-and-symptoms|symptoms/.test(key)) {
     description = `Review common ${conditionName} signs and symptoms, how they can affect daily life, and when professional mental health support may help.`;
   } else if (/warning-signs/.test(key)) {
@@ -198,11 +181,9 @@ export const buildConditionTopicMetaDescription = (topic = {}, condition = {}) =
   } else if (/daily-life/.test(key)) {
     description = `Understand how ${conditionName} can affect work, school, relationships, sleep, and daily routines, plus when care may help.`;
   } else if (/treatment-options/.test(key)) {
-    description = `Explore ${titleCondition} treatment options, including evaluation, therapy support, medication management, and follow-up care.`;
-  } else if (/medication-management/.test(key)) {
-    description = `Learn how medication management for ${conditionName} may work, including review, monitoring, side effects, and follow-up care.`;
+    description = `Explore ${titleCondition} treatment options, including evaluation, therapy support, and follow-up care.`;
   } else if (/telehealth/.test(key)) {
-    description = `Learn how telehealth care for ${conditionName} can support evaluation, medication management, and follow-up visits when appropriate.`;
+    description = `Learn how telehealth care for ${conditionName} can support evaluation, follow-up care, and follow-up visits when appropriate.`;
   } else if (/when-to-seek-help/.test(key)) {
     description = `Know when to seek help for ${conditionName}, what symptoms to watch for, and how to start mental health care with Tinka Health.`;
   } else {
@@ -219,6 +200,6 @@ export const buildBlogMetaDescription = (blog = {}) => {
   const plainBody = stripHtmlText(blog.body || "");
   return normalizeMetaDescription(
     blog.excerpt || plainBody,
-    "Read this mental health article from Tinka Health about psychiatry, medication management, telehealth care, and behavioral health support.",
+    "Read this mental health article from Tinka Health about psychiatry, follow-up care, telehealth care, and behavioral health support.",
   );
 };

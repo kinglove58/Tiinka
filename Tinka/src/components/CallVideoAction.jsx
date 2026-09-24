@@ -31,7 +31,7 @@ const CallVideoAction = () => {
               mental health care for children, adolescents, and adults
               experiencing a variety of emotional, behavioral, and psychiatric
               concerns. Through comprehensive psychiatric evaluations,
-              medication management, ADHD assessment and treatment, substance
+              ongoing psychiatric care, ADHD assessment and treatment, substance
               use treatment, and ongoing support, we create an individualized
               treatment plan centered around your needs and goals.
             </p>

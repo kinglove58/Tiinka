@@ -6,7 +6,7 @@ const DCPsychiatrist = () => {
   const metaTitle =
     "Psychiatric Provider in Washington DC | Tinka Health";
   const metaDescription =
-    "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and medication management with telehealth and insurance access.";
+    "Find Washington DC psychiatric care for anxiety, depression, ADHD, PTSD, and ongoing psychiatric care with telehealth and insurance access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const DCPsychiatrist = () => {
       },
       {
         "@type": "MedicalService",
-        name: "Medication Management",
+        name: "Ongoing Psychiatric Care",
       },
       {
         "@type": "MedicalService",
@@ -92,14 +92,14 @@ const DCPsychiatrist = () => {
         "kaiser psychiatrist dc",
         "telehealth psychiatry dc",
         "amerihealth caritas dc mental health provider",
-        "medication management washington dc",
+        "ongoing psychiatric care washington dc",
       ]}
       heroTitle="Psychiatric Provider in Washington DC"
       heroSubtitle="Telehealth psychiatry in DC with insurance-friendly access"
       intro={{
         title: "Psychiatric care for adults throughout Washington DC",
         description: [
-          "Tinka Health Services provides psychiatric evaluations, medication management, and follow-up treatment for adults living in Washington DC through secure telehealth appointments.",
+          "Tinka Health Services provides psychiatric evaluations, follow-up care, and follow-up treatment for adults living in Washington DC through secure telehealth appointments.",
           "We support patients with anxiety, depression, ADHD, PTSD, bipolar disorder, and mood concerns while accepting DC Medicaid, Kaiser Permanente DC, AmeriHealth Caritas DC, CareFirst, and other major insurance plans.",
         ],
       }}
@@ -117,7 +117,7 @@ const DCPsychiatrist = () => {
           "ADHD symptoms that interfere with focus, planning, and productivity",
           "PTSD symptoms, intrusive thoughts, or trauma-related sleep disruption",
           "Mood instability, irritability, or concerns that may require psychiatric evaluation",
-          "The need for medication review, follow-up, or a more structured treatment plan",
+          "The need for clinical review, follow-up, or a more structured treatment plan",
         ],
       }}
       sectionTwo={{
@@ -126,10 +126,10 @@ const DCPsychiatrist = () => {
           "Our DC psychiatry services are designed to help patients start treatment clearly, verify insurance early, and continue care through a flexible telehealth model.",
         items: [
           "Comprehensive psychiatric evaluations focused on diagnosis, symptoms, and treatment planning",
-          "Medication management for adults dealing with anxiety, mood, attention, and trauma-related symptoms",
+          "Ongoing psychiatric care for adults dealing with anxiety, mood, attention, and trauma-related symptoms",
           "Telehealth visits that fit the pace of life in Washington DC without adding commute time",
           "Insurance access that includes DC Medicaid, Kaiser Permanente DC, and other major plans",
-          "Follow-up appointments to monitor progress, medication response, and needed changes",
+          "Follow-up appointments to monitor progress, care progress, and needed changes",
           "A practical, patient-centered approach that helps move treatment forward with less friction",
         ],
       }}

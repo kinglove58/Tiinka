@@ -170,7 +170,7 @@ const Footer = () => {
               loading="lazy"
             />
             <p className="max-w-sm text-sm leading-6 text-slate-200">
-              Psychiatric care, medication management, telehealth support, and
+              Psychiatric evaluations, follow-up care, telehealth support, and
               practical wellness services for patients in Maryland, Washington
               DC, and Virginia.
             </p>

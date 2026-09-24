@@ -14,7 +14,7 @@ import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import providerImage from "/images/img_mental_health/contact_us/Pro_Head_shot.jpg";
 
 const expertiseList = [
-  "Psychiatric evaluations & medication management",
+  "Psychiatric evaluations & ongoing psychiatric care",
   "Mood disorders: depression, bipolar disorder, dysthymia, postpartum depression",
   "Anxiety-related disorders: generalized anxiety, panic disorder, OCD, PTSD",
   "Psychotic disorders: schizophrenia, schizoaffective disorder",
@@ -78,11 +78,11 @@ const MeetOurProvider = () => {
         </title>
         <meta
           name="description"
-          content="Meet Dr. Seliat Dosunmu, psychiatric provider for medication management, anxiety, depression, ADHD, PTSD, and care in MD, DC, and VA."
+          content="Meet Dr. Seliat Dosunmu, psychiatric provider for ongoing psychiatric care, anxiety, depression, ADHD, PTSD, and care in MD, DC, and VA."
         />
         <meta
           name="keywords"
-          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management specialist, PMHNP provider"
+          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, ongoing psychiatric care specialist, PMHNP provider"
         />
         <link
           rel="canonical"
@@ -228,7 +228,7 @@ const MeetOurProvider = () => {
                   collaborate.
                 </p>
                 <p className="mt-4 text-lg leading-8 text-gray-700">
-                  Her approach combines evidence-based medication management
+                  Her approach combines evidence-based ongoing psychiatric care
                   with lifestyle strategies, coping skills, and therapy
                   referrals—ensuring clients receive comprehensive,
                   compassionate support.

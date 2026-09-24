@@ -15,7 +15,7 @@ import BookingModal from "../../components/BookingModal"; // ✅ Import modal
 const Testimonial = lazy(() => import("../home/Testimonial"));
 
 const serviceHighlights = [
-  "Psychiatric evaluations & medication management",
+  "Psychiatric evaluations & ongoing psychiatric care",
   "Individual, family, and group therapy",
   "Support for depression, anxiety, bipolar disorder, ADHD, trauma, and substance use",
   "Children, adolescent, and adult behavioral health services",
@@ -39,11 +39,11 @@ const AboutUs = () => {
         </title>
         <meta
           name="description"
-          content="Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and medication management."
+          content="Learn about Tinka Health Services, a psychiatric provider serving Maryland, DC, and Virginia with telehealth and ongoing psychiatric care."
         />
         <meta
           name="keywords"
-          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medication management services, telehealth psychiatry appointments, accepting new patients"
+          content="psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, ongoing psychiatric care services, telehealth psychiatry appointments, accepting new patients"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/about" />
         <meta

@@ -32,11 +32,11 @@ const TinkaBookingEmbed = () => {
         <title>Book Psychiatry Appointment | Tinka Health Services</title>
         <meta
           name="description"
-          content="Book psychiatric evaluation, medication management, and telehealth care with Tinka Health Services in MD, DC, and VA."
+          content="Book psychiatric evaluation, ongoing psychiatric care, and telehealth care with Tinka Health Services in MD, DC, and VA."
         />
         <meta
           name="keywords"
-          content="book psychiatric appointment, medication management appointment, telehealth psychiatry appointment, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medicaid mental health appointment"
+          content="book psychiatric appointment, ongoing psychiatric care appointment, telehealth psychiatry appointment, psychiatric provider maryland, psychiatric provider washington dc, psychiatric provider virginia, medicaid mental health appointment"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/booking" />
         <meta

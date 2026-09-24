@@ -44,7 +44,7 @@ const servicesDataList = [
     id_sub: "Comprehensive psychiatric care for adults",
     title1: "Expert psychiatric care tailored for adult mental health needs",
     title1Des:
-      "Adult psychiatry focuses on the diagnosis, treatment, and prevention of mental health disorders in adults. At Tinka Health, our psychiatric services combine medication management with therapeutic support to provide comprehensive care that addresses both the biological and psychological aspects of mental health conditions.",
+      "Adult psychiatry focuses on the diagnosis, treatment, and prevention of mental health disorders in adults. At Tinka Health, our psychiatric services combine careful evaluation with therapeutic support to provide comprehensive care that addresses both the biological and psychological aspects of mental health conditions.",
     btnText: "Get Psychiatric Care",
     title2: "Are you struggling with complex mental health challenges?",
     title2Des:
@@ -62,8 +62,8 @@ const servicesDataList = [
       "Our adult psychiatry services provide comprehensive evaluation and treatment for a wide range of mental health conditions. Our experienced psychiatrists work closely with you to develop personalized treatment plans. Here's how we support your mental health:",
     title3List: [
       "Comprehensive psychiatric evaluations to accurately diagnose mental health conditions",
-      "Medication management and monitoring to optimize treatment effectiveness",
-      "Integration of therapy and medication for the best possible outcomes",
+      "Follow-up visits to review progress and adjust the care plan",
+      "Coordination with therapeutic support when appropriate",
       "Treatment of complex conditions including bipolar disorder, schizophrenia, and severe depression",
       "Ongoing support and adjustment of treatment plans as needed",
       "Collaboration with other healthcare providers for holistic care",
@@ -88,7 +88,7 @@ const servicesDataList = [
     title1:
       "Personalized weight loss management with clinical guidance and follow-up care",
     title1Des:
-      "Weight loss is affected by health history, appetite, sleep, stress, medications, routines, and emotional patterns. Tinka Health Services provides weight loss management that combines lifestyle planning, clinical review, and follow-up support for eligible patients in Maryland, Washington DC, and Virginia. We do not ship weight-loss medication.",
+      "Weight loss is affected by health history, appetite, sleep, stress, routines, and emotional patterns. Tinka Health Services provides lifestyle planning, clinical review, and follow-up support for eligible patients in Maryland, Washington DC, and Virginia.",
     btnText: "Start Weight Management",
     title2: "Do you need structured support for weight loss?",
     title2Des:
@@ -96,7 +96,7 @@ const servicesDataList = [
     title2List: [
       "Repeated attempts to lose weight without a sustainable plan",
       "Stress, sleep, mood, or appetite patterns that affect consistency",
-      "Questions about whether medication may be appropriate or safe",
+      "Questions about healthy weight goals and sustainable habits",
       "Need for accountability and follow-up instead of one-time advice",
       "Weight-related health concerns that should be reviewed clinically",
       "A preference for telehealth visits when appropriate and available",
@@ -105,10 +105,10 @@ const servicesDataList = [
     title3Des:
       "Our approach focuses on steady progress, practical goals, and safety. Your provider can help you understand the factors affecting your weight and create a plan that can be reviewed at follow-up visits.",
     title3List: [
-      "Review your health history, medications, weight goals, and barriers",
+      "Review your health history, weight goals, and barriers",
       "Build nutrition, activity, sleep, and behavior goals that fit daily life",
-      "Discuss medication options only when clinically appropriate",
-      "Monitor side effects, progress, and safety factors over time",
+      "Discuss practical nutrition and activity goals",
+      "Monitor progress and health factors over time",
       "Coordinate care when additional medical follow-up or labs may be needed",
       "Offer telehealth access for eligible patients in MD, DC, and VA",
     ],
@@ -130,19 +130,12 @@ const servicesDataList = [
         items: [
           "Medical and lifestyle review",
           "Nutrition, activity, sleep, and habit planning",
-          "Medication education when appropriate",
+          "Behavior and habit coaching",
           "Telehealth follow-up for eligible patients",
           "Insurance-friendly care coordination",
         ],
       },
-      {
-        type: "h2",
-        text: "Medication delivery",
-      },
-      {
-        type: "p",
-        text: "Tinka Health Services does not deliver or ship weight-loss medication. If medication is clinically appropriate, your provider will explain safe options, monitoring, and next steps.",
-      },
+
     ],
     keywords: [
       "weight loss management",
@@ -261,41 +254,6 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Antidepressants",
-    name: "Antidepressants",
-    image: "/images/services/Antidepressants.jpg",
-    imageAlt:
-      "Medication management for depression treatment with healthcare professional",
-    id_sub: "Expert medication management and monitoring",
-    title1: "Professional antidepressant medication management",
-    title1Des:
-      "Finding the right antidepressant medication can be a crucial part of your mental health treatment. At Tinka Health, our psychiatric professionals provide expert medication management, ensuring you receive the most effective treatment with minimal side effects, while monitoring your progress closely.",
-    btnText: "Get Medication Support",
-    title2: "Are you considering or currently taking antidepressants?",
-    title2Des:
-      "Antidepressant medication can be highly effective, but finding the right medication and dosage requires professional guidance and ongoing monitoring:",
-    title2List: [
-      "Uncertainty about which medication might work best for you",
-      "Concerns about side effects or interactions with other medications",
-      "Questions about how long treatment should continue",
-      "Need for dosage adjustments or medication changes",
-      "Monitoring for effectiveness and side effects",
-      "Support during the initial weeks when medications are taking effect",
-    ],
-    title3: "Tinka Health's Medication Management Approach",
-    title3Des:
-      "Our comprehensive medication management ensures you receive safe, effective treatment tailored to your specific needs:",
-    title3List: [
-      "Thorough psychiatric evaluation to determine the best medication options",
-      "Regular monitoring appointments to assess effectiveness and side effects",
-      "Gradual dosage adjustments based on your response and tolerance",
-      "Education about your medication, including benefits and potential side effects",
-      "Coordination with your primary care physician and other healthcare providers",
-      "Support during medication transitions or discontinuation when appropriate",
-      "Integration of medication management with therapy for optimal outcomes",
-    ],
-  },
-  {
     id: "Anxiety",
     name: "Anxiety",
     image: "/images/services/Anxiety.jpg",
@@ -339,7 +297,7 @@ const servicesDataList = [
     id_sub: "Comprehensive ADHD evaluation and treatment",
     title1: "Expert ADHD diagnosis and management for all ages",
     title1Des:
-      "ADHD affects millions of children and adults, impacting focus, impulse control, and daily functioning. At Tinka Health, we provide comprehensive ADHD evaluations, accurate diagnosis, and personalized treatment plans that may include therapy, medication management, and behavioral strategies to help you or your loved one thrive.",
+      "ADHD affects millions of children and adults, impacting focus, impulse control, and daily functioning. At Tinka Health, we provide comprehensive ADHD evaluations, accurate diagnosis, and personalized care plans that may include therapy coordination and behavioral strategies to help you or your loved one thrive.",
     btnText: "Get ADHD Support",
     title2: "Is ADHD affecting your or your child's life?",
     title2Des:
@@ -358,7 +316,7 @@ const servicesDataList = [
       "Our approach to ADHD treatment is thorough and individualized, designed to help you or your child succeed:",
     title3List: [
       "Comprehensive evaluation and accurate diagnosis of ADHD",
-      "Medication management with careful monitoring and adjustments",
+      "Ongoing follow-up with progress checks and care plan updates",
       "Behavioral therapy and coaching to develop coping strategies",
       "Family education and support to improve home and school environments",
       "Coordination with schools and teachers for academic accommodations",
@@ -463,7 +421,7 @@ const servicesDataList = [
     title3Des:
       "Bipolar disorder affects everyone differently, and Tinka Health understands that your experience is unique. Our goal is to help you regulate your mood and regain control of your mental health. Here's how Tinka Health can support you:",
     title3List: [
-      "Explore treatment options, including lifestyle changes, talk therapy, and potentially medication, to help you manage mood swings.",
+      "Explore care options, including lifestyle changes and talk therapy, to help you manage mood swings.",
       "Reduce impulsive or risky behaviors that could impact your relationships, health, finances, or work.",
       "Address depressive feelings, social withdrawal, and thoughts of self-harm.",
       "Decrease substance use during mood episodes and find healthier coping mechanisms.",
@@ -578,42 +536,6 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Medication-Management",
-    name: "Medication Management",
-    image: "/images/services/Medication_management.jpg",
-    imageAlt: "Psychiatric medication management and monitoring services",
-    id_sub: "Expert psychiatric medication oversight and optimization",
-    title1:
-      "Optimize your mental health with professional medication management",
-    title1Des:
-      "Proper medication management is crucial for mental health treatment success. At Tinka Health, our psychiatric professionals provide comprehensive medication management services, ensuring you receive the most effective treatment with minimal side effects through careful monitoring and adjustments.",
-    btnText: "Optimize My Medications",
-    title2: "Are you getting the most from your psychiatric medications?",
-    title2Des:
-      "Effective medication management requires ongoing professional oversight to ensure optimal outcomes:",
-    title2List: [
-      "Questions about medication effectiveness or side effects",
-      "Need for dosage adjustments or medication changes",
-      "Concerns about drug interactions with other medications",
-      "Difficulty with medication adherence or complex regimens",
-      "Transitioning between different psychiatric medications",
-      "Managing multiple mental health conditions with various medications",
-      "Long-term medication monitoring and safety assessments",
-    ],
-    title3: "Tinka Health's Comprehensive Medication Management",
-    title3Des:
-      "Our systematic approach ensures safe, effective psychiatric medication treatment:",
-    title3List: [
-      "Comprehensive psychiatric evaluation and medication review",
-      "Regular monitoring appointments to assess effectiveness and side effects",
-      "Careful dosage adjustments based on your response and tolerance",
-      "Drug interaction screening and safety assessments",
-      "Patient education about medications and expected outcomes",
-      "Coordination with primary care physicians and other specialists",
-      "Long-term treatment planning and optimization strategies",
-    ],
-  },
-  {
     id: "Obsessive-Compulsive-Disorder",
     name: "Obsessive Compulsive Disorder",
     image: "/images/services/Obsessive_Compulsive_Disorder.jpg",
@@ -641,46 +563,11 @@ const servicesDataList = [
     title3List: [
       "Exposure and Response Prevention (ERP) therapy - the gold standard for OCD treatment",
       "Cognitive Behavioral Therapy specifically adapted for OCD",
-      "Medication management when appropriate",
+      "Follow-up care when appropriate",
       "Family education and support to reduce accommodation behaviors",
       "Gradual exposure exercises to reduce anxiety and compulsions",
       "Relapse prevention and long-term management strategies",
       "Support groups with others who understand OCD challenges",
-    ],
-  },
-  {
-    id: "Opioid-Medication-Assistant-Treatment",
-    name: "Opioid Medication Assistant Treatment",
-    image: "/images/services/Opioid_medication_assistant_treatment.jpg",
-    imageAlt: "Opioid medication assisted treatment and recovery services",
-    id_sub: "Comprehensive medication-assisted treatment for opioid addiction",
-    title1: "Overcome opioid addiction with medication-assisted treatment",
-    title1Des:
-      "Opioid addiction is a serious medical condition that requires professional treatment. At Tinka Health, we provide medication-assisted treatment (MAT) that combines FDA-approved medications with counseling and behavioral therapies to treat opioid use disorders and support long-term recovery.",
-    btnText: "Start MAT Treatment",
-    title2: "Are you struggling with opioid addiction?",
-    title2Des:
-      "Opioid addiction affects millions of people and can have devastating consequences. Medication-assisted treatment has been proven effective for:",
-    title2List: [
-      "Prescription opioid addiction (pain medications, oxycodone, hydrocodone)",
-      "Heroin addiction and illegal opioid use",
-      "Fentanyl addiction and synthetic opioid dependence",
-      "Reducing withdrawal symptoms and cravings",
-      "Preventing overdose and reducing mortality risk",
-      "Supporting long-term recovery and relapse prevention",
-      "Improving overall quality of life and functioning",
-    ],
-    title3: "Tinka Health's Medication-Assisted Treatment Program",
-    title3Des:
-      "Our comprehensive MAT program combines medication with comprehensive support services:",
-    title3List: [
-      "Medical evaluation and assessment for appropriate MAT medications",
-      "Prescription and monitoring of medications like buprenorphine or naltrexone",
-      "Individual counseling and addiction therapy",
-      "Group therapy and peer support programs",
-      "Family counseling and education about opioid addiction",
-      "Coordination with primary care providers and specialists",
-      "Long-term recovery planning and aftercare support",
     ],
   },
   {
@@ -713,7 +600,7 @@ const servicesDataList = [
       "Breathing techniques and relaxation strategies for managing symptoms",
       "Cognitive therapy to address catastrophic thinking patterns",
       "Gradual exposure to feared situations in a safe, controlled way",
-      "Medication management if appropriate",
+      "Follow-up care when appropriate",
       "Lifestyle changes to reduce overall anxiety and stress",
       "Long-term strategies for preventing future panic attacks",
     ],
@@ -746,7 +633,7 @@ const servicesDataList = [
     title3List: [
       "Evidence-based therapies like EMDR, CPT, and Prolonged Exposure",
       "Individual trauma therapy in a safe, supportive environment",
-      "Medication management for PTSD symptoms when appropriate",
+      "Follow-up care for PTSD symptoms when appropriate",
       "Group therapy with other trauma survivors",
       "Family therapy to improve relationships and support systems",
       "Mindfulness and grounding techniques for managing triggers",
@@ -761,7 +648,7 @@ const servicesDataList = [
     id_sub: "Comprehensive care for schizophrenia and psychotic disorders",
     title1: "Expert treatment for schizophrenia and recovery support",
     title1Des:
-      "Schizophrenia is a complex mental health condition that affects thinking, perception, emotions, and behavior. With proper treatment and support, people with schizophrenia can lead fulfilling lives. At Tinka Health, we provide comprehensive care that combines medication management, therapy, and psychosocial support.",
+      "Schizophrenia is a complex mental health condition that affects thinking, perception, emotions, and behavior. With proper treatment and support, people with schizophrenia can lead fulfilling lives. At Tinka Health, we provide comprehensive care that combines evaluation, therapy coordination, and psychosocial support.",
     btnText: "Get Comprehensive Care",
     title2: "Are you or your loved one living with schizophrenia?",
     title2Des:
@@ -780,7 +667,7 @@ const servicesDataList = [
       "Our comprehensive treatment addresses all aspects of schizophrenia care:",
     title3List: [
       "Psychiatric evaluation and accurate diagnosis",
-      "Medication management with regular monitoring and adjustments",
+      "Regular follow-up to review progress and adjust the care plan",
       "Individual therapy to address symptoms and improve coping",
       "Family education and support services",
       "Social skills training and rehabilitation services",
@@ -859,42 +746,6 @@ const servicesDataList = [
     ],
   },
   {
-    id: "Suboxone-Treatment",
-    name: "Suboxone Treatment",
-    image: "/images/services/Suboxone_treatment.jpg",
-    imageAlt: "Suboxone treatment for opioid addiction recovery",
-    id_sub:
-      "Specialized Suboxone medication-assisted treatment for opioid addiction",
-    title1: "Effective opioid addiction treatment with Suboxone",
-    title1Des:
-      "Suboxone is a highly effective medication-assisted treatment for opioid addiction that helps reduce withdrawal symptoms and cravings. At Tinka Health, our qualified providers offer comprehensive Suboxone treatment programs that combine medication with counseling and support services for lasting recovery.",
-    btnText: "Start Suboxone Treatment",
-    title2: "Is opioid addiction controlling your life?",
-    title2Des:
-      "Suboxone treatment can help you break free from opioid addiction and reclaim your life. Our program addresses:",
-    title2List: [
-      "Prescription opioid addiction (OxyContin, Percocet, Vicodin, etc.)",
-      "Heroin addiction and street opioid dependence",
-      "Severe withdrawal symptoms and cravings",
-      "Multiple failed attempts at getting clean",
-      "Fear of withdrawal and detox process",
-      "Need for medical supervision during recovery",
-      "Desire for outpatient treatment that allows you to maintain daily responsibilities",
-    ],
-    title3: "Tinka Health's Comprehensive Suboxone Program",
-    title3Des:
-      "Our Suboxone treatment program provides medical oversight and comprehensive support:",
-    title3List: [
-      "Medical evaluation and assessment for Suboxone candidacy",
-      "Safe Suboxone induction and stabilization process",
-      "Regular monitoring appointments and medication management",
-      "Individual counseling and addiction therapy",
-      "Group therapy and peer support groups",
-      "Relapse prevention planning and coping skills training",
-      "Gradual tapering and long-term recovery support when ready",
-    ],
-  },
-  {
     id: "Grief-and-Loss",
     name: "Grief and Loss",
     image: "/images/services/Bereavement.jpg",
@@ -950,7 +801,7 @@ const servicesDataList = [
       "Daytime fatigue, irritability, and difficulty concentrating",
       "Increased anxiety or depression related to sleep problems",
       "Physical health issues related to poor sleep quality",
-      "Reliance on sleep medications or substances to fall asleep",
+      "Difficulty sleeping without a familiar routine",
       "Impact on work performance, relationships, and daily activities",
       "Racing thoughts or worry that interfere with falling asleep",
     ],
@@ -962,7 +813,7 @@ const servicesDataList = [
       "Sleep hygiene education and environmental optimization",
       "Relaxation techniques and stress management strategies",
       "Assessment and treatment of underlying mental health conditions",
-      "Medication management when appropriate and necessary",
+      "Follow-up care when appropriate and necessary",
       "Sleep schedule regulation and circadian rhythm support",
       "Addressing lifestyle factors that impact sleep quality",
       "Long-term maintenance strategies for healthy sleep patterns",

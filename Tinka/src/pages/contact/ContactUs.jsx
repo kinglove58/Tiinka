@@ -112,11 +112,11 @@ function ContactUs() {
         </title>
         <meta
           name="description"
-          content="Contact Tinka Health Services to book telehealth psychiatry and medication management in Maryland, DC, and Virginia."
+          content="Contact Tinka Health Services to book telehealth psychiatry and ongoing psychiatric care in Maryland, DC, and Virginia."
         />
         <meta
           name="keywords"
-          content="contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, medication management services, accepting new patients"
+          content="contact psychiatric provider, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, ongoing psychiatric care services, accepting new patients"
         />
         <link rel="canonical" href="https://tinkahealthservices.com/contact" />
         <meta
@@ -125,7 +125,7 @@ function ContactUs() {
         />
         <meta
           property="og:description"
-          content="Book appointments for psychiatric care, medication management, and telehealth services across MD, DC, and VA."
+          content="Book appointments for psychiatric evaluations, follow-up care, and telehealth services across MD, DC, and VA."
         />
         <meta
           property="og:url"
