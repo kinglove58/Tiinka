@@ -148,13 +148,13 @@ const buildFallbackSections = (service) => [
     ],
   },
   {
-    title: "Treatment and medication options",
-    slug: "treatment-medication-options",
+    title: "Treatment and support options",
+    slug: "treatment-support-options",
     order: 30,
     visibleCount: 5,
     summary:
       service.title3Des ||
-      `Treatment for ${service.name} may include psychiatric evaluation, medication management, therapy support, and ongoing follow-up when clinically appropriate.`,
+      `Care for ${service.name} may include psychiatric evaluation, therapy coordination, and ongoing follow-up when appropriate.`,
     bullets: service.title3List || [],
     topics: [
       makeTopic({
@@ -164,9 +164,9 @@ const buildFallbackSections = (service) => [
           `Learn how treatment for ${service.name} may be planned and monitored.`,
       }),
       makeTopic({
-        title: `${service.name} medication management`,
+        title: `${service.name} follow-up care`,
         summary:
-          "Medication management includes review, monitoring, adjustment, and follow-up when medicine is clinically appropriate.",
+          "Follow-up visits help review progress and adjust the care plan when needed.",
       }),
       makeTopic({
         title: `Telehealth care for ${service.name}`,
@@ -181,7 +181,7 @@ const buildFallbackSections = (service) => [
     order: 40,
     visibleCount: 5,
     summary:
-      "Tinka Health Services supports eligible patients across Maryland, Washington DC, and Virginia with psychiatric evaluation, medication management, telehealth appointments, and insurance verification before care begins.",
+      "Tinka Health Services supports eligible patients across Maryland, Washington DC, and Virginia with psychiatric evaluation, follow-up care, telehealth appointments, and insurance verification before care begins.",
     topics: [
       makeTopic({
         title: "Book an appointment",
@@ -305,7 +305,7 @@ const buildServiceCondition = (service) => {
       hubSanity?.keywords || [
         title,
         `${title} treatment`,
-        `${title} medication management`,
+        `${title} follow-up care`,
         "telehealth psychiatry",
         "Maryland",
         "Washington DC",
@@ -349,7 +349,7 @@ const buildSanityOnlyCondition = (sanity) => {
       sanity?.keywords || [
         title,
         `${title} treatment`,
-        `${title} medication management`,
+        `${title} follow-up care`,
         "telehealth psychiatry",
       ],
     image: sanity?.image || "/images/logo/Tinka_health_logo.png",

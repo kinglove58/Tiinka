@@ -6,7 +6,7 @@ const VirginiaPsychiatrist = () => {
   const metaTitle =
     "Psychiatric Provider in Virginia | Tinka Health Services";
   const metaDescription =
-    "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and medication management with telehealth access.";
+    "Find Virginia psychiatric care for anxiety, depression, ADHD, bipolar disorder, and ongoing psychiatric care with telehealth access.";
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const VirginiaPsychiatrist = () => {
       },
       {
         "@type": "MedicalService",
-        name: "Medication Management",
+        name: "Ongoing Psychiatric Care",
       },
       {
         "@type": "MedicalService",
@@ -91,15 +91,15 @@ const VirginiaPsychiatrist = () => {
         "telehealth psychiatry virginia",
         "virginia medicaid psychiatrist",
         "psychiatrist accepting medicare virginia",
-        "medication management virginia",
+        "ongoing psychiatric care virginia",
         "mental health provider virginia",
       ]}
       heroTitle="Psychiatric Provider in Virginia"
-      heroSubtitle="Telehealth psychiatry and medication management across Virginia"
+      heroSubtitle="Telehealth psychiatry and ongoing psychiatric care across Virginia"
       intro={{
         title: "Psychiatric services in Virginia with flexible online access",
         description: [
-          "Tinka Health Services provides psychiatric evaluations, medication management, and ongoing follow-up care for adults throughout Virginia using secure telehealth appointments.",
+          "Tinka Health Services provides psychiatric evaluations, follow-up care, and ongoing follow-up care for adults throughout Virginia using secure telehealth appointments.",
           "We support patients managing anxiety, depression, ADHD, bipolar disorder, PTSD, and mood-related concerns while accepting Medicaid, Medicare, Anthem, Aetna, Cigna, Optum, and other major insurance plans in Virginia.",
         ],
       }}
@@ -116,7 +116,7 @@ const VirginiaPsychiatrist = () => {
           "ADHD symptoms that affect organization, attention, and follow-through",
           "Mood changes, irritability, or unstable symptoms that need closer review",
           "PTSD, trauma-related symptoms, or sleep problems that disrupt recovery",
-          "Questions about medication effectiveness, side effects, or treatment options",
+          "Questions about care progress, side effects, or treatment options",
         ],
       }}
       sectionTwo={{
@@ -125,7 +125,7 @@ const VirginiaPsychiatrist = () => {
           "Our Virginia telehealth model is built to keep psychiatric treatment accessible, consistent, and responsive to each patient's needs over time.",
         items: [
           "Comprehensive psychiatric evaluations to better understand symptoms and diagnosis",
-          "Medication management appointments with monitoring and treatment adjustments",
+          "Ongoing psychiatric care appointments with monitoring and treatment adjustments",
           "Telehealth access that allows patients across Virginia to receive care from home",
           "Insurance-friendly options that include Medicaid, Medicare, and major commercial plans",
           "Treatment planning tailored to symptom patterns, medical history, and patient goals",

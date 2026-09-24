@@ -5,9 +5,9 @@ const faqData = [
     category: "Scheduling & Appointments",
     items: [
       {
-        question: "What is included in medication management?",
+        question: "What is included in ongoing psychiatric care?",
         answer:
-          "Our practice offers medication management services to support your mental health journey.",
+          "Our practice offers ongoing psychiatric care services to support your mental health journey.",
       },
       {
         question: "Who do you provide treatment for?",
@@ -37,12 +37,12 @@ const faqData = [
     ],
   },
   {
-    category: "Medication Policy",
+    category: "Care and appointments",
     items: [
       {
-        question: "How are medication refills managed?",
+        question: "How are follow-up appointments managed?",
         answer:
-          "Requests for refills should be made during scheduled visits. For valid cancellations, a bridge refill may be provided as a one-time courtesy.",
+          "Please schedule follow-up appointments to review your progress and discuss any changes to your care plan. If you need to reschedule, contact our office.",
       },
       {
         question: "What is the recommended frequency of visits?",

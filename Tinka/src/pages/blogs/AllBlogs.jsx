@@ -88,7 +88,7 @@ function AllBlogs() {
         </title>
         <meta
           name="description"
-          content="Explore mental health articles from Tinka Health Services on anxiety, depression, ADHD, medication management, and telehealth psychiatry care for Maryland, Washington DC, and Virginia."
+          content="Explore mental health articles from Tinka Health Services on anxiety, depression, ADHD, ongoing psychiatric care, and telehealth psychiatry care for Maryland, Washington DC, and Virginia."
         />
         <meta
           name="keywords"
