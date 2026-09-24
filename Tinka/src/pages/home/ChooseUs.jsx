@@ -13,7 +13,7 @@ const benefits = [
     title: "Personalized",
     description:
       "Care plans shaped around your symptoms, concerns and treatment goals.",
-    image: "/images/seo/medication-management-dc.webp",
+    image: "/images/seo/ongoing-psychiatric-care-dc.webp",
     imageAlt: "A provider and patient discussing a personalized care plan",
   },
   {

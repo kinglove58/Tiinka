@@ -25,11 +25,6 @@ const featuredServices = [
     "Personalized treatment and follow-up for mood stability.",
   ],
   [
-    "Medication-Management",
-    "Psychiatric Medication Management",
-    "Review treatment benefits, side effects and ongoing medication needs.",
-  ],
-  [
     "Addiction-Treatment",
     "Addiction Treatment",
     "Compassionate treatment and ongoing support for substance use and recovery.",

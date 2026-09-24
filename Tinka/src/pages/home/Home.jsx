@@ -20,11 +20,11 @@ const Home = () => (
       <title>Psychiatric Provider MD, DC & VA | Tinka Health Services</title>
       <meta
         name="description"
-        content="Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
+        content="Ongoing psychiatric care and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
       />
       <meta
         name="keywords"
-        content="psychiatric provider maryland, psychiatric nurse practitioner maryland, pmhnp near me, mental health provider dc, psychiatric services virginia, medication management near me, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, anxiety treatment psychiatrist near me, depression treatment provider near me, adhd medication management provider"
+        content="psychiatric provider maryland, psychiatric nurse practitioner maryland, pmhnp near me, mental health provider dc, psychiatric services virginia, ongoing psychiatric care near me, telehealth psychiatry maryland, telehealth psychiatry dc, telehealth psychiatry virginia, anxiety treatment psychiatrist near me, depression treatment provider near me, adhd ongoing psychiatric care provider"
       />
       <link rel="canonical" href="https://tinkahealthservices.com" />
       <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@ const Home = () => (
       />
       <meta
         property="og:description"
-        content="Medication management and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
+        content="Ongoing psychiatric care and mental health care in Maryland, DC, and Virginia with telehealth and insurance-friendly access."
       />
       <meta property="og:url" content="https://tinkahealthservices.com" />
       <meta
@@ -49,7 +49,7 @@ const Home = () => (
       />
       <meta
         name="twitter:description"
-        content="Telehealth psychiatry and medication management for anxiety, depression, ADHD, bipolar disorder, PTSD, and related concerns."
+        content="Telehealth psychiatry and ongoing psychiatric care for anxiety, depression, ADHD, bipolar disorder, PTSD, and related concerns."
       />
       <link
         rel="preload"

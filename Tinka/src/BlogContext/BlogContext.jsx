@@ -1,3 +1,4 @@
+import { isMedicationFocusedBlog } from "../../content-policy.js";
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
@@ -25,12 +26,13 @@ export const BlogProvider = ({ children }) => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get("https://api.tinkahealthservices.com/api/blogs/30");
-        setBlogs(response.data.data.map(blog => ({
+        const visibleBlogs = response.data.data.filter(blog => !isMedicationFocusedBlog(blog));
+        setBlogs(visibleBlogs.map(blog => ({
             ...blog,
             slug: createSlug(blog.title)
           })
         ));
-        setFilteredBlogs(response.data.data.map(blog => ({
+        setFilteredBlogs(visibleBlogs.map(blog => ({
             ...blog,
             slug: createSlug(blog.title)
           })

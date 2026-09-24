@@ -8,6 +8,9 @@ const InsuranceLogo = () => (
     aria-labelledby="insurance-logos-heading"
   >
     <div className="mx-auto max-w-6xl">
+      <h2 id="insurance-logos-heading" className="mb-4 text-lg font-bold text-[#0b2d4f]">
+        Insurance plans we accept
+      </h2>
       <Link
         to="/insurance-we-accept"
         className="mb-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-[#005ab0] px-4 py-2 text-sm font-bold text-white hover:bg-[#00427f]"
