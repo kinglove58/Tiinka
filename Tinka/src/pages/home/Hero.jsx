@@ -36,9 +36,8 @@ const Hero = () => {
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-[16px] font-medium leading-7 text-slate-700 md:mx-0 md:text-lg">
-            Compassionate mental health care, psychiatric evaluation and
-            ongoing psychiatric care for adults across Virginia, Maryland and
-            Washington, DC.
+            Compassionate mental health care, psychiatric evaluation and ongoing
+            psychiatric care across Virginia, Maryland and Washington, DC.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
