@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { trackBookingStartedConversion } from "../utils/googleAdsTracking";
 
 const BookingLink = ({
   className = "",
@@ -35,7 +36,12 @@ const BookingLink = ({
       href={href}
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
-      onClick={onClick}
+      onClick={(event) => {
+        onClick?.(event);
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || href !== "/booking" || target !== "_self") return;
+        event.preventDefault();
+        trackBookingStartedConversion(href);
+      }}
       className={classes}
     >
       {children}

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
+import { trackBookingStartedConversion } from "../utils/googleAdsTracking";
 
 const BookingModal = ({ show }) => {
   useEffect(() => {
     if (show) {
-      window.location.assign("/booking");
+      trackBookingStartedConversion();
     }
   }, [show]);
 

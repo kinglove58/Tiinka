@@ -1,11 +1,11 @@
 import { memo } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 import {
   FaStethoscope,
 } from "react-icons/fa";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import providerImage from "/images/img_mental_health/contact_us/Pro_Head_shot.jpg";
+import BookingLink from "../../components/BookingLink";
 
 const expertiseList = [
   "Psychiatric evaluations",
@@ -138,7 +138,7 @@ const MeetOurProvider = () => {
             </div>
             <div className="rounded-3xl bg-[#005ab0] px-8 py-10 text-center text-white shadow-xl">
               <h2 className="text-2xl font-semibold">Ready to start your journey?</h2>
-              <Link to="/booking" className="mt-6 inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#005ab0] hover:bg-blue-100">Book an Appointment</Link>
+              <BookingLink className="mt-6 inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#005ab0] hover:bg-blue-100">Book an Appointment</BookingLink>
             </div>
           </div>
         </ScrollAnimationWrapper>

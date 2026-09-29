@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import serviceData from "./serviceData";
 import ServiceGrid from "../../components/ServiceGrid";
+import BookingLink from "../../components/BookingLink";
 
 function Services() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -671,12 +672,11 @@ function Services() {
               >
                 Contact Us Today
               </Link>
-              <Link
-                to="/booking"
+              <BookingLink
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 text-lg border-2 border-blue-600 hover:border-blue-700"
               >
                 Schedule Appointment
-              </Link>
+              </BookingLink>
             </div>
             <p className="text-sm text-blue-100 mt-4">
               Accepting new patients with same week appointments when available.

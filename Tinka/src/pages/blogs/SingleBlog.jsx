@@ -7,6 +7,7 @@ import ScrollAnimationWrapper from "../home/ScrollAnimationWrapper";
 import { PuffLoader } from "react-spinners";
 import { Helmet } from "react-helmet";
 import BlogStructuredData from "../../components/BlogStructuredData";
+import BookingLink from "../../components/BookingLink";
 import {
   buildBlogMetaDescription,
   buildBlogSeoTitle,
@@ -192,12 +193,11 @@ function SingleBlog() {
             >
               Insurance We Accept
             </Link>
-            <Link
-              to="/booking"
+            <BookingLink
               className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
             >
               Book Appointment
-            </Link>
+            </BookingLink>
           </div>
         </div>
 
