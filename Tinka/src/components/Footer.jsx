@@ -1,6 +1,7 @@
 import { useState, useContext, memo, useMemo } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import BookingLink from "./BookingLink";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { TiSocialYoutubeCircular } from "react-icons/ti";
 import { FaXTwitter } from "react-icons/fa6";
@@ -76,6 +77,9 @@ const footerLinkClass =
   "block rounded px-2 py-1 text-sm leading-6 text-white transition hover:text-blue-300";
 
 const FooterLink = ({ item }) => {
+  if (item.link === "/booking") {
+    return <BookingLink className={footerLinkClass}>{item.value}</BookingLink>;
+  }
   if (item.href) {
     return (
       <a

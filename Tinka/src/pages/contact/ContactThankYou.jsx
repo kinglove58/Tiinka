@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { FiArrowRight, FiCheckCircle, FiPhoneCall } from "react-icons/fi";
 import { trackContactConversion } from "../../utils/googleAdsTracking";
+import BookingLink from "../../components/BookingLink";
 
 const ContactThankYou = () => {
   const location = useLocation();
@@ -46,13 +47,12 @@ const ContactThankYou = () => {
             <FiPhoneCall aria-hidden="true" />
             Call 443-295-6600
           </a>
-          <Link
-            to="/booking"
+          <BookingLink
             className="inline-flex items-center justify-center gap-2 rounded-full border border-[#b8d8f3] bg-white px-6 py-4 font-bold text-[#005ab0] transition hover:bg-blue-50"
           >
             Book an Appointment
             <FiArrowRight aria-hidden="true" />
-          </Link>
+          </BookingLink>
         </div>
       </section>
     </main>
