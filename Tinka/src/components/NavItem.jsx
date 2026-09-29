@@ -53,6 +53,7 @@ const NavItem = () => {
   }, []);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showAllLocations, setShowAllLocations] = useState(false);
 
   const servicesToShow = useMemo(() => serviceData, []);
 
@@ -115,7 +116,9 @@ const NavItem = () => {
                 571-349-8285
               </a>
             </div>
-            <div className="hidden min-w-0 md:block">
+            <div
+              className={`${showAllLocations ? "max-sm:block" : "hidden"} min-w-0 md:block`}
+            >
               <Link
                 to="/dc-psychiatrist"
                 className="block whitespace-nowrap hover:underline"
@@ -132,7 +135,9 @@ const NavItem = () => {
                 202-933-4300
               </a>
             </div>
-            <div className="hidden min-w-0 md:block">
+            <div
+              className={`${showAllLocations ? "max-sm:block" : "hidden"} min-w-0 md:block`}
+            >
               <Link
                 to="/maryland-psychiatrist"
                 className="block whitespace-nowrap hover:underline"
@@ -188,12 +193,13 @@ const NavItem = () => {
               className="shrink-0 !bg-transparent !border-none !shadow-none !px-0"
             />
           </div>
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={() => setShowAllLocations((isOpen) => !isOpen)}
             className="hidden min-h-8 items-center whitespace-nowrap underline underline-offset-4 hover:text-blue-100 max-sm:inline-flex max-sm:min-h-0"
           >
-            View all locations
-          </Link>
+            {showAllLocations ? "Hide locations" : "View all locations"}
+          </button>
         </div>
       </div>
       <div className="relative h-20 bg-[#f1f2f6] px-4 hover:bg-white md:px-8 xl:px-16">
