@@ -12,6 +12,7 @@ dist
 dist-ssr
 tmp
 *.local
+cloudflare-worker/.dev.vars*
 
 # Editor directories and files
 .vscode/*

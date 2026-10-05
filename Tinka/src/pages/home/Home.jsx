@@ -164,6 +164,23 @@ const Home = () => (
         </div>
       </div>
     </section>
+    <section className="home-section bg-[#eef6fd]" aria-labelledby="care-finder-heading">
+      <div className="home-container text-center">
+        <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#005ab0]">
+          Not sure where to begin?
+        </p>
+        <h2 id="care-finder-heading" className="home-heading mt-2">
+          Find a clearer path to care.
+        </h2>
+        <p className="home-copy mx-auto">
+          Answer a few private, multiple-choice questions to explore the Tinka
+          Health Services support that may fit your needs.
+        </p>
+        <Link to="/care-finder" className="home-button mt-7 bg-[#005ab0] text-white hover:!bg-[#00427f]">
+          Start the Care Finder <FiArrowRight aria-hidden="true" />
+        </Link>
+      </div>
+    </section>
   </main>
 );
 

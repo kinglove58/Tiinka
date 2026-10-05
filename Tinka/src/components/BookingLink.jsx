@@ -38,7 +38,7 @@ const BookingLink = ({
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       onClick={(event) => {
         onClick?.(event);
-        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || href !== "/booking" || target !== "_self") return;
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !href.startsWith("/booking") || target !== "_self") return;
         event.preventDefault();
         trackBookingStartedConversion(href);
       }}

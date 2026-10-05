@@ -7,6 +7,7 @@ import ScrollUp from "./components/ScrollUp";
 import ScrollToTop from "./components/ScrollToTop ";
 import StructuredData from "./components/StructuredData";
 import CanonicalLink from "./components/CanonicalLink";
+import CareFinderExitPrompt from "./components/CareFinderExitPrompt";
 
 const SITE_URL = "https://tinkahealthservices.com";
 
@@ -97,6 +98,7 @@ function App() {
         <Footer />
         <ScrollUp />
       </div>
+      <CareFinderExitPrompt />
 
       {/* Tailwind-Styled Cookie Banner */}
       <CookieConsent

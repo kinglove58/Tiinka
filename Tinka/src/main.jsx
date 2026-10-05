@@ -63,6 +63,7 @@ const TelehealthPsychiatry = lazy(
 const WeightLossManagement = lazy(
   () => import("./pages/weight/WeightLossManagement.jsx"),
 );
+const CareFinder = lazy(() => import("./pages/care-finder/CareFinder.jsx"));
 const SeoTreatmentPage = lazy(() => import("./pages/seo/SeoTreatmentPage.jsx"));
 
 const router = createBrowserRouter([
@@ -161,6 +162,10 @@ const router = createBrowserRouter([
       {
         path: "/weight-loss-management",
         element: <WeightLossManagement />,
+      },
+      {
+        path: "/care-finder",
+        element: <CareFinder />,
       },
       {
         path: "/services/Weight-Loss-Management",
