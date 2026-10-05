@@ -74,12 +74,14 @@ const CareFinderExitPrompt = () => {
           id="care-finder-exit-heading"
           className="mt-2 text-2xl font-bold text-[#06192f] sm:text-3xl"
         >
-          Find a clearer next step for care.
+          Find the support that fits you
         </h2>
         <p className="mt-3 leading-7 text-slate-700">
-          Answer a few private, multiple-choice questions to explore the Tinka
-          service that may fit your needs. This is not a diagnosis or emergency
-          service.
+          Take a quick, private check-in and explore the care options that may
+          be most relevant to what you&apos;re experiencing.
+        </p>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          This is not a diagnosis or emergency service.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link

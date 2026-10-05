@@ -5,14 +5,16 @@ const allowedOrigins = new Set([
   "http://localhost:5175",
 ]);
 
-const allowedQuestionIds = [
-  "careGoals",
-  "careHistory",
-  "dailyFunctioning",
-  "timing",
-];
-
-const fallbackQuestionIds = ["careGoals", "careHistory"];
+const questionIdsByProfile = {
+  adhd: ["adhd-evaluation", "adhd-setting", "adhd-age-group"],
+  anxiety: ["anxiety-pattern", "anxiety-support", "anxiety-timing"],
+  depression: ["depression-routine", "depression-support", "depression-timing"],
+  bipolar: ["bipolar-history", "bipolar-goal", "bipolar-timing"],
+  addiction: ["addiction-support", "addiction-care", "addiction-timing"],
+  eating: ["eating-support", "eating-goal", "eating-timing"],
+  weight: ["weight-barrier", "weight-history", "weight-timing"],
+  general: ["general-routine", "general-history", "general-timing"],
+};
 
 const corsHeaders = (origin) => ({
   "Access-Control-Allow-Origin": allowedOrigins.has(origin) ? origin : "https://tinkahealthservices.com",
@@ -34,9 +36,13 @@ const readOutputText = (data) => {
     .join("");
 };
 
-const uniqueAllowedIds = (ids) => {
+const fallbackQuestionIds = (profile) =>
+  (questionIdsByProfile[profile] || questionIdsByProfile.general).slice(0, 2);
+
+const uniqueAllowedIds = (ids, profile) => {
+  const allowedQuestionIds = questionIdsByProfile[profile] || questionIdsByProfile.general;
   const unique = [...new Set(ids)].filter((id) => allowedQuestionIds.includes(id));
-  return unique.length >= 2 ? unique.slice(0, 2) : fallbackQuestionIds;
+  return unique.length >= 2 ? unique.slice(0, 2) : fallbackQuestionIds(profile);
 };
 
 export default {
@@ -68,6 +74,10 @@ export default {
     }
 
     const service = typeof payload.service === "string" ? payload.service.trim().slice(0, 100) : "";
+    const profile =
+      typeof payload.profile === "string" && questionIdsByProfile[payload.profile]
+        ? payload.profile
+        : "general";
     const answers = Array.isArray(payload.answers) ? payload.answers.slice(0, 4) : [];
     const isValidAnswer = answers.every(
       (answer) =>
@@ -82,6 +92,7 @@ export default {
       return response({ error: "Invalid care finder details" }, 400, origin);
     }
 
+    const allowedQuestionIds = questionIdsByProfile[profile];
     const schema = {
       type: "object",
       additionalProperties: false,
@@ -100,6 +111,7 @@ export default {
       "Do not diagnose, assess risk, provide treatment advice, discuss medication, or generate new questions.",
       "Do not request or infer identity, contact details, medical history, or a clinical condition.",
       `Requested service: ${service}`,
+      `Care navigation profile: ${profile}`,
       `Anonymous multiple-choice answers: ${JSON.stringify(answers)}`,
       `Allowed question IDs: ${allowedQuestionIds.join(", ")}`,
       "Return two different IDs that would help the visitor choose a next step, and a supportive message of no more than 20 words.",
@@ -113,7 +125,7 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "gpt-6-luna",
+          model: "gpt-4o-mini",
           store: false,
           max_output_tokens: 160,
           input: prompt,
@@ -129,14 +141,14 @@ export default {
       });
 
       if (!openAiResponse.ok) {
-        return response({ followUpQuestionIds: fallbackQuestionIds }, 200, origin);
+        return response({ followUpQuestionIds: fallbackQuestionIds(profile) }, 200, origin);
       }
 
       const output = await openAiResponse.json();
       const parsed = JSON.parse(readOutputText(output));
       return response(
         {
-          followUpQuestionIds: uniqueAllowedIds(parsed.followUpQuestionIds || []),
+          followUpQuestionIds: uniqueAllowedIds(parsed.followUpQuestionIds || [], profile),
           supportiveMessage:
             typeof parsed.supportiveMessage === "string"
               ? parsed.supportiveMessage.slice(0, 240)
@@ -146,7 +158,7 @@ export default {
         origin,
       );
     } catch {
-      return response({ followUpQuestionIds: fallbackQuestionIds }, 200, origin);
+      return response({ followUpQuestionIds: fallbackQuestionIds(profile) }, 200, origin);
     }
   },
 };
