@@ -37,12 +37,12 @@ const readOutputText = (data) => {
 };
 
 const fallbackQuestionIds = (profile) =>
-  (questionIdsByProfile[profile] || questionIdsByProfile.general).slice(0, 2);
+  (questionIdsByProfile[profile] || questionIdsByProfile.general).slice(0, 3);
 
 const uniqueAllowedIds = (ids, profile) => {
   const allowedQuestionIds = questionIdsByProfile[profile] || questionIdsByProfile.general;
   const unique = [...new Set(ids)].filter((id) => allowedQuestionIds.includes(id));
-  return unique.length >= 2 ? unique.slice(0, 2) : fallbackQuestionIds(profile);
+  return unique.length >= 3 ? unique.slice(0, 3) : fallbackQuestionIds(profile);
 };
 
 export default {
@@ -78,7 +78,7 @@ export default {
       typeof payload.profile === "string" && questionIdsByProfile[payload.profile]
         ? payload.profile
         : "general";
-    const answers = Array.isArray(payload.answers) ? payload.answers.slice(0, 4) : [];
+    const answers = Array.isArray(payload.answers) ? payload.answers.slice(0, 8) : [];
     const isValidAnswer = answers.every(
       (answer) =>
         answer &&
@@ -107,14 +107,14 @@ export default {
     };
 
     const prompt = [
-      "You select two approved follow-up question IDs for a non-diagnostic mental-health care navigation form.",
+      "You select three approved follow-up question IDs for a non-diagnostic mental-health care navigation form.",
       "Do not diagnose, assess risk, provide treatment advice, discuss medication, or generate new questions.",
       "Do not request or infer identity, contact details, medical history, or a clinical condition.",
       `Requested service: ${service}`,
       `Care navigation profile: ${profile}`,
       `Anonymous multiple-choice answers: ${JSON.stringify(answers)}`,
       `Allowed question IDs: ${allowedQuestionIds.join(", ")}`,
-      "Return two different IDs that would help the visitor choose a next step, and a supportive message of no more than 20 words.",
+      "Return three different IDs that would help the visitor choose a next step, and a supportive message of no more than 20 words.",
     ].join("\n");
 
     try {

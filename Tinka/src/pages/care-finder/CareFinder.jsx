@@ -42,6 +42,241 @@ const durationLabels = {
   general: "How long has this concern been present?",
 };
 
+const deeperQuestionsByProfile = {
+  adhd: [
+    {
+      id: "adhd-experience",
+      label: "Has an ADHD evaluation been discussed before?",
+      options: [
+        { value: "no", label: "No, not yet" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "unsure", label: "I am not sure" },
+      ],
+    },
+    {
+      id: "adhd-daily-setting",
+      label: "Where are these concerns showing up most?",
+      options: [
+        { value: "work-school", label: "Work or school" },
+        { value: "home", label: "Home or daily routines" },
+        { value: "relationships", label: "Relationships" },
+      ],
+    },
+    {
+      id: "adhd-goal",
+      label: "What would feel most useful from support?",
+      options: [
+        { value: "clarity", label: "Clarity about next steps" },
+        { value: "skills", label: "Better daily structure and follow-through" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+  anxiety: [
+    {
+      id: "anxiety-daily-pattern",
+      label: "When do these concerns tend to feel strongest?",
+      options: [
+        { value: "most-days", label: "Most days" },
+        { value: "situations", label: "In certain situations" },
+        { value: "unexpected", label: "Unexpectedly" },
+      ],
+    },
+    {
+      id: "anxiety-context",
+      label: "Which area feels most affected right now?",
+      options: [
+        { value: "work-school", label: "Work or school" },
+        { value: "home", label: "Home or daily routines" },
+        { value: "relationships", label: "Relationships" },
+      ],
+    },
+    {
+      id: "anxiety-goal",
+      label: "What would you like help with first?",
+      options: [
+        { value: "understanding", label: "Understanding my care options" },
+        { value: "plan", label: "Making a practical plan" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+  depression: [
+    {
+      id: "depression-daily-routine",
+      label: "What part of your routine feels hardest right now?",
+      options: [
+        { value: "work-school", label: "Work or school" },
+        { value: "home", label: "Home and daily tasks" },
+        { value: "relationships", label: "Relationships" },
+      ],
+    },
+    {
+      id: "depression-experience",
+      label: "Have you had support for this concern before?",
+      options: [
+        { value: "new", label: "No, this is new for me" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "current", label: "Yes, currently" },
+      ],
+    },
+    {
+      id: "depression-goal",
+      label: "What would feel most helpful from support?",
+      options: [
+        { value: "clarity", label: "Understanding care options" },
+        { value: "plan", label: "A clear next step" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+  bipolar: [
+    {
+      id: "bipolar-care-history",
+      label: "Have you previously met with a psychiatric provider?",
+      options: [
+        { value: "no", label: "No" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "current", label: "Yes, currently" },
+      ],
+    },
+    {
+      id: "bipolar-context",
+      label: "Which area would you most like to stabilize?",
+      options: [
+        { value: "routine", label: "Daily routines" },
+        { value: "relationships", label: "Relationships" },
+        { value: "work-school", label: "Work or school" },
+      ],
+    },
+    {
+      id: "bipolar-care-goal",
+      label: "What would be most useful from a first visit?",
+      options: [
+        { value: "understanding", label: "Understanding care options" },
+        { value: "plan", label: "Making a care plan" },
+        { value: "follow-up", label: "Planning follow-up support" },
+      ],
+    },
+  ],
+  addiction: [
+    {
+      id: "addiction-current-support",
+      label: "Do you currently have recovery support?",
+      options: [
+        { value: "none", label: "Not at this time" },
+        { value: "some", label: "Some support" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+    {
+      id: "addiction-context",
+      label: "Where would more support make the biggest difference?",
+      options: [
+        { value: "routine", label: "Daily routines" },
+        { value: "relationships", label: "Relationships" },
+        { value: "work-school", label: "Work or school" },
+      ],
+    },
+    {
+      id: "addiction-goal",
+      label: "What would be most useful from a first conversation?",
+      options: [
+        { value: "options", label: "Understanding care options" },
+        { value: "plan", label: "Planning next steps" },
+        { value: "follow-up", label: "Coordinating ongoing care" },
+      ],
+    },
+  ],
+  eating: [
+    {
+      id: "eating-experience",
+      label: "Have you worked with a provider about this before?",
+      options: [
+        { value: "new", label: "No, this is new for me" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "current", label: "Yes, currently" },
+      ],
+    },
+    {
+      id: "eating-context",
+      label: "Which part of daily life feels most affected?",
+      options: [
+        { value: "routine", label: "Daily routines" },
+        { value: "relationships", label: "Relationships or social situations" },
+        { value: "well-being", label: "Overall well-being" },
+      ],
+    },
+    {
+      id: "eating-care-goal",
+      label: "What would feel most helpful right now?",
+      options: [
+        { value: "options", label: "Understanding care options" },
+        { value: "plan", label: "A clear next step" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+  weight: [
+    {
+      id: "weight-care-history",
+      label: "Have you had structured weight-management support before?",
+      options: [
+        { value: "no", label: "No" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "current", label: "Yes, currently" },
+      ],
+    },
+    {
+      id: "weight-context",
+      label: "What would you like support to improve first?",
+      options: [
+        { value: "routine", label: "Daily routines" },
+        { value: "habits", label: "Sustainable habits" },
+        { value: "accountability", label: "Accountability and follow-up" },
+      ],
+    },
+    {
+      id: "weight-goal",
+      label: "What would feel most useful from care?",
+      options: [
+        { value: "options", label: "Understanding care options" },
+        { value: "plan", label: "A practical plan" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+  general: [
+    {
+      id: "general-experience",
+      label: "Have you worked with a provider about this before?",
+      options: [
+        { value: "new", label: "No, this is new for me" },
+        { value: "past", label: "Yes, in the past" },
+        { value: "current", label: "Yes, currently" },
+      ],
+    },
+    {
+      id: "general-context",
+      label: "Which part of life feels most affected?",
+      options: [
+        { value: "work-school", label: "Work or school" },
+        { value: "home", label: "Home or daily routines" },
+        { value: "relationships", label: "Relationships" },
+      ],
+    },
+    {
+      id: "general-goal",
+      label: "What would feel most helpful right now?",
+      options: [
+        { value: "options", label: "Understanding care options" },
+        { value: "plan", label: "A clear next step" },
+        { value: "ongoing", label: "Ongoing support" },
+      ],
+    },
+  ],
+};
+
 const makeProfile = (id, concern, impact, followUps) => ({
   id,
   base: [
@@ -52,6 +287,7 @@ const makeProfile = (id, concern, impact, followUps) => ({
       label: durationLabels[id],
       options: durationOptions,
     },
+    ...deeperQuestionsByProfile[id],
   ],
   followUps,
 });
@@ -543,13 +779,13 @@ const CareFinder = () => {
         ? data.followUpQuestionIds
             .map((id) => profile.followUps.find((question) => question.id === id))
             .filter(Boolean)
-            .slice(0, 2)
+            .slice(0, 3)
         : [];
       const followUps =
-        selectedQuestions.length === 2 ? selectedQuestions : profile.followUps.slice(0, 2);
+        selectedQuestions.length === 3 ? selectedQuestions : profile.followUps.slice(0, 3);
       setQuestions([safetyQuestion, ...profile.base, ...followUps]);
     } catch {
-      setQuestions([safetyQuestion, ...profile.base, ...profile.followUps.slice(0, 2)]);
+      setQuestions([safetyQuestion, ...profile.base, ...profile.followUps.slice(0, 3)]);
     } finally {
       setIsLoadingFollowUp(false);
     }
