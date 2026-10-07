@@ -1,6 +1,7 @@
 export const GOOGLE_ADS_ID = "AW-17341962831";
 export const CONTACT_CONVERSION_ID = `${GOOGLE_ADS_ID}/-VdbClO_3O4aEM-0pc1A`;
 export const BOOKING_STARTED_CONVERSION_ID = `${GOOGLE_ADS_ID}/osU9CLKh6IodEM-0pc1A`;
+let bookingNavigationInProgress = false;
 
 const trackGoogleAdsConversion = (sendTo) => {
   if (typeof window === "undefined" || typeof window.gtag !== "function") {
@@ -21,6 +22,8 @@ export const trackContactConversion = () =>
 // Use Google's click callback (with a timeout) so navigation does not cancel the ping.
 export const trackBookingStartedConversion = (url = "/booking") => {
   if (typeof window === "undefined") return;
+  if (bookingNavigationInProgress) return;
+  bookingNavigationInProgress = true;
 
   let navigated = false;
   const navigate = () => {
