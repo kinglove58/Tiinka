@@ -36,6 +36,8 @@ export const trackBookingStartedConversion = (url = "/booking") => {
 
   window.gtag("event", "conversion", {
     send_to: BOOKING_STARTED_CONVERSION_ID,
+    value: 1.0,
+    currency: "USD",
     event_callback: navigate,
     event_timeout: 1000,
   });
