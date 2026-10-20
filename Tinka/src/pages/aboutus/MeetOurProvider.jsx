@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import {
   FaStethoscope,
@@ -12,6 +12,53 @@ const expertiseList = [
   "Individualized treatment planning",
   "Anxiety, depression, ADHD, bipolar disorder, mood disorders, and trauma-related conditions",
 ];
+
+const psychologyTodayProfile = "https://www.psychologytoday.com/profile/1599765";
+const psychologyTodaySealDocument = `<!doctype html>
+<html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body style="margin:0">
+<a href="${psychologyTodayProfile}" class="sx-verified-seal" aria-label="View Dr. Seliat Dosunmu's Psychology Today profile"></a>
+<script src="https://member.psychologytoday.com/verified-seal.js" data-badge="14" data-id="1599765" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xNC9wcm9maWxlLzE1OTk3NjU/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="></script>
+<script>
+const seal = document.querySelector('.sx-verified-seal');
+new MutationObserver(() => {
+  const height = Math.ceil(seal.getBoundingClientRect().height);
+  if (height) parent.postMessage({ type: 'psychology-today-seal-size', height }, '*');
+}).observe(seal, { attributes: true, attributeFilter: ['style'] });
+</script>
+</body></html>`;
+
+const PsychologyTodaySeal = () => {
+  const frameRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.source !== frameRef.current?.contentWindow || event.data?.type !== "psychology-today-seal-size") return;
+      if (Number.isFinite(event.data.height)) setHeight(Math.min(Math.max(event.data.height + 4, 80), 320));
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  return (
+    <div className="mt-6 flex flex-col items-start gap-2">
+      <iframe
+        ref={frameRef}
+        title="Psychology Today verified professional seal for Dr. Seliat Dosunmu"
+        srcDoc={psychologyTodaySealDocument}
+        sandbox="allow-scripts allow-top-navigation-by-user-activation"
+        loading="lazy"
+        width="300"
+        height={height || 1}
+        className={`max-w-full border-0 ${height ? "" : "pointer-events-none opacity-0"}`}
+      />
+      <a href={psychologyTodayProfile} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[#005ab0] underline underline-offset-2 hover:text-[#0b3065]">
+        View Dr. Dosunmu&apos;s Psychology Today profile
+      </a>
+    </div>
+  );
+};
 
 const MeetOurProvider = () => {
   const providerProfileStructuredData = {
@@ -135,6 +182,7 @@ const MeetOurProvider = () => {
                 <li>Board-Certified Family Nurse Practitioner</li>
                 <li>Board-Certified Psychiatric Mental Health Nurse Practitioner</li>
               </ul>
+              <PsychologyTodaySeal />
             </div>
             <div className="rounded-3xl bg-[#005ab0] px-8 py-10 text-center text-white shadow-xl">
               <h2 className="text-2xl font-semibold">Ready to start your journey?</h2>
