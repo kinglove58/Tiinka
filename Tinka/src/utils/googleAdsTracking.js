@@ -1,3 +1,5 @@
+import { trackGa4BookingStarted } from "./googleAnalyticsTracking";
+
 export const GOOGLE_ADS_ID = "AW-17341962831";
 export const CONTACT_CONVERSION_ID = `${GOOGLE_ADS_ID}/-VdbClO_3O4aEM-0pc1A`;
 export const BOOKING_STARTED_CONVERSION_ID = `${GOOGLE_ADS_ID}/osU9CLKh6IodEM-0pc1A`;
@@ -37,6 +39,7 @@ export const trackBookingStartedConversion = (url = "/booking") => {
     return;
   }
 
+  trackGa4BookingStarted();
   window.gtag("event", "conversion", {
     send_to: BOOKING_STARTED_CONVERSION_ID,
     value: 1.0,
