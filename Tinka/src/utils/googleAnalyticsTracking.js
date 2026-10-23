@@ -1,4 +1,4 @@
-export const GOOGLE_ANALYTICS_ID = "G-FF5582HSDD";
+export const GOOGLE_ANALYTICS_ID = "G-FF5582HDSD";
 
 export const trackGa4BookingStarted = () => {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
